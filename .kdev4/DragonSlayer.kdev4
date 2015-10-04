@@ -7,9 +7,9 @@ Current Build Directory Index=0
 ProjectRootRelative=./
 
 [CMake][CMake Build Directory 0]
-Build Directory Path=file:///home/xaliver/projects/DragonSlayer/build
+Build Directory Path=file:///home/xaliver/projects/DragonSlayer//build
 Build Type=Debug
-CMake Binary=file:///usr/bin/cmake
+CMake Binary=file:///usr/bin/make
 Environment Profile=
 Extra Arguments=
 Install Directory=file:///home/xaliver/projects/DragonSlayer
