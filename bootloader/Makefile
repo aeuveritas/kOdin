@@ -13,5 +13,5 @@ BootLoader.bin: BootLoader.asm
 	@echo
 	
 clean:
-	rm -rf BootLoader.bin
+	rm -rf ../OUT/bootloader
 	
