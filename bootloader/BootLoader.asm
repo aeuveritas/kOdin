@@ -1,5 +1,5 @@
 ;[ORG 0x00]					; Start address is 0x00
-[BITS 16]					; Code is 16 bit
+[BITS 16]					; Code is 16 bits
 
 SECTION .text				; Define the text section
 
@@ -9,7 +9,7 @@ jmp 0x07C0:START			; Insert 0x07C0 to CS register and move to
 ;	Dragon Slayer OS Configurations
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 TOTALSECTORCOUNT:	
-	dw 1024					; The size of Dragon Slayer OS excepting for
+	dw 1					; The size of Dragon Slayer OS excepting for
 							; the bootloader
 							; The maximum size is 1152 sectors (= 0x900000byte)
 
@@ -65,7 +65,7 @@ START:
 	push 1					; Push the point of Y
 	push 0					; Push the point of X
 	call PRINTMESSAGE		; Call the function PRINTMESSAGE
-	add sp, 6				; Remove parameter
+	add sp, 6				; Remove parameters
 	
 	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	;	Loading OS image from disk
@@ -167,7 +167,7 @@ READEND:
 	push 1					; Push the point of Y
 	push 20					; Push the point of X
 	call PRINTMESSAGE		; Call the function PRINTMESSAGE
-	add sp, 6				; Remove parameter
+	add sp, 6				; Remove parameters
 	
 	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	;	Execute OS image which is loaded
@@ -194,7 +194,7 @@ PRINTMESSAGE:
 							; BP will be used to calculate to find address of 
 							; the specific parameter
 							
-	push es					; Push ES to DX registers 
+	push es					; Push from ES to DX registers
 	push si					; there will be restore at the end of the function
 	push di					; The reason why BX is not pushed is
 	push ax					; BX is currently used to read sector
@@ -223,7 +223,7 @@ PRINTMESSAGE:
 							; and it is added by point of X
 							
 	; Address of string
-	mov si, word [ bp + 8] 	; Read third parameter
+	mov si, word [ bp + 8 ] ; Read third parameter
 	
 .MESSAGELOOP:				; Print message
 	mov cl, byte [ si ]		
@@ -234,7 +234,7 @@ PRINTMESSAGE:
 	cmp cl, 0 				; if character is 0, it means end.
 	je .MESSAGEEND			; if cl is 0, jump to .MESSAGEEND
 	
-	mov byte [ es: di ], cl	; if cl is not 0, print value of es + di address
+	mov byte [ es: di ], cl	; if cl is not 0, print value of ES + DI address
 	
 	add si, 1				; Move to the next character
 	add di, 2				; Move to the next address

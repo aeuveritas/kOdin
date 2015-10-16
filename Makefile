@@ -1,4 +1,4 @@
-all: BootLoader VirtualOS Disk.img
+all: BootLoader Kernel32 Disk.img
 
 BootLoader:
 	@echo
@@ -11,24 +11,23 @@ BootLoader:
 	@echo ===== BootLoader Build Complete =================================
 	@echo
 	
-VirtualOS:
+Kernel32:
 	@echo
-	@echo ===== VirtualOS Build Start ====================================
+	@echo ===== Kernel32 Build Start ====================================
 	@echo
 	
 	make -C kernel32
 	
 	@echo
-	@echo ===== VirtualOS Build Complete =================================
+	@echo ===== Kernel32 Build Complete =================================
 	@echo
 	
-Disk.img:
+Disk.img: OUT/bootloader/BootLoader.bin OUT/kernel32/Kernel32.bin
 	@echo
 	@echo ===== Disk Image Build Start ====================================
 	@echo
 	
-	cat ./OUT/bootloader/BootLoader.bin > ./OUT/DS.img
-	cat ./OUT/kernel32/VirtualOS.bin >> ./OUT/DS.img
+	cat $^ > ./OUT/DS.img
 	
 	@echo
 	@echo ===== Disk Image Build Complete =================================

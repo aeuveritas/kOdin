@@ -1,15 +1,15 @@
-all: VirtualOS.bin
+all: Kernel32.bin
 
-VirtualOS.bin: VirtualOS.asm
+Kernel32.bin: Entry.s
 	@echo
-	@echo ===== VirtualOS Build Start IN =================================
+	@echo ===== Kernel32 Build Start IN =================================
 	@echo
 	
 	mkdir -p ../OUT/kernel32
-	nasm -o ../OUT/kernel32/VirtualOS.bin VirtualOS.asm
+	nasm -o ../OUT/kernel32/Kernel32.bin $<
 		
 	@echo
-	@echo ===== VirtualOS Build Complete IN ==============================
+	@echo ===== Kernel32 Build Complete IN ==============================
 	@echo
 clean:
 	rm -rf ../OUT/kernel32
