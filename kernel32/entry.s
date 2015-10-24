@@ -1,20 +1,20 @@
-[BITS 16]					; Code is 16 bits
+[BITS 16]						; Code is 16 bits
 
-SECTION .text				; Define the text section
+SECTION .text					; Define the text section
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	Code section
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 START:
-	mov ax, 0x1000			; Start address of the protected mode is 0x1000
-							; To set a segment register, AX is used as an 
-							; auxiliary register.
-	mov ds, ax				; Move value of AX to DS (Data Segment Reigster)
-	mov es, ax				; Move value of AX to ES
-							; ES is related to video.
+	mov ax, 0x1000				; Start address of the protected mode is 0x1000
+								; To set a segment register, AX is used as an 
+								; auxiliary register.
+	mov ds, ax					; Move value of AX to DS (Data Segment Reigster)
+	mov es, ax					; Move value of AX to ES
+								; ES is related to video.
 							
-	cli						; Disable interrupts
-	lgdt [ GDTR ]			; Load GDT by setting GDTR on the processor
+	cli							; Disable interrupts
+	lgdt [ GDTR ]				; Load GDT by setting GDTR on the processor
 	
 	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	;	Enter the protected mode
@@ -34,28 +34,28 @@ START:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	Enter the protected mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[BITS 32]					; Below code is 32 bits code
+[BITS 32]						; Below code is 32 bits code
 PROTECTEDMODE:
-	mov ax, 0x10			; The location of data segment selector
-	mov ds, ax				; DS segment selector
-	mov es, ax				; ES segment selector
-	mov fs, ax				; FS segment selector
-	mov gs, ax				; GS segment selector
+	mov ax, 0x10				; The location of data segment selector
+	mov ds, ax					; DS segment selector
+	mov es, ax					; ES segment selector
+	mov fs, ax					; FS segment selector
+	mov gs, ax					; GS segment selector
 	
 	; Create a stack whose rage is 0x00000000 ~ 0x0000FFFF(64 KB)
-	mov ss, ax				; Set SS
-	mov esp, 0xFFFE			; Set ESP register
-	mov ebp, 0xFFFE			; Set EBP register
+	mov ss, ax					; Set SS
+	mov esp, 0xFFFE				; Set ESP register
+	mov ebp, 0xFFFE				; Set EBP register
 	
 	; Print greeting message
-	push ( SWITCHSUCCESSMESSAGE - $$ + 0x10000)
-							; Push the address of the message
-	push 2					; Y point
-	push 0					; X point
-	call PRINTMESSAGE		; Call print function
-	add esp, 12				; Remove parameters
+	push (SWITCHSUCCESSMESSAGE - $$ + 0x10000)
+								; Push the address of the message
+	push 2						; Y point
+	push 0						; X point
+	call PRINTMESSAGE			; Call print function
+	add esp, 12					; Remove parameters
 	
-	jmp $					; Infinite loop at this point
+	jmp dword 0x08: 0x10200		; Jump to 0x10200 at which C++ kernel is located 
 							
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	Function section
@@ -63,14 +63,15 @@ PROTECTEDMODE:
 ; Function for printing message
 ;	PARAM: x point, y point, string
 PRINTMESSAGE:
-	push ebp				; Push BP (Base Pooint) register
-	mov ebp, esp			; Store SP in BP
-							; BP will be used to calculate to find address of 
-							; the specific parameter
+	push ebp					; Push BP (Base Pooint) register
+	mov ebp, esp				; Store SP in BP
+								; BP will be used to calculate to find address
+								; of the specific parameter
 		
-	push esi				; there will be restore at the end of the function
-	push edi				; The reason why BX is not pushed is
-	push eax				; BX is currently used to read sector
+	push esi					; there will be restored at the end of 
+								; the function
+	push edi					; The reason why BX is not pushed is
+	push eax					; BX is currently used to read sector
 	push ecx					
 	push edx
 	
@@ -79,50 +80,50 @@ PRINTMESSAGE:
 	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 	; Calculate address of Y point
 	mov eax, dword [ ebp + 12 ]
-							; Read second parameter and set AX as it
-	mov esi, 160			; 160 ( 80 * 2 ) is the number of byte for one line
-							; in screen
-	mul esi					; Y point = AX = AX * SI
-	mov edi, eax			; Y point is stored in DI
+								; Read second parameter and set AX as it
+	mov esi, 160				; 160 ( 80 * 2 ) is the number of byte for one
+								; line in screen
+	mul esi						; Y point = AX = AX * SI
+	mov edi, eax				; Y point is stored in DI
 	
 	; Calculate address of X point
 	mov eax, dword [ ebp + 8 ]	
-							; Read first parameter and set AX as it
-	mov esi, 2				; Two bytes are used for one character
-	mul esi					; X point = AX = AX * SI
-	add edi, eax			; DI had a start address of the line
-							; and it is added by point of X
+								; Read first parameter and set AX as it
+	mov esi, 2					; Two bytes are used for one character
+	mul esi						; X point = AX = AX * SI
+	add edi, eax				; DI had a start address of the line
+								; and it is added by point of X
 							
 	; Address of string
 	mov esi, dword [ ebp + 16 ]
-							; Read third parameter
+								; Read third parameter
 	
-.MESSAGELOOP:				; Print message
+.MESSAGELOOP:					; Print message
 	mov cl, byte [ esi ]		
-							; Copy the value of si address
-							; to CL register.
-							; CL register is low 1 byte of CX register
+								; Copy the value of si address
+								; to CL register.
+								; CL register is low 1 byte of CX register
 									
-	cmp cl, 0 				; if character is 0, it means end.
-	je .MESSAGEEND			; if cl is 0, jump to .MESSAGEEND
+	cmp cl, 0 					; if character is 0, it means end.
+	je .MESSAGEEND				; if cl is 0, jump to .MESSAGEEND
 	
 	mov byte [ edi + 0xB8000 ], cl	
-							; if cl is not 0, print value of EDI + 0x8000
-							; address
+								; if cl is not 0, print value of EDI + 0x8000
+								; address
 	
-	add esi, 1				; Move to the next character
-	add edi, 2				; Move to the next address
+	add esi, 1					; Move to the next character
+	add edi, 2					; Move to the next address
 	
-	jmp .MESSAGELOOP		; Move to the next iteration
+	jmp .MESSAGELOOP			; Move to the next iteration
 
 .MESSAGEEND:
-	pop edx					; At the end of the function,
-	pop ecx					; the values of the registers for the caller
-	pop eax					; should be restored
-	pop edi					; The order is reversed of the push
+	pop edx						; At the end of the function,
+	pop ecx						; the values of the registers for the caller
+	pop eax						; should be restored
+	pop edi						; The order is reversed of the push
 	pop esi					
-	pop ebp					; Restore BP
-	ret						; Return to the caller
+	pop ebp						; Restore BP
+	ret							; Return to the caller
 	
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	Data section
@@ -135,9 +136,9 @@ dw 0x0000
 
 ; GDTR data structure
 GDTR:
-	dw GDTEND - GDT - 1 	; The size of GDT
+	dw GDTEND - GDT - 1 		; The size of GDT
 	dd ( GDT - $$ + 0x10000 ) 
-							; The start address of GDT in physical memory
+								; The start address of GDT in physical memory
 
 ; GDT Table
 GDT:
