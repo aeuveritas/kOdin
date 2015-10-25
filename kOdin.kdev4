@@ -1,4 +1,4 @@
 [Project]
 Manager=KDevCustomMakeManager
-Name=DragonSlayer
+Name=kOdin
 VersionControl=kdevgit

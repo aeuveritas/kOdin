@@ -1,4 +1,4 @@
-all: BootLoader Kernel32 DS.img
+all: BootLoader Kernel32 kOdin.img
 
 BootLoader:
 	@echo
@@ -22,13 +22,13 @@ Kernel32:
 	@echo ===== Kernel32 Build Complete =================================
 	@echo
 	
-DS.img: OUT/bootloader/BootLoader.bin OUT/kernel32/Kernel32.bin
+kOdin.img: OUT/bootloader/BootLoader.bin OUT/kernel32/Kernel32.bin
 	@echo
 	@echo ===== Disk Image Build Start ====================================
 	@echo
 
 	make -C utility/imageMaker
-	./imageMaker $^
+	./OUT/imageMaker $^
 
 	@echo
 	@echo ===== Disk Image Build Complete =================================

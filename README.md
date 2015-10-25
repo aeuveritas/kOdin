@@ -1,6 +1,6 @@
-# DragonSlayer
-"Dragon Slayer" is a custom 64 bits OS which is written in C++.
-"Dragon Slayer" is under construction, but it will be a unix-like and
+# kOdin 
+"kOdin" is a custom 64 bits OS which is written in C++.
+"kOdin" is under construction, but it will be a unix-like and
 most POSIX-compliant.
 
 # License
@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # Source tree
 * .
 * README.md
-* DragonSlayer.kdev4
+* kOdin.kdev4
 * Makefile
 * run.sh
 * application
@@ -28,7 +28,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   * BootLoader.asm
   * Makefile
 * kernel32
-  * VirtualOS.asm
-  * Makefiel
+  * entry.s
+  * els_i386.x
+  * types.hpp
+  * main.cpp
+  * Makefie
 * kernel64
 * utility
+  * imageMaker
+    * imageMaker.c
+    * Makefile
+

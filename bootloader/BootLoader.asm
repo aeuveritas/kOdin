@@ -6,10 +6,10 @@ SECTION .text					; Define the text section
 jmp 0x07C0:START				; Insert 0x07C0 to CS register and move to
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	Dragon Slayer OS Configurations
+;	kOdin OS Configurations
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 TOTALSECTORCOUNT:	
-	dw 0x02						; The size of Dragon Slayer OS excepting for
+	dw 0x02						; The size of kOdin OS excepting for
 								; the bootloader
 								; The maximum size is 1152 sectors 
 								; (= 0x900000byte)
@@ -257,7 +257,7 @@ PRINTMESSAGE:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Message of bootloader starting
 MESSAGE1: 
-	db 'Dragon Slayer OS Boot Loader Start!!', 0
+	db 'kOdin OS Boot Loader Start!!', 0
 								; Message for print
 								; last 0 means the end of string
 

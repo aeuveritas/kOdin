@@ -5,9 +5,8 @@ all: imageMaker
 imageMaker: imageMaker.c
 	@echo ======================= MAKE imageMaker =======================
 	gcc -o $@ $<
-	cp $@ ../../
+	mv $@ ../../OUT/
 	@echo ===================== imageMaker Complete =====================
 	
 clean:
-	rm -rf imageMaker
-	rm -f ../../imageMaker
+	rm -f ../../OUT/imageMaker
