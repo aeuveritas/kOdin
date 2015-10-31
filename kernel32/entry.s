@@ -12,7 +12,29 @@ START:
 	mov ds, ax					; Move value of AX to DS (Data Segment Reigster)
 	mov es, ax					; Move value of AX to ES
 								; ES is related to video.
-							
+	
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	;	Activate A20 
+	;	Try BIOS service at first
+	;	If it fals, try system control port
+	;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+	; By BIOS service
+	mov ax, 0x2401				; 0x2041 is a value for activating A20 gate
+	int 0x15					; Call BIOS interrupt service
+	
+	jc .A20GATEERROR			; Check BIOS service success
+	jmp .A20GATESUCCESS			; If succeed, jump to .A20GATESUCCESS
+	
+	; If failed, try system control port
+.A20GATEERROR:
+	in al, 0x92					; Read one byte from system cotrol port(0x92)
+								; and store it to AX register
+	or al, 0x02					; Set the 1 bit of A20 gate as 1
+	and al, 0xFE				; Set the 0 bit as 0 to prevent system reset
+	out 0x92, al				; Restore the value 
+								; to the system control port(x092)
+	
+.A20GATESUCCESS:
 	cli							; Disable interrupts
 	lgdt [ GDTR ]				; Load GDT by setting GDTR on the processor
 	

@@ -5,7 +5,7 @@
 #define WORD	unsigned short
 #define DWORD	unsigned int
 #define QWORD	unsigned long
-#define BOOL	unsigned char
+//#define BOOL	unsigned char
 
 #pragma pack(push, 1)
 
