@@ -166,7 +166,7 @@ READEND:
 	push LOADINGCOMPLETEMESSAGE
 								; Push the address of the message in the stack
 	push 1						; Push the point of Y
-	push 20						; Push the point of X
+	push 2						; Push the point of X
 	call PRINTMESSAGE			; Call the function PRINTMESSAGE
 	add sp, 6					; Remove parameters
 	
@@ -182,7 +182,7 @@ READEND:
 HANDLEDISKERROR:
 	push DISKERRORMESSAGE		; Push the address of the message in the stack
 	push 1						; Push the point of Y
-	push 20						; Push the point of X
+	push 2						; Push the point of X
 	call PRINTMESSAGE			; Call the function PRINTMESSAGE
 	
 	jmp $						; Infinite loop at this point
@@ -257,16 +257,16 @@ PRINTMESSAGE:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Message of bootloader starting
 MESSAGE1: 
-	db 'kOdin OS Boot Loader Start!!', 0
+	db '[ **** ]  kOdin OS Boot Loader Start', 0
 								; Message for print
 								; last 0 means the end of string
 
 DISKERRORMESSAGE:
-	db 'DISK Error~!!', 0
+	db 'FAIL', 0
 IMAGELOADINGMESSAGE:
-	db 'OS Image Loading...', 0
+	db '[      ]  OS Image Loading', 0
 LOADINGCOMPLETEMESSAGE:
-	db 'Complete~!!', 0
+	db 'PASS', 0
 	
 ; Variables for disk read
 SECTORNUMBER: 

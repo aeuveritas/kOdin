@@ -194,7 +194,7 @@ GDTEND:
 
 ; Greeting message
 SWITCHSUCCESSMESSAGE: 
-	db "Switch To The Protected Mode Success~!!", 0
+	db "[ PASS ]  Switch To The Protected Mode", 0
 	
 times 512 - ( $ - $$ )	db	0x00
 								; To fill 512 byte, the rest of memory is filled

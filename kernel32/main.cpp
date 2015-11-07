@@ -8,32 +8,32 @@ void main(void)
 {
 	DWORD i;
 	
-	kPrintString(0, 3, "C++ Language Kernel Start.................................................[PASS]");
+	kPrintString(0, 3, "[ PASS ]  C++ Language Kernel Start");
 	
 	// Check the memory is larger than the minimum size
-	kPrintString(0, 4, "Minimum Memory Size Check.................................................[    ]");
+	kPrintString(0, 4, "[      ]  Minimum Memory Size Check");
 	if (kIsMemoryEnough() == false)
 	{
-		kPrintString(75, 4, "FAIL");
+		kPrintString(2, 4, "FAIL");
 		kPrintString(0, 5, "Not Enough Memory!! kOdin Requires Over 64 MB!!");
 		
 		while (1);
 	}
 	else
 	{
-		kPrintString(75, 4, "PASS");
+		kPrintString(2, 4, "PASS");
 	}
 	
 	// Initialize kernel area for IA-32e mode
-	kPrintString(0, 5, "IA-32e Kernel Area Initialize.............................................[    ]");
+	kPrintString(0, 5, "[      ]  IA-32e Kernel Area Initialize");
 	if (kInitializeKernel64Area() == false)
 	{
-		kPrintString(75, 5, "FAIL");
+		kPrintString(2, 5, "FAIL");
 		kPrintString(0, 6, "Kernel Area initialization Fail!!");
 		
 		while (1);
 	}
-	kPrintString(75, 5, "PASS");
+	kPrintString(2, 5, "PASS");
 	
 	while (1);
 }
