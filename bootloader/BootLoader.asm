@@ -13,7 +13,8 @@ TOTALSECTORCOUNT:
 								; the bootloader
 								; The maximum size is 1152 sectors 
 								; (= 0x900000byte)
-
+KERNEL32SECTORCOUNT:
+	dw 0x02						; The number of total protected mode sectors
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	Code section
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

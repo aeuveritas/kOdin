@@ -49,8 +49,8 @@ START:
 
 	; Change kernel code segment which refer to 0x00,and Set EIP as 0x00
 	; CS segment selector : EIP
-	jmp dword 0x08 : ( PROTECTEDMODE - $$ + 0x10000 )
-								; Eveno though kernel code segment refers to 
+	jmp dword 0x18 : ( PROTECTEDMODE - $$ + 0x10000 )
+								; Even though kernel code segment refers to
 								; 0x00, there is a 0x10000 offset from the 
 								; physical address.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -58,7 +58,7 @@ START:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [BITS 32]						; Below code is 32 bits code
 PROTECTEDMODE:
-	mov ax, 0x10				; The location of data segment selector
+	mov ax, 0x20				; The location of data segment selector
 	mov ds, ax					; DS segment selector
 	mov es, ax					; ES segment selector
 	mov fs, ax					; FS segment selector
@@ -77,7 +77,7 @@ PROTECTEDMODE:
 	call PRINTMESSAGE			; Call print function
 	add esp, 12					; Remove parameters
 	
-	jmp dword 0x08: 0x10200		; Jump to 0x10200 at which C++ kernel is located 
+	jmp dword 0x18: 0x10200		; Jump to 0x10200 at which C++ kernel is located 
 							
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;	Function section
@@ -173,7 +173,25 @@ GDT:
 		db 0x00
 		db 0x00
 
-	; Code segment descriptor
+	; IA-32e mode kernel code segment descriptor
+	IA_32eCODEDESCRIPTOR:
+		dw 0xFFFF				; Limit [ 15 : 0 ]
+		dw 0x0000				; Base [ 15 : 0 ]
+		db 0x00					; Base [ 23 : 16 ]
+		db 0x9A					; P = 1, DPL = 0, Code Segment, Executed/Read
+		db 0xAF					; G = 1, D = 0, L = 1, Limit [ 19 : 16 ]
+		db 0x00					; Base [ 31 : 24 ]
+
+	; IA-32e mode kernel data segment descriptor
+	IA_32eDATADESCRIPTOR:
+		dw 0xFFFF				; Limit [ 15 : 0 ]
+		dw 0x0000				; Base [ 15 : 0 ]
+		db 0x00					; Base [ 23 : 16 ]
+		db 0x92					; P = 1, DPL = 0, Data Segment, Read/Write
+		db 0xAF					; G = 1, D = 0, L = 1, Limit [ 19 : 16 ]
+		db 0x00					; Base [ 31: 24 ]
+		
+	; Protected mode kernel code segment descriptor
 	CODEDESCRIPTOR:
 		dw 0xFFFF				; Limit [ 15 : 0 ]
 		dw 0x0000				; Base [ 15 : 0 ]
@@ -182,7 +200,7 @@ GDT:
 		db 0xCF					; G = 1, D = 1, L = 0, Limit [ 19 : 16 ]
 		db 0x00					; Base [ 31 : 24 ]
 
-	; Data segment descriptor
+	; Protected mode kernel data segment descriptor
 	DATADESCRIPTOR:
 		dw 0xFFFF				; Limit [ 15 : 0 ]
 		dw 0x0000				; Base [ 15 : 0 ]

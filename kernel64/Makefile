@@ -4,23 +4,20 @@
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 
 SOURCEDIRECTORY = $(dir $(mkfile_path))
-OBJECTDIRECTORY = $(SOURCEDIRECTORY)../OUT/kernel32/
+OBJECTDIRECTORY = $(SOURCEDIRECTORY)../OUT/kernel64/
 
-NASM32 = nasm -g
-GPP32 = x86_64-pc-linux-g++ -std=c++11 -g -c -m32 -ffreestanding
-LD32 = x86_64-pc-linux-ld -melf_i386 -T $(SOURCEDIRECTORY)./elf_i386.x -nostdlib -e main -Ttext 0x10200
-OBJCOPY32 = x86_64-pc-linux-objcopy -j .text -j .data -j .rodata -j .bss -S -O binary
+NASM64 = nasm -f elf64 -g
+GPP64 = x86_64-pc-linux-g++ -std=c++11 -g -c -m64 -ffreestanding
+LD64 = x86_64-pc-linux-ld -melf_x86_64 -T $(SOURCEDIRECTORY)./elf_x86_64.x -nostdlib -e main -Ttext 0x200000
+OBJCOPY64 = x86_64-pc-linux-objcopy -j .text -j .data -j .rodata -j .bss -S -O binary
 
 ###############################################################################
 #	Set build target and rules
 ###############################################################################
-all: prepare Kernel32.bin
+all: prepare Kernel64.bin
 
 prepare:
 	mkdir -p $(OBJECTDIRECTORY)
-	
-$(OBJECTDIRECTORY)/entry.bin: $(SOURCEDIRECTORY)/entry.s
-	$(NASM32) -o $@ $<
 	
 dep:
 	@echo ===================== MAKE Dependency File ====================
@@ -28,15 +25,11 @@ dep:
 	@echo ================== Dependency Search Complete =================
 
 ExecuteInternalBuild: dep
-	make -C $(OBJECTDIRECTORY) -f $(SOURCEDIRECTORY)./Makefile Kernel32.elf
+	make -C $(OBJECTDIRECTORY) -f $(SOURCEDIRECTORY)./Makefile Kernel64.elf
 
-$(OBJECTDIRECTORY)/Kernel32.elf.bin: ExecuteInternalBuild
-	$(OBJCOPY32) $(OBJECTDIRECTORY)./Kernel32.elf $@
+Kernel64.bin: ExecuteInternalBuild
+	$(OBJCOPY64) $(OBJECTDIRECTORY)./Kernel64.elf $(OBJECTDIRECTORY)./$@
 
-Kernel32.bin: $(OBJECTDIRECTORY)/entry.bin $(OBJECTDIRECTORY)/Kernel32.elf.bin
-	cat $^ > $@
-	mv $@ $(OBJECTDIRECTORY)
-	
 clean:
 	rm -f *.bin
 	rm -rf $(OBJECTDIRECTORY)
@@ -44,25 +37,30 @@ clean:
 ###############################################################################
 #	Part will be called by OBEJCTDIRECTORY
 ###############################################################################
-CPPENTERYPOINTOBEJCTFILE = main.o
+ENTRYPOINTSOURCEFILE = $(SOURCEDIRECTORY)./entry.s
+ENTRYPOINTOBJECTFILE = entry.o
 CPPSOURCEFILES = $(wildcard $(SOURCEDIRECTORY)./*.cpp)
 ASSEMBLYSOURCEFILES = $(wildcard $(SOURCEDIRECTORY)./*.asm)
-CPPOBJECTFILES = $(subst main.o, , $(notdir $(patsubst %.cpp, %.o, $(CPPSOURCEFILES))))
+CPPOBJECTFILES = $(notdir $(patsubst %.cpp, %.o, $(CPPSOURCEFILES)))
 ASSEMBLYOBJECTFILES = $(notdir $(patsubst %.asm, %.o, $(ASSEMBLYSOURCEFILES)))
 
+# Assembly entry point build
+$(ENTRYPOINTOBJECTFILE): $(ENTRYPOINTSOURCEFILE)
+	$(NASM64) -o $@ $<
+	
 # Change .cpp to .o
 %.o: $(SOURCEDIRECTORY)./%.cpp
-	$(GPP32) $<
+	$(GPP64) $<
 	
 # Change .asm to .o
 %.o: $(SOURCEDIRECTORY)./%.asm
-	$(NASM32) -f elf32 -o $@ $<
+	$(NASM64) -o $@ $<
 	
 InternalDependency:
-	$(GPP32) -MM $(CPPSOURCEFILES) > Dependency.dep
+	$(GPP64) -MM $(CPPSOURCEFILES) > Dependency.dep
 
-Kernel32.elf: $(CPPENTERYPOINTOBEJCTFILE) $(CPPOBJECTFILES) $(ASSEMBLYOBJECTFILES)
-	$(LD32) -o $@ $^
+Kernel64.elf: $(ENTRYPOINTOBJECTFILE) $(CPPOBJECTFILES) $(ASSEMBLYOBJECTFILES)
+	$(LD64) -o $@ $^
 
 ifeq (Dependency.dep, $(wildcard Dependency.dep))
 include Dependency.dep
