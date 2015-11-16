@@ -3,13 +3,13 @@
 
 void main(void)
 {
-	DWORD dwLine;
-	kUtils clUtils;
-	
-	dwLine = 10;
-	
-	clUtils.kPrintString(2, dwLine++,
-							"PASS");
-	clUtils.kPrintString(0, dwLine++,
-							"[ PASS ]  IA-32e C++ Language Kernel Start");
+    DWORD dwLine;
+    kUtils clUtils;
+
+    dwLine = 10;
+
+    clUtils.kPrintString(2, dwLine++,
+                         "PASS");
+    clUtils.kPrintString(0, dwLine++,
+                         "[ PASS ]  IA-32e C++ Language Kernel Start");
 }

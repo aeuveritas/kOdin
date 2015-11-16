@@ -6,7 +6,7 @@
 class kUtils
 {
 public:
-	bool kPrintString(int iX, int iY, const char* pcString);
+    bool kPrintString(int iX, int iY, const char* pcString);
 };
 
 #endif /* __UTIL_HPP__ */

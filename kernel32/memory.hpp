@@ -5,11 +5,11 @@
 
 class kMemory
 {
-	kPageManager clPM;
-	
+    kPageManager clPM;
+
 public:
-	bool kIsMemoryEnough(void);
-	bool kInitializeKernel64Area(void);
-	void kInitializePageManager(void);
+    bool kIsMemoryEnough(void);
+    bool kInitializeKernel64Area(void);
+    void kInitializePageManager(void);
 };
 #endif /* __MEMORY_HPP__ */
