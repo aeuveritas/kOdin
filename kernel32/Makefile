@@ -7,7 +7,7 @@ SOURCEDIRECTORY = $(dir $(mkfile_path))
 OBJECTDIRECTORY = $(SOURCEDIRECTORY)../OUT/kernel32/
 
 NASM32 = nasm -g
-GPP32 = x86_64-pc-linux-g++ -std=c++11 -g -c -m32 -ffreestanding
+GPP32 = x86_64-pc-linux-g++ -std=c++11 -g -c -m32 -ffreestanding -fno-exceptions -fno-rtti
 LD32 = x86_64-pc-linux-ld -melf_i386 -T $(SOURCEDIRECTORY)./elf_i386.x -nostdlib -e main -Ttext 0x10200
 OBJCOPY32 = x86_64-pc-linux-objcopy -j .text -j .data -j .rodata -j .bss -S -O binary
 

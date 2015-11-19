@@ -7,7 +7,7 @@ SOURCEDIRECTORY = $(dir $(mkfile_path))
 OBJECTDIRECTORY = $(SOURCEDIRECTORY)../OUT/kernel64/
 
 NASM64 = nasm -f elf64 -g
-GPP64 = x86_64-pc-linux-g++ -std=c++11 -g -c -m64 -ffreestanding
+GPP64 = x86_64-pc-linux-g++ -std=c++11 -g -c -m64 -ffreestanding -fno-exceptions -fno-rtti
 LD64 = x86_64-pc-linux-ld -melf_x86_64 -T $(SOURCEDIRECTORY)./elf_x86_64.x -nostdlib -e main -Ttext 0x200000
 OBJCOPY64 = x86_64-pc-linux-objcopy -j .text -j .data -j .rodata -j .bss -S -O binary
 
