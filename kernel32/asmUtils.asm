@@ -34,19 +34,19 @@ _kReadCPUID:
     ; *pdwEBX
     mov esi, dword [ ebp + 16 ]     ; Store parameter 3 (dwEBX) in ESI
     mov dword [ esi ], ebx          ; pdwEBX is a pointer
-                                    ; Store paramter 3 (EAX) in the address
+                                    ; Store paramter 3 (EBX) in the address
                                     ; of pdwEBX
 
     ; *pdwECX
     mov esi, dword [ ebp + 20 ]     ; Store parameter 4 (dwECX) in ESI
     mov dword [ esi ], ecx          ; pdwECX is a pointer
-                                    ; Store paramter 4 (EAX) in the address
+                                    ; Store paramter 4 (ECX) in the address
                                     ; of pdwECX
 
     ; *pdwEDX
     mov esi, dword [ ebp + 24 ]     ; Store parameter 5 (dwEDX) in ESI
     mov dword [ esi ], edx          ; pdwEDX is a pointer
-                                    ; Store paramter 5 (EAX) in the address
+                                    ; Store paramter 5 (EDX) in the address
                                     ; of pdwEDX
 
     pop esi                         ; After the function finished,

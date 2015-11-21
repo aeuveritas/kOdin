@@ -24,7 +24,7 @@ class kPageManager
         unsigned int dwUpperFlag);
 
 public:
-    void kInitPageManager(void);
+    void kInitPage(void);
 };
 #pragma pack(pop)
 

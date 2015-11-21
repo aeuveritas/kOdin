@@ -54,5 +54,5 @@ bool kMemory::kIsMemoryEnough(void)
 
 void kMemory::kInitializePageManager(void)
 {
-    clPM.kInitPageManager();
+    clPM.kInitPage();
 }

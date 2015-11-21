@@ -22,12 +22,12 @@ void main(void)
     if (clMem.kIsMemoryEnough() == false) {
         clUtils.kPrintString(2, dwLine++, "FAIL");
         clUtils.kPrintString(0, dwLine,
-                             "Not Enough Memory!! Over 64 MB is required!!");
+                         "Not Enough Memory!! Over 64 MB is required!!");
 
         while (1);
     } else {
         clUtils.kPrintString(2, dwLine++,
-                             "PASS");
+                         "PASS");
     }
 
     // Initialize kernel area for IA-32e mode
@@ -35,9 +35,9 @@ void main(void)
                          "[      ]  IA-32e Kernel Area Initialize");
     if (clMem.kInitializeKernel64Area() == false) {
         clUtils.kPrintString(2, dwLine++,
-                             "FAIL");
+                         "FAIL");
         clUtils.kPrintString(0, dwLine,
-                             "Kernel Area initialization Fail!!");
+                         "Kernel Area initialization Fail!!");
 
         while (1);
     }
@@ -68,12 +68,12 @@ void main(void)
                          "[      ]  64 bits Mode Support Check");
     if (dwEDX & (1 << 29)) {
         clUtils.kPrintString(2, dwLine++,
-                             "PASS");
+                         "PASS");
     } else {
         clUtils.kPrintString(2, dwLine++,
-                             "FAIL");
+                         "FAIL");
         clUtils.kPrintString(0, dwLine,
-                             "This processor does not support 64 bits mode");
+                         "This processor does not support 64 bits mode");
 
         while (1);
     }

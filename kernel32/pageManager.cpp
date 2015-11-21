@@ -1,7 +1,7 @@
 #include "pageManager.hpp"
 
 // Initialize page tables  for IA-32e mode
-void kPageManager::kInitPageManager(void)
+void kPageManager::kInitPage(void)
 {
     // Allocate PML4 table
     kSetPageTableAddress(&pstPML4T, (kPageTableEntry*)0x100000);
