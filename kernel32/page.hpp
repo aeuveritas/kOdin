@@ -26,7 +26,7 @@
 #pragma pack(push, 1)
 
 // structure for Page Entry
-struct kPageTableEntry {
+class kPageTableEntry {
     // For PML4 and PDP
     // 1 bit:   P, RW, US, PWT, PCD, A
     // 3 bits:  Reserved, Avail
@@ -42,6 +42,10 @@ struct kPageTableEntry {
     // 11 bits: Avail
     // 1 bit:   EXB
     DWORD dwUpperBaseAddressAndEXB;
+
+public:
+    void setDwAttributeAndLowerBaseAddress(DWORD input);
+    void setDwUpperBaseAddressAndEXB(DWORD input);
 };
 #pragma pak(pop)
 
