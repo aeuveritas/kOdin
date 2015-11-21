@@ -1,5 +1,4 @@
-#ifndef __PAGE_HPP__
-#define __PAGE_HPP__
+#pragma once
 
 #include "types.hpp"
 
@@ -49,4 +48,3 @@ public:
 };
 #pragma pak(pop)
 
-#endif /* __PAGE_HPP__ */

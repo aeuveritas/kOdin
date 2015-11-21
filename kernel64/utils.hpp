@@ -1,5 +1,4 @@
-#ifndef __UTILS_HPP__
-#define __UTILS_HPP__
+#pragma once
 
 #include "types.hpp"
 
@@ -9,4 +8,3 @@ public:
     bool kPrintString(int iX, int iY, const char* pcString);
 };
 
-#endif /* __UTIL_HPP__ */

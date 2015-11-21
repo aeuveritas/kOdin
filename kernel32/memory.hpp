@@ -1,5 +1,4 @@
-#ifndef __MEMORY_HPP__
-#define __MEMORY_HPP__
+#pragma once
 
 #include "pageManager.hpp"
 
@@ -12,4 +11,3 @@ public:
     bool kInitializeKernel64Area(void);
     void kInitializePageManager(void);
 };
-#endif /* __MEMORY_HPP__ */

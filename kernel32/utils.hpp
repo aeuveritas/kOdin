@@ -1,5 +1,4 @@
-#ifndef __UTILS_HPP__
-#define __UTILS_HPP__
+#pragma once
 
 #include "types.hpp"
 #include "asmUtils.hpp"
@@ -14,4 +13,3 @@ public:
     void kCopyKernel64ImageTo2MB(void);
 };
 
-#endif /* __UTIL_HPP__ */

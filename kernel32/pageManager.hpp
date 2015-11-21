@@ -1,5 +1,4 @@
-#ifndef __PAGE_MANAGER_HPP__
-#define __PAGE_MANAGER_HPP__
+#pragma once
 
 #include "page.hpp"
 
@@ -28,4 +27,3 @@ public:
 };
 #pragma pack(pop)
 
-#endif /* __PAGE_MANAGER_HPP__ */
