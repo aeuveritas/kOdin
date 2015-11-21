@@ -43,8 +43,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   * utils.hpp<br>
 * kernel64<br>
   * Makefile<br>
+  * asmUtils.asm<br>
+  * asmUtils.hpp<br>
   * elf_x86_64.x<br>
   * entry.s<br>
+  * keyMappingEntry.hpp
+  * keyboardManager.cpp
+  * keyboardManager.hpp
   * main.cpp<br>
   * types.hpp<br>
   * utils.cpp<br>
@@ -68,3 +73,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 [8. Initializing Memory](https://aeuveritas.github.io/Initializing-memory/)<br>
 [9. Activating Paging](https://aeuveritas.github.io/Activating-Paging/)<br>
 [10. Switching to the IA-32e Mode](https://aeuveritas.github.io/Switching-to-the-IA-32e-Mode/)<br>
+[11. Adding Keyboard Driver](https://aeuveritas.github.io/Adding-Keyboard-Driver/)<br>
+

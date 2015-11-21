@@ -60,8 +60,8 @@ void kPageManager::kSetPageEntryData(
     unsigned int dwLowerFlags,
     unsigned int dwUpperFlag)
 {
-    pstEntry->setDwAttributeAndLowerBaseAddress(dwLowerBaseAddress | dwLowerFlags);
-    pstEntry->setDwUpperBaseAddressAndEXB((dwUpperBaseAddress & 0xFF) | dwUpperFlag);
+    pstEntry->dwAttributeAndLowerBaseAddress = dwLowerBaseAddress | dwLowerFlags;
+    pstEntry->dwUpperBaseAddressAndEXB =(dwUpperBaseAddress & 0xFF) | dwUpperFlag;
 
     return;
 }

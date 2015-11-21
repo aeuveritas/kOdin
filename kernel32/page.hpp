@@ -21,11 +21,11 @@
 #define PAGE_MAXENTRYCOUNT      512
 #define PAGE_DEFAULTSIZE        0x200000
 
-// Structures
+// Struct
 #pragma pack(push, 1)
 
-// structure for Page Entry
-class kPageTableEntry {
+// Struct for Page Entry
+struct kPageTableEntry {
     // For PML4 and PDP
     // 1 bit:   P, RW, US, PWT, PCD, A
     // 3 bits:  Reserved, Avail
@@ -41,10 +41,6 @@ class kPageTableEntry {
     // 11 bits: Avail
     // 1 bit:   EXB
     DWORD dwUpperBaseAddressAndEXB;
-
-public:
-    void setDwAttributeAndLowerBaseAddress(DWORD input);
-    void setDwUpperBaseAddressAndEXB(DWORD input);
 };
 #pragma pak(pop)
 
