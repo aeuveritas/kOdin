@@ -387,7 +387,7 @@ bool kKeyboardManager::kIsUseCombinedCode(BYTE bScanCode)
 }
 
 // Update a combination key state and Sync LED state.
-void kKeyboardManager::updateCombinationKeyStatusAndLED(BYTE bScanCode)
+void kKeyboardManager::kUpdateCombinationKeyStatusAndLED(BYTE bScanCode)
 {
     BYTE bDownScanCode;
     bool bDown;
@@ -508,7 +508,7 @@ bool kKeyboardManager::kConvertScanCodeToASCIICode(BYTE bScanCode,
     }
     
     // update push or release of a combination key
-    updateCombinationKeyStatusAndLED(bScanCode);
+    kUpdateCombinationKeyStatusAndLED(bScanCode);
     
     // Skip single shift key
     if (bShiftDown == true &&

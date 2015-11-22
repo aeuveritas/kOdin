@@ -23,7 +23,7 @@ class kKeyboardManager
     bool kIsNumberOrSymbolScanCode(BYTE bScanCode);
     bool kIsNumberPadScanCode(BYTE bScanCode);
     bool kIsUseCombinedCode(BYTE bScanCode);
-    void updateCombinationKeyStatusAndLED(BYTE bScanCode);
+    void kUpdateCombinationKeyStatusAndLED(BYTE bScanCode);
     
 public:
     kKeyboardManager();
