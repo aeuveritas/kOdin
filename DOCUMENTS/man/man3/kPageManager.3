@@ -1,0 +1,91 @@
+.TH "kPageManager" 3 "Sat Dec 5 2015" "kOdin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+kPageManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pageManager\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBkInitPage\fP (void)"
+.br
+.RI "\fIInitialize page tables for IA-32e mode\&. \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBkSetPageTableAddress\fP (\fBkPageTableEntry\fP **pageTable, \fBkPageTableEntry\fP *address)"
+.br
+.RI "\fISet the base address of the page tables\&. \fP"
+.ti -1c
+.RI "void \fBkSetPageEntryData\fP (\fBkPageTableEntry\fP *pstEntry, unsigned int dwUpperBaseAddress, unsigned int dwLowerBaseAddress, unsigned int dwLowerFlags, unsigned int dwUpperFlag)"
+.br
+.RI "\fISet base address and flags for the page entry\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBkPageTableEntry\fP * \fBpstPML4T\fP"
+.br
+.ti -1c
+.RI "\fBkPageTableEntry\fP * \fBpstPDPT\fP"
+.br
+.ti -1c
+.RI "\fBkPageTableEntry\fP * \fBpstPDT\fP"
+.br
+.ti -1c
+.RI "\fBkPageTableEntry\fP * \fBpstPT\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file pageManager\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void kPageManager::kInitPage (void)"
+
+.PP
+Initialize page tables for IA-32e mode\&. 
+.PP
+Definition at line 4 of file pageManager\&.cpp\&.
+.SS "void kPageManager::kSetPageEntryData (\fBkPageTableEntry\fP *pstEntry, unsigned intdwUpperBaseAddress, unsigned intdwLowerBaseAddress, unsigned intdwLowerFlags, unsigned intdwUpperFlag)\fC [private]\fP"
+
+.PP
+Set base address and flags for the page entry\&. 
+.PP
+Definition at line 56 of file pageManager\&.cpp\&.
+.SS "void kPageManager::kSetPageTableAddress (\fBkPageTableEntry\fP **pageTable, \fBkPageTableEntry\fP *address)\fC [private]\fP"
+
+.PP
+Set the base address of the page tables\&. 
+.PP
+Definition at line 47 of file pageManager\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBkPageTableEntry\fP* kPageManager::pstPDPT\fC [private]\fP"
+
+.PP
+Definition at line 12 of file pageManager\&.hpp\&.
+.SS "\fBkPageTableEntry\fP* kPageManager::pstPDT\fC [private]\fP"
+
+.PP
+Definition at line 13 of file pageManager\&.hpp\&.
+.SS "\fBkPageTableEntry\fP* kPageManager::pstPML4T\fC [private]\fP"
+
+.PP
+Definition at line 11 of file pageManager\&.hpp\&.
+.SS "\fBkPageTableEntry\fP* kPageManager::pstPT\fC [private]\fP"
+
+.PP
+Definition at line 14 of file pageManager\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for kOdin from the source code\&.

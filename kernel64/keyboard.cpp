@@ -1,6 +1,7 @@
 #include "keyboard.hpp"
 #include "utils.hpp"
 
+/// Constructor of kKeyboard class
 kKeyboard::kKeyboard(void) 
 {
     bShiftDown = false;
@@ -14,8 +15,11 @@ kKeyboard::kKeyboard(void)
 ///////////////////////////////////////////////////////////////////////////////
 // Functions related to keyboard controller and keyboard 
 ///////////////////////////////////////////////////////////////////////////////
-// Check whether or not there is a received data 
-// in the output buffer (port 0x60).
+
+/** 
+ * Check whether or not there is a received data 
+ * in the output buffer (port 0x60).
+ */
 bool kKeyboard::kIsOutputBufferFull(void)
 {
     // Read the state register (port 0x64), 
@@ -29,7 +33,7 @@ bool kKeyboard::kIsOutputBufferFull(void)
     return false;
 }
 
-// Check whether ot nor there is a data in the input buffer (port 0x60).
+/// Check whether ot nor there is a data in the input buffer (port 0x60).
 bool kKeyboard::kIsInputBufferFull(void)
 {
     // Read the state register (port 0x64),
@@ -43,7 +47,7 @@ bool kKeyboard::kIsInputBufferFull(void)
     return false;
 }
 
-// Activate keyboard.
+/// Activate keyboard.
 bool kKeyboard::kActivateKeyboard(void)
 {
     // Activate a keyboard device by sending keyboard activating command (0xAE)
@@ -97,7 +101,7 @@ bool kKeyboard::kActivateKeyboard(void)
     return false;
 }
 
-// Read a key from the output buffer (port 0x60).
+/// Read a key from the output buffer (port 0x60).
 BYTE kKeyboard::kGetKeyboardScanCode(void)
 {
     // Wait until the output buffer (port 0x60) is full.
@@ -109,7 +113,7 @@ BYTE kKeyboard::kGetKeyboardScanCode(void)
     return _kInPortByte(0x60);
 }
 
-// Change the sate of LEDs.
+/// Change the sate of LEDs.
 bool kKeyboard::kChangeKeyboardLED(bool bCapsLockOn,
                                           bool bNumLockOn, bool bScrollLockOn)
 {
@@ -206,7 +210,7 @@ bool kKeyboard::kChangeKeyboardLED(bool bCapsLockOn,
     return true;
 }
 
-// Activate A20 gate.
+/// Activate A20 gate.
 void kKeyboard::kEnableA20Gate(void)
 {
     BYTE bOutputPortData;
@@ -255,7 +259,7 @@ void kKeyboard::kEnableA20Gate(void)
     return;
 }
 
-// Reset a processor
+/// Reset a processor
 void kKeyboard::kReboot(void)
 {
     // If the input buffer (port 0x60) is empty,
@@ -287,7 +291,7 @@ void kKeyboard::kReboot(void)
 ///////////////////////////////////////////////////////////////////////////////
 // Functions to translate Scan Code to ASCII 
 ///////////////////////////////////////////////////////////////////////////////
-// Check the Scan Code is alphabet.
+/// Check the Scan Code is alphabet.
 bool kKeyboard::kIsAlphabetScanCode(BYTE bScanCode)
 {
     // Check the Scan Code is in the range of the alphabet.
@@ -300,7 +304,7 @@ bool kKeyboard::kIsAlphabetScanCode(BYTE bScanCode)
     return false;
 }
 
-// Check the Scan Code is number or symbol.
+/// Check the Scan Code is number or symbol.
 bool kKeyboard::kIsNumberOrSymbolScanCode(BYTE bScanCode)
 {
     // If it is in number pad or extended key range(Scan Code 2 ~ 53)
@@ -314,7 +318,7 @@ bool kKeyboard::kIsNumberOrSymbolScanCode(BYTE bScanCode)
     return false;
 }
 
-// Check the Scan Code is in number pad.
+/// Check the Scan Code is in number pad.
 bool kKeyboard::kIsNumberPadScanCode(BYTE bScanCode)
 {
     // The range of number pad is 71 ~ 83.
@@ -326,7 +330,7 @@ bool kKeyboard::kIsNumberPadScanCode(BYTE bScanCode)
     return false;
 }
 
-// Check whether or not a combination key should be used.
+/// Check whether or not a combination key should be used.
 bool kKeyboard::kIsUseCombinedCode(BYTE bScanCode)
 {
     BYTE bDownScanCode;
@@ -386,7 +390,7 @@ bool kKeyboard::kIsUseCombinedCode(BYTE bScanCode)
     return bUseCombinedKey;
 }
 
-// Update a combination key state and Sync LED state.
+/// Update a combination key state and Sync LED state.
 void kKeyboard::kUpdateCombinationKeyStatusAndLED(BYTE bScanCode)
 {
     BYTE bDownScanCode;
@@ -446,7 +450,7 @@ void kKeyboard::kUpdateCombinationKeyStatusAndLED(BYTE bScanCode)
     return;
 }
 
-// Translate ScFALSEan Code to ASCII.
+/// Translate ScFALSEan Code to ASCII.
 bool kKeyboard::kConvertScanCodeToASCIICode(BYTE bScanCode, 
                                                    char* pbASCIICode, 
                                                    BYTE* pbFlags)

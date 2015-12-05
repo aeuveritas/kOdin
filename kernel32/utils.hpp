@@ -2,6 +2,7 @@
 
 #include "types.hpp"
 
+/// Class for Utilities
 class kUtils
 {
 public:

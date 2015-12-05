@@ -1,0 +1,216 @@
+.TH "md__r_e_a_d_m_e" 3 "Sat Dec 5 2015" "kOdin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__r_e_a_d_m_e \- kOdin 
+'kOdin' is a custom 64 bits OS which is written in C++\&. 'kOdin' is under construction, but it will be a unix-like and most POSIX-compliant\&.
+.PP
+.SH "License"
+.PP
+.PP
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version\&.
+.PP
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE\&. See the GNU General Public License for more details\&.
+.PP
+You should have received a copy of the GNU General Public License along with this program\&. If not, see http://www.gnu.org/licenses/\&.
+.PP
+.SH "Source tree"
+.PP
+.PP
+.IP "\(bu" 2
+\&.
+.br
+
+.IP "\(bu" 2
+Makefile
+.br
+
+.IP "\(bu" 2
+\fBREADME\&.md\fP
+.br
+
+.IP "\(bu" 2
+kOdin\&.kdev4
+.br
+
+.IP "\(bu" 2
+run\&.sh
+.br
+
+.IP "\(bu" 2
+bootloader
+.br
+.IP "  \(bu" 4
+BootLoader\&.asm
+.br
+
+.IP "  \(bu" 4
+Makefile
+.br
+
+.PP
+
+.IP "\(bu" 2
+kernel32
+.br
+.IP "  \(bu" 4
+Makefile
+.br
+
+.IP "  \(bu" 4
+asmUtils\&.asm
+.br
+
+.IP "  \(bu" 4
+\fBcpu\&.hpp\fP
+.br
+
+.IP "  \(bu" 4
+\fBcpu\&.cpp\fP
+.br
+
+.IP "  \(bu" 4
+elf_i386\&.x
+.br
+
+.IP "  \(bu" 4
+entry\&.s
+.br
+
+.IP "  \(bu" 4
+main\&.cpp
+.br
+
+.IP "  \(bu" 4
+\fBmemory\&.cpp\fP
+.br
+
+.IP "  \(bu" 4
+\fBmemory\&.hpp\fP
+.br
+
+.IP "  \(bu" 4
+\fBpage\&.hpp\fP
+.br
+
+.IP "  \(bu" 4
+\fBpageManager\&.cpp\fP
+.br
+
+.IP "  \(bu" 4
+\fBpageManager\&.hpp\fP
+.br
+
+.IP "  \(bu" 4
+types\&.hpp
+.br
+
+.IP "  \(bu" 4
+utils\&.cpp
+.br
+
+.IP "  \(bu" 4
+utils\&.hpp
+.br
+
+.PP
+
+.IP "\(bu" 2
+kernel64
+.br
+.IP "  \(bu" 4
+Makefile
+.br
+
+.IP "  \(bu" 4
+asmUtils\&.asm
+.br
+
+.IP "  \(bu" 4
+\fBasmUtils\&.hpp\fP
+.br
+
+.IP "  \(bu" 4
+elf_x86_64\&.x
+.br
+
+.IP "  \(bu" 4
+entry\&.s
+.br
+
+.IP "  \(bu" 4
+\fBkeyMappingEntry\&.hpp\fP
+.IP "  \(bu" 4
+keyboardManager\&.cpp
+.IP "  \(bu" 4
+keyboardManager\&.hpp
+.IP "  \(bu" 4
+main\&.cpp
+.br
+
+.IP "  \(bu" 4
+types\&.hpp
+.br
+
+.IP "  \(bu" 4
+utils\&.cpp
+.br
+
+.IP "  \(bu" 4
+utils\&.hpp
+.br
+
+.PP
+
+.IP "\(bu" 2
+utility
+.br
+.IP "  \(bu" 4
+Makefile
+.br
+
+.IP "  \(bu" 4
+imageMaker
+.br
+.IP "    \(bu" 6
+Makefile
+.br
+
+.IP "    \(bu" 6
+\fBimageMaker\&.c\fP
+.br
+
+.PP
+
+.PP
+
+.PP
+.PP
+.SH "Build history"
+.PP
+.PP
+\fC0\&. kOdin\fP
+.br
+ \fC1\&. Setting Build Environment for kOdin\fP
+.br
+ \fC2\&. Basic Knowledge for IA 64 Bit Processor\fP
+.br
+ \fC3\&. Booting & Bootloader\fP
+.br
+ \fC4\&. Implementing Bootloader\fP
+.br
+ \fC5\&. Loading the OS image\fP
+.br
+ \fC6\&. Entering the Protected Mode\fP
+.br
+ \fC7\&. Writing a C++ Kernel Code\fP
+.br
+ \fC8\&. Initializing Memory\fP
+.br
+ \fC9\&. Activating Paging\fP
+.br
+ \fC10\&. Switching to the IA-32e Mode\fP
+.br
+ \fC11\&. Adding Keyboard Driver\fP
+.br
+ 

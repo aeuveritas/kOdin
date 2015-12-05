@@ -8,7 +8,7 @@
 
 #pragma pack(push, 1)
 
-// Data structure for text to print in video mode
+/// Data structure for text to print in video mode
 typedef struct kCharactorStruct {
     BYTE bCharactor;
     BYTE bAttribute;

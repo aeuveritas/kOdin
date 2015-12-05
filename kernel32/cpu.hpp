@@ -7,6 +7,7 @@ extern "C" {
     void _kSwitchAndExecute64bitsKernel(void);
 }
 
+/// Class for CPU registers
 class kCpu
 {
 public:

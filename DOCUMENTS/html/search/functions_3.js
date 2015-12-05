@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['kactivatekeyboard',['kActivateKeyboard',['../classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c',1,'kKeyboard']]],
+  ['kchangekeyboardled',['kChangeKeyboardLED',['../classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc',1,'kKeyboard']]],
+  ['kconvertscancodetoasciicode',['kConvertScanCodeToASCIICode',['../classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a',1,'kKeyboard']]],
+  ['kcopykernel64imageto2mb',['kCopyKernel64ImageTo2MB',['../classk_memory.html#ac147a25d1fadf2075cd6f05a998ab13d',1,'kMemory']]],
+  ['kenablea20gate',['kEnableA20Gate',['../classk_keyboard.html#a502b6e2fbe5d089c35adeef652919289',1,'kKeyboard']]],
+  ['kgetkeyboardscancode',['kGetKeyboardScanCode',['../classk_keyboard.html#a714eb7f95810867f33330f49cfab90c7',1,'kKeyboard']]],
+  ['kinitializekernel64area',['kInitializeKernel64Area',['../classk_memory.html#a3232feb17e3d9a1f39a93e71b5c3a999',1,'kMemory']]],
+  ['kinitializepagemanager',['kInitializePageManager',['../classk_memory.html#a5c46bc3b2d7c0ec2f8abef571a732aed',1,'kMemory']]],
+  ['kinitpage',['kInitPage',['../classk_page_manager.html#ab290429de75b7119fa1a0a8f0bddc9ad',1,'kPageManager']]],
+  ['kisalphabetscancode',['kIsAlphabetScanCode',['../classk_keyboard.html#a699bd3a2eeae0bdf0247f43b9f94ae88',1,'kKeyboard']]],
+  ['kisinputbufferfull',['kIsInputBufferFull',['../classk_keyboard.html#ab1093813a299c6d5d6f45e3dc4c757a3',1,'kKeyboard']]],
+  ['kismemoryenough',['kIsMemoryEnough',['../classk_memory.html#a9fc70470156b717e9e6309e03a7da4c5',1,'kMemory']]],
+  ['kisnumberorsymbolscancode',['kIsNumberOrSymbolScanCode',['../classk_keyboard.html#a866bf09378d34ec83476869953d8cbfb',1,'kKeyboard']]],
+  ['kisnumberpadscancode',['kIsNumberPadScanCode',['../classk_keyboard.html#a40824696636e8f49fe7eef695a97586e',1,'kKeyboard']]],
+  ['kisoutputbufferfull',['kIsOutputBufferFull',['../classk_keyboard.html#a889d812f2ebc66775d84dba823e6fb65',1,'kKeyboard']]],
+  ['kisusecombinedcode',['kIsUseCombinedCode',['../classk_keyboard.html#a451c6411404db8f08a13dfc3d76059a2',1,'kKeyboard']]],
+  ['kkeyboard',['kKeyboard',['../classk_keyboard.html#a6b21ceebd8e47d1d5b43381cf3566236',1,'kKeyboard']]],
+  ['kprintstring',['kPrintString',['../classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb',1,'kUtils::kPrintString(int iX, int iY, const char *pcString)'],['../classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb',1,'kUtils::kPrintString(int iX, int iY, const char *pcString)']]],
+  ['kreadcpuid',['kReadCPUID',['../classk_cpu.html#a76637d24ba19b551fe94178b42a23044',1,'kCpu']]],
+  ['kreboot',['kReboot',['../classk_keyboard.html#af11e0c261c17dba63705b65071ee86ba',1,'kKeyboard']]],
+  ['ksetpageentrydata',['kSetPageEntryData',['../classk_page_manager.html#a9109d23ffa662fa53b8c99f18f123e8e',1,'kPageManager']]],
+  ['ksetpagetableaddress',['kSetPageTableAddress',['../classk_page_manager.html#ac8618fc3f0e55170e9a34fa6c996ccaa',1,'kPageManager']]],
+  ['kshell',['kShell',['../classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038',1,'kUtils']]],
+  ['kswitchandexecute64bitskernel',['kSwitchAndExecute64bitsKernel',['../classk_cpu.html#a219049a9ee5a67a6d81088ac875832b6',1,'kCpu']]],
+  ['kupdatecombinationkeystatusandled',['kUpdateCombinationKeyStatusAndLED',['../classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944',1,'kKeyboard']]]
+];

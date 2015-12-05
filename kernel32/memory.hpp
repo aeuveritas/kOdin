@@ -2,6 +2,7 @@
 
 #include "pageManager.hpp"
 
+/// Class for memory
 class kMemory
 {
     kPageManager clPM;

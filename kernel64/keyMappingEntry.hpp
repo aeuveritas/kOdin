@@ -54,7 +54,7 @@
 
 #pragma pack(push, 1)
 
-// Struct for Scan Code Table
+/// Struct for Scan Code Table
 struct kKeyMappingEntry {
     // Normal ASCII
     BYTE bNormalCode;
@@ -65,7 +65,7 @@ struct kKeyMappingEntry {
 
 #pragma pack(pop)
 
-// Mapping Table
+/// Mapping Table
 const kKeyMappingEntry stKeyMappingTable[KEY_MAPPINGTABLEMAXCOUNT] = 
 {
     {KEY_NONE           , KEY_NONE          }, /* 0  */

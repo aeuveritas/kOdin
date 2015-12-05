@@ -1,0 +1,17 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="291,5,423,32"/>
+<area shape="rect" id="node3" href="$classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c" title="Activate keyboard. " alt="" coords="800,157,1003,184"/>
+<area shape="rect" id="node8" href="$classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc" title="Change the sate of LEDs. " alt="" coords="789,216,1014,243"/>
+<area shape="rect" id="node9" href="$classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038" title="Simple shell. " alt="" coords="105,107,205,133"/>
+<area shape="rect" id="node4" href="$asm_utils_8hpp.html#a3118257a6a597aefbf404ee707c1dae4" title="_kOutPortByte" alt="" coords="1127,208,1235,235"/>
+<area shape="rect" id="node5" href="$classk_keyboard.html#ab1093813a299c6d5d6f45e3dc4c757a3" title="Check whether ot nor there is a data in the input buffer (port 0x60). " alt="" coords="1084,259,1279,285"/>
+<area shape="rect" id="node6" href="$asm_utils_8hpp.html#a22130730d12e1e17d6201ef36cd90222" title="_kInPortByte" alt="" coords="1341,157,1440,184"/>
+<area shape="rect" id="node7" href="$classk_keyboard.html#a889d812f2ebc66775d84dba823e6fb65" title="kKeyboard::kIsOutputBufferFull" alt="" coords="1079,107,1284,133"/>
+<area shape="rect" id="node10" href="$classk_keyboard.html#a714eb7f95810867f33330f49cfab90c7" title="Read a key from the output buffer (port 0x60). " alt="" coords="783,56,1019,83"/>
+<area shape="rect" id="node11" href="$classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="254,209,461,250"/>
+<area shape="rect" id="node12" href="$classk_keyboard.html#a451c6411404db8f08a13dfc3d76059a2" title="Check whether or not a combination key should be used. " alt="" coords="509,325,733,352"/>
+<area shape="rect" id="node16" href="$classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944" title="Update a combination key state and Sync LED state. " alt="" coords="514,209,729,250"/>
+<area shape="rect" id="node13" href="$classk_keyboard.html#a699bd3a2eeae0bdf0247f43b9f94ae88" title="Check the Scan Code is alphabet. " alt="" coords="1070,372,1293,399"/>
+<area shape="rect" id="node14" href="$classk_keyboard.html#a866bf09378d34ec83476869953d8cbfb" title="Check the Scan Code is number or symbol. " alt="" coords="794,318,1009,359"/>
+<area shape="rect" id="node15" href="$classk_keyboard.html#a40824696636e8f49fe7eef695a97586e" title="Check the Scan Code is in number pad. " alt="" coords="781,267,1021,293"/>
+</map>

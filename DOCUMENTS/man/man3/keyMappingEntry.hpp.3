@@ -1,0 +1,338 @@
+.TH "kernel64/keyMappingEntry.hpp" 3 "Sat Dec 5 2015" "kOdin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+kernel64/keyMappingEntry.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'types\&.hpp'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBkKeyMappingEntry\fP"
+.br
+.RI "\fIStruct for Scan Code Table\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBKEY_SKIPCOUNTFORPAUSE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBKEY_FLAGS_UP\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBKEY_FLAGS_DOWN\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBKEY_FLAGS_EXTENDEDKEY\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBKEY_MAPPINGTABLEMAXCOUNT\fP   89"
+.br
+.ti -1c
+.RI "#define \fBKEY_NONE\fP   0x00"
+.br
+.ti -1c
+.RI "#define \fBKEY_ENTER\fP   '\\n'"
+.br
+.ti -1c
+.RI "#define \fBKEY_TAB\fP   '\\t'"
+.br
+.ti -1c
+.RI "#define \fBKEY_ESC\fP   0x1B"
+.br
+.ti -1c
+.RI "#define \fBKEY_BACKSPACE\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBKEY_CTRL\fP   0x81"
+.br
+.ti -1c
+.RI "#define \fBKEY_LSHIFT\fP   0x82"
+.br
+.ti -1c
+.RI "#define \fBKEY_RSHIFT\fP   0x83"
+.br
+.ti -1c
+.RI "#define \fBKEY_PRINTSCREEN\fP   0x84"
+.br
+.ti -1c
+.RI "#define \fBKEY_LALT\fP   0x85"
+.br
+.ti -1c
+.RI "#define \fBKEY_CAPSLOCK\fP   0x86"
+.br
+.ti -1c
+.RI "#define \fBKEY_F1\fP   0x87"
+.br
+.ti -1c
+.RI "#define \fBKEY_F2\fP   0x88"
+.br
+.ti -1c
+.RI "#define \fBKEY_F3\fP   0x89"
+.br
+.ti -1c
+.RI "#define \fBKEY_F4\fP   0x8A"
+.br
+.ti -1c
+.RI "#define \fBKEY_F5\fP   0x8B"
+.br
+.ti -1c
+.RI "#define \fBKEY_F6\fP   0x8C"
+.br
+.ti -1c
+.RI "#define \fBKEY_F7\fP   0x8D"
+.br
+.ti -1c
+.RI "#define \fBKEY_F8\fP   0x8E"
+.br
+.ti -1c
+.RI "#define \fBKEY_F9\fP   0x8F"
+.br
+.ti -1c
+.RI "#define \fBKEY_F10\fP   0x90"
+.br
+.ti -1c
+.RI "#define \fBKEY_NUMLOCK\fP   0x91"
+.br
+.ti -1c
+.RI "#define \fBKEY_SCROLLLOCK\fP   0x92"
+.br
+.ti -1c
+.RI "#define \fBKEY_HOME\fP   0x93"
+.br
+.ti -1c
+.RI "#define \fBKEY_UP\fP   0x94"
+.br
+.ti -1c
+.RI "#define \fBKEY_PAGEUP\fP   0x95"
+.br
+.ti -1c
+.RI "#define \fBKEY_LEFT\fP   0x96"
+.br
+.ti -1c
+.RI "#define \fBKEY_CENTER\fP   0x97"
+.br
+.ti -1c
+.RI "#define \fBKEY_RIGHT\fP   0x98"
+.br
+.ti -1c
+.RI "#define \fBKEY_END\fP   0x99"
+.br
+.ti -1c
+.RI "#define \fBKEY_DOWN\fP   0x9A"
+.br
+.ti -1c
+.RI "#define \fBKEY_PAGEDOWN\fP   0x9B"
+.br
+.ti -1c
+.RI "#define \fBKEY_INS\fP   0x9C"
+.br
+.ti -1c
+.RI "#define \fBKEY_DEL\fP   0x9D"
+.br
+.ti -1c
+.RI "#define \fBKEY_F11\fP   0x9E"
+.br
+.ti -1c
+.RI "#define \fBKEY_F12\fP   0x9F"
+.br
+.ti -1c
+.RI "#define \fBKEY_PAUSE\fP   0xA0"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const \fBkKeyMappingEntry\fP \fBstKeyMappingTable\fP [\fBKEY_MAPPINGTABLEMAXCOUNT\fP]"
+.br
+.RI "\fIMapping Table\&. \fP"
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define KEY_BACKSPACE   0x08"
+
+.PP
+Definition at line 21 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_CAPSLOCK   0x86"
+
+.PP
+Definition at line 27 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_CENTER   0x97"
+
+.PP
+Definition at line 44 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_CTRL   0x81"
+
+.PP
+Definition at line 22 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_DEL   0x9D"
+
+.PP
+Definition at line 50 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_DOWN   0x9A"
+
+.PP
+Definition at line 47 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_END   0x99"
+
+.PP
+Definition at line 46 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_ENTER   '\\n'"
+
+.PP
+Definition at line 18 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_ESC   0x1B"
+
+.PP
+Definition at line 20 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F1   0x87"
+
+.PP
+Definition at line 28 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F10   0x90"
+
+.PP
+Definition at line 37 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F11   0x9E"
+
+.PP
+Definition at line 51 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F12   0x9F"
+
+.PP
+Definition at line 52 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F2   0x88"
+
+.PP
+Definition at line 29 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F3   0x89"
+
+.PP
+Definition at line 30 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F4   0x8A"
+
+.PP
+Definition at line 31 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F5   0x8B"
+
+.PP
+Definition at line 32 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F6   0x8C"
+
+.PP
+Definition at line 33 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F7   0x8D"
+
+.PP
+Definition at line 34 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F8   0x8E"
+
+.PP
+Definition at line 35 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_F9   0x8F"
+
+.PP
+Definition at line 36 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_FLAGS_DOWN   0x01"
+
+.PP
+Definition at line 11 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_FLAGS_EXTENDEDKEY   0x02"
+
+.PP
+Definition at line 12 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_FLAGS_UP   0x00"
+
+.PP
+Definition at line 10 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_HOME   0x93"
+
+.PP
+Definition at line 40 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_INS   0x9C"
+
+.PP
+Definition at line 49 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_LALT   0x85"
+
+.PP
+Definition at line 26 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_LEFT   0x96"
+
+.PP
+Definition at line 43 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_LSHIFT   0x82"
+
+.PP
+Definition at line 23 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_MAPPINGTABLEMAXCOUNT   89"
+
+.PP
+Definition at line 15 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_NONE   0x00"
+
+.PP
+Definition at line 17 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_NUMLOCK   0x91"
+
+.PP
+Definition at line 38 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_PAGEDOWN   0x9B"
+
+.PP
+Definition at line 48 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_PAGEUP   0x95"
+
+.PP
+Definition at line 42 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_PAUSE   0xA0"
+
+.PP
+Definition at line 53 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_PRINTSCREEN   0x84"
+
+.PP
+Definition at line 25 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_RIGHT   0x98"
+
+.PP
+Definition at line 45 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_RSHIFT   0x83"
+
+.PP
+Definition at line 24 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_SCROLLLOCK   0x92"
+
+.PP
+Definition at line 39 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_SKIPCOUNTFORPAUSE   2"
+
+.PP
+Definition at line 7 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_TAB   '\\t'"
+
+.PP
+Definition at line 19 of file keyMappingEntry\&.hpp\&.
+.SS "#define KEY_UP   0x94"
+
+.PP
+Definition at line 41 of file keyMappingEntry\&.hpp\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const \fBkKeyMappingEntry\fP stKeyMappingTable[\fBKEY_MAPPINGTABLEMAXCOUNT\fP]"
+
+.PP
+Mapping Table\&. 
+.PP
+Definition at line 69 of file keyMappingEntry\&.hpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for kOdin from the source code\&.

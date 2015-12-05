@@ -1,0 +1,7 @@
+<map id="kKeyboard::kIsAlphabetScanCode" name="kKeyboard::kIsAlphabetScanCode">
+<area shape="rect" id="node2" href="$classk_keyboard.html#a866bf09378d34ec83476869953d8cbfb" title="Check the Scan Code is number or symbol. " alt="" coords="278,5,493,46"/>
+<area shape="rect" id="node3" href="$classk_keyboard.html#a451c6411404db8f08a13dfc3d76059a2" title="Check whether or not a combination key should be used. " alt="" coords="541,41,765,68"/>
+<area shape="rect" id="node4" href="$classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="814,34,1021,75"/>
+<area shape="rect" id="node5" href="$classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038" title="Simple shell. " alt="" coords="1070,41,1170,68"/>
+<area shape="rect" id="node6" href="$kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1219,41,1269,68"/>
+</map>

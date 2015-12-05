@@ -1,0 +1,73 @@
+.TH "utility/imageMaker/imageMaker.c" 3 "Sat Dec 5 2015" "kOdin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+utility/imageMaker/imageMaker.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <fcntl\&.h>\fP
+.br
+\fC#include <sys/io\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <sys/stat\&.h>\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBBYTESOFSECTOR\fP   512"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBadjustInSectorSize\fP (int iFd, int iSourceSize)"
+.br
+.ti -1c
+.RI "void \fBwriteKernelInformation\fP (int iTargetFd, int iKernelSectorCount, int iKernel32SectorCount)"
+.br
+.ti -1c
+.RI "int \fBcopyFile\fP (int iSourceFd, int iTargetFd)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BYTESOFSECTOR   512"
+
+.PP
+Definition at line 9 of file imageMaker\&.c\&.
+.SH "Function Documentation"
+.PP 
+.SS "int adjustInSectorSize (intiFd, intiSourceSize)"
+
+.PP
+Definition at line 108 of file imageMaker\&.c\&.
+.SS "int copyFile (intiSourceFd, intiTargetFd)"
+
+.PP
+Definition at line 163 of file imageMaker\&.c\&.
+.SS "int main (intargc, char *argv[])"
+
+.PP
+Definition at line 18 of file imageMaker\&.c\&.
+.SS "void writeKernelInformation (intiTargetFd, intiKernelSectorCount, intiKernel32SectorCount)"
+
+.PP
+Definition at line 135 of file imageMaker\&.c\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for kOdin from the source code\&.

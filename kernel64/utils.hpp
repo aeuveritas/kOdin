@@ -3,6 +3,7 @@
 #include "types.hpp"
 #include "keyboard.hpp"
 
+/// Class for Utilities
 class kUtils
 {
 public:

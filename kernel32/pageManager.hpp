@@ -5,7 +5,7 @@
 // Structures
 #pragma pack(push, 1)
 
-// Strructure for Page Manager
+// Class for Page Manager
 class kPageManager
 {
     kPageTableEntry* pstPML4T;

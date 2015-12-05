@@ -1,6 +1,6 @@
 #include "pageManager.hpp"
 
-// Initialize page tables  for IA-32e mode
+/// Initialize page tables  for IA-32e mode
 void kPageManager::kInitPage(void)
 {
     // Allocate PML4 table
@@ -43,7 +43,7 @@ void kPageManager::kInitPage(void)
     return;
 }
 
-// Set the base address of the page tables
+/// Set the base address of the page tables
 void kPageManager::kSetPageTableAddress(kPageTableEntry** pageTable,
                                         kPageTableEntry* address)
 {
@@ -52,7 +52,7 @@ void kPageManager::kSetPageTableAddress(kPageTableEntry** pageTable,
     return;
 }
 
-// Set base address and flags for the page entry
+/// Set base address and flags for the page entry
 void kPageManager::kSetPageEntryData(
     kPageTableEntry* pstEntry,
     unsigned int dwUpperBaseAddress,

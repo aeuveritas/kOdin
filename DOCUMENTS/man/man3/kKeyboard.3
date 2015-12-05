@@ -1,0 +1,219 @@
+.TH "kKeyboard" 3 "Sat Dec 5 2015" "kOdin" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+kKeyboard \- 
+.PP
+Class for keyboard\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <keyboard\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBkKeyboard\fP (void)"
+.br
+.RI "\fIConstructor of \fBkKeyboard\fP class\&. \fP"
+.ti -1c
+.RI "bool \fBkActivateKeyboard\fP (void)"
+.br
+.RI "\fIActivate keyboard\&. \fP"
+.ti -1c
+.RI "bool \fBkChangeKeyboardLED\fP (bool \fBbCapsLockOn\fP, bool \fBbNumLockOn\fP, bool \fBbScrollLockOn\fP)"
+.br
+.RI "\fIChange the sate of LEDs\&. \fP"
+.ti -1c
+.RI "bool \fBkIsInputBufferFull\fP (void)"
+.br
+.RI "\fICheck whether ot nor there is a data in the input buffer (port 0x60)\&. \fP"
+.ti -1c
+.RI "bool \fBkIsOutputBufferFull\fP (void)"
+.br
+.ti -1c
+.RI "\fBBYTE\fP \fBkGetKeyboardScanCode\fP (void)"
+.br
+.RI "\fIRead a key from the output buffer (port 0x60)\&. \fP"
+.ti -1c
+.RI "bool \fBkConvertScanCodeToASCIICode\fP (\fBBYTE\fP bScanCode, char *pbASCIICode, \fBBYTE\fP *pbFlags)"
+.br
+.RI "\fITranslate ScFALSEan Code to ASCII\&. \fP"
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBkEnableA20Gate\fP (void)"
+.br
+.RI "\fIActivate A20 gate\&. \fP"
+.ti -1c
+.RI "void \fBkReboot\fP (void)"
+.br
+.RI "\fIReset a processor\&. \fP"
+.ti -1c
+.RI "bool \fBkIsAlphabetScanCode\fP (\fBBYTE\fP bScanCode)"
+.br
+.RI "\fICheck the Scan Code is alphabet\&. \fP"
+.ti -1c
+.RI "bool \fBkIsNumberOrSymbolScanCode\fP (\fBBYTE\fP bScanCode)"
+.br
+.RI "\fICheck the Scan Code is number or symbol\&. \fP"
+.ti -1c
+.RI "bool \fBkIsNumberPadScanCode\fP (\fBBYTE\fP bScanCode)"
+.br
+.RI "\fICheck the Scan Code is in number pad\&. \fP"
+.ti -1c
+.RI "bool \fBkIsUseCombinedCode\fP (\fBBYTE\fP bScanCode)"
+.br
+.RI "\fICheck whether or not a combination key should be used\&. \fP"
+.ti -1c
+.RI "void \fBkUpdateCombinationKeyStatusAndLED\fP (\fBBYTE\fP bScanCode)"
+.br
+.RI "\fIUpdate a combination key state and Sync LED state\&. \fP"
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBbShiftDown\fP"
+.br
+.ti -1c
+.RI "bool \fBbCapsLockOn\fP"
+.br
+.ti -1c
+.RI "bool \fBbNumLockOn\fP"
+.br
+.ti -1c
+.RI "bool \fBbScrollLockOn\fP"
+.br
+.ti -1c
+.RI "bool \fBbExtendedCodeIn\fP"
+.br
+.ti -1c
+.RI "int \fBiSkipCountForPause\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Class for keyboard\&. 
+.PP
+Definition at line 8 of file keyboard\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "kKeyboard::kKeyboard (void)"
+
+.PP
+Constructor of \fBkKeyboard\fP class\&. 
+.PP
+Definition at line 5 of file keyboard\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool kKeyboard::kActivateKeyboard (void)"
+
+.PP
+Activate keyboard\&. 
+.PP
+Definition at line 51 of file keyboard\&.cpp\&.
+.SS "bool kKeyboard::kChangeKeyboardLED (boolbCapsLockOn, boolbNumLockOn, boolbScrollLockOn)"
+
+.PP
+Change the sate of LEDs\&. 
+.PP
+Definition at line 117 of file keyboard\&.cpp\&.
+.SS "bool kKeyboard::kConvertScanCodeToASCIICode (\fBBYTE\fPbScanCode, char *pbASCIICode, \fBBYTE\fP *pbFlags)"
+
+.PP
+Translate ScFALSEan Code to ASCII\&. 
+.PP
+Definition at line 454 of file keyboard\&.cpp\&.
+.SS "void kKeyboard::kEnableA20Gate (void)\fC [private]\fP"
+
+.PP
+Activate A20 gate\&. 
+.PP
+Definition at line 214 of file keyboard\&.cpp\&.
+.SS "\fBBYTE\fP kKeyboard::kGetKeyboardScanCode (void)"
+
+.PP
+Read a key from the output buffer (port 0x60)\&. 
+.PP
+Definition at line 105 of file keyboard\&.cpp\&.
+.SS "bool kKeyboard::kIsAlphabetScanCode (\fBBYTE\fPbScanCode)\fC [private]\fP"
+
+.PP
+Check the Scan Code is alphabet\&. 
+.PP
+Definition at line 295 of file keyboard\&.cpp\&.
+.SS "bool kKeyboard::kIsInputBufferFull (void)"
+
+.PP
+Check whether ot nor there is a data in the input buffer (port 0x60)\&. 
+.PP
+Definition at line 37 of file keyboard\&.cpp\&.
+.SS "bool kKeyboard::kIsNumberOrSymbolScanCode (\fBBYTE\fPbScanCode)\fC [private]\fP"
+
+.PP
+Check the Scan Code is number or symbol\&. 
+.PP
+Definition at line 308 of file keyboard\&.cpp\&.
+.SS "bool kKeyboard::kIsNumberPadScanCode (\fBBYTE\fPbScanCode)\fC [private]\fP"
+
+.PP
+Check the Scan Code is in number pad\&. 
+.PP
+Definition at line 322 of file keyboard\&.cpp\&.
+.SS "bool kKeyboard::kIsOutputBufferFull (void)"
+Check whether or not there is a received data in the output buffer (port 0x60)\&. 
+.PP
+Definition at line 23 of file keyboard\&.cpp\&.
+.SS "bool kKeyboard::kIsUseCombinedCode (\fBBYTE\fPbScanCode)\fC [private]\fP"
+
+.PP
+Check whether or not a combination key should be used\&. 
+.PP
+Definition at line 334 of file keyboard\&.cpp\&.
+.SS "void kKeyboard::kReboot (void)\fC [private]\fP"
+
+.PP
+Reset a processor\&. 
+.PP
+Definition at line 263 of file keyboard\&.cpp\&.
+.SS "void kKeyboard::kUpdateCombinationKeyStatusAndLED (\fBBYTE\fPbScanCode)\fC [private]\fP"
+
+.PP
+Update a combination key state and Sync LED state\&. 
+.PP
+Definition at line 394 of file keyboard\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool kKeyboard::bCapsLockOn\fC [private]\fP"
+
+.PP
+Definition at line 12 of file keyboard\&.hpp\&.
+.SS "bool kKeyboard::bExtendedCodeIn\fC [private]\fP"
+
+.PP
+Definition at line 17 of file keyboard\&.hpp\&.
+.SS "bool kKeyboard::bNumLockOn\fC [private]\fP"
+
+.PP
+Definition at line 13 of file keyboard\&.hpp\&.
+.SS "bool kKeyboard::bScrollLockOn\fC [private]\fP"
+
+.PP
+Definition at line 14 of file keyboard\&.hpp\&.
+.SS "bool kKeyboard::bShiftDown\fC [private]\fP"
+
+.PP
+Definition at line 11 of file keyboard\&.hpp\&.
+.SS "int kKeyboard::iSkipCountForPause\fC [private]\fP"
+
+.PP
+Definition at line 18 of file keyboard\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for kOdin from the source code\&.

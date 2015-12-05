@@ -4,6 +4,7 @@
 #include "asmUtils.hpp"
 #include "keyMappingEntry.hpp"
 
+/// Class for keyboard
 class kKeyboard
 {
     // Information for combination

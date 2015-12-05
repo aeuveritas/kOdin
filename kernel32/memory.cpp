@@ -1,6 +1,6 @@
 #include "memory.hpp"
 
-// Initialize kernel area for IA-32e with 0
+/// Initialize kernel area for IA-32e with 0
 bool kMemory::kInitializeKernel64Area(void)
 {
     DWORD* pdwCurrentAddress;
@@ -25,7 +25,7 @@ bool kMemory::kInitializeKernel64Area(void)
     return true;
 }
 
-// Check the size of memory is larget than the minimum
+/// Check the size of memory is larget than the minimum
 bool kMemory::kIsMemoryEnough(void)
 {
     DWORD* pdwCurrentAddress;
@@ -52,7 +52,7 @@ bool kMemory::kIsMemoryEnough(void)
     return true;
 }
 
-// Copy IA-32e mode kernel to 0x200000 (= 2 MB)
+/// Copy IA-32e mode kernel to 0x200000 (= 2 MB)
 void kMemory::kCopyKernel64ImageTo2MB(void)
 {
     WORD wKernel32SectorCount;
@@ -77,6 +77,7 @@ void kMemory::kCopyKernel64ImageTo2MB(void)
     }
 }
 
+/// Initialize page manager
 void kMemory::kInitializePageManager(void)
 {
     clPM.kInitPage();
