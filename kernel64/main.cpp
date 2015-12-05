@@ -1,12 +1,12 @@
 #include "types.hpp"
 #include "utils.hpp"
-#include "keyboardManager.hpp"
+#include "keyboard.hpp"
 
 void main(void)
 {
     DWORD dwLine;
     kUtils clUtils;
-    kKeyboardManager clKM;
+    kKeyboard clKeyboard;
     
     dwLine = 10;
 
@@ -19,11 +19,11 @@ void main(void)
                          "[      ]  Keyboard Activate");
     
     // Activate a keyboard
-    if (clKM.kActivateKeyboard() == true)
+    if (clKeyboard.kActivateKeyboard() == true)
     {
         clUtils.kPrintString(2, dwLine++,
                          "PASS");
-        clKM.kChangeKeyboardLED(false, false, false);
+        clKeyboard.kChangeKeyboardLED(false, false, false);
     }
     else
     {
@@ -32,5 +32,5 @@ void main(void)
         while (1);
     }
     
-    clUtils.kShell(clKM, dwLine);
+    clUtils.kShell(clKeyboard, dwLine);
 }

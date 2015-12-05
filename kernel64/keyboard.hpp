@@ -4,7 +4,7 @@
 #include "asmUtils.hpp"
 #include "keyMappingEntry.hpp"
 
-class kKeyboardManager
+class kKeyboard
 {
     // Information for combination
     bool bShiftDown;
@@ -26,7 +26,7 @@ class kKeyboardManager
     void kUpdateCombinationKeyStatusAndLED(BYTE bScanCode);
     
 public:
-    kKeyboardManager();
+    kKeyboard(void);
     
     bool kActivateKeyboard(void);
     bool kChangeKeyboardLED(bool bCapsLockOn, 
