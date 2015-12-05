@@ -29,7 +29,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * kernel32<br>
   * Makefile<br>
   * asmUtils.asm<br>
-  * asmUtils.hpp<br>
+  * cpu.hpp<br>
+  * cpu.cpp<br>
   * elf_i386.x<br>
   * entry.s<br>
   * main.cpp<br>

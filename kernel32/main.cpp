@@ -1,6 +1,7 @@
 #include "types.hpp"
 #include "utils.hpp"
 #include "memory.hpp"
+#include "cpu.hpp"
 
 void main(void)
 {
@@ -10,6 +11,7 @@ void main(void)
 
     kMemory clMem;
     kUtils clUtils;
+    kCpu clCpu;
 
     dwLine = 3;
 
@@ -52,7 +54,7 @@ void main(void)
                          "PASS");
 
     // Read information of processor vendor
-    clUtils.kReadCPUID(0x00, &dwEAX, &dwEBX, &dwECX, &dwEDX);
+    clCpu.kReadCPUID(0x00, &dwEAX, &dwEBX, &dwECX, &dwEDX);
     *(DWORD*)cVendorString = dwEBX;
     *((DWORD*)cVendorString + 1) = dwEDX;
     *((DWORD*)cVendorString + 2) = dwECX;
@@ -63,7 +65,7 @@ void main(void)
     clUtils.kPrintString(38, dwLine++, cVendorString);
 
     // Check 64 bits mode available
-    clUtils.kReadCPUID(0x80000001, &dwEAX, &dwEBX, &dwECX, &dwEDX);
+    clCpu.kReadCPUID(0x80000001, &dwEAX, &dwEBX, &dwECX, &dwEDX);
     clUtils.kPrintString(0, dwLine,
                          "[      ]  64 bits Mode Support Check");
     if (dwEDX & (1 << 29)) {
@@ -81,14 +83,14 @@ void main(void)
     // Copy IA-32e mode kernel to 0x200000 (= 2 MB)
     clUtils.kPrintString(0, dwLine,
                          "[      ]  Copy IA-32e Kernel To 2M Address");
-    clUtils.kCopyKernel64ImageTo2MB();
+    clMem.kCopyKernel64ImageTo2MB();
     clUtils.kPrintString(2, dwLine++,
                          "PASS");
 
     // Switch to the IA-32e mode
     clUtils.kPrintString(0, dwLine,
                          "[      ]  Switch to IA-32e Mode");
-    clUtils.kSwitchAndExecute64bitsKernel();
+    clCpu.kSwitchAndExecute64bitsKernel();
 
     clUtils.kPrintString(2, dwLine,
                          "FAIL");
