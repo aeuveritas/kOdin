@@ -12,6 +12,17 @@ kKeyboard::kKeyboard(void)
     iSkipCountForPause = 0;
 }
 
+kKeyboard::~kKeyboard(void)
+{
+    bShiftDown = false;
+    bCapsLockOn = false;
+    bNumLockOn = false;
+    bScrollLockOn = false;
+    bExtendedCodeIn = false; 
+    iSkipCountForPause = 0;
+}
+
+
 ///////////////////////////////////////////////////////////////////////////////
 // Functions related to keyboard controller and keyboard 
 ///////////////////////////////////////////////////////////////////////////////

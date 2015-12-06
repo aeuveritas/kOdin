@@ -108,57 +108,97 @@ $(document).ready(function(){initNavTree('kernel64_2main_8cpp_source.html','');}
 <a href="kernel64_2main_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kernel64_2types_8hpp.html">types.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kernel64_2utils_8hpp.html">utils.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="keyboard_8hpp.html">keyboard.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="kernel32_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667">main</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a> dwLine;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classk_utils.html">kUtils</a> clUtils;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classk_keyboard.html">kKeyboard</a> clKeyboard;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    dwLine = 10;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                         <span class="stringliteral">&quot;PASS&quot;</span>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine++,</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                         <span class="stringliteral">&quot;[ PASS ]  IA-32e C++ Language Kernel Start&quot;</span>);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                         <span class="stringliteral">&quot;[      ]  Keyboard Activate&quot;</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// Activate a keyboard</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (clKeyboard.<a class="code" href="classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c">kActivateKeyboard</a>() == <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                         <span class="stringliteral">&quot;PASS&quot;</span>);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        clKeyboard.<a class="code" href="classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc">kChangeKeyboardLED</a>(<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                         <span class="stringliteral">&quot;FAIL&quot;</span>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">while</span> (1);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    clUtils.<a class="code" href="classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038">kShell</a>(clKeyboard, dwLine);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_d_t_8hpp.html">DT.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="shell_8hpp.html">shell.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="shell_8hpp.html#adf67c54d5a4c70f9b1a443d6e299748d">    7</a></span>&#160;<a class="code" href="classk_utils.html">kUtils</a> <a class="code" href="kernel64_2main_8cpp.html#adf67c54d5a4c70f9b1a443d6e299748d">clUtils</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667">    9</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="kernel32_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667">main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a> dwLine;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classk_keyboard.html">kKeyboard</a> clKeyboard;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classk_d_t.html">kDT</a> clDT;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classk_shell.html">kShell</a> clShell;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    dwLine = 10;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                           <span class="stringliteral">&quot;PASS&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine++,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                         <span class="stringliteral">&quot;[ PASS ]  IA-32e C++ Language Kernel Start&quot;</span>);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine,</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                         <span class="stringliteral">&quot;[      ]  Initialize GDT for IA-32e Mode&quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    clDT.<a class="code" href="classk_d_t.html#ab3bbe99e69ecdc2c5b3e16685fe31f92">kInitializeGDT</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    clDT.<a class="code" href="classk_d_t.html#a7e2b7bcf85ff2e1818993519186f3867">kLoadGDTR</a>(<a class="code" href="segment_descriptor_8hpp.html#a9be99ff4a9b47c1729c9944672071cae">GDTR_STARTADDRESS</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                           <span class="stringliteral">&quot;PASS&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                         <span class="stringliteral">&quot;[      ]  Initialize TSS&quot;</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    clDT.<a class="code" href="classk_d_t.html#a23c76bd851a469698658e8e7e72f219d">kInitializeTSS</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    clDT.<a class="code" href="classk_d_t.html#a469131c4c0cf30fe1a13d3e4d88e31b4">kLoadTR</a>(<a class="code" href="segment_descriptor_8hpp.html#afa2f85c6adeea0d29c4852d4cef33d4c">GDT_TSS</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                           <span class="stringliteral">&quot;PASS&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                         <span class="stringliteral">&quot;[      ]  Initialize IDT&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    clDT.<a class="code" href="classk_d_t.html#a4a54afd1f9b289cd2dd9cdfcd4f82d7f">kInitializeIDT</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    clDT.<a class="code" href="classk_d_t.html#af59d59bb384a9d912565a8dea64a70d4">kLoadIDTR</a>(<a class="code" href="interrupt_descriptor_8hpp.html#afce34094f6b8173755a8e715b12a9374">IDTR_STARTADDRESS</a>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                           <span class="stringliteral">&quot;PASS&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                         <span class="stringliteral">&quot;[      ]  Keyboard Activate&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">// Activate a keyboard</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (clKeyboard.<a class="code" href="classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c">kActivateKeyboard</a>() == <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                           <span class="stringliteral">&quot;PASS&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        clKeyboard.<a class="code" href="classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc">kChangeKeyboardLED</a>(<span class="keyword">false</span>, <span class="keyword">false</span>, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        clUtils.<a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                           <span class="stringliteral">&quot;FAIL&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">while</span> (1);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    clShell.<a class="code" href="classk_shell.html#ab292740d0e9f12d21a8a3b86ae3236d4">kPrompt</a>(clKeyboard, dwLine);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="ttc" id="classk_shell_html_ab292740d0e9f12d21a8a3b86ae3236d4"><div class="ttname"><a href="classk_shell.html#ab292740d0e9f12d21a8a3b86ae3236d4">kShell::kPrompt</a></div><div class="ttdeci">void kPrompt(kKeyboard &amp;clKeyboard, DWORD &amp;dwline)</div><div class="ttdoc">Simple shell. </div><div class="ttdef"><b>Definition:</b> <a href="shell_8cpp_source.html#l00004">shell.cpp:4</a></div></div>
 <div class="ttc" id="classk_utils_html"><div class="ttname"><a href="classk_utils.html">kUtils</a></div><div class="ttdoc">Class for Utilities. </div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2utils_8hpp_source.html#l00006">utils.hpp:6</a></div></div>
-<div class="ttc" id="kernel32_2types_8hpp_html_aa39b39d94407451a6ec0226479db68cf"><div class="ttname"><a href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a></div><div class="ttdeci">#define DWORD</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00005">types.hpp:5</a></div></div>
-<div class="ttc" id="classk_keyboard_html"><div class="ttname"><a href="classk_keyboard.html">kKeyboard</a></div><div class="ttdoc">Class for keyboard. </div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8hpp_source.html#l00008">keyboard.hpp:8</a></div></div>
+<div class="ttc" id="classk_keyboard_html"><div class="ttname"><a href="classk_keyboard.html">kKeyboard</a></div><div class="ttdoc">Class for keyboard. </div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8hpp_source.html#l00010">keyboard.hpp:10</a></div></div>
+<div class="ttc" id="classk_d_t_html_ab3bbe99e69ecdc2c5b3e16685fe31f92"><div class="ttname"><a href="classk_d_t.html#ab3bbe99e69ecdc2c5b3e16685fe31f92">kDT::kInitializeGDT</a></div><div class="ttdeci">void kInitializeGDT(void)</div><div class="ttdoc">Initialize GDT entries. </div><div class="ttdef"><b>Definition:</b> <a href="_d_t_8cpp_source.html#l00028">DT.cpp:28</a></div></div>
+<div class="ttc" id="classk_d_t_html_a7e2b7bcf85ff2e1818993519186f3867"><div class="ttname"><a href="classk_d_t.html#a7e2b7bcf85ff2e1818993519186f3867">kDT::kLoadGDTR</a></div><div class="ttdeci">void kLoadGDTR(QWORD qwGDTRAddress)</div><div class="ttdef"><b>Definition:</b> <a href="_d_t_8cpp_source.html#l00149">DT.cpp:149</a></div></div>
 <div class="ttc" id="kernel64_2types_8hpp_html"><div class="ttname"><a href="kernel64_2types_8hpp.html">types.hpp</a></div></div>
-<div class="ttc" id="classk_utils_html_aec7de7b52710a4e44ce60d1ff674debb"><div class="ttname"><a href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kUtils::kPrintString</a></div><div class="ttdeci">bool kPrintString(int iX, int iY, const char *pcString)</div><div class="ttdoc">Print message. </div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2utils_8cpp_source.html#l00004">utils.cpp:4</a></div></div>
+<div class="ttc" id="segment_descriptor_8hpp_html_a9be99ff4a9b47c1729c9944672071cae"><div class="ttname"><a href="segment_descriptor_8hpp.html#a9be99ff4a9b47c1729c9944672071cae">GDTR_STARTADDRESS</a></div><div class="ttdeci">#define GDTR_STARTADDRESS</div><div class="ttdoc">Other macros. </div><div class="ttdef"><b>Definition:</b> <a href="segment_descriptor_8hpp_source.html#l00054">segmentDescriptor.hpp:54</a></div></div>
+<div class="ttc" id="classk_d_t_html_a469131c4c0cf30fe1a13d3e4d88e31b4"><div class="ttname"><a href="classk_d_t.html#a469131c4c0cf30fe1a13d3e4d88e31b4">kDT::kLoadTR</a></div><div class="ttdeci">void kLoadTR(WORD wTSSSegmentOffset)</div><div class="ttdef"><b>Definition:</b> <a href="_d_t_8cpp_source.html#l00154">DT.cpp:154</a></div></div>
+<div class="ttc" id="classk_utils_html_aec7de7b52710a4e44ce60d1ff674debb"><div class="ttname"><a href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kUtils::kPrintString</a></div><div class="ttdeci">bool kPrintString(int iX, int iY, const char *pcString)</div><div class="ttdoc">Print message. </div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2utils_8cpp_source.html#l00006">utils.cpp:6</a></div></div>
 <div class="ttc" id="kernel32_2main_8cpp_html_a6288eba0f8e8ad3ab1544ad731eb7667"><div class="ttname"><a href="kernel32_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667">main</a></div><div class="ttdeci">void main(void)</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2main_8cpp_source.html#l00006">main.cpp:6</a></div></div>
-<div class="ttc" id="classk_keyboard_html_a8e48c42235ca22cb294f73c51146dcfc"><div class="ttname"><a href="classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc">kKeyboard::kChangeKeyboardLED</a></div><div class="ttdeci">bool kChangeKeyboardLED(bool bCapsLockOn, bool bNumLockOn, bool bScrollLockOn)</div><div class="ttdoc">Change the sate of LEDs. </div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8cpp_source.html#l00117">keyboard.cpp:117</a></div></div>
-<div class="ttc" id="classk_utils_html_a0f5f44062d64847d23eca1c72fd2a038"><div class="ttname"><a href="classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038">kUtils::kShell</a></div><div class="ttdeci">void kShell(kKeyboard &amp;clKeyboard, DWORD &amp;dwline)</div><div class="ttdoc">Simple shell. </div><div class="ttdef"><b>Definition:</b> <a href="kernel64_2utils_8cpp_source.html#l00018">utils.cpp:18</a></div></div>
+<div class="ttc" id="classk_keyboard_html_a8e48c42235ca22cb294f73c51146dcfc"><div class="ttname"><a href="classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc">kKeyboard::kChangeKeyboardLED</a></div><div class="ttdeci">bool kChangeKeyboardLED(bool bCapsLockOn, bool bNumLockOn, bool bScrollLockOn)</div><div class="ttdoc">Change the sate of LEDs. </div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8cpp_source.html#l00128">keyboard.cpp:128</a></div></div>
+<div class="ttc" id="classk_shell_html"><div class="ttname"><a href="classk_shell.html">kShell</a></div><div class="ttdef"><b>Definition:</b> <a href="shell_8hpp_source.html#l00011">shell.hpp:11</a></div></div>
+<div class="ttc" id="interrupt_descriptor_8hpp_html_afce34094f6b8173755a8e715b12a9374"><div class="ttname"><a href="interrupt_descriptor_8hpp.html#afce34094f6b8173755a8e715b12a9374">IDTR_STARTADDRESS</a></div><div class="ttdeci">#define IDTR_STARTADDRESS</div><div class="ttdoc">The start address of IDTR - after TSS. </div><div class="ttdef"><b>Definition:</b> <a href="interrupt_descriptor_8hpp_source.html#l00029">interruptDescriptor.hpp:29</a></div></div>
+<div class="ttc" id="classk_d_t_html_a23c76bd851a469698658e8e7e72f219d"><div class="ttname"><a href="classk_d_t.html#a23c76bd851a469698658e8e7e72f219d">kDT::kInitializeTSS</a></div><div class="ttdeci">void kInitializeTSS(void)</div><div class="ttdoc">Initialize TSS. </div><div class="ttdef"><b>Definition:</b> <a href="_d_t_8cpp_source.html#l00093">DT.cpp:93</a></div></div>
 <div class="ttc" id="keyboard_8hpp_html"><div class="ttname"><a href="keyboard_8hpp.html">keyboard.hpp</a></div></div>
+<div class="ttc" id="classk_d_t_html"><div class="ttname"><a href="classk_d_t.html">kDT</a></div><div class="ttdef"><b>Definition:</b> <a href="_d_t_8hpp_source.html#l00012">DT.hpp:12</a></div></div>
+<div class="ttc" id="classk_d_t_html_a4a54afd1f9b289cd2dd9cdfcd4f82d7f"><div class="ttname"><a href="classk_d_t.html#a4a54afd1f9b289cd2dd9cdfcd4f82d7f">kDT::kInitializeIDT</a></div><div class="ttdeci">void kInitializeIDT(void)</div><div class="ttdoc">Initialize IDT. </div><div class="ttdef"><b>Definition:</b> <a href="_d_t_8cpp_source.html#l00105">DT.cpp:105</a></div></div>
 <div class="ttc" id="kernel64_2utils_8hpp_html"><div class="ttname"><a href="kernel64_2utils_8hpp.html">utils.hpp</a></div></div>
-<div class="ttc" id="classk_keyboard_html_aa2fd2bfb94b6f8a57aae2035d11c4b7c"><div class="ttname"><a href="classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c">kKeyboard::kActivateKeyboard</a></div><div class="ttdeci">bool kActivateKeyboard(void)</div><div class="ttdoc">Activate keyboard. </div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8cpp_source.html#l00051">keyboard.cpp:51</a></div></div>
+<div class="ttc" id="kernel32_2types_8hpp_html_a798af1e30bc65f319c1a246cecf59e39"><div class="ttname"><a href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a></div><div class="ttdeci">unsigned int DWORD</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00005">types.hpp:5</a></div></div>
+<div class="ttc" id="classk_d_t_html_af59d59bb384a9d912565a8dea64a70d4"><div class="ttname"><a href="classk_d_t.html#af59d59bb384a9d912565a8dea64a70d4">kDT::kLoadIDTR</a></div><div class="ttdeci">void kLoadIDTR(QWORD qwIDTRAddress)</div><div class="ttdef"><b>Definition:</b> <a href="_d_t_8cpp_source.html#l00159">DT.cpp:159</a></div></div>
+<div class="ttc" id="segment_descriptor_8hpp_html_afa2f85c6adeea0d29c4852d4cef33d4c"><div class="ttname"><a href="segment_descriptor_8hpp.html#afa2f85c6adeea0d29c4852d4cef33d4c">GDT_TSS</a></div><div class="ttdeci">#define GDT_TSS</div><div class="ttdef"><b>Definition:</b> <a href="segment_descriptor_8hpp_source.html#l00049">segmentDescriptor.hpp:49</a></div></div>
+<div class="ttc" id="shell_8hpp_html"><div class="ttname"><a href="shell_8hpp.html">shell.hpp</a></div></div>
+<div class="ttc" id="kernel64_2main_8cpp_html_adf67c54d5a4c70f9b1a443d6e299748d"><div class="ttname"><a href="kernel64_2main_8cpp.html#adf67c54d5a4c70f9b1a443d6e299748d">clUtils</a></div><div class="ttdeci">kUtils clUtils</div><div class="ttdef"><b>Definition:</b> <a href="kernel64_2main_8cpp_source.html#l00007">main.cpp:7</a></div></div>
+<div class="ttc" id="classk_keyboard_html_aa2fd2bfb94b6f8a57aae2035d11c4b7c"><div class="ttname"><a href="classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c">kKeyboard::kActivateKeyboard</a></div><div class="ttdeci">bool kActivateKeyboard(void)</div><div class="ttdoc">Activate keyboard. </div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8cpp_source.html#l00062">keyboard.cpp:62</a></div></div>
+<div class="ttc" id="_d_t_8hpp_html"><div class="ttname"><a href="_d_t_8hpp.html">DT.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_db908db968f8f6092f1b3817428a1d92.html">kernel64</a></li><li class="navelem"><a class="el" href="kernel64_2main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Sat Dec 5 2015 21:29:29 for kOdin by
+    <li class="footer">Generated on Mon Dec 7 2015 01:05:37 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

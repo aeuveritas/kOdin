@@ -2,6 +2,8 @@
 
 #include "pageManager.hpp"
 
+#pragma pack(push, 1)
+
 /// Class for memory
 class kMemory
 {
@@ -13,3 +15,5 @@ public:
     void kInitializePageManager(void);
     void kCopyKernel64ImageTo2MB(void);
 };
+
+#pragma pakc(pop)

@@ -110,21 +110,30 @@ $(document).ready(function(){initNavTree('asm_utils_8hpp_source.html','');});
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="kernel64_2types_8hpp.html">types.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#aec93e83855ac17c3c25c55c37ca186dd">BYTE</a> <a class="code" href="asm_utils_8hpp.html#a22130730d12e1e17d6201ef36cd90222">_kInPortByte</a>(<a class="code" href="kernel32_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</a> wPort);</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="asm_utils_8hpp.html#a3118257a6a597aefbf404ee707c1dae4">_kOutPortByte</a>(<a class="code" href="kernel32_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</a> wPort, <a class="code" href="kernel32_2types_8hpp.html#aec93e83855ac17c3c25c55c37ca186dd">BYTE</a> bData);</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;};</div>
-<div class="ttc" id="kernel32_2types_8hpp_html_aec93e83855ac17c3c25c55c37ca186dd"><div class="ttname"><a href="kernel32_2types_8hpp.html#aec93e83855ac17c3c25c55c37ca186dd">BYTE</a></div><div class="ttdeci">#define BYTE</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00003">types.hpp:3</a></div></div>
-<div class="ttc" id="kernel32_2types_8hpp_html_a4cfc63e05db4883dc4b60a1245a9ffc5"><div class="ttname"><a href="kernel32_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</a></div><div class="ttdeci">#define WORD</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00004">types.hpp:4</a></div></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> <a class="code" href="asm_utils_8hpp.html#a22130730d12e1e17d6201ef36cd90222">_kInPortByte</a>(<a class="code" href="kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> wPort);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="asm_utils_8hpp.html#a3118257a6a597aefbf404ee707c1dae4">_kOutPortByte</a>(<a class="code" href="kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> wPort, <a class="code" href="kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> bData);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="asm_utils_8hpp.html#a959047d2e47706e0eb327110bd41e15b">_kLoadGDTR</a>(<a class="code" href="kernel32_2types_8hpp.html#a3d7c96c615c5889c5acb849b888fd811">QWORD</a> qwGDTRAddress);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="asm_utils_8hpp.html#a5b3d8f500273f26e2f1f489a874daa40">_kLoadTR</a>(<a class="code" href="kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> wTSSSegmentOffset);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="asm_utils_8hpp.html#a562cc350f9e18de1c2262230d8611397">_kLoadIDTR</a>(<a class="code" href="kernel32_2types_8hpp.html#a3d7c96c615c5889c5acb849b888fd811">QWORD</a> qwIDTRAddress);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;};</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma pack(push, 1)</span></div>
+<div class="ttc" id="asm_utils_8hpp_html_a5b3d8f500273f26e2f1f489a874daa40"><div class="ttname"><a href="asm_utils_8hpp.html#a5b3d8f500273f26e2f1f489a874daa40">_kLoadTR</a></div><div class="ttdeci">void _kLoadTR(WORD wTSSSegmentOffset)</div></div>
+<div class="ttc" id="asm_utils_8hpp_html_a562cc350f9e18de1c2262230d8611397"><div class="ttname"><a href="asm_utils_8hpp.html#a562cc350f9e18de1c2262230d8611397">_kLoadIDTR</a></div><div class="ttdeci">void _kLoadIDTR(QWORD qwIDTRAddress)</div></div>
 <div class="ttc" id="kernel64_2types_8hpp_html"><div class="ttname"><a href="kernel64_2types_8hpp.html">types.hpp</a></div></div>
+<div class="ttc" id="kernel32_2types_8hpp_html_a4ae1dab0fb4b072a66584546209e7d58"><div class="ttname"><a href="kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a></div><div class="ttdeci">unsigned char BYTE</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00003">types.hpp:3</a></div></div>
 <div class="ttc" id="asm_utils_8hpp_html_a3118257a6a597aefbf404ee707c1dae4"><div class="ttname"><a href="asm_utils_8hpp.html#a3118257a6a597aefbf404ee707c1dae4">_kOutPortByte</a></div><div class="ttdeci">void _kOutPortByte(WORD wPort, BYTE bData)</div></div>
+<div class="ttc" id="kernel32_2types_8hpp_html_a3d7c96c615c5889c5acb849b888fd811"><div class="ttname"><a href="kernel32_2types_8hpp.html#a3d7c96c615c5889c5acb849b888fd811">QWORD</a></div><div class="ttdeci">unsigned long QWORD</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00006">types.hpp:6</a></div></div>
+<div class="ttc" id="asm_utils_8hpp_html_a959047d2e47706e0eb327110bd41e15b"><div class="ttname"><a href="asm_utils_8hpp.html#a959047d2e47706e0eb327110bd41e15b">_kLoadGDTR</a></div><div class="ttdeci">void _kLoadGDTR(QWORD qwGDTRAddress)</div></div>
 <div class="ttc" id="asm_utils_8hpp_html_a22130730d12e1e17d6201ef36cd90222"><div class="ttname"><a href="asm_utils_8hpp.html#a22130730d12e1e17d6201ef36cd90222">_kInPortByte</a></div><div class="ttdeci">BYTE _kInPortByte(WORD wPort)</div></div>
+<div class="ttc" id="kernel32_2types_8hpp_html_a197942eefa7db30960ae396d68339b97"><div class="ttname"><a href="kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a></div><div class="ttdeci">unsigned short WORD</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00004">types.hpp:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_db908db968f8f6092f1b3817428a1d92.html">kernel64</a></li><li class="navelem"><a class="el" href="asm_utils_8hpp.html">asmUtils.hpp</a></li>
-    <li class="footer">Generated on Sat Dec 5 2015 21:29:29 for kOdin by
+    <li class="footer">Generated on Mon Dec 7 2015 01:05:37 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

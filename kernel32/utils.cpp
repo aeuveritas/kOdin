@@ -1,5 +1,7 @@
 #include "utils.hpp"
 
+#pragma pack(push, 1)
+
 /// Print message
 bool kUtils::kPrintString(int iX, int iY, const char* pcString)
 {
@@ -14,4 +16,4 @@ bool kUtils::kPrintString(int iX, int iY, const char* pcString)
     return true;
 }
 
-
+#pragma pack(pop)

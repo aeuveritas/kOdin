@@ -5,8 +5,16 @@ var searchData=
   ['bcharactor',['bCharactor',['../structk_charactor_struct.html#a658ceea1126c0249d0f3a52783a4e451',1,'kCharactorStruct']]],
   ['bcombinedcode',['bCombinedCode',['../structk_key_mapping_entry.html#aa2c38ccdda38921a9edba2fd95a18a4a',1,'kKeyMappingEntry']]],
   ['bextendedcodein',['bExtendedCodeIn',['../classk_keyboard.html#a6e633d357b18a95e8b8b207948803e39',1,'kKeyboard']]],
+  ['bist',['bIST',['../structk_i_d_t_entry_struct.html#a4b2c0b0c3a867db5607126b0c54ebeb8',1,'kIDTEntryStruct']]],
+  ['bmiddlebaseaddress1',['bMiddleBaseAddress1',['../structk_g_d_t_entry16_struct.html#a810f43fa586853e1bb7b0c05250d879a',1,'kGDTEntry16Struct']]],
+  ['bmiddlebaseaddress2',['bMiddleBaseAddress2',['../structk_g_d_t_entry16_struct.html#a1314a94871941b985025ae7345126da7',1,'kGDTEntry16Struct']]],
   ['bnormalcode',['bNormalCode',['../structk_key_mapping_entry.html#a4a82a0cb8fec8c5c25fdd9c2c886d96c',1,'kKeyMappingEntry']]],
   ['bnumlockon',['bNumLockOn',['../classk_keyboard.html#a95c8ac4220bbb18f7b388f10066cc954',1,'kKeyboard']]],
   ['bscrolllockon',['bScrollLockOn',['../classk_keyboard.html#af368055e40dc350e144b1cffcba38bbc',1,'kKeyboard']]],
-  ['bshiftdown',['bShiftDown',['../classk_keyboard.html#aebdb28e7d38ec5670a531c64241a1753',1,'kKeyboard']]]
+  ['bshiftdown',['bShiftDown',['../classk_keyboard.html#aebdb28e7d38ec5670a531c64241a1753',1,'kKeyboard']]],
+  ['btypeadnlowerflag',['bTypeAdnLowerFlag',['../structk_g_d_t_entry8_struct.html#afb511de4f68302e4d462eb522e598d2a',1,'kGDTEntry8Struct::bTypeAdnLowerFlag()'],['../structk_g_d_t_entry16_struct.html#ab7d3cde85f3fd6b78f04790e14da0d0d',1,'kGDTEntry16Struct::bTypeAdnLowerFlag()']]],
+  ['btypeandflags',['bTypeAndFlags',['../structk_i_d_t_entry_struct.html#a67eca9069d9d83141bd22fa7b4f5836c',1,'kIDTEntryStruct']]],
+  ['bupperbaseaddress1',['bUpperBaseAddress1',['../structk_g_d_t_entry8_struct.html#a1a18316a7597858d0c937c1cf2fd88bf',1,'kGDTEntry8Struct']]],
+  ['bupperbaseaddress2',['bUpperBaseAddress2',['../structk_g_d_t_entry8_struct.html#af07a8e45d973e3623240f68dc48b13ad',1,'kGDTEntry8Struct']]],
+  ['bupperlimitandupperflag',['bUpperLimitAndUpperFlag',['../structk_g_d_t_entry8_struct.html#a31693d14a81958ca9c5a10b91fe690d8',1,'kGDTEntry8Struct::bUpperLimitAndUpperFlag()'],['../structk_g_d_t_entry16_struct.html#a6cdf1de129994d2e16fb94f6a09a63aa',1,'kGDTEntry16Struct::bUpperLimitAndUpperFlag()']]]
 ];

@@ -56,10 +56,10 @@
 
 /// Struct for Scan Code Table
 struct kKeyMappingEntry {
-    // Normal ASCII
+    /// Normal ASCII
     BYTE bNormalCode;
 
-    // Combined key with Shift or CAPS lock
+    /// Combined key with Shift or CAPS lock
     BYTE bCombinedCode;
 };
 

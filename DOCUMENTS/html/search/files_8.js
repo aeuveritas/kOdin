@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['utils_2ecpp',['utils.cpp',['../kernel32_2utils_8cpp.html',1,'']]],
-  ['utils_2ecpp',['utils.cpp',['../kernel64_2utils_8cpp.html',1,'']]],
-  ['utils_2ehpp',['utils.hpp',['../kernel32_2utils_8hpp.html',1,'']]],
-  ['utils_2ehpp',['utils.hpp',['../kernel64_2utils_8hpp.html',1,'']]]
+  ['segmentdescriptor_2ehpp',['segmentDescriptor.hpp',['../segment_descriptor_8hpp.html',1,'']]],
+  ['shell_2ecpp',['shell.cpp',['../shell_8cpp.html',1,'']]],
+  ['shell_2ehpp',['shell.hpp',['../shell_8hpp.html',1,'']]]
 ];

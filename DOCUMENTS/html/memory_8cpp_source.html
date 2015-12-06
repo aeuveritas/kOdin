@@ -109,13 +109,13 @@ $(document).ready(function(){initNavTree('memory_8cpp_source.html','');});
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classk_memory.html#a3232feb17e3d9a1f39a93e71b5c3a999">    4</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classk_memory.html#a3232feb17e3d9a1f39a93e71b5c3a999">kMemory::kInitializeKernel64Area</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>* pdwCurrentAddress;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>* pdwCurrentAddress;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="comment">// Start point of initialization, 1 MB</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    pdwCurrentAddress = (<a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>*) 0x100000;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    pdwCurrentAddress = (<a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>*) 0x100000;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">// Until 6 MB, initialize every 4 byte with 0</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">while</span> ((<a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>)pdwCurrentAddress &lt; 0x600000) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">while</span> ((<a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>)pdwCurrentAddress &lt; 0x600000) {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        *pdwCurrentAddress = 0x00;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="comment">// After writing, check the written value.</span></div>
@@ -133,13 +133,13 @@ $(document).ready(function(){initNavTree('memory_8cpp_source.html','');});
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
 <div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classk_memory.html#a9fc70470156b717e9e6309e03a7da4c5">   29</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classk_memory.html#a9fc70470156b717e9e6309e03a7da4c5">kMemory::kIsMemoryEnough</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>* pdwCurrentAddress;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>* pdwCurrentAddress;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">// From 0x100000 (= 1MB)</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    pdwCurrentAddress = (<a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>*) 0x100000;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    pdwCurrentAddress = (<a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>*) 0x100000;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// Util 64 MB, check the memory</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">while</span> ((<a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>)pdwCurrentAddress &lt; 0x4000000) {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">while</span> ((<a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>)pdwCurrentAddress &lt; 0x4000000) {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="comment">// Write an temporary value</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        *pdwCurrentAddress = 0x12345678;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
@@ -159,19 +159,19 @@ $(document).ready(function(){initNavTree('memory_8cpp_source.html','');});
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classk_memory.html#ac147a25d1fadf2075cd6f05a998ab13d">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classk_memory.html#ac147a25d1fadf2075cd6f05a998ab13d">kMemory::kCopyKernel64ImageTo2MB</a>(<span class="keywordtype">void</span>)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</a> wKernel32SectorCount;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</a> wTotalKernelSectorCount;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>* pdwSourceAddress;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>* pdwDestinationAddress;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> wKernel32SectorCount;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> wTotalKernelSectorCount;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>* pdwSourceAddress;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>* pdwDestinationAddress;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// Read the number of total sectors from 0x7C05</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    wTotalKernelSectorCount = *((<a class="code" href="kernel32_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</a>*) 0x7C05);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    wTotalKernelSectorCount = *((<a class="code" href="kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a>*) 0x7C05);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">// Read the number of protected mode kernel sectors</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    wKernel32SectorCount = *((<a class="code" href="kernel32_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</a>*) 0x7C07);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    wKernel32SectorCount = *((<a class="code" href="kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a>*) 0x7C07);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    pdwSourceAddress = (<a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>*)(0x10000 + wKernel32SectorCount * 512);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    pdwDestinationAddress = (<a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>*) 0x200000;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    pdwSourceAddress = (<a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>*)(0x10000 + wKernel32SectorCount * 512);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    pdwDestinationAddress = (<a class="code" href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>*) 0x200000;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// Copy IA-32e mode kernel sectors as the size</span></div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; 512 * (wTotalKernelSectorCount - wKernel32SectorCount) / 4; i++) {</div>
@@ -188,11 +188,11 @@ $(document).ready(function(){initNavTree('memory_8cpp_source.html','');});
 <div class="ttc" id="classk_page_manager_html_ab290429de75b7119fa1a0a8f0bddc9ad"><div class="ttname"><a href="classk_page_manager.html#ab290429de75b7119fa1a0a8f0bddc9ad">kPageManager::kInitPage</a></div><div class="ttdeci">void kInitPage(void)</div><div class="ttdoc">Initialize page tables for IA-32e mode. </div><div class="ttdef"><b>Definition:</b> <a href="page_manager_8cpp_source.html#l00004">pageManager.cpp:4</a></div></div>
 <div class="ttc" id="classk_memory_html_a9fc70470156b717e9e6309e03a7da4c5"><div class="ttname"><a href="classk_memory.html#a9fc70470156b717e9e6309e03a7da4c5">kMemory::kIsMemoryEnough</a></div><div class="ttdeci">bool kIsMemoryEnough(void)</div><div class="ttdoc">Check the size of memory is larget than the minimum. </div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00029">memory.cpp:29</a></div></div>
 <div class="ttc" id="classk_memory_html_ac147a25d1fadf2075cd6f05a998ab13d"><div class="ttname"><a href="classk_memory.html#ac147a25d1fadf2075cd6f05a998ab13d">kMemory::kCopyKernel64ImageTo2MB</a></div><div class="ttdeci">void kCopyKernel64ImageTo2MB(void)</div><div class="ttdoc">Copy IA-32e mode kernel to 0x200000 (= 2 MB) </div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00056">memory.cpp:56</a></div></div>
-<div class="ttc" id="kernel32_2types_8hpp_html_aa39b39d94407451a6ec0226479db68cf"><div class="ttname"><a href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a></div><div class="ttdeci">#define DWORD</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00005">types.hpp:5</a></div></div>
-<div class="ttc" id="kernel32_2types_8hpp_html_a4cfc63e05db4883dc4b60a1245a9ffc5"><div class="ttname"><a href="kernel32_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5">WORD</a></div><div class="ttdeci">#define WORD</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00004">types.hpp:4</a></div></div>
 <div class="ttc" id="classk_memory_html_a5c46bc3b2d7c0ec2f8abef571a732aed"><div class="ttname"><a href="classk_memory.html#a5c46bc3b2d7c0ec2f8abef571a732aed">kMemory::kInitializePageManager</a></div><div class="ttdeci">void kInitializePageManager(void)</div><div class="ttdoc">Initialize page manager. </div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00081">memory.cpp:81</a></div></div>
 <div class="ttc" id="classk_memory_html_a3232feb17e3d9a1f39a93e71b5c3a999"><div class="ttname"><a href="classk_memory.html#a3232feb17e3d9a1f39a93e71b5c3a999">kMemory::kInitializeKernel64Area</a></div><div class="ttdeci">bool kInitializeKernel64Area(void)</div><div class="ttdoc">Initialize kernel area for IA-32e with 0. </div><div class="ttdef"><b>Definition:</b> <a href="memory_8cpp_source.html#l00004">memory.cpp:4</a></div></div>
-<div class="ttc" id="classk_memory_html_a5371b77091dfab73faf1df62726430df"><div class="ttname"><a href="classk_memory.html#a5371b77091dfab73faf1df62726430df">kMemory::clPM</a></div><div class="ttdeci">kPageManager clPM</div><div class="ttdef"><b>Definition:</b> <a href="memory_8hpp_source.html#l00008">memory.hpp:8</a></div></div>
+<div class="ttc" id="classk_memory_html_a5371b77091dfab73faf1df62726430df"><div class="ttname"><a href="classk_memory.html#a5371b77091dfab73faf1df62726430df">kMemory::clPM</a></div><div class="ttdeci">kPageManager clPM</div><div class="ttdef"><b>Definition:</b> <a href="memory_8hpp_source.html#l00010">memory.hpp:10</a></div></div>
+<div class="ttc" id="kernel32_2types_8hpp_html_a798af1e30bc65f319c1a246cecf59e39"><div class="ttname"><a href="kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a></div><div class="ttdeci">unsigned int DWORD</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00005">types.hpp:5</a></div></div>
+<div class="ttc" id="kernel32_2types_8hpp_html_a197942eefa7db30960ae396d68339b97"><div class="ttname"><a href="kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a></div><div class="ttdeci">unsigned short WORD</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00004">types.hpp:4</a></div></div>
 <div class="ttc" id="memory_8hpp_html"><div class="ttname"><a href="memory_8hpp.html">memory.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -200,7 +200,7 @@ $(document).ready(function(){initNavTree('memory_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_addb28c7a5fc17b8a68a66812d63c84d.html">kernel32</a></li><li class="navelem"><a class="el" href="memory_8cpp.html">memory.cpp</a></li>
-    <li class="footer">Generated on Sat Dec 5 2015 21:29:29 for kOdin by
+    <li class="footer">Generated on Mon Dec 7 2015 01:05:37 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

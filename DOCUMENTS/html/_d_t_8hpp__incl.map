@@ -1,0 +1,7 @@
+<map id="kernel64/DT.hpp" name="kernel64/DT.hpp">
+<area shape="rect" id="node2" href="$kernel64_2utils_8hpp.html" title="utils.hpp" alt="" coords="5,80,75,107"/>
+<area shape="rect" id="node4" href="$asm_utils_8hpp.html" title="asmUtils.hpp" alt="" coords="100,80,199,107"/>
+<area shape="rect" id="node5" href="$segment_descriptor_8hpp.html" title="segmentDescriptor.hpp" alt="" coords="223,80,380,107"/>
+<area shape="rect" id="node6" href="$interrupt_descriptor_8hpp.html" title="interruptDescriptor.hpp" alt="" coords="404,80,557,107"/>
+<area shape="rect" id="node3" href="$kernel64_2types_8hpp.html" title="types.hpp" alt="" coords="186,155,264,181"/>
+</map>

@@ -2,6 +2,7 @@
 
 ; Make function call path from C
 global _kInPortByte, _kOutPortByte
+global _kLoadGDTR, _kLoadTR, _kLoadIDTR
 
 SECTION .text                       ; Define text section
 
@@ -34,3 +35,24 @@ _kOutPortByte:
     pop rax                         ; Restore RDX and RAX from the stack
     pop rdx
     ret                             ; Return the caller
+
+; Set GDT on GDTR
+;   PARAM: Address of GDT data structure
+_kLoadGDTR:
+    lgdt [rdi]                      ; Load parameter 1 (= Address of GDT data 
+                                    ; structure) and set GDTR
+    ret
+    
+; Set TSS on TR
+;   PARAM: Offset of TSS descriptor
+_kLoadTR:
+    ltr di                          ; Load parameter 1 (= Offset of TSS
+                                    ; descriptor) ans set TR
+    ret
+    
+; Set IDT on IDTR
+;   PARAM: Address of IDT data structure
+_kLoadIDTR:
+    lidt [rdi]                      ; Load parameter 1 (= Address of IDT data
+                                    ; structure) and set IDTR
+    ret

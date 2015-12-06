@@ -79,6 +79,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
     </ul>
   </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_k"><span>k</span></a></li>
+      <li class="current"><a href="#index_~"><span>~</span></a></li>
+    </ul>
+  </div>
 </div><!-- top -->
 <div id="side-nav" class="ui-resizable side-nav-resizable">
   <div id="nav-tree">
@@ -109,7 +115,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </div>
 
 <div class="contents">
-&#160;<ul>
+&#160;
+
+<h3><a class="anchor" id="index_k"></a>- k -</h3><ul>
 <li>kActivateKeyboard()
 : <a class="el" href="classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c">kKeyboard</a>
 </li>
@@ -122,17 +130,32 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>kCopyKernel64ImageTo2MB()
 : <a class="el" href="classk_memory.html#ac147a25d1fadf2075cd6f05a998ab13d">kMemory</a>
 </li>
+<li>kDT()
+: <a class="el" href="classk_d_t.html#a160e8909a34e346b6c8780fb2119689c">kDT</a>
+</li>
+<li>kDummyHandler()
+: <a class="el" href="classk_d_t.html#abdf5c50642b286472109c764a61abd34">kDT</a>
+</li>
 <li>kEnableA20Gate()
 : <a class="el" href="classk_keyboard.html#a502b6e2fbe5d089c35adeef652919289">kKeyboard</a>
 </li>
 <li>kGetKeyboardScanCode()
 : <a class="el" href="classk_keyboard.html#a714eb7f95810867f33330f49cfab90c7">kKeyboard</a>
 </li>
+<li>kInitializeGDT()
+: <a class="el" href="classk_d_t.html#ab3bbe99e69ecdc2c5b3e16685fe31f92">kDT</a>
+</li>
+<li>kInitializeIDT()
+: <a class="el" href="classk_d_t.html#a4a54afd1f9b289cd2dd9cdfcd4f82d7f">kDT</a>
+</li>
 <li>kInitializeKernel64Area()
 : <a class="el" href="classk_memory.html#a3232feb17e3d9a1f39a93e71b5c3a999">kMemory</a>
 </li>
 <li>kInitializePageManager()
 : <a class="el" href="classk_memory.html#a5c46bc3b2d7c0ec2f8abef571a732aed">kMemory</a>
+</li>
+<li>kInitializeTSS()
+: <a class="el" href="classk_d_t.html#a23c76bd851a469698658e8e7e72f219d">kDT</a>
 </li>
 <li>kInitPage()
 : <a class="el" href="classk_page_manager.html#ab290429de75b7119fa1a0a8f0bddc9ad">kPageManager</a>
@@ -161,8 +184,29 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>kKeyboard()
 : <a class="el" href="classk_keyboard.html#a6b21ceebd8e47d1d5b43381cf3566236">kKeyboard</a>
 </li>
+<li>kLoadGDTR()
+: <a class="el" href="classk_d_t.html#a7e2b7bcf85ff2e1818993519186f3867">kDT</a>
+</li>
+<li>kLoadIDTR()
+: <a class="el" href="classk_d_t.html#af59d59bb384a9d912565a8dea64a70d4">kDT</a>
+</li>
+<li>kLoadTR()
+: <a class="el" href="classk_d_t.html#a469131c4c0cf30fe1a13d3e4d88e31b4">kDT</a>
+</li>
+<li>kMemCmp()
+: <a class="el" href="classk_utils.html#aa1984cd49311e481724e9ee578b92b6b">kUtils</a>
+</li>
+<li>kMemCpy()
+: <a class="el" href="classk_utils.html#a21e544dbcff594780a779780ddc10f03">kUtils</a>
+</li>
+<li>kMemSet()
+: <a class="el" href="classk_utils.html#ae055e25c0ba9910ca7886c4d59c44d58">kUtils</a>
+</li>
 <li>kPrintString()
 : <a class="el" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kUtils</a>
+</li>
+<li>kPrompt()
+: <a class="el" href="classk_shell.html#ab292740d0e9f12d21a8a3b86ae3236d4">kShell</a>
 </li>
 <li>kReadCPUID()
 : <a class="el" href="classk_cpu.html#a76637d24ba19b551fe94178b42a23044">kCpu</a>
@@ -170,14 +214,20 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>kReboot()
 : <a class="el" href="classk_keyboard.html#af11e0c261c17dba63705b65071ee86ba">kKeyboard</a>
 </li>
+<li>kSetGDTEntry16()
+: <a class="el" href="classk_d_t.html#ae96d1da4d8a82d54e2b55ba7499fbd86">kDT</a>
+</li>
+<li>kSetGDTEntry8()
+: <a class="el" href="classk_d_t.html#aa3acf11a8d9eabb14a50a019c2574173">kDT</a>
+</li>
+<li>kSetIDTEntry()
+: <a class="el" href="classk_d_t.html#aab66cde783767e1fb1125e1304f4d29b">kDT</a>
+</li>
 <li>kSetPageEntryData()
 : <a class="el" href="classk_page_manager.html#a9109d23ffa662fa53b8c99f18f123e8e">kPageManager</a>
 </li>
 <li>kSetPageTableAddress()
 : <a class="el" href="classk_page_manager.html#ac8618fc3f0e55170e9a34fa6c996ccaa">kPageManager</a>
-</li>
-<li>kShell()
-: <a class="el" href="classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038">kUtils</a>
 </li>
 <li>kSwitchAndExecute64bitsKernel()
 : <a class="el" href="classk_cpu.html#a219049a9ee5a67a6d81088ac875832b6">kCpu</a>
@@ -186,12 +236,22 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944">kKeyboard</a>
 </li>
 </ul>
+
+
+<h3><a class="anchor" id="index_~"></a>- ~ -</h3><ul>
+<li>~kDT()
+: <a class="el" href="classk_d_t.html#a387c907223d2e62372a3d878365f63d8">kDT</a>
+</li>
+<li>~kKeyboard()
+: <a class="el" href="classk_keyboard.html#ad97f9287889a01c630a4db142623962a">kKeyboard</a>
+</li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Dec 5 2015 21:29:29 for kOdin by
+    <li class="footer">Generated on Mon Dec 7 2015 01:05:37 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

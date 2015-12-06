@@ -19,6 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # Source tree
 * .<br>
+* DOCEMENTS<br>
 * Makefile<br>
 * README.md<br>
 * kOdin.kdev4<br>
@@ -43,15 +44,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   * utils.cpp<br>
   * utils.hpp<br>
 * kernel64<br>
+  * DT.cpp<br>
+  * DT.hpp<br>
   * Makefile<br>
   * asmUtils.asm<br>
   * asmUtils.hpp<br>
   * elf_x86_64.x<br>
   * entry.s<br>
-  * keyMappingEntry.hpp
-  * keyboardManager.cpp
-  * keyboardManager.hpp
+  * interruptDescriptor.hpp<br>
+  * keyMappingEntry.hpp<br>
+  * keyboard.cpp<br>
+  * keyboard.hpp<br>
   * main.cpp<br>
+  * segmentDescritptor.hpp<br>
+  * shell.cpp<br>
+  * shell.hpp<br>
   * types.hpp<br>
   * utils.cpp<br>
   * utils.hpp<br>
@@ -75,4 +82,5 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 [9. Activating Paging](https://aeuveritas.github.io/Activating-Paging/)<br>
 [10. Switching to the IA-32e Mode](https://aeuveritas.github.io/Switching-to-the-IA-32e-Mode/)<br>
 [11. Adding Keyboard Driver](https://aeuveritas.github.io/Adding-Keyboard-Driver/)<br>
+[12. Preparing for Interrupt](https://aeuveritas.github.io/Preparing-for-Interrupt/)<br>
 

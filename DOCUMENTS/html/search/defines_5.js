@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['word',['WORD',['../kernel32_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5',1,'WORD():&#160;types.hpp'],['../kernel64_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5',1,'WORD():&#160;types.hpp']]]
+  ['tss_5fsegmentsize',['TSS_SEGMENTSIZE',['../segment_descriptor_8hpp.html#a181cef9741006f91872be0d95a654e58',1,'segmentDescriptor.hpp']]]
 ];

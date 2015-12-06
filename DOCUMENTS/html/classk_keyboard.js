@@ -1,6 +1,7 @@
 var classk_keyboard =
 [
     [ "kKeyboard", "classk_keyboard.html#a6b21ceebd8e47d1d5b43381cf3566236", null ],
+    [ "~kKeyboard", "classk_keyboard.html#ad97f9287889a01c630a4db142623962a", null ],
     [ "kActivateKeyboard", "classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c", null ],
     [ "kChangeKeyboardLED", "classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc", null ],
     [ "kConvertScanCodeToASCIICode", "classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a", null ],

@@ -14,33 +14,43 @@ bool kUtils::kPrintString(int iX, int iY, const char* pcString)
     return true;
 }
 
-/// Simple shell
-void kUtils::kShell(kKeyboard& clKeyboard, DWORD& dwLine)
+// Fill memory with data
+void kUtils::kMemSet(void* pvDestination, unsigned char bData, int iSize)
 {
-    char cTemp[2] = {0, };
-    BYTE bFlags;
-    BYTE bTemp;
-    int xIndex = 0;
-    
-    while (1)
+    for (int i = 0; i < iSize; i++)
     {
-        // If the output buffer (port 0x60) is full, 
-        // Scan Code is available
-        if (clKeyboard.kIsOutputBufferFull() == true)
+        ((char*)pvDestination)[i] = bData;
+    }
+
+    return;
+}
+
+// Copy value of memory
+int kUtils::kMemCpy(void* pvDestination, const void* pvSource, int iSize)
+{
+    for (int i = 0; i < iSize; i++)
+    {
+        ((char*)pvDestination)[i] = ((char*)pvSource)[i];
+    }
+    
+    return iSize;
+}
+
+// Compare values of memory
+int kUtils::kMemCmp(const void* pvDestination, const void* pvSource, int iSize)
+{
+    char cTemp;
+    
+    for (int i = 0; i < iSize; i++)
+    {
+        cTemp = ((char*)pvDestination)[i] - ((char*)pvSource)[i];
+        
+        if (cTemp != 0)
         {
-            // Read Scan Code from the output buffer (0x60)
-            bTemp = clKeyboard.kGetKeyboardScanCode();
-            
-            // Translate Scan Code to ASCII
-            // and Check push and release
-            if (clKeyboard.kConvertScanCodeToASCIICode(bTemp, &(cTemp[0]), &bFlags) == true)
-            {
-                // If key is pushed, print the key
-                if (bFlags & KEY_FLAGS_DOWN)
-                {
-                    kPrintString(xIndex++, dwLine, cTemp);
-                }
-            }
+            return (int) cTemp;
         }
     }
+    
+    return 0;
 }
+

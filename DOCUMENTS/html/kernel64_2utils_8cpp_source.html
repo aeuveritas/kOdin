@@ -120,54 +120,60 @@ $(document).ready(function(){initNavTree('kernel64_2utils_8cpp_source.html','');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038">kUtils::kShell</a>(<a class="code" href="classk_keyboard.html">kKeyboard</a>&amp; clKeyboard, <a class="code" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a>&amp; dwLine)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Fill memory with data</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classk_utils.html#ae055e25c0ba9910ca7886c4d59c44d58">   18</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classk_utils.html#ae055e25c0ba9910ca7886c4d59c44d58">kUtils::kMemSet</a>(<span class="keywordtype">void</span>* pvDestination, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> bData, <span class="keywordtype">int</span> iSize)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">char</span> cTemp[2] = {0, };</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#aec93e83855ac17c3c25c55c37ca186dd">BYTE</a> bFlags;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="kernel32_2types_8hpp.html#aec93e83855ac17c3c25c55c37ca186dd">BYTE</a> bTemp;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> xIndex = 0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">while</span> (1)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">// If the output buffer (port 0x60) is full, </span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="comment">// Scan Code is available</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (clKeyboard.<a class="code" href="classk_keyboard.html#a889d812f2ebc66775d84dba823e6fb65">kIsOutputBufferFull</a>() == <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="comment">// Read Scan Code from the output buffer (0x60)</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            bTemp = clKeyboard.<a class="code" href="classk_keyboard.html#a714eb7f95810867f33330f49cfab90c7">kGetKeyboardScanCode</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">// Translate Scan Code to ASCII</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="comment">// and Check push and release</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span> (clKeyboard.<a class="code" href="classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a">kConvertScanCodeToASCIICode</a>(bTemp, &amp;(cTemp[0]), &amp;bFlags) == <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="comment">// If key is pushed, print the key</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">if</span> (bFlags &amp; <a class="code" href="key_mapping_entry_8hpp.html#a61d9ceb415580ae9623d617665430c07">KEY_FLAGS_DOWN</a>)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    <a class="code" href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(xIndex++, dwLine, cTemp);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
-<div class="ttc" id="kernel32_2types_8hpp_html_aa39b39d94407451a6ec0226479db68cf"><div class="ttname"><a href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">DWORD</a></div><div class="ttdeci">#define DWORD</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00005">types.hpp:5</a></div></div>
-<div class="ttc" id="key_mapping_entry_8hpp_html_a61d9ceb415580ae9623d617665430c07"><div class="ttname"><a href="key_mapping_entry_8hpp.html#a61d9ceb415580ae9623d617665430c07">KEY_FLAGS_DOWN</a></div><div class="ttdeci">#define KEY_FLAGS_DOWN</div><div class="ttdef"><b>Definition:</b> <a href="key_mapping_entry_8hpp_source.html#l00011">keyMappingEntry.hpp:11</a></div></div>
-<div class="ttc" id="kernel32_2types_8hpp_html_aec93e83855ac17c3c25c55c37ca186dd"><div class="ttname"><a href="kernel32_2types_8hpp.html#aec93e83855ac17c3c25c55c37ca186dd">BYTE</a></div><div class="ttdeci">#define BYTE</div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00003">types.hpp:3</a></div></div>
-<div class="ttc" id="classk_keyboard_html"><div class="ttname"><a href="classk_keyboard.html">kKeyboard</a></div><div class="ttdoc">Class for keyboard. </div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8hpp_source.html#l00008">keyboard.hpp:8</a></div></div>
-<div class="ttc" id="classk_keyboard_html_a889d812f2ebc66775d84dba823e6fb65"><div class="ttname"><a href="classk_keyboard.html#a889d812f2ebc66775d84dba823e6fb65">kKeyboard::kIsOutputBufferFull</a></div><div class="ttdeci">bool kIsOutputBufferFull(void)</div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8cpp_source.html#l00023">keyboard.cpp:23</a></div></div>
-<div class="ttc" id="classk_utils_html_aec7de7b52710a4e44ce60d1ff674debb"><div class="ttname"><a href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kUtils::kPrintString</a></div><div class="ttdeci">bool kPrintString(int iX, int iY, const char *pcString)</div><div class="ttdoc">Print message. </div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2utils_8cpp_source.html#l00004">utils.cpp:4</a></div></div>
-<div class="ttc" id="structk_charactor_struct_html"><div class="ttname"><a href="structk_charactor_struct.html">kCharactorStruct</a></div><div class="ttdoc">Data structure for text to print in video mode. </div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00012">types.hpp:12</a></div></div>
-<div class="ttc" id="classk_utils_html_a0f5f44062d64847d23eca1c72fd2a038"><div class="ttname"><a href="classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038">kUtils::kShell</a></div><div class="ttdeci">void kShell(kKeyboard &amp;clKeyboard, DWORD &amp;dwline)</div><div class="ttdoc">Simple shell. </div><div class="ttdef"><b>Definition:</b> <a href="kernel64_2utils_8cpp_source.html#l00018">utils.cpp:18</a></div></div>
-<div class="ttc" id="classk_keyboard_html_a21b6a75fb4b81b0a6f94668fde71196a"><div class="ttname"><a href="classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a">kKeyboard::kConvertScanCodeToASCIICode</a></div><div class="ttdeci">bool kConvertScanCodeToASCIICode(BYTE bScanCode, char *pbASCIICode, BYTE *pbFlags)</div><div class="ttdoc">Translate ScFALSEan Code to ASCII. </div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8cpp_source.html#l00454">keyboard.cpp:454</a></div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iSize; i++)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        ((<span class="keywordtype">char</span>*)pvDestination)[i] = bData;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// Copy value of memory</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classk_utils.html#a21e544dbcff594780a779780ddc10f03">   29</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classk_utils.html#a21e544dbcff594780a779780ddc10f03">kUtils::kMemCpy</a>(<span class="keywordtype">void</span>* pvDestination, <span class="keyword">const</span> <span class="keywordtype">void</span>* pvSource, <span class="keywordtype">int</span> iSize)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iSize; i++)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        ((<span class="keywordtype">char</span>*)pvDestination)[i] = ((<span class="keywordtype">char</span>*)pvSource)[i];</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> iSize;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">// Compare values of memory</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classk_utils.html#aa1984cd49311e481724e9ee578b92b6b">   40</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classk_utils.html#aa1984cd49311e481724e9ee578b92b6b">kUtils::kMemCmp</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* pvDestination, <span class="keyword">const</span> <span class="keywordtype">void</span>* pvSource, <span class="keywordtype">int</span> iSize)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">char</span> cTemp;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; iSize; i++)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        cTemp = ((<span class="keywordtype">char</span>*)pvDestination)[i] - ((<span class="keywordtype">char</span>*)pvSource)[i];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (cTemp != 0)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordflow">return</span> (<span class="keywordtype">int</span>) cTemp;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="ttc" id="classk_utils_html_ae055e25c0ba9910ca7886c4d59c44d58"><div class="ttname"><a href="classk_utils.html#ae055e25c0ba9910ca7886c4d59c44d58">kUtils::kMemSet</a></div><div class="ttdeci">void kMemSet(void *pvDestination, BYTE bData, int iSize)</div><div class="ttdef"><b>Definition:</b> <a href="kernel64_2utils_8cpp_source.html#l00018">utils.cpp:18</a></div></div>
+<div class="ttc" id="classk_utils_html_aa1984cd49311e481724e9ee578b92b6b"><div class="ttname"><a href="classk_utils.html#aa1984cd49311e481724e9ee578b92b6b">kUtils::kMemCmp</a></div><div class="ttdeci">int kMemCmp(const void *pvDestination, const void *pvSource, int iSize)</div><div class="ttdef"><b>Definition:</b> <a href="kernel64_2utils_8cpp_source.html#l00040">utils.cpp:40</a></div></div>
+<div class="ttc" id="classk_utils_html_aec7de7b52710a4e44ce60d1ff674debb"><div class="ttname"><a href="classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kUtils::kPrintString</a></div><div class="ttdeci">bool kPrintString(int iX, int iY, const char *pcString)</div><div class="ttdoc">Print message. </div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2utils_8cpp_source.html#l00006">utils.cpp:6</a></div></div>
+<div class="ttc" id="classk_utils_html_a21e544dbcff594780a779780ddc10f03"><div class="ttname"><a href="classk_utils.html#a21e544dbcff594780a779780ddc10f03">kUtils::kMemCpy</a></div><div class="ttdeci">int kMemCpy(void *pvDestination, const void *pvSource, int iSize)</div><div class="ttdef"><b>Definition:</b> <a href="kernel64_2utils_8cpp_source.html#l00029">utils.cpp:29</a></div></div>
+<div class="ttc" id="structk_charactor_struct_html"><div class="ttname"><a href="structk_charactor_struct.html">kCharactorStruct</a></div><div class="ttdoc">Data structure for text to print in video mode. </div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00011">types.hpp:11</a></div></div>
 <div class="ttc" id="kernel64_2utils_8hpp_html"><div class="ttname"><a href="kernel64_2utils_8hpp.html">utils.hpp</a></div></div>
-<div class="ttc" id="structk_charactor_struct_html_a658ceea1126c0249d0f3a52783a4e451"><div class="ttname"><a href="structk_charactor_struct.html#a658ceea1126c0249d0f3a52783a4e451">kCharactorStruct::bCharactor</a></div><div class="ttdeci">BYTE bCharactor</div><div class="ttdoc">Charactor. </div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00013">types.hpp:13</a></div></div>
-<div class="ttc" id="classk_keyboard_html_a714eb7f95810867f33330f49cfab90c7"><div class="ttname"><a href="classk_keyboard.html#a714eb7f95810867f33330f49cfab90c7">kKeyboard::kGetKeyboardScanCode</a></div><div class="ttdeci">BYTE kGetKeyboardScanCode(void)</div><div class="ttdoc">Read a key from the output buffer (port 0x60). </div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8cpp_source.html#l00105">keyboard.cpp:105</a></div></div>
+<div class="ttc" id="structk_charactor_struct_html_a658ceea1126c0249d0f3a52783a4e451"><div class="ttname"><a href="structk_charactor_struct.html#a658ceea1126c0249d0f3a52783a4e451">kCharactorStruct::bCharactor</a></div><div class="ttdeci">BYTE bCharactor</div><div class="ttdoc">Charactor. </div><div class="ttdef"><b>Definition:</b> <a href="kernel32_2types_8hpp_source.html#l00012">types.hpp:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_db908db968f8f6092f1b3817428a1d92.html">kernel64</a></li><li class="navelem"><a class="el" href="kernel64_2utils_8cpp.html">utils.cpp</a></li>
-    <li class="footer">Generated on Sat Dec 5 2015 21:29:29 for kOdin by
+    <li class="footer">Generated on Mon Dec 7 2015 01:05:37 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -83,11 +83,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow4" class="tabs3">
     <ul class="tablist">
       <li><a href="#index_b"><span>b</span></a></li>
-      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
-      <li><a href="#index_q"><span>q</span></a></li>
-      <li class="current"><a href="#index_w"><span>w</span></a></li>
+      <li class="current"><a href="#index_t"><span>t</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -123,18 +123,148 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
-<li>BYTE
-: <a class="el" href="kernel32_2types_8hpp.html#aec93e83855ac17c3c25c55c37ca186dd">types.hpp</a>
-</li>
 <li>BYTESOFSECTOR
 : <a class="el" href="image_maker_8c.html#a655c44a39369eba3d68f38a6519c815c">imageMaker.c</a>
 </li>
 </ul>
 
 
-<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
-<li>DWORD
-: <a class="el" href="kernel32_2types_8hpp.html#aa39b39d94407451a6ec0226479db68cf">types.hpp</a>
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>GDT_FLAGS_LOWER_DPL0
+: <a class="el" href="segment_descriptor_8hpp.html#adedb1a71dbcf804cdb57f118b2c970a8">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_LOWER_DPL1
+: <a class="el" href="segment_descriptor_8hpp.html#a462be8cef93d79139434b22441bf0999">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_LOWER_DPL2
+: <a class="el" href="segment_descriptor_8hpp.html#a6f2e67c1861caee996d1653ec99e7c19">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_LOWER_DPL3
+: <a class="el" href="segment_descriptor_8hpp.html#a04295ae08c68932bcc84f46a29c00fe3">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_LOWER_KERNELCODE
+: <a class="el" href="segment_descriptor_8hpp.html#aba943f46a90ce66c685661b8d96fe88b">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_LOWER_KERNELDATA
+: <a class="el" href="segment_descriptor_8hpp.html#abf278a1229e0a5074be65d8df8ac568e">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_LOWER_P
+: <a class="el" href="segment_descriptor_8hpp.html#a75d83a91c160ad179aca31a6deaccc39">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_LOWER_S
+: <a class="el" href="segment_descriptor_8hpp.html#a647cc4e71f1ce60bee72f296c2cbedd6">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_LOWER_TSS
+: <a class="el" href="segment_descriptor_8hpp.html#a189fd13418550853ad595e42d28961b9">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_LOWER_USERCODE
+: <a class="el" href="segment_descriptor_8hpp.html#a954fcdd8422f1819ce595e17bc66d2b5">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_LOWER_USERDATA
+: <a class="el" href="segment_descriptor_8hpp.html#a1f1cceac89ef9a179ee33863adc32862">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_UPPER_CODE
+: <a class="el" href="segment_descriptor_8hpp.html#a5c5b4d5cf88177623604ed9681618b4d">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_UPPER_DATA
+: <a class="el" href="segment_descriptor_8hpp.html#a8e79bb1efa21d9c1e56103bd85dced4e">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_UPPER_DB
+: <a class="el" href="segment_descriptor_8hpp.html#ab8f59df64bd5fa27df87819c2d29c8dc">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_UPPER_G
+: <a class="el" href="segment_descriptor_8hpp.html#ade1cd1f8789fe79c3ccba0821746bb86">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_UPPER_L
+: <a class="el" href="segment_descriptor_8hpp.html#ab47a954716b96c547ea25fab4041543c">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_FLAGS_UPPER_TSS
+: <a class="el" href="segment_descriptor_8hpp.html#a48265739f2a868520c2b235b4d03581c">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_KERNELCODESEGMENT
+: <a class="el" href="segment_descriptor_8hpp.html#a16eb4a84ae391d88fac733fc7405447a">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_KERNELDATASEGMENT
+: <a class="el" href="segment_descriptor_8hpp.html#a6c73c3faaafd6b740c6612da1be42fc0">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_MAXENTRY16COUNT
+: <a class="el" href="segment_descriptor_8hpp.html#a1cd136f32211f0ca50acb340d18ca036">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_MAXENTRY8COUNT
+: <a class="el" href="segment_descriptor_8hpp.html#a4616e3dcd3cf21178c513f25b8abed16">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_TABLESIZE
+: <a class="el" href="segment_descriptor_8hpp.html#aa9f5921c3637868b5ccae42cc0aa6b4e">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_TSS
+: <a class="el" href="segment_descriptor_8hpp.html#afa2f85c6adeea0d29c4852d4cef33d4c">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_TYPE_CODE
+: <a class="el" href="segment_descriptor_8hpp.html#a5ba3c6302d19380006c152d8730b8106">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_TYPE_DATA
+: <a class="el" href="segment_descriptor_8hpp.html#a01a4ba74339b8d6e29df2ea763439433">segmentDescriptor.hpp</a>
+</li>
+<li>GDT_TYPE_TSS
+: <a class="el" href="segment_descriptor_8hpp.html#ab861bcc6e3be59914c5ba1e6e99e8530">segmentDescriptor.hpp</a>
+</li>
+<li>GDTR_STARTADDRESS
+: <a class="el" href="segment_descriptor_8hpp.html#a9be99ff4a9b47c1729c9944672071cae">segmentDescriptor.hpp</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>IDT_FLAGS_DPL0
+: <a class="el" href="interrupt_descriptor_8hpp.html#ae00bfe90514ec859da31ab103c84935d">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_FLAGS_DPL1
+: <a class="el" href="interrupt_descriptor_8hpp.html#ab5eaf9ec5f37716b8847f66687756a53">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_FLAGS_DPL2
+: <a class="el" href="interrupt_descriptor_8hpp.html#a6d66ea8f59c2c6e20133fc3de8ddb42f">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_FLAGS_DPL3
+: <a class="el" href="interrupt_descriptor_8hpp.html#a95ecc520f63d23cf537a4ce9e729f919">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_FLAGS_IST0
+: <a class="el" href="interrupt_descriptor_8hpp.html#a85bbafa3c9f94bc724f5dd7049c0e5b4">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_FLAGS_IST1
+: <a class="el" href="interrupt_descriptor_8hpp.html#a9514cf4458d12827f19abc26f9c6a01a">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_FLAGS_KERNEL
+: <a class="el" href="interrupt_descriptor_8hpp.html#a22b5c8e28718e0fba12e94d5a7e289b8">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_FLAGS_P
+: <a class="el" href="interrupt_descriptor_8hpp.html#a92ffed317dd50a9ad4b7d39bdad79215">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_FLAGS_USER
+: <a class="el" href="interrupt_descriptor_8hpp.html#a7bc390b0cb85b70b3d0b15b620a70691">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_MAXENTRYCOUNT
+: <a class="el" href="interrupt_descriptor_8hpp.html#ae156cf383a1d2ebba4e66f205a0213a4">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_STARTADDRESS
+: <a class="el" href="interrupt_descriptor_8hpp.html#a3b742e57519f1eeefc43e4ec1f81ab74">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_TABLESIZE
+: <a class="el" href="interrupt_descriptor_8hpp.html#ae3d17d3e21e5e5c8b359d1b5412a9d77">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_TYPE_INTERRUPT
+: <a class="el" href="interrupt_descriptor_8hpp.html#ac75536fcc73991489f97b149a970a06d">interruptDescriptor.hpp</a>
+</li>
+<li>IDT_TYPE_TRAP
+: <a class="el" href="interrupt_descriptor_8hpp.html#af75ed12daf02af27df0d8d62b0ba6d8d">interruptDescriptor.hpp</a>
+</li>
+<li>IDTR_STARTADDRESS
+: <a class="el" href="interrupt_descriptor_8hpp.html#afce34094f6b8173755a8e715b12a9374">interruptDescriptor.hpp</a>
+</li>
+<li>IST_SIZE
+: <a class="el" href="interrupt_descriptor_8hpp.html#ab0ff8a4220fff635d59b9ac59520efa5">interruptDescriptor.hpp</a>
+</li>
+<li>IST_STARTADDRESS
+: <a class="el" href="interrupt_descriptor_8hpp.html#a25ca88f1f6ce021fa081b22468aa0df6">interruptDescriptor.hpp</a>
 </li>
 </ul>
 
@@ -318,16 +448,9 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 </ul>
 
 
-<h3><a class="anchor" id="index_q"></a>- q -</h3><ul>
-<li>QWORD
-: <a class="el" href="kernel32_2types_8hpp.html#a43d9cdc629b161072de9e63067a28b39">types.hpp</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
-<li>WORD
-: <a class="el" href="kernel32_2types_8hpp.html#a4cfc63e05db4883dc4b60a1245a9ffc5">types.hpp</a>
+<h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>TSS_SEGMENTSIZE
+: <a class="el" href="segment_descriptor_8hpp.html#a181cef9741006f91872be0d95a654e58">segmentDescriptor.hpp</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -335,7 +458,7 @@ $(document).ready(function(){initNavTree('globals_defs.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Dec 5 2015 21:29:29 for kOdin by
+    <li class="footer">Generated on Mon Dec 7 2015 01:05:37 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

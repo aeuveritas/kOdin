@@ -1,9 +1,9 @@
 #pragma once
 
-#define BYTE    unsigned char
-#define WORD    unsigned short
-#define DWORD   unsigned int
-#define QWORD   unsigned long
+typedef unsigned char   BYTE;
+typedef unsigned short  WORD;
+typedef unsigned int    DWORD;
+typedef unsigned long   QWORD;
 
 #pragma pack(push, 1)
 

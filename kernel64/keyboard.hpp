@@ -4,6 +4,8 @@
 #include "asmUtils.hpp"
 #include "keyMappingEntry.hpp"
 
+#pragma pack(push, 1)
+
 /// Class for keyboard
 class kKeyboard
 {
@@ -28,6 +30,7 @@ class kKeyboard
     
 public:
     kKeyboard(void);
+    ~kKeyboard(void);
     
     bool kActivateKeyboard(void);
     bool kChangeKeyboardLED(bool bCapsLockOn, 
@@ -38,3 +41,5 @@ public:
     bool kConvertScanCodeToASCIICode(BYTE bScanCode, 
                                      char* pbASCIICode, BYTE* pbFlags);
 };
+
+#pragma pack(pop)

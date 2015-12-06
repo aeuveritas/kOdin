@@ -1,13 +1,20 @@
 #pragma once
 
 #include "types.hpp"
-#include "keyboard.hpp"
+
+#pragma pack(push, 1)
 
 /// Class for Utilities
+/// TODO: Apply singleton
 class kUtils
 {
 public:
     bool kPrintString(int iX, int iY, const char* pcString);
-    void kShell(kKeyboard& clKeyboard, DWORD& dwline);
+    
+    // Memory operations
+    void kMemSet(void* pvDestination, BYTE bData, int iSize);
+    int kMemCpy(void* pvDestination, const void* pvSource, int iSize);
+    int kMemCmp(const void* pvDestination, const void* pvSource, int iSize);
 };
 
+#pragma pack(pop)

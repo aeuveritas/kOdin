@@ -7,6 +7,8 @@ extern "C" {
     void _kSwitchAndExecute64bitsKernel(void);
 }
 
+#pragma pack(push, 1)
+
 /// Class for CPU registers
 class kCpu
 {
@@ -14,3 +16,5 @@ public:
     void kReadCPUID(DWORD dwEAX, DWORD* pdwEAX, DWORD* pdwEBX, DWORD* pdwECX, DWORD* pdwEDX);
     void kSwitchAndExecute64bitsKernel(void);
 };
+
+#pragma pack(pop)

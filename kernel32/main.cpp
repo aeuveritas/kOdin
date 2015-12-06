@@ -29,7 +29,7 @@ void main(void)
         while (1);
     } else {
         clUtils.kPrintString(2, dwLine++,
-                         "PASS");
+                           "PASS");
     }
 
     // Initialize kernel area for IA-32e mode
@@ -37,21 +37,21 @@ void main(void)
                          "[      ]  IA-32e Kernel Area Initialize");
     if (clMem.kInitializeKernel64Area() == false) {
         clUtils.kPrintString(2, dwLine++,
-                         "FAIL");
+                           "FAIL");
         clUtils.kPrintString(0, dwLine,
                          "Kernel Area initialization Fail!!");
 
         while (1);
     }
     clUtils.kPrintString(2, dwLine++,
-                         "PASS");
+                           "PASS");
 
     // Create the page tables for IA-32e mode
     clUtils.kPrintString(0, dwLine,
                          "[      ]  IA-32e Page Tables Initialize");
     clMem.kInitializePageManager();
     clUtils.kPrintString(2, dwLine++,
-                         "PASS");
+                           "PASS");
 
     // Read information of processor vendor
     clCpu.kReadCPUID(0x00, &dwEAX, &dwEBX, &dwECX, &dwEDX);
@@ -61,7 +61,7 @@ void main(void)
     clUtils.kPrintString(0, dwLine,
                          "[      ]  Processor Vendor Message - ");
     clUtils.kPrintString(2, dwLine,
-                         "PASS");
+                           "PASS");
     clUtils.kPrintString(38, dwLine++, cVendorString);
 
     // Check 64 bits mode available
@@ -70,10 +70,10 @@ void main(void)
                          "[      ]  64 bits Mode Support Check");
     if (dwEDX & (1 << 29)) {
         clUtils.kPrintString(2, dwLine++,
-                         "PASS");
+                           "PASS");
     } else {
         clUtils.kPrintString(2, dwLine++,
-                         "FAIL");
+                           "FAIL");
         clUtils.kPrintString(0, dwLine,
                          "This processor does not support 64 bits mode");
 
@@ -85,7 +85,7 @@ void main(void)
                          "[      ]  Copy IA-32e Kernel To 2M Address");
     clMem.kCopyKernel64ImageTo2MB();
     clUtils.kPrintString(2, dwLine++,
-                         "PASS");
+                           "PASS");
 
     // Switch to the IA-32e mode
     clUtils.kPrintString(0, dwLine,
@@ -93,7 +93,7 @@ void main(void)
     clCpu.kSwitchAndExecute64bitsKernel();
 
     clUtils.kPrintString(2, dwLine,
-                         "FAIL");
+                           "FAIL");
     while (1);
 }
 

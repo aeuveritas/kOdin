@@ -1,5 +1,5 @@
 <map id="kKeyboard::kUpdateCombinationKeyStatusAndLED" name="kKeyboard::kUpdateCombinationKeyStatusAndLED">
 <area shape="rect" id="node2" href="$classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="270,5,477,46"/>
-<area shape="rect" id="node3" href="$classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038" title="Simple shell. " alt="" coords="526,12,626,39"/>
-<area shape="rect" id="node4" href="$kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="675,12,725,39"/>
+<area shape="rect" id="node3" href="$classk_shell.html#ab292740d0e9f12d21a8a3b86ae3236d4" title="Simple shell. " alt="" coords="525,12,640,39"/>
+<area shape="rect" id="node4" href="$kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="688,12,739,39"/>
 </map>

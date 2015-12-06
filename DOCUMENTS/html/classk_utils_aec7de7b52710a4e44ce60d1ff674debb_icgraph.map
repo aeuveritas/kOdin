@@ -1,5 +1,7 @@
 <map id="kUtils::kPrintString" name="kUtils::kPrintString">
-<area shape="rect" id="node2" href="$kernel32_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="212,5,263,32"/>
-<area shape="rect" id="node3" href="$classk_utils.html#a0f5f44062d64847d23eca1c72fd2a038" title="Simple shell. " alt="" coords="187,56,287,83"/>
-<area shape="rect" id="node4" href="$kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="336,56,387,83"/>
+<area shape="rect" id="node2" href="$kernel32_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="239,5,289,32"/>
+<area shape="rect" id="node3" href="$classk_d_t.html#abdf5c50642b286472109c764a61abd34" title="kDT::kDummyHandler" alt="" coords="187,56,341,83"/>
+<area shape="rect" id="node6" href="$classk_shell.html#ab292740d0e9f12d21a8a3b86ae3236d4" title="Simple shell. " alt="" coords="399,107,513,133"/>
+<area shape="rect" id="node4" href="$classk_d_t.html#a4a54afd1f9b289cd2dd9cdfcd4f82d7f" title="Initialize IDT. " alt="" coords="390,56,522,83"/>
+<area shape="rect" id="node5" href="$kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="571,81,621,108"/>
 </map>
