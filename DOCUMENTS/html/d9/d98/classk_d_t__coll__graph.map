@@ -1,0 +1,7 @@
+<map id="kDT" name="kDT">
+<area shape="rect" id="node2" href="$df/d1d/structk_t_s_s_struct.html" title="TSS data structure [IA&#45;32e Mode]. " alt="" coords="5,13,165,179"/>
+<area shape="rect" id="node3" href="$dc/d68/structk_i_d_t_entry_struct.html" title="Structure for IDT Gate Descriptor [IA&#45;32e Mode]. " alt="" coords="190,13,353,179"/>
+<area shape="rect" id="node4" href="$d4/d6e/structk_d_t_r_struct.html" title="structures for descriptor table register, GDTR and IDTR [IA&#45;32e Mode] " alt="" coords="378,35,507,157"/>
+<area shape="rect" id="node5" href="$d9/d8c/structk_g_d_t_entry8_struct.html" title="8 bytes GDT entry [IA&#45;32e Mode] " alt="" coords="532,21,719,171"/>
+<area shape="rect" id="node6" href="$d3/dbc/structk_g_d_t_entry16_struct.html" title="16 bytes GDT entry [IA&#45;32e Mode] " alt="" coords="743,6,929,186"/>
+</map>

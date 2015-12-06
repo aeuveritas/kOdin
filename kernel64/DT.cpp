@@ -132,6 +132,7 @@ void kDT::kSetIDTEntry(IDTENTRY* pstEntry, void (*pvHandler)(),
     pstEntry->dwReserved = 0;
 }
 
+/// Dummny handler for an interrupt and an exception
 void kDT::kDummyHandler(void)
 {
     clUtils.kPrintString(0, 0,

@@ -54,7 +54,7 @@
 
 #pragma pack(push, 1)
 
-/// Struct for Scan Code Table
+/// Struct for Scan Code Table [IA-32e Mode]
 struct kKeyMappingEntry {
     /// Normal ASCII
     BYTE bNormalCode;

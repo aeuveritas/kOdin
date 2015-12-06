@@ -1,0 +1,5 @@
+<map id="kDT::kInitializeIDT" name="kDT::kInitializeIDT">
+<area shape="rect" id="node2" href="$da/d13/classk_d_t.html#aab66cde783767e1fb1125e1304f4d29b" title="Set IDT gate descriptor. " alt="" coords="197,5,331,32"/>
+<area shape="rect" id="node3" href="$da/d13/classk_d_t.html#abdf5c50642b286472109c764a61abd34" title="Dummny handler for an interrupt and an exception. " alt="" coords="187,56,341,83"/>
+<area shape="rect" id="node4" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="390,56,522,83"/>
+</map>

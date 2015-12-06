@@ -7,7 +7,7 @@ typedef unsigned long   QWORD;
 
 #pragma pack(push, 1)
 
-/// Data structure for text to print in video mode
+/// Data structure for text to print in video mode [Protected Mode]
 typedef struct kCharactorStruct {
     BYTE bCharactor;
     BYTE bAttribute;

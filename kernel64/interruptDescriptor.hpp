@@ -42,7 +42,8 @@
 
 #pragma pack(push, 1)
 
-typedef struct kIDTEntryStruct
+/// Structure for IDT Gate Descriptor [IA-32e Mode]
+typedef struct kIDTEntryStruct 
 {
     WORD wLowerBaseAddress;
     WORD wSegmentSelector;

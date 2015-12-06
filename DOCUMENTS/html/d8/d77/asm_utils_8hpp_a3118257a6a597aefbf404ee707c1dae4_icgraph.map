@@ -1,0 +1,10 @@
+<map id="_kOutPortByte" name="_kOutPortByte">
+<area shape="rect" id="node2" href="$de/d2e/classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c" title="Activate keyboard. " alt="" coords="444,5,647,32"/>
+<area shape="rect" id="node4" href="$de/d2e/classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc" title="Change the sate of LEDs. " alt="" coords="163,56,389,83"/>
+<area shape="rect" id="node8" href="$de/d2e/classk_keyboard.html#a502b6e2fbe5d089c35adeef652919289" title="Activate A20 gate. " alt="" coords="181,107,371,133"/>
+<area shape="rect" id="node9" href="$de/d2e/classk_keyboard.html#af11e0c261c17dba63705b65071ee86ba" title="Reset a processor. " alt="" coords="205,157,347,184"/>
+<area shape="rect" id="node3" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1120,56,1171,83"/>
+<area shape="rect" id="node5" href="$de/d2e/classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944" title="Update a combination key state and Sync LED state. " alt="" coords="438,107,653,149"/>
+<area shape="rect" id="node6" href="$de/d2e/classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="702,107,909,149"/>
+<area shape="rect" id="node7" href="$de/dc1/classk_shell.html#ab292740d0e9f12d21a8a3b86ae3236d4" title="Simple shell. " alt="" coords="957,111,1072,137"/>
+</map>

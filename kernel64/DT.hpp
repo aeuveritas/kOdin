@@ -9,6 +9,7 @@ extern kUtils clUtils;
 
 #pragma pack(push, 1)
 
+/// Class for Description Table [IA-32e Mode]
 class kDT
 {
     DTR* pstGDTR;

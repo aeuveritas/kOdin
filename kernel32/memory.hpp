@@ -4,7 +4,7 @@
 
 #pragma pack(push, 1)
 
-/// Class for memory
+/// Class for memory [Protected Mode]
 class kMemory
 {
     kPageManager clPM;

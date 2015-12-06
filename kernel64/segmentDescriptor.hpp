@@ -66,7 +66,7 @@
 
 #pragma pack(push, 1)
 
-/// structures for descriptor table register, GDTR and IDTR
+/// structures for descriptor table register, GDTR and IDTR [IA-32e Mode]
 typedef struct kDTRStruct
 {
     WORD wLimit;
@@ -76,7 +76,7 @@ typedef struct kDTRStruct
     DWORD dwPadding;
 } DTR;
 
-/// 8 bytes GDT entry
+/// 8 bytes GDT entry [IA-32e Mode]
 typedef struct kGDTEntry8Struct
 {
     WORD wLowerLimit;
@@ -89,7 +89,7 @@ typedef struct kGDTEntry8Struct
     BYTE bUpperBaseAddress2;
 } GDTENTRY8;
 
-/// 16 bytes GDT entry
+/// 16 bytes GDT entry [IA-32e Mode]
 typedef struct kGDTEntry16Struct
 {
     WORD wLowerLimit;
@@ -104,7 +104,7 @@ typedef struct kGDTEntry16Struct
     DWORD dwReserved;
 } GDTENTRY16;
 
-/// TSS data structure
+/// TSS data structure [IA-32e Mode]
 typedef struct kTSSStruct
 {
     DWORD dwReserved1;

@@ -1,6 +1,0 @@
-<map id="kKeyboard::kActivateKeyboard" name="kKeyboard::kActivateKeyboard">
-<area shape="rect" id="node2" href="$asm_utils_8hpp.html#a3118257a6a597aefbf404ee707c1dae4" title="_kOutPortByte" alt="" coords="305,5,413,32"/>
-<area shape="rect" id="node3" href="$classk_keyboard.html#ab1093813a299c6d5d6f45e3dc4c757a3" title="Check whether ot nor there is a data in the input buffer (port 0x60). " alt="" coords="261,56,456,83"/>
-<area shape="rect" id="node4" href="$asm_utils_8hpp.html#a22130730d12e1e17d6201ef36cd90222" title="_kInPortByte" alt="" coords="509,107,608,133"/>
-<area shape="rect" id="node5" href="$classk_keyboard.html#a889d812f2ebc66775d84dba823e6fb65" title="kKeyboard::kIsOutputBufferFull" alt="" coords="256,157,461,184"/>
-</map>

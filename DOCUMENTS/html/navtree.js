@@ -1,7 +1,6 @@
 var NAVTREE =
 [
   [ "kOdin", "index.html", [
-    [ "kOdin", "md__r_e_a_d_m_e.html", null ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
@@ -26,8 +25,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_d_t_8cpp.html",
-"segment_descriptor_8hpp.html#a6f2e67c1861caee996d1653ec99e7c19"
+"annotated.html",
+"df/d67/key_mapping_entry_8hpp.html#ae176aa9af3d2acaeba5b8453aff5bbbf"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

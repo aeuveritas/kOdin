@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="kOdin.jpg"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">kOdin
    </div>
@@ -44,7 +45,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -85,7 +85,7 @@ $(document).ready(function(){initNavTree('index.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -99,12 +99,143 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="title">kOdin Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>"kOdin" is a custom 64 bits OS which is written in C++. "kOdin" is under construction, but it will be a unix-like and most POSIX-compliant.</p>
+<h1>License</h1>
+<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.</p>
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+<h1>Source tree</h1>
+<ul>
+<li>.<br/>
+</li>
+<li>DOCUMENTS<br/>
+</li>
+<li>Makefile<br/>
+</li>
+<li><a class="el" href="d9/dd6/_r_e_a_d_m_e_8md.html">README.md</a><br/>
+</li>
+<li>kOdin.kdev4<br/>
+</li>
+<li>run.sh<br/>
+</li>
+<li>bootloader<br/>
+<ul>
+<li>BootLoader.asm<br/>
+</li>
+<li>Makefile<br/>
+</li>
+</ul>
+</li>
+<li>kernel32<br/>
+<ul>
+<li>Makefile<br/>
+</li>
+<li>asmUtils.asm<br/>
+</li>
+<li><a class="el" href="df/dbe/cpu_8hpp.html">cpu.hpp</a><br/>
+</li>
+<li><a class="el" href="d7/dfc/cpu_8cpp.html">cpu.cpp</a><br/>
+</li>
+<li>elf_i386.x<br/>
+</li>
+<li>entry.s<br/>
+</li>
+<li>main.cpp<br/>
+</li>
+<li><a class="el" href="d8/d71/memory_8cpp.html">memory.cpp</a><br/>
+</li>
+<li><a class="el" href="da/d3e/memory_8hpp.html">memory.hpp</a><br/>
+</li>
+<li><a class="el" href="d8/d6d/page_8hpp.html">page.hpp</a><br/>
+</li>
+<li><a class="el" href="de/d8d/page_manager_8cpp.html">pageManager.cpp</a><br/>
+</li>
+<li><a class="el" href="d5/d19/page_manager_8hpp.html">pageManager.hpp</a><br/>
+</li>
+<li>types.hpp<br/>
+</li>
+<li>utils.cpp<br/>
+</li>
+<li>utils.hpp<br/>
+</li>
+</ul>
+</li>
+<li>kernel64<br/>
+<ul>
+<li><a class="el" href="da/dc7/_d_t_8cpp.html">DT.cpp</a><br/>
+</li>
+<li><a class="el" href="d6/d12/_d_t_8hpp.html">DT.hpp</a><br/>
+</li>
+<li>Makefile<br/>
+</li>
+<li>asmUtils.asm<br/>
+</li>
+<li><a class="el" href="d8/d77/asm_utils_8hpp.html">asmUtils.hpp</a><br/>
+</li>
+<li>elf_x86_64.x<br/>
+</li>
+<li>entry.s<br/>
+</li>
+<li><a class="el" href="d5/d6d/interrupt_descriptor_8hpp.html">interruptDescriptor.hpp</a><br/>
+</li>
+<li><a class="el" href="df/d67/key_mapping_entry_8hpp.html">keyMappingEntry.hpp</a><br/>
+</li>
+<li><a class="el" href="d7/df5/keyboard_8cpp.html">keyboard.cpp</a><br/>
+</li>
+<li><a class="el" href="dd/d39/keyboard_8hpp.html">keyboard.hpp</a><br/>
+</li>
+<li>main.cpp<br/>
+</li>
+<li>segmentDescritptor.hpp<br/>
+</li>
+<li><a class="el" href="da/d8a/shell_8cpp.html">shell.cpp</a><br/>
+</li>
+<li><a class="el" href="d5/d98/shell_8hpp.html">shell.hpp</a><br/>
+</li>
+<li>types.hpp<br/>
+</li>
+<li>utils.cpp<br/>
+</li>
+<li>utils.hpp<br/>
+</li>
+</ul>
+</li>
+<li>utility<br/>
+<ul>
+<li>Makefile<br/>
+</li>
+<li>imageMaker<br/>
+<ul>
+<li>Makefile<br/>
+</li>
+<li><a class="el" href="db/db9/image_maker_8c.html">imageMaker.c</a><br/>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1>Build history</h1>
+<p><a href="https://aeuveritas.github.io/kOdin/">0. kOdin</a><br/>
+ <a href="https://aeuveritas.github.io/setting-for-dl/">1. Setting Build Environment for kOdin</a><br/>
+ <a href="https://aeuveritas.github.io/Basic-Knowledge-for-IA-64-bit-processor/">2. Basic Knowledge for IA 64 Bit Processor</a><br/>
+ <a href="https://aeuveritas.github.io/Booting-and-Bootloader/">3. Booting &amp; Bootloader</a><br/>
+ <a href="https://aeuveritas.github.io/Implementing-Bootloader/">4. Implementing Bootloader</a><br/>
+ <a href="https://aeuveritas.github.io/Loading-OS/">5. Loading the OS image</a><br/>
+ <a href="https://aeuveritas.github.io/Entering-the-Protected-Mode/">6. Entering the Protected Mode</a><br/>
+ <a href="https://aeuveritas.github.io/Writing-a-C++-Kernel-Code/">7. Writing a C++ Kernel Code</a><br/>
+ <a href="https://aeuveritas.github.io/Initializing-memory/">8. Initializing Memory</a><br/>
+ <a href="https://aeuveritas.github.io/Activating-Paging/">9. Activating Paging</a><br/>
+ <a href="https://aeuveritas.github.io/Switching-to-the-IA-32e-Mode/">10. Switching to the IA-32e Mode</a><br/>
+ <a href="https://aeuveritas.github.io/Adding-Keyboard-Driver/">11. Adding Keyboard Driver</a><br/>
+ <a href="https://aeuveritas.github.io/Preparing-for-Interrupt/">12. Preparing for Interrupt</a><br/>
+ </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Dec 7 2015 01:05:37 for kOdin by
+    <li class="footer">Generated on Mon Dec 7 2015 01:50:33 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

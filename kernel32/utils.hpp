@@ -2,7 +2,7 @@
 
 #include "types.hpp"
 
-/// Class for Utilities
+/// Class for Utilities [Protected Mode]
 class kUtils
 {
 public:

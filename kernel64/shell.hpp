@@ -8,6 +8,7 @@ extern kUtils clUtils;
 
 #pragma pack(push, 1)
 
+/// Class for shell [IA-32e Mode]
 class kShell
 {
 public:

@@ -24,7 +24,7 @@
 // Struct
 #pragma pack(push, 1)
 
-// Struct for Page Entry
+// Struct for Page Entry [Protected Mode]
 struct kPageTableEntry {
     // For PML4 and PDP
     // 1 bit:   P, RW, US, PWT, PCD, A

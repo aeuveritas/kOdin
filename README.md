@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # Source tree
 * .<br>
-* DOCEMENTS<br>
+* DOCUMENTS<br>
 * Makefile<br>
 * README.md<br>
 * kOdin.kdev4<br>

@@ -1,0 +1,7 @@
+<map id="kKeyboard::kUpdateCombinationKeyStatusAndLED" name="kKeyboard::kUpdateCombinationKeyStatusAndLED">
+<area shape="rect" id="node2" href="$de/d2e/classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc" title="Change the sate of LEDs. " alt="" coords="270,81,495,108"/>
+<area shape="rect" id="node3" href="$de/d2e/classk_keyboard.html#ab1093813a299c6d5d6f45e3dc4c757a3" title="Check whether ot nor there is a data in the input buffer (port 0x60). " alt="" coords="549,5,744,32"/>
+<area shape="rect" id="node4" href="$d8/d77/asm_utils_8hpp.html#a22130730d12e1e17d6201ef36cd90222" title="_kInPortByte" alt="" coords="797,56,896,83"/>
+<area shape="rect" id="node5" href="$d8/d77/asm_utils_8hpp.html#a3118257a6a597aefbf404ee707c1dae4" title="_kOutPortByte" alt="" coords="593,107,701,133"/>
+<area shape="rect" id="node6" href="$de/d2e/classk_keyboard.html#a889d812f2ebc66775d84dba823e6fb65" title="kKeyboard::kIsOutputBufferFull" alt="" coords="544,157,749,184"/>
+</map>

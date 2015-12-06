@@ -1,0 +1,5 @@
+<map id="kMemory::kInitializePageManager" name="kMemory::kInitializePageManager">
+<area shape="rect" id="node2" href="$d8/d6a/classk_page_manager.html#ab290429de75b7119fa1a0a8f0bddc9ad" title="Initialize page tables for IA&#45;32e mode. " alt="" coords="225,41,397,68"/>
+<area shape="rect" id="node3" href="$d8/d6a/classk_page_manager.html#ac8618fc3f0e55170e9a34fa6c996ccaa" title="Set the base address of the page tables. " alt="" coords="459,5,666,46"/>
+<area shape="rect" id="node4" href="$d8/d6a/classk_page_manager.html#a9109d23ffa662fa53b8c99f18f123e8e" title="Set base address and flags for the page entry. " alt="" coords="446,71,679,97"/>
+</map>

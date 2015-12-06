@@ -1,6 +1,0 @@
-<map id="kKeyboard::kChangeKeyboardLED" name="kKeyboard::kChangeKeyboardLED">
-<area shape="rect" id="node2" href="$kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="963,5,1013,32"/>
-<area shape="rect" id="node3" href="$classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944" title="Update a combination key state and Sync LED state. " alt="" coords="281,29,495,70"/>
-<area shape="rect" id="node4" href="$classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="545,29,751,70"/>
-<area shape="rect" id="node5" href="$classk_shell.html#ab292740d0e9f12d21a8a3b86ae3236d4" title="Simple shell. " alt="" coords="800,32,915,59"/>
-</map>

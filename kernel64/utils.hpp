@@ -4,7 +4,7 @@
 
 #pragma pack(push, 1)
 
-/// Class for Utilities
+/// Class for Utilities [IA-32e Mode]
 /// TODO: Apply singleton
 class kUtils
 {

@@ -6,7 +6,7 @@
 
 #pragma pack(push, 1)
 
-/// Class for keyboard
+/// Class for keyboard [IA-32e Mode]
 class kKeyboard
 {
     // Information for combination

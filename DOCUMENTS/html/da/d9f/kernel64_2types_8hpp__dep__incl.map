@@ -1,0 +1,15 @@
+<map id="kernel64/types.hpp" name="kernel64/types.hpp">
+<area shape="rect" id="node2" href="$d8/d77/asm_utils_8hpp.html" title="kernel64/asmUtils.hpp" alt="" coords="472,80,624,107"/>
+<area shape="rect" id="node5" href="$df/ddd/kernel64_2main_8cpp.html" title="kernel64/main.cpp" alt="" coords="648,304,776,331"/>
+<area shape="rect" id="node6" href="$dd/d39/keyboard_8hpp.html" title="kernel64/keyboard.hpp" alt="" coords="699,155,852,181"/>
+<area shape="rect" id="node8" href="$d5/d98/shell_8hpp.html" title="kernel64/shell.hpp" alt="" coords="979,229,1105,256"/>
+<area shape="rect" id="node10" href="$d1/d72/kernel64_2utils_8hpp.html" title="kernel64/utils.hpp" alt="" coords="975,80,1099,107"/>
+<area shape="rect" id="node12" href="$df/db2/segment_descriptor_8hpp.html" title="kernel64/segmentDescriptor.hpp" alt="" coords="5,80,215,107"/>
+<area shape="rect" id="node13" href="$d5/d6d/interrupt_descriptor_8hpp.html" title="kernel64/interruptDescriptor.hpp" alt="" coords="241,80,447,107"/>
+<area shape="rect" id="node14" href="$df/d67/key_mapping_entry_8hpp.html" title="kernel64/keyMappingEntry.hpp" alt="" coords="750,80,951,107"/>
+<area shape="rect" id="node3" href="$d6/d12/_d_t_8hpp.html" title="kernel64/DT.hpp" alt="" coords="471,155,589,181"/>
+<area shape="rect" id="node4" href="$da/dc7/_d_t_8cpp.html" title="kernel64/DT.cpp" alt="" coords="454,229,572,256"/>
+<area shape="rect" id="node7" href="$d7/df5/keyboard_8cpp.html" title="kernel64/keyboard.cpp" alt="" coords="750,229,903,256"/>
+<area shape="rect" id="node9" href="$da/d8a/shell_8cpp.html" title="kernel64/shell.cpp" alt="" coords="979,304,1105,331"/>
+<area shape="rect" id="node11" href="$da/d2e/kernel64_2utils_8cpp.html" title="kernel64/utils.cpp" alt="" coords="1030,155,1153,181"/>
+</map>
