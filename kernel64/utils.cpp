@@ -1,6 +1,15 @@
 #include "utils.hpp"
 
-/// Print message
+/// Initialize Utils
+void kUtils::kInitializeUtils(DWORD offset)
+{
+    dwLine = offset;
+    xIndex = 0;
+    
+    return;
+}
+
+/// Print string
 bool kUtils::kPrintString(int iX, int iY, const char* pcString)
 {
     CHARACTER* pstScreen = (CHARACTER*) 0xB8000;
@@ -14,7 +23,63 @@ bool kUtils::kPrintString(int iX, int iY, const char* pcString)
     return true;
 }
 
-// Fill memory with data
+/// Print character
+bool kUtils::kPrintChar(const char* pcString)
+{
+    kPrintString(xIndex++, dwLine, pcString);
+}
+
+
+/// Print message
+bool kUtils::kPrintMessage(const char* pcString)
+{
+    kPrintString(0, dwLine, pcString);
+    
+    return true;
+}
+
+/// Print result
+bool kUtils::kPrintResult(const char* pcString)
+{
+    kPrintString(2, dwLine++, pcString);
+    
+    return true;
+}
+
+/// Print exception message
+void kUtils::kPrintException(const char* pcVectorNumber)
+{
+    kPrintString(0, 0,
+        "===========================================================");
+    kPrintString(0, 1, 
+        "                     Exception Occur                       ");
+    kPrintString(0, 2, 
+        "                  Vector:                                  ");
+    kPrintString(0, 3, 
+        "===========================================================");
+    
+    kPrintString(26, 2, pcVectorNumber);
+ 
+    return;
+}
+
+/// Print interrupt message
+bool kUtils::kPrintInterrupt(const char* pcString)
+{
+    kPrintString(70, 0, pcString);
+    
+    return true;
+}
+
+/// Print keyboard interrupt message
+bool kUtils::kPrintKeyboardInterrupt(const char* pcString)
+{
+    kPrintString(70, 1, pcString);
+
+    return true;
+}
+
+/// Fill memory with data
 void kUtils::kMemSet(void* pvDestination, unsigned char bData, int iSize)
 {
     for (int i = 0; i < iSize; i++)
@@ -25,7 +90,7 @@ void kUtils::kMemSet(void* pvDestination, unsigned char bData, int iSize)
     return;
 }
 
-// Copy value of memory
+/// Copy value of memory
 int kUtils::kMemCpy(void* pvDestination, const void* pvSource, int iSize)
 {
     for (int i = 0; i < iSize; i++)
@@ -36,7 +101,7 @@ int kUtils::kMemCpy(void* pvDestination, const void* pvSource, int iSize)
     return iSize;
 }
 
-// Compare values of memory
+/// Compare values of memory
 int kUtils::kMemCmp(const void* pvDestination, const void* pvSource, int iSize)
 {
     char cTemp;
@@ -50,7 +115,16 @@ int kUtils::kMemCmp(const void* pvDestination, const void* pvSource, int iSize)
             return (int) cTemp;
         }
     }
-    
+
     return 0;
 }
 
+/// Wait for GDB
+void kUtils::kLock(void)
+{
+    volatile unsigned int k;
+
+    for (k=0; k < 0xFFFFFFFF ; k++);
+
+    return;
+}

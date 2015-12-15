@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.hpp"
-#include "asmUtils.hpp"
+#include "port.hpp"
 #include "keyMappingEntry.hpp"
 
 #pragma pack(push, 1)
@@ -9,6 +9,9 @@
 /// Class for keyboard [IA-32e Mode]
 class kKeyboard
 {
+    // class pointer for kPort
+    kPort* a_pclPort;
+    
     // Information for combination
     bool bShiftDown;
     bool bCapsLockOn;
@@ -32,6 +35,7 @@ public:
     kKeyboard(void);
     ~kKeyboard(void);
     
+    void kInitializeKeyboard(kPort* _kPort);
     bool kActivateKeyboard(void);
     bool kChangeKeyboardLED(bool bCapsLockOn, 
                             bool bNumLockOn, bool bScrollLockOn);

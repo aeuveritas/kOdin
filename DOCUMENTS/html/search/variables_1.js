@@ -1,5 +1,20 @@
 var searchData=
 [
-  ['clpm',['clPM',['../d6/d9c/classk_memory.html#a5371b77091dfab73faf1df62726430df',1,'kMemory']]],
-  ['clutils',['clUtils',['../d6/d12/_d_t_8hpp.html#adf67c54d5a4c70f9b1a443d6e299748d',1,'clUtils():&#160;main.cpp'],['../df/ddd/kernel64_2main_8cpp.html#adf67c54d5a4c70f9b1a443d6e299748d',1,'clUtils():&#160;main.cpp'],['../d5/d98/shell_8hpp.html#adf67c54d5a4c70f9b1a443d6e299748d',1,'clUtils():&#160;main.cpp']]]
+  ['battribute',['bAttribute',['../d8/dbe/structk_charactor_struct.html#a6322a765ad32e7942473b251b6e0df15',1,'kCharactorStruct']]],
+  ['bcapslockon',['bCapsLockOn',['../de/d2e/classk_keyboard.html#a0ffc0558b3e313f50aff290c89f4e03a',1,'kKeyboard']]],
+  ['bcharactor',['bCharactor',['../d8/dbe/structk_charactor_struct.html#a658ceea1126c0249d0f3a52783a4e451',1,'kCharactorStruct']]],
+  ['bcombinedcode',['bCombinedCode',['../d5/d01/structk_key_mapping_entry.html#aa2c38ccdda38921a9edba2fd95a18a4a',1,'kKeyMappingEntry']]],
+  ['bextendedcodein',['bExtendedCodeIn',['../de/d2e/classk_keyboard.html#a6e633d357b18a95e8b8b207948803e39',1,'kKeyboard']]],
+  ['bist',['bIST',['../dc/d68/structk_i_d_t_entry_struct.html#a4b2c0b0c3a867db5607126b0c54ebeb8',1,'kIDTEntryStruct']]],
+  ['bmiddlebaseaddress1',['bMiddleBaseAddress1',['../d3/dbc/structk_g_d_t_entry16_struct.html#a810f43fa586853e1bb7b0c05250d879a',1,'kGDTEntry16Struct']]],
+  ['bmiddlebaseaddress2',['bMiddleBaseAddress2',['../d3/dbc/structk_g_d_t_entry16_struct.html#a1314a94871941b985025ae7345126da7',1,'kGDTEntry16Struct']]],
+  ['bnormalcode',['bNormalCode',['../d5/d01/structk_key_mapping_entry.html#a4a82a0cb8fec8c5c25fdd9c2c886d96c',1,'kKeyMappingEntry']]],
+  ['bnumlockon',['bNumLockOn',['../de/d2e/classk_keyboard.html#a95c8ac4220bbb18f7b388f10066cc954',1,'kKeyboard']]],
+  ['bscrolllockon',['bScrollLockOn',['../de/d2e/classk_keyboard.html#af368055e40dc350e144b1cffcba38bbc',1,'kKeyboard']]],
+  ['bshiftdown',['bShiftDown',['../de/d2e/classk_keyboard.html#aebdb28e7d38ec5670a531c64241a1753',1,'kKeyboard']]],
+  ['btypeandflags',['bTypeAndFlags',['../dc/d68/structk_i_d_t_entry_struct.html#a67eca9069d9d83141bd22fa7b4f5836c',1,'kIDTEntryStruct']]],
+  ['btypeandlowerflag',['bTypeAndLowerFlag',['../d9/d8c/structk_g_d_t_entry8_struct.html#ae17d66bee36b0f839cc914667792a373',1,'kGDTEntry8Struct::bTypeAndLowerFlag()'],['../d3/dbc/structk_g_d_t_entry16_struct.html#a5f8651cb80df3112777bcb0c24df4c3a',1,'kGDTEntry16Struct::bTypeAndLowerFlag()']]],
+  ['bupperbaseaddress1',['bUpperBaseAddress1',['../d9/d8c/structk_g_d_t_entry8_struct.html#a1a18316a7597858d0c937c1cf2fd88bf',1,'kGDTEntry8Struct']]],
+  ['bupperbaseaddress2',['bUpperBaseAddress2',['../d9/d8c/structk_g_d_t_entry8_struct.html#af07a8e45d973e3623240f68dc48b13ad',1,'kGDTEntry8Struct']]],
+  ['bupperlimitandupperflag',['bUpperLimitAndUpperFlag',['../d9/d8c/structk_g_d_t_entry8_struct.html#a31693d14a81958ca9c5a10b91fe690d8',1,'kGDTEntry8Struct::bUpperLimitAndUpperFlag()'],['../d3/dbc/structk_g_d_t_entry16_struct.html#a6cdf1de129994d2e16fb94f6a09a63aa',1,'kGDTEntry16Struct::bUpperLimitAndUpperFlag()']]]
 ];

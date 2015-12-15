@@ -16,11 +16,11 @@ void main(void)
     dwLine = 3;
 
     clUtils.kPrintString(0, dwLine++,
-                         "[ PASS ]  Protected Mode C++ Language Kernel Start");
+                         "[ PASS ]  Start Protected Mode C++ Language Kernel");
 
     // Check the memory is larger than the minimum size
     clUtils.kPrintString(0, dwLine,
-                         "[      ]  Minimum Memory Size Check");
+                         "[      ]  Check Minimum Memory Size");
     if (clMem.kIsMemoryEnough() == false) {
         clUtils.kPrintString(2, dwLine++, "FAIL");
         clUtils.kPrintString(0, dwLine,
@@ -34,7 +34,7 @@ void main(void)
 
     // Initialize kernel area for IA-32e mode
     clUtils.kPrintString(0, dwLine,
-                         "[      ]  IA-32e Kernel Area Initialize");
+                         "[      ]  Initialize IA-32e Kernel Area");
     if (clMem.kInitializeKernel64Area() == false) {
         clUtils.kPrintString(2, dwLine++,
                            "FAIL");
@@ -48,7 +48,7 @@ void main(void)
 
     // Create the page tables for IA-32e mode
     clUtils.kPrintString(0, dwLine,
-                         "[      ]  IA-32e Page Tables Initialize");
+                         "[      ]  Initialize IA-32e Page Tables");
     clMem.kInitializePageManager();
     clUtils.kPrintString(2, dwLine++,
                            "PASS");
@@ -67,7 +67,7 @@ void main(void)
     // Check 64 bits mode available
     clCpu.kReadCPUID(0x80000001, &dwEAX, &dwEBX, &dwECX, &dwEDX);
     clUtils.kPrintString(0, dwLine,
-                         "[      ]  64 bits Mode Support Check");
+                         "[      ]  Check 64 bits Mode Support");
     if (dwEDX & (1 << 29)) {
         clUtils.kPrintString(2, dwLine++,
                            "PASS");

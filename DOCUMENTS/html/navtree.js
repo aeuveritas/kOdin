@@ -4,6 +4,7 @@ var NAVTREE =
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
@@ -26,7 +27,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"df/d67/key_mapping_entry_8hpp.html#ae176aa9af3d2acaeba5b8453aff5bbbf"
+"de/d2e/classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

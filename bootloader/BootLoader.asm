@@ -92,7 +92,7 @@ RESETDISK:                      ; The start point to reset disk
     ; Target address in memory is 0x10000, and it is set in ES and BX
     mov si, 0x1000              ; To set segment register, SI is used
     mov es, si                  ; Set ES register
-    mov bx, 0x0000              ; BX is used as an offest,
+    mov bx, 0x0000              ; BX is used as an offset,
                                 ; so, 0x1000:0000 (= 0x10000) is set now.
 
     mov di, word [ TOTALSECTORCOUNT ]
@@ -119,8 +119,8 @@ READDATA:
     mov dh, byte [ HEADNUMBER ]
                                 ; Set the head number to be read
     mov dl, 0x00                ; Set the driver number (0 = Floppy disk)
-    int 0x13                    ; Execute the interrpt service
-    jc HANDLEDISKERROR          ; If error occurrs,
+    int 0x13                    ; Execute the interrupt service
+    jc HANDLEDISKERROR          ; If error occurs,
                                 ; jump to service routine for error
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     ;   Calculate the addresses of track, head, sector
@@ -158,7 +158,7 @@ READDATA:
     ; Increase the track number
     add byte [ TRACKNUMBER ], 0x01
                                 ; Increasing the track number
-    jmp READDATA                ; jump to thr READDATA
+    jmp READDATA                ; jump to the READDATA
 READEND:
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -204,7 +204,7 @@ PRINTMESSAGE:
     push dx
 
     ; Set ES register as the start address of video memory
-    mov ax, 0xB800              ; The start address of Video meory is 0xB8000
+    mov ax, 0xB800              ; The start address of Video memory is 0xB8000
     mov es, ax                  ; Set ES register
 
     ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -258,19 +258,19 @@ PRINTMESSAGE:
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Message of bootloader starting
 MESSAGE1:
-    db '[ **** ]  kOdin OS Boot Loader Start', 0
+    db '[ **** ]  Start kOdin OS Boot Loader', 0
                                 ; Message for print
                                 ; last 0 means the end of string
 
 DISKERRORMESSAGE:
     db 'FAIL', 0
 IMAGELOADINGMESSAGE:
-    db '[      ]  OS Image Loading', 0
+    db '[      ]  Load OS Image', 0
 LOADINGCOMPLETEMESSAGE:
     db 'PASS', 0
 
 ; Variables for disk read
-SECTORNUMBER: 
+SECTORNUMBER:
     db 0x02                     ; The sector number which OS image start
 HEADNUMBER:
     db 0x00                     ; The head number which OS image start
@@ -278,7 +278,7 @@ TRACKNUMBER:
     db 0x00                     ; The track number which OS image start
 
 times 510 - ( $ - $$ )  db  0x00
-                                ; $: adress of current line
+                                ; $: address of current line
                                 ; $$: start address of current section
                                 ; $ - $$: Offset from current section
                                 ; 510 - ( $ - $$ ): from here to address 510

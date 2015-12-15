@@ -69,6 +69,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
     <ul class="tablist">
       <li><a href="../../annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="../../classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="../../inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="../../functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -103,91 +104,55 @@ $(document).ready(function(){initNavTree('da/d13/classk_d_t.html','../../');});
 
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
-<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../d1/dd2/classk_d_t-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">kDT Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Class for Description Table [IA-32e Mode].  
+<p>Class for description table [IA-32e Mode].  
  <a href="../../da/d13/classk_d_t.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d6/d12/_d_t_8hpp_source.html">DT.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for kDT:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d1/db7/classk_d_t__inherit__graph.png" border="0" usemap="#k_d_t_inherit__map" alt="Inheritance graph"/></div>
+<map name="k_d_t_inherit__map" id="k_d_t_inherit__map">
+<area shape="rect" id="node2" href="../../d8/d83/classk_g_d_t.html" title="Class for Global Descriptor Table. " alt="" coords="5,160,144,384"/><area shape="rect" id="node3" href="../../d4/db2/classk_i_d_t.html" title="Class for Interrupt Descriptor Table. " alt="" coords="169,197,287,347"/></map>
+</div>
 <div class="dynheader">
 Collaboration diagram for kDT:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d98/classk_d_t__coll__graph.png" border="0" usemap="#k_d_t_coll__map" alt="Collaboration graph"/></div>
 <map name="k_d_t_coll__map" id="k_d_t_coll__map">
-<area shape="rect" id="node2" href="../../df/d1d/structk_t_s_s_struct.html" title="TSS data structure [IA&#45;32e Mode]. " alt="" coords="5,13,165,179"/><area shape="rect" id="node3" href="../../dc/d68/structk_i_d_t_entry_struct.html" title="Structure for IDT Gate Descriptor [IA&#45;32e Mode]. " alt="" coords="190,13,353,179"/><area shape="rect" id="node4" href="../../d4/d6e/structk_d_t_r_struct.html" title="structures for descriptor table register, GDTR and IDTR [IA&#45;32e Mode] " alt="" coords="378,35,507,157"/><area shape="rect" id="node5" href="../../d9/d8c/structk_g_d_t_entry8_struct.html" title="8 bytes GDT entry [IA&#45;32e Mode] " alt="" coords="532,21,719,171"/><area shape="rect" id="node6" href="../../d3/dbc/structk_g_d_t_entry16_struct.html" title="16 bytes GDT entry [IA&#45;32e Mode] " alt="" coords="743,6,929,186"/></map>
+</map>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a160e8909a34e346b6c8780fb2119689c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a160e8909a34e346b6c8780fb2119689c">kDT</a> ()</td></tr>
-<tr class="memdesc:a160e8909a34e346b6c8780fb2119689c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of descriptor Table.  <a href="#a160e8909a34e346b6c8780fb2119689c">More...</a><br/></td></tr>
-<tr class="separator:a160e8909a34e346b6c8780fb2119689c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a387c907223d2e62372a3d878365f63d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a387c907223d2e62372a3d878365f63d8">~kDT</a> ()</td></tr>
-<tr class="memdesc:a387c907223d2e62372a3d878365f63d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor of descriptor Table.  <a href="#a387c907223d2e62372a3d878365f63d8">More...</a><br/></td></tr>
-<tr class="separator:a387c907223d2e62372a3d878365f63d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3bbe99e69ecdc2c5b3e16685fe31f92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#ab3bbe99e69ecdc2c5b3e16685fe31f92">kInitializeGDT</a> (void)</td></tr>
-<tr class="memdesc:ab3bbe99e69ecdc2c5b3e16685fe31f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize GDT entries.  <a href="#ab3bbe99e69ecdc2c5b3e16685fe31f92">More...</a><br/></td></tr>
-<tr class="separator:ab3bbe99e69ecdc2c5b3e16685fe31f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23c76bd851a469698658e8e7e72f219d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a23c76bd851a469698658e8e7e72f219d">kInitializeTSS</a> (void)</td></tr>
-<tr class="memdesc:a23c76bd851a469698658e8e7e72f219d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize TSS.  <a href="#a23c76bd851a469698658e8e7e72f219d">More...</a><br/></td></tr>
-<tr class="separator:a23c76bd851a469698658e8e7e72f219d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a54afd1f9b289cd2dd9cdfcd4f82d7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a4a54afd1f9b289cd2dd9cdfcd4f82d7f">kInitializeIDT</a> (void)</td></tr>
-<tr class="memdesc:a4a54afd1f9b289cd2dd9cdfcd4f82d7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize IDT.  <a href="#a4a54afd1f9b289cd2dd9cdfcd4f82d7f">More...</a><br/></td></tr>
-<tr class="separator:a4a54afd1f9b289cd2dd9cdfcd4f82d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e2b7bcf85ff2e1818993519186f3867"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a7e2b7bcf85ff2e1818993519186f3867">kLoadGDTR</a> (<a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a3d7c96c615c5889c5acb849b888fd811">QWORD</a> qwGDTRAddress)</td></tr>
-<tr class="separator:a7e2b7bcf85ff2e1818993519186f3867"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a469131c4c0cf30fe1a13d3e4d88e31b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a469131c4c0cf30fe1a13d3e4d88e31b4">kLoadTR</a> (<a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> wTSSSegmentOffset)</td></tr>
-<tr class="separator:a469131c4c0cf30fe1a13d3e4d88e31b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af59d59bb384a9d912565a8dea64a70d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#af59d59bb384a9d912565a8dea64a70d4">kLoadIDTR</a> (<a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a3d7c96c615c5889c5acb849b888fd811">QWORD</a> qwIDTRAddress)</td></tr>
-<tr class="separator:af59d59bb384a9d912565a8dea64a70d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
-Private Member Functions</h2></td></tr>
-<tr class="memitem:aa3acf11a8d9eabb14a50a019c2574173"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#aa3acf11a8d9eabb14a50a019c2574173">kSetGDTEntry8</a> (<a class="el" href="../../df/db2/segment_descriptor_8hpp.html#a2e30799bc05d9a9ccc2b47081d35cde1">GDTENTRY8</a> *pstEntry, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a> dwBaseAddress, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a> dwLimit, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> bUpperFlags, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> bLowerFlags, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> bType)</td></tr>
-<tr class="separator:aa3acf11a8d9eabb14a50a019c2574173"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae96d1da4d8a82d54e2b55ba7499fbd86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#ae96d1da4d8a82d54e2b55ba7499fbd86">kSetGDTEntry16</a> (<a class="el" href="../../df/db2/segment_descriptor_8hpp.html#ac0d691650a59a67d6d57cb706c161d6a">GDTENTRY16</a> *pstEntry, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a3d7c96c615c5889c5acb849b888fd811">QWORD</a> qwBaseAddress, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a> dwLimit, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> bUpperFlags, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> bLowerFlags, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> bType)</td></tr>
-<tr class="separator:ae96d1da4d8a82d54e2b55ba7499fbd86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab66cde783767e1fb1125e1304f4d29b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#aab66cde783767e1fb1125e1304f4d29b">kSetIDTEntry</a> (<a class="el" href="../../d5/d6d/interrupt_descriptor_8hpp.html#a3c17a3ae35f355b45c6e9dcec059bb59">IDTENTRY</a> *pstEntry, void(*pvHandler)(), <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a> wSelector, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> bIST, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> bFlags, <a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a> bType)</td></tr>
-<tr class="memdesc:aab66cde783767e1fb1125e1304f4d29b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set IDT gate descriptor.  <a href="#aab66cde783767e1fb1125e1304f4d29b">More...</a><br/></td></tr>
-<tr class="separator:aab66cde783767e1fb1125e1304f4d29b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:abdf5c50642b286472109c764a61abd34"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#abdf5c50642b286472109c764a61abd34">kDummyHandler</a> (void)</td></tr>
-<tr class="memdesc:abdf5c50642b286472109c764a61abd34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummny handler for an interrupt and an exception.  <a href="#abdf5c50642b286472109c764a61abd34">More...</a><br/></td></tr>
-<tr class="separator:abdf5c50642b286472109c764a61abd34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
-Private Attributes</h2></td></tr>
-<tr class="memitem:a3ce94f54a89698f308d71e29d5c49bbe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a3ce94f54a89698f308d71e29d5c49bbe">pstGDTR</a></td></tr>
-<tr class="separator:a3ce94f54a89698f308d71e29d5c49bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24542954ef6a1551dfeafa368470b67c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#a2e30799bc05d9a9ccc2b47081d35cde1">GDTENTRY8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a24542954ef6a1551dfeafa368470b67c">pstGDTEntry8</a></td></tr>
-<tr class="separator:a24542954ef6a1551dfeafa368470b67c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2795330123fdb71fa223d250ce64965a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#ac0d691650a59a67d6d57cb706c161d6a">GDTENTRY16</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a2795330123fdb71fa223d250ce64965a">pstGDTEntry16</a></td></tr>
-<tr class="separator:a2795330123fdb71fa223d250ce64965a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fe77bb2d2a6813fb247a5897fc5c1bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#a1ba0e2f974c947810fb437ebe702df10">TSS</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a2fe77bb2d2a6813fb247a5897fc5c1bb">pstTSS</a></td></tr>
-<tr class="separator:a2fe77bb2d2a6813fb247a5897fc5c1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30052523618bfb5fd8e2f3f7ba22d822"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a30052523618bfb5fd8e2f3f7ba22d822">pstIDTR</a></td></tr>
-<tr class="separator:a30052523618bfb5fd8e2f3f7ba22d822"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af640ad72dc2079627b33971a33f3c885"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d6d/interrupt_descriptor_8hpp.html#a3c17a3ae35f355b45c6e9dcec059bb59">IDTENTRY</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#af640ad72dc2079627b33971a33f3c885">pstIDTEntry</a></td></tr>
-<tr class="separator:af640ad72dc2079627b33971a33f3c885"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a72a24d3b8447b997ea1106b7c6d684ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a72a24d3b8447b997ea1106b7c6d684ac">kDT</a> (void)</td></tr>
+<tr class="memdesc:a72a24d3b8447b997ea1106b7c6d684ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of <a class="el" href="../../da/d13/classk_d_t.html" title="Class for description table [IA-32e Mode]. ">kDT</a>.  <a href="#a72a24d3b8447b997ea1106b7c6d684ac">More...</a><br/></td></tr>
+<tr class="separator:a72a24d3b8447b997ea1106b7c6d684ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad2fa2ad1fe1870af8c7de634502ac10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#aad2fa2ad1fe1870af8c7de634502ac10">~kDT</a> (void)</td></tr>
+<tr class="memdesc:aad2fa2ad1fe1870af8c7de634502ac10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deconstructor of <a class="el" href="../../da/d13/classk_d_t.html" title="Class for description table [IA-32e Mode]. ">kDT</a>.  <a href="#aad2fa2ad1fe1870af8c7de634502ac10">More...</a><br/></td></tr>
+<tr class="separator:aad2fa2ad1fe1870af8c7de634502ac10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717dd28b321a0bc7bab3aa3b21d076f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d13/classk_d_t.html#a717dd28b321a0bc7bab3aa3b21d076f1">kInitializeDT</a> (void)</td></tr>
+<tr class="memdesc:a717dd28b321a0bc7bab3aa3b21d076f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize descriptor Table.  <a href="#a717dd28b321a0bc7bab3aa3b21d076f1">More...</a><br/></td></tr>
+<tr class="separator:a717dd28b321a0bc7bab3aa3b21d076f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class for Description Table [IA-32e Mode]. </p>
+<div class="textblock"><p>Class for description table [IA-32e Mode]. </p>
 
-<p>Definition at line <a class="el" href="../../d6/d12/_d_t_8hpp_source.html#l00013">13</a> of file <a class="el" href="../../d6/d12/_d_t_8hpp_source.html">DT.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../d6/d12/_d_t_8hpp_source.html#l00010">10</a> of file <a class="el" href="../../d6/d12/_d_t_8hpp_source.html">DT.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a160e8909a34e346b6c8780fb2119689c"></a>
+<a class="anchor" id="a72a24d3b8447b997ea1106b7c6d684ac"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">kDT::kDT </td>
@@ -197,35 +162,49 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Constructor of descriptor Table. </p>
+<p>Constructor of <a class="el" href="../../da/d13/classk_d_t.html" title="Class for description table [IA-32e Mode]. ">kDT</a>. </p>
 
 <p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00004">4</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a387c907223d2e62372a3d878365f63d8"></a>
+<a class="anchor" id="aad2fa2ad1fe1870af8c7de634502ac10"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">kDT::~kDT </td>
           <td>(</td>
+          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Deconstructor of descriptor Table. </p>
+<p>Deconstructor of <a class="el" href="../../da/d13/classk_d_t.html" title="Class for description table [IA-32e Mode]. ">kDT</a>. </p>
 
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00016">16</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00010">10</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="abdf5c50642b286472109c764a61abd34"></a>
+<a class="anchor" id="a717dd28b321a0bc7bab3aa3b21d076f1"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -233,7 +212,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void kDT::kDummyHandler </td>
+          <td class="memname">void kDT::kInitializeDT </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -242,598 +221,14 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Dummny handler for an interrupt and an exception. </p>
+<p>Initialize descriptor Table. </p>
 
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00136">136</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_abdf5c50642b286472109c764a61abd34_cgraph.png" border="0" usemap="#da/d13/classk_d_t_abdf5c50642b286472109c764a61abd34_cgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_abdf5c50642b286472109c764a61abd34_cgraph" id="da/d13/classk_d_t_abdf5c50642b286472109c764a61abd34_cgraph">
-<area shape="rect" id="node2" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="209,5,341,32"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_abdf5c50642b286472109c764a61abd34_icgraph.png" border="0" usemap="#da/d13/classk_d_t_abdf5c50642b286472109c764a61abd34_icgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_abdf5c50642b286472109c764a61abd34_icgraph" id="da/d13/classk_d_t_abdf5c50642b286472109c764a61abd34_icgraph">
-<area shape="rect" id="node2" href="../../da/d13/classk_d_t.html#a4a54afd1f9b289cd2dd9cdfcd4f82d7f" title="Initialize IDT. " alt="" coords="209,5,341,32"/><area shape="rect" id="node3" href="../../df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="389,5,440,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ab3bbe99e69ecdc2c5b3e16685fe31f92"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kDT::kInitializeGDT </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialize GDT entries. </p>
-
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00028">28</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_ab3bbe99e69ecdc2c5b3e16685fe31f92_cgraph.png" border="0" usemap="#da/d13/classk_d_t_ab3bbe99e69ecdc2c5b3e16685fe31f92_cgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_ab3bbe99e69ecdc2c5b3e16685fe31f92_cgraph" id="da/d13/classk_d_t_ab3bbe99e69ecdc2c5b3e16685fe31f92_cgraph">
-<area shape="rect" id="node2" href="../../da/d13/classk_d_t.html#aa3acf11a8d9eabb14a50a019c2574173" title="kDT::kSetGDTEntry8" alt="" coords="195,5,343,32"/><area shape="rect" id="node3" href="../../da/d13/classk_d_t.html#ae96d1da4d8a82d54e2b55ba7499fbd86" title="kDT::kSetGDTEntry16" alt="" coords="192,56,347,83"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_ab3bbe99e69ecdc2c5b3e16685fe31f92_icgraph.png" border="0" usemap="#da/d13/classk_d_t_ab3bbe99e69ecdc2c5b3e16685fe31f92_icgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_ab3bbe99e69ecdc2c5b3e16685fe31f92_icgraph" id="da/d13/classk_d_t_ab3bbe99e69ecdc2c5b3e16685fe31f92_icgraph">
-<area shape="rect" id="node2" href="../../df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="192,5,243,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a4a54afd1f9b289cd2dd9cdfcd4f82d7f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kDT::kInitializeIDT </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialize IDT. </p>
-
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00105">105</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_a4a54afd1f9b289cd2dd9cdfcd4f82d7f_cgraph.png" border="0" usemap="#da/d13/classk_d_t_a4a54afd1f9b289cd2dd9cdfcd4f82d7f_cgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_a4a54afd1f9b289cd2dd9cdfcd4f82d7f_cgraph" id="da/d13/classk_d_t_a4a54afd1f9b289cd2dd9cdfcd4f82d7f_cgraph">
-<area shape="rect" id="node2" href="../../da/d13/classk_d_t.html#aab66cde783767e1fb1125e1304f4d29b" title="Set IDT gate descriptor. " alt="" coords="197,5,331,32"/><area shape="rect" id="node3" href="../../da/d13/classk_d_t.html#abdf5c50642b286472109c764a61abd34" title="Dummny handler for an interrupt and an exception. " alt="" coords="187,56,341,83"/><area shape="rect" id="node4" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="390,56,522,83"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_a4a54afd1f9b289cd2dd9cdfcd4f82d7f_icgraph.png" border="0" usemap="#da/d13/classk_d_t_a4a54afd1f9b289cd2dd9cdfcd4f82d7f_icgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_a4a54afd1f9b289cd2dd9cdfcd4f82d7f_icgraph" id="da/d13/classk_d_t_a4a54afd1f9b289cd2dd9cdfcd4f82d7f_icgraph">
-<area shape="rect" id="node2" href="../../df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="187,5,237,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a23c76bd851a469698658e8e7e72f219d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kDT::kInitializeTSS </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialize TSS. </p>
-
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00093">93</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_a23c76bd851a469698658e8e7e72f219d_cgraph.png" border="0" usemap="#da/d13/classk_d_t_a23c76bd851a469698658e8e7e72f219d_cgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_a23c76bd851a469698658e8e7e72f219d_cgraph" id="da/d13/classk_d_t_a23c76bd851a469698658e8e7e72f219d_cgraph">
-<area shape="rect" id="node2" href="../../db/daa/classk_utils.html#ae055e25c0ba9910ca7886c4d59c44d58" title="kUtils::kMemSet" alt="" coords="189,5,309,32"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_a23c76bd851a469698658e8e7e72f219d_icgraph.png" border="0" usemap="#da/d13/classk_d_t_a23c76bd851a469698658e8e7e72f219d_icgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_a23c76bd851a469698658e8e7e72f219d_icgraph" id="da/d13/classk_d_t_a23c76bd851a469698658e8e7e72f219d_icgraph">
-<area shape="rect" id="node2" href="../../df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="189,5,240,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a7e2b7bcf85ff2e1818993519186f3867"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kDT::kLoadGDTR </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a3d7c96c615c5889c5acb849b888fd811">QWORD</a>&#160;</td>
-          <td class="paramname"><em>qwGDTRAddress</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00150">150</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_a7e2b7bcf85ff2e1818993519186f3867_cgraph.png" border="0" usemap="#da/d13/classk_d_t_a7e2b7bcf85ff2e1818993519186f3867_cgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_a7e2b7bcf85ff2e1818993519186f3867_cgraph" id="da/d13/classk_d_t_a7e2b7bcf85ff2e1818993519186f3867_cgraph">
-<area shape="rect" id="node2" href="../../d8/d77/asm_utils_8hpp.html#a959047d2e47706e0eb327110bd41e15b" title="_kLoadGDTR" alt="" coords="182,5,285,32"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_a7e2b7bcf85ff2e1818993519186f3867_icgraph.png" border="0" usemap="#da/d13/classk_d_t_a7e2b7bcf85ff2e1818993519186f3867_icgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_a7e2b7bcf85ff2e1818993519186f3867_icgraph" id="da/d13/classk_d_t_a7e2b7bcf85ff2e1818993519186f3867_icgraph">
-<area shape="rect" id="node2" href="../../df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="181,5,232,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="af59d59bb384a9d912565a8dea64a70d4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kDT::kLoadIDTR </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a3d7c96c615c5889c5acb849b888fd811">QWORD</a>&#160;</td>
-          <td class="paramname"><em>qwIDTRAddress</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00160">160</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_af59d59bb384a9d912565a8dea64a70d4_cgraph.png" border="0" usemap="#da/d13/classk_d_t_af59d59bb384a9d912565a8dea64a70d4_cgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_af59d59bb384a9d912565a8dea64a70d4_cgraph" id="da/d13/classk_d_t_af59d59bb384a9d912565a8dea64a70d4_cgraph">
-<area shape="rect" id="node2" href="../../d8/d77/asm_utils_8hpp.html#a562cc350f9e18de1c2262230d8611397" title="_kLoadIDTR" alt="" coords="176,5,272,32"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_af59d59bb384a9d912565a8dea64a70d4_icgraph.png" border="0" usemap="#da/d13/classk_d_t_af59d59bb384a9d912565a8dea64a70d4_icgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_af59d59bb384a9d912565a8dea64a70d4_icgraph" id="da/d13/classk_d_t_af59d59bb384a9d912565a8dea64a70d4_icgraph">
-<area shape="rect" id="node2" href="../../df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="176,5,227,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a469131c4c0cf30fe1a13d3e4d88e31b4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kDT::kLoadTR </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a>&#160;</td>
-          <td class="paramname"><em>wTSSSegmentOffset</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00155">155</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_a469131c4c0cf30fe1a13d3e4d88e31b4_cgraph.png" border="0" usemap="#da/d13/classk_d_t_a469131c4c0cf30fe1a13d3e4d88e31b4_cgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_a469131c4c0cf30fe1a13d3e4d88e31b4_cgraph" id="da/d13/classk_d_t_a469131c4c0cf30fe1a13d3e4d88e31b4_cgraph">
-<area shape="rect" id="node2" href="../../d8/d77/asm_utils_8hpp.html#a5b3d8f500273f26e2f1f489a874daa40" title="_kLoadTR" alt="" coords="163,5,245,32"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_a469131c4c0cf30fe1a13d3e4d88e31b4_icgraph.png" border="0" usemap="#da/d13/classk_d_t_a469131c4c0cf30fe1a13d3e4d88e31b4_icgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_a469131c4c0cf30fe1a13d3e4d88e31b4_icgraph" id="da/d13/classk_d_t_a469131c4c0cf30fe1a13d3e4d88e31b4_icgraph">
-<area shape="rect" id="node2" href="../../df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="163,5,213,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="ae96d1da4d8a82d54e2b55ba7499fbd86"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kDT::kSetGDTEntry16 </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#ac0d691650a59a67d6d57cb706c161d6a">GDTENTRY16</a> *&#160;</td>
-          <td class="paramname"><em>pstEntry</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a3d7c96c615c5889c5acb849b888fd811">QWORD</a>&#160;</td>
-          <td class="paramname"><em>qwBaseAddress</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>&#160;</td>
-          <td class="paramname"><em>dwLimit</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a>&#160;</td>
-          <td class="paramname"><em>bUpperFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a>&#160;</td>
-          <td class="paramname"><em>bLowerFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a>&#160;</td>
-          <td class="paramname"><em>bType</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Set 16 bytes GDT entry TSS descriptor </p>
-
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00075">75</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_ae96d1da4d8a82d54e2b55ba7499fbd86_icgraph.png" border="0" usemap="#da/d13/classk_d_t_ae96d1da4d8a82d54e2b55ba7499fbd86_icgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_ae96d1da4d8a82d54e2b55ba7499fbd86_icgraph" id="da/d13/classk_d_t_ae96d1da4d8a82d54e2b55ba7499fbd86_icgraph">
-<area shape="rect" id="node2" href="../../da/d13/classk_d_t.html#ab3bbe99e69ecdc2c5b3e16685fe31f92" title="Initialize GDT entries. " alt="" coords="208,5,347,32"/><area shape="rect" id="node3" href="../../df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="395,5,445,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="aa3acf11a8d9eabb14a50a019c2574173"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kDT::kSetGDTEntry8 </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#a2e30799bc05d9a9ccc2b47081d35cde1">GDTENTRY8</a> *&#160;</td>
-          <td class="paramname"><em>pstEntry</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>&#160;</td>
-          <td class="paramname"><em>dwBaseAddress</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a>&#160;</td>
-          <td class="paramname"><em>dwLimit</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a>&#160;</td>
-          <td class="paramname"><em>bUpperFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a>&#160;</td>
-          <td class="paramname"><em>bLowerFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a>&#160;</td>
-          <td class="paramname"><em>bType</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Set 8 bytes GDT entry NULL, Code and Data segment descriptor </p>
-
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00056">56</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_aa3acf11a8d9eabb14a50a019c2574173_icgraph.png" border="0" usemap="#da/d13/classk_d_t_aa3acf11a8d9eabb14a50a019c2574173_icgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_aa3acf11a8d9eabb14a50a019c2574173_icgraph" id="da/d13/classk_d_t_aa3acf11a8d9eabb14a50a019c2574173_icgraph">
-<area shape="rect" id="node2" href="../../da/d13/classk_d_t.html#ab3bbe99e69ecdc2c5b3e16685fe31f92" title="Initialize GDT entries. " alt="" coords="203,5,341,32"/><area shape="rect" id="node3" href="../../df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="389,5,440,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="aab66cde783767e1fb1125e1304f4d29b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void kDT::kSetIDTEntry </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d5/d6d/interrupt_descriptor_8hpp.html#a3c17a3ae35f355b45c6e9dcec059bb59">IDTENTRY</a> *&#160;</td>
-          <td class="paramname"><em>pstEntry</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void(*)()&#160;</td>
-          <td class="paramname"><em>pvHandler</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a197942eefa7db30960ae396d68339b97">WORD</a>&#160;</td>
-          <td class="paramname"><em>wSelector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a>&#160;</td>
-          <td class="paramname"><em>bIST</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a>&#160;</td>
-          <td class="paramname"><em>bFlags</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d5/d99/kernel32_2types_8hpp.html#a4ae1dab0fb4b072a66584546209e7d58">BYTE</a>&#160;</td>
-          <td class="paramname"><em>bType</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Set IDT gate descriptor. </p>
-
-<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00123">123</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="../../da/d13/classk_d_t_aab66cde783767e1fb1125e1304f4d29b_icgraph.png" border="0" usemap="#da/d13/classk_d_t_aab66cde783767e1fb1125e1304f4d29b_icgraph" alt=""/></div>
-<map name="da/d13/classk_d_t_aab66cde783767e1fb1125e1304f4d29b_icgraph" id="da/d13/classk_d_t_aab66cde783767e1fb1125e1304f4d29b_icgraph">
-<area shape="rect" id="node2" href="../../da/d13/classk_d_t.html#a4a54afd1f9b289cd2dd9cdfcd4f82d7f" title="Initialize IDT. " alt="" coords="190,5,322,32"/><area shape="rect" id="node3" href="../../df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="371,5,421,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a2795330123fdb71fa223d250ce64965a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#ac0d691650a59a67d6d57cb706c161d6a">GDTENTRY16</a>* kDT::pstGDTEntry16</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d6/d12/_d_t_8hpp_source.html#l00017">17</a> of file <a class="el" href="../../d6/d12/_d_t_8hpp_source.html">DT.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a24542954ef6a1551dfeafa368470b67c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#a2e30799bc05d9a9ccc2b47081d35cde1">GDTENTRY8</a>* kDT::pstGDTEntry8</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d6/d12/_d_t_8hpp_source.html#l00016">16</a> of file <a class="el" href="../../d6/d12/_d_t_8hpp_source.html">DT.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a3ce94f54a89698f308d71e29d5c49bbe"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a>* kDT::pstGDTR</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d6/d12/_d_t_8hpp_source.html#l00015">15</a> of file <a class="el" href="../../d6/d12/_d_t_8hpp_source.html">DT.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="af640ad72dc2079627b33971a33f3c885"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d5/d6d/interrupt_descriptor_8hpp.html#a3c17a3ae35f355b45c6e9dcec059bb59">IDTENTRY</a>* kDT::pstIDTEntry</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d6/d12/_d_t_8hpp_source.html#l00021">21</a> of file <a class="el" href="../../d6/d12/_d_t_8hpp_source.html">DT.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a30052523618bfb5fd8e2f3f7ba22d822"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a>* kDT::pstIDTR</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d6/d12/_d_t_8hpp_source.html#l00020">20</a> of file <a class="el" href="../../d6/d12/_d_t_8hpp_source.html">DT.hpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a2fe77bb2d2a6813fb247a5897fc5c1bb"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../df/db2/segment_descriptor_8hpp.html#a1ba0e2f974c947810fb437ebe702df10">TSS</a>* kDT::pstTSS</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="../../d6/d12/_d_t_8hpp_source.html#l00018">18</a> of file <a class="el" href="../../d6/d12/_d_t_8hpp_source.html">DT.hpp</a>.</p>
+<p>Definition at line <a class="el" href="../../da/dc7/_d_t_8cpp_source.html#l00016">16</a> of file <a class="el" href="../../da/dc7/_d_t_8cpp_source.html">DT.cpp</a>.</p>
 
 </div>
 </div>
@@ -847,7 +242,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../da/d13/classk_d_t.html">kDT</a></li>
-    <li class="footer">Generated on Mon Dec 7 2015 01:50:32 for kOdin by
+    <li class="footer">Generated on Sun Dec 20 2015 21:57:52 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

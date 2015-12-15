@@ -1,0 +1,7 @@
+<map id="kIH::kKeyboardHandler" name="kIH::kKeyboardHandler">
+<area shape="rect" id="node2" href="$db/daa/classk_utils.html#abb2a5d36a730ee4f13b0e3c27c1edf76" title="Print keyboard interrupt message. " alt="" coords="214,5,415,32"/>
+<area shape="rect" id="node4" href="$d8/da9/classk_p_i_c.html#ae49dafa5afe263e507635f1e8235a192" title="kPIC::kSendEOIToPIC" alt="" coords="235,56,394,83"/>
+<area shape="rect" id="node3" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="469,5,601,32"/>
+<area shape="rect" id="node5" href="$d9/d2f/classk_port.html#a222c22ded99850a8c88e71639c19f05f" title="kPort::kOutPortByte" alt="" coords="465,56,605,83"/>
+<area shape="rect" id="node6" href="$d1/d42/port_8hpp.html#a3118257a6a597aefbf404ee707c1dae4" title="_kOutPortByte" alt="" coords="654,56,762,83"/>
+</map>

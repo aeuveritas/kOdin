@@ -6,7 +6,9 @@
 <area shape="rect" id="node5" href="$de/d2e/classk_keyboard.html#a40824696636e8f49fe7eef695a97586e" title="Check the Scan Code is in number pad. " alt="" coords="533,115,773,141"/>
 <area shape="rect" id="node7" href="$de/d2e/classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc" title="Change the sate of LEDs. " alt="" coords="541,165,766,192"/>
 <area shape="rect" id="node8" href="$de/d2e/classk_keyboard.html#ab1093813a299c6d5d6f45e3dc4c757a3" title="Check whether ot nor there is a data in the input buffer (port 0x60). " alt="" coords="836,89,1031,116"/>
-<area shape="rect" id="node9" href="$d8/d77/asm_utils_8hpp.html#a22130730d12e1e17d6201ef36cd90222" title="_kInPortByte" alt="" coords="1093,140,1192,167"/>
-<area shape="rect" id="node10" href="$d8/d77/asm_utils_8hpp.html#a3118257a6a597aefbf404ee707c1dae4" title="_kOutPortByte" alt="" coords="879,191,987,217"/>
-<area shape="rect" id="node11" href="$de/d2e/classk_keyboard.html#a889d812f2ebc66775d84dba823e6fb65" title="kKeyboard::kIsOutputBufferFull" alt="" coords="831,241,1036,268"/>
+<area shape="rect" id="node9" href="$d9/d2f/classk_port.html#aa0591f8ba4ce293929f771f7f0d0ad43" title="kPort::kInPortByte" alt="" coords="1093,140,1224,167"/>
+<area shape="rect" id="node11" href="$d9/d2f/classk_port.html#a222c22ded99850a8c88e71639c19f05f" title="kPort::kOutPortByte" alt="" coords="863,241,1003,268"/>
+<area shape="rect" id="node13" href="$de/d2e/classk_keyboard.html#a889d812f2ebc66775d84dba823e6fb65" title="kKeyboard::kIsOutputBufferFull" alt="" coords="831,191,1036,217"/>
+<area shape="rect" id="node10" href="$d1/d42/port_8hpp.html#a22130730d12e1e17d6201ef36cd90222" title="_kInPortByte" alt="" coords="1272,140,1371,167"/>
+<area shape="rect" id="node12" href="$d1/d42/port_8hpp.html#a3118257a6a597aefbf404ee707c1dae4" title="_kOutPortByte" alt="" coords="1105,241,1213,268"/>
 </map>

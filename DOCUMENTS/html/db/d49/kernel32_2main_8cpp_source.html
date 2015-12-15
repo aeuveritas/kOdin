@@ -117,17 +117,17 @@ $(document).ready(function(){initNavTree('db/d49/kernel32_2main_8cpp_source.html
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">char</span> cVendorString[13] = {0, };</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="../../d6/d9c/classk_memory.html">kMemory</a> clMem;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="../../db/daa/classk_utils.html">kUtils</a> <a class="code" href="../../df/ddd/kernel64_2main_8cpp.html#adf67c54d5a4c70f9b1a443d6e299748d">clUtils</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="../../db/daa/classk_utils.html">kUtils</a> clUtils;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="../../d9/d0e/classk_cpu.html">kCpu</a> clCpu;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    dwLine = 3;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    clUtils.<a class="code" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine++,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                         <span class="stringliteral">&quot;[ PASS ]  Protected Mode C++ Language Kernel Start&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                         <span class="stringliteral">&quot;[ PASS ]  Start Protected Mode C++ Language Kernel&quot;</span>);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// Check the memory is larger than the minimum size</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    clUtils.<a class="code" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                         <span class="stringliteral">&quot;[      ]  Minimum Memory Size Check&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                         <span class="stringliteral">&quot;[      ]  Check Minimum Memory Size&quot;</span>);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">if</span> (clMem.<a class="code" href="../../d6/d9c/classk_memory.html#a9fc70470156b717e9e6309e03a7da4c5">kIsMemoryEnough</a>() == <span class="keyword">false</span>) {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        clUtils.<a class="code" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++, <span class="stringliteral">&quot;FAIL&quot;</span>);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        clUtils.<a class="code" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine,</div>
@@ -141,7 +141,7 @@ $(document).ready(function(){initNavTree('db/d49/kernel32_2main_8cpp_source.html
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// Initialize kernel area for IA-32e mode</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    clUtils.<a class="code" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                         <span class="stringliteral">&quot;[      ]  IA-32e Kernel Area Initialize&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                         <span class="stringliteral">&quot;[      ]  Initialize IA-32e Kernel Area&quot;</span>);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (clMem.<a class="code" href="../../d6/d9c/classk_memory.html#a3232feb17e3d9a1f39a93e71b5c3a999">kInitializeKernel64Area</a>() == <span class="keyword">false</span>) {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        clUtils.<a class="code" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                           <span class="stringliteral">&quot;FAIL&quot;</span>);</div>
@@ -155,7 +155,7 @@ $(document).ready(function(){initNavTree('db/d49/kernel32_2main_8cpp_source.html
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Create the page tables for IA-32e mode</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    clUtils.<a class="code" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                         <span class="stringliteral">&quot;[      ]  IA-32e Page Tables Initialize&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                         <span class="stringliteral">&quot;[      ]  Initialize IA-32e Page Tables&quot;</span>);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    clMem.<a class="code" href="../../d6/d9c/classk_memory.html#a5c46bc3b2d7c0ec2f8abef571a732aed">kInitializePageManager</a>();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    clUtils.<a class="code" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                           <span class="stringliteral">&quot;PASS&quot;</span>);</div>
@@ -174,7 +174,7 @@ $(document).ready(function(){initNavTree('db/d49/kernel32_2main_8cpp_source.html
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">// Check 64 bits mode available</span></div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    clCpu.<a class="code" href="../../d9/d0e/classk_cpu.html#a76637d24ba19b551fe94178b42a23044">kReadCPUID</a>(0x80000001, &amp;dwEAX, &amp;dwEBX, &amp;dwECX, &amp;dwEDX);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    clUtils.<a class="code" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(0, dwLine,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                         <span class="stringliteral">&quot;[      ]  64 bits Mode Support Check&quot;</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                         <span class="stringliteral">&quot;[      ]  Check 64 bits Mode Support&quot;</span>);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> (dwEDX &amp; (1 &lt;&lt; 29)) {</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        clUtils.<a class="code" href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kPrintString</a>(2, dwLine++,</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                           <span class="stringliteral">&quot;PASS&quot;</span>);</div>
@@ -212,14 +212,13 @@ $(document).ready(function(){initNavTree('db/d49/kernel32_2main_8cpp_source.html
 <div class="ttc" id="classk_memory_html_a5c46bc3b2d7c0ec2f8abef571a732aed"><div class="ttname"><a href="../../d6/d9c/classk_memory.html#a5c46bc3b2d7c0ec2f8abef571a732aed">kMemory::kInitializePageManager</a></div><div class="ttdeci">void kInitializePageManager(void)</div><div class="ttdoc">Initialize page manager. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/memory_8cpp_source.html#l00081">memory.cpp:81</a></div></div>
 <div class="ttc" id="classk_utils_html_aec7de7b52710a4e44ce60d1ff674debb"><div class="ttname"><a href="../../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb">kUtils::kPrintString</a></div><div class="ttdeci">bool kPrintString(int iX, int iY, const char *pcString)</div><div class="ttdoc">Print message. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d99/kernel32_2utils_8cpp_source.html#l00006">utils.cpp:6</a></div></div>
 <div class="ttc" id="kernel32_2main_8cpp_html_a6288eba0f8e8ad3ab1544ad731eb7667"><div class="ttname"><a href="../../db/d49/kernel32_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667">main</a></div><div class="ttdeci">void main(void)</div><div class="ttdef"><b>Definition:</b> <a href="../../db/d49/kernel32_2main_8cpp_source.html#l00006">main.cpp:6</a></div></div>
-<div class="ttc" id="classk_cpu_html_a219049a9ee5a67a6d81088ac875832b6"><div class="ttname"><a href="../../d9/d0e/classk_cpu.html#a219049a9ee5a67a6d81088ac875832b6">kCpu::kSwitchAndExecute64bitsKernel</a></div><div class="ttdeci">void kSwitchAndExecute64bitsKernel(void)</div><div class="ttdoc">Switch to the IA-32e mode. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dfc/cpu_8cpp_source.html#l00012">cpu.cpp:12</a></div></div>
+<div class="ttc" id="classk_cpu_html_a219049a9ee5a67a6d81088ac875832b6"><div class="ttname"><a href="../../d9/d0e/classk_cpu.html#a219049a9ee5a67a6d81088ac875832b6">kCpu::kSwitchAndExecute64bitsKernel</a></div><div class="ttdeci">void kSwitchAndExecute64bitsKernel(void)</div><div class="ttdoc">Switch to the IA-32e mode. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dfc/cpu_8cpp_source.html#l00013">cpu.cpp:13</a></div></div>
 <div class="ttc" id="classk_memory_html_a3232feb17e3d9a1f39a93e71b5c3a999"><div class="ttname"><a href="../../d6/d9c/classk_memory.html#a3232feb17e3d9a1f39a93e71b5c3a999">kMemory::kInitializeKernel64Area</a></div><div class="ttdeci">bool kInitializeKernel64Area(void)</div><div class="ttdoc">Initialize kernel area for IA-32e with 0. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d71/memory_8cpp_source.html#l00004">memory.cpp:4</a></div></div>
 <div class="ttc" id="cpu_8hpp_html"><div class="ttname"><a href="../../df/dbe/cpu_8hpp.html">cpu.hpp</a></div></div>
-<div class="ttc" id="classk_cpu_html"><div class="ttname"><a href="../../d9/d0e/classk_cpu.html">kCpu</a></div><div class="ttdoc">Class for CPU registers [Protected Mode]. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/cpu_8hpp_source.html#l00013">cpu.hpp:13</a></div></div>
+<div class="ttc" id="classk_cpu_html"><div class="ttname"><a href="../../d9/d0e/classk_cpu.html">kCpu</a></div><div class="ttdoc">Class for CPU registers [Protected Mode]. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dbe/cpu_8hpp_source.html#l00014">cpu.hpp:14</a></div></div>
 <div class="ttc" id="kernel32_2types_8hpp_html"><div class="ttname"><a href="../../d5/d99/kernel32_2types_8hpp.html">types.hpp</a></div></div>
 <div class="ttc" id="kernel32_2types_8hpp_html_a798af1e30bc65f319c1a246cecf59e39"><div class="ttname"><a href="../../d5/d99/kernel32_2types_8hpp.html#a798af1e30bc65f319c1a246cecf59e39">DWORD</a></div><div class="ttdeci">unsigned int DWORD</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d99/kernel32_2types_8hpp_source.html#l00005">types.hpp:5</a></div></div>
 <div class="ttc" id="classk_cpu_html_a76637d24ba19b551fe94178b42a23044"><div class="ttname"><a href="../../d9/d0e/classk_cpu.html#a76637d24ba19b551fe94178b42a23044">kCpu::kReadCPUID</a></div><div class="ttdeci">void kReadCPUID(DWORD dwEAX, DWORD *pdwEAX, DWORD *pdwEBX, DWORD *pdwECX, DWORD *pdwEDX)</div><div class="ttdoc">Read information of the processor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dfc/cpu_8cpp_source.html#l00004">cpu.cpp:4</a></div></div>
-<div class="ttc" id="kernel64_2main_8cpp_html_adf67c54d5a4c70f9b1a443d6e299748d"><div class="ttname"><a href="../../df/ddd/kernel64_2main_8cpp.html#adf67c54d5a4c70f9b1a443d6e299748d">clUtils</a></div><div class="ttdeci">kUtils clUtils</div><div class="ttdef"><b>Definition:</b> <a href="../../df/ddd/kernel64_2main_8cpp_source.html#l00007">main.cpp:7</a></div></div>
 <div class="ttc" id="memory_8hpp_html"><div class="ttname"><a href="../../da/d3e/memory_8hpp.html">memory.hpp</a></div></div>
 <div class="ttc" id="kernel32_2utils_8hpp_html"><div class="ttname"><a href="../../d1/dd9/kernel32_2utils_8hpp.html">utils.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -228,7 +227,7 @@ $(document).ready(function(){initNavTree('db/d49/kernel32_2main_8cpp_source.html
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_addb28c7a5fc17b8a68a66812d63c84d.html">kernel32</a></li><li class="navelem"><a class="el" href="../../db/d49/kernel32_2main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Mon Dec 7 2015 01:50:32 for kOdin by
+    <li class="footer">Generated on Sun Dec 20 2015 21:57:52 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

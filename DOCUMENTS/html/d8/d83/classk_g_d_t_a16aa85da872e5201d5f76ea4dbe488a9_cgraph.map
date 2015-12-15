@@ -1,0 +1,4 @@
+<map id="kGDT::kInitializeGDT" name="kGDT::kInitializeGDT">
+<area shape="rect" id="node2" href="$d8/d83/classk_g_d_t.html#ad1530e109a056d812930a99d41b52696" title="kGDT::kSetGDTEntry8" alt="" coords="206,5,365,32"/>
+<area shape="rect" id="node3" href="$d8/d83/classk_g_d_t.html#af2bb05d30260513f9c71c0e200106e08" title="kGDT::kSetGDTEntry16" alt="" coords="203,56,368,83"/>
+</map>

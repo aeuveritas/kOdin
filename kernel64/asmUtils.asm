@@ -3,6 +3,7 @@
 ; Make function call path from C
 global _kInPortByte, _kOutPortByte
 global _kLoadGDTR, _kLoadTR, _kLoadIDTR
+global _kEnableInterrupt, _kDisableInterrupt, _kReadRFLAGS
 
 SECTION .text                       ; Define text section
 
@@ -55,4 +56,24 @@ _kLoadTR:
 _kLoadIDTR:
     lidt [rdi]                      ; Load parameter 1 (= Address of IDT data
                                     ; structure) and set IDTR
+    ret
+    
+; Enable interrupt
+;   PARAM: None
+_kEnableInterrupt:
+    sti                             ; Enable interrupt
+    ret
+    
+; Disable interrupt
+;   PARAM: None
+_kDisableInterrupt:
+    cli                             ; Disable interrupt
+    ret
+    
+; Read RFLGAS and return it
+;   PARAM: None
+_kReadRFLAGS:
+    pushfq                          ; Store value of RFLAGS to the stack
+    pop rax                         ; Copy value in the stack to the RAX,
+                                    ; because RAX is the return value
     ret

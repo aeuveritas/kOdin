@@ -4,15 +4,19 @@
 #include "utils.hpp"
 #include "keyboard.hpp"
 
-extern kUtils clUtils;
-
 #pragma pack(push, 1)
 
 /// Class for shell [IA-32e Mode]
 class kShell
 {
+    kKeyboard* a_pclKeyboard;
+    
 public:
-    void kPrompt(kKeyboard& clKeyboard, DWORD& dwline);
+    kShell(void);
+    ~kShell(void);
+    
+    void kInitializeShell(kKeyboard* _kKeyboard);
+    void kPrompt(void);
 };
 
 #pragma pakc(pop)

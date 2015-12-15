@@ -1,9 +1,10 @@
 #include "keyboard.hpp"
 #include "utils.hpp"
 
-/// Constructor of kKeyboard class
+/// Constructor
 kKeyboard::kKeyboard(void) 
 {
+    a_pclPort = nullptr;
     bShiftDown = false;
     bCapsLockOn = false;
     bNumLockOn = false;
@@ -12,8 +13,10 @@ kKeyboard::kKeyboard(void)
     iSkipCountForPause = 0;
 }
 
-kKeyboard::~kKeyboard(void)
+/// Deconstructor
+kKeyboard::~kKeyboard(void) 
 {
+    a_pclPort = nullptr;
     bShiftDown = false;
     bCapsLockOn = false;
     bNumLockOn = false;
@@ -21,11 +24,15 @@ kKeyboard::~kKeyboard(void)
     bExtendedCodeIn = false; 
     iSkipCountForPause = 0;
 }
-
 
 ///////////////////////////////////////////////////////////////////////////////
 // Functions related to keyboard controller and keyboard 
 ///////////////////////////////////////////////////////////////////////////////
+/// Initialize kKeyboard
+void kKeyboard::kInitializeKeyboard(kPort* _kPort)
+{
+    a_pclPort = _kPort;
+}
 
 /** 
  * Check whether or not there is a received data 
@@ -36,7 +43,7 @@ bool kKeyboard::kIsOutputBufferFull(void)
     // Read the state register (port 0x64), 
     // and check the output buffer state bit (= Bit 0) is 1.
     // If it is 1, there is data from a keyboard.
-    if (_kInPortByte(0x64) & 0x01)
+    if (a_pclPort->kInPortByte(0x64) & 0x01)
     {
         return true;
     }
@@ -50,7 +57,7 @@ bool kKeyboard::kIsInputBufferFull(void)
     // Read the state register (port 0x64),
     // and check the input buffer state bit (=x Bit 1) is 1.
     // IF it is 1, there is still data.
-    if (_kInPortByte(0x64) & 0x02)
+    if (a_pclPort->kInPortByte(0x64) & 0x02)
     {
         return true;
     }
@@ -63,7 +70,7 @@ bool kKeyboard::kActivateKeyboard(void)
 {
     // Activate a keyboard device by sending keyboard activating command (0xAE)
     // to the controll register (0x64).
-    _kOutPortByte(0x64, 0xAE);
+    a_pclPort->kOutPortByte(0x64, 0xAE);
     
     // Wait for the input buffer (port 0x60) being empty.
     // If it is empty, send the command.
@@ -80,7 +87,7 @@ bool kKeyboard::kActivateKeyboard(void)
     
     // Activate a keyboard by sending keyboard activatin command (0xF4)
     // to the input buffer (0x60).
-    _kOutPortByte(0x60, 0xF4);
+    a_pclPort->kOutPortByte(0x60, 0xF4);
     
     // Wait for ACK.
     // Before coming ACK, a key data can be arrived 
@@ -103,7 +110,7 @@ bool kKeyboard::kActivateKeyboard(void)
         }
         
         // If read data is ACK (0xFA), it is succeed.
-        if (_kInPortByte(0x60) == 0xFA)
+        if (a_pclPort->kInPortByte(0x60) == 0xFA)
         {
             return true;
         }
@@ -121,7 +128,7 @@ BYTE kKeyboard::kGetKeyboardScanCode(void)
         ;
     }
     
-    return _kInPortByte(0x60);
+    return a_pclPort->kInPortByte(0x60);
 }
 
 /// Change the sate of LEDs.
@@ -141,7 +148,7 @@ bool kKeyboard::kChangeKeyboardLED(bool bCapsLockOn,
     }
     
     // Send LED state change command (0xED) to the output buffer (port 0x60).
-    _kOutPortByte(0x60, 0xED);
+    a_pclPort->kOutPortByte(0x60, 0xED);
     for (int i = 0; i < 0xFFFF; i++)
     {
         // If the inpur buffer (port 0x60) is empty,
@@ -166,7 +173,7 @@ bool kKeyboard::kChangeKeyboardLED(bool bCapsLockOn,
         }
         
         // If read data is ACK (0xFA), it is succeed.
-        if (_kInPortByte(0x60) == 0xFA)
+        if (a_pclPort->kInPortByte(0x60) == 0xFA)
         {
             break;
         }
@@ -179,7 +186,7 @@ bool kKeyboard::kChangeKeyboardLED(bool bCapsLockOn,
     }
     
     // Send new LED state value to a keyboard until the command is done
-    _kOutPortByte(0x60, 
+    a_pclPort->kOutPortByte(0x60, 
                   (bCapsLockOn << 2) | (bNumLockOn << 1) | bScrollLockOn);
     
     for (int i = 0; i < 0xFFFF; i++)
@@ -206,7 +213,7 @@ bool kKeyboard::kChangeKeyboardLED(bool bCapsLockOn,
         }
         
         // If read data is ACK (0xFA), it is succeed.
-        if (_kInPortByte(0x60) == 0xFA)
+        if (a_pclPort->kInPortByte(0x60) == 0xFA)
         {
             break;
         }
@@ -228,7 +235,7 @@ void kKeyboard::kEnableA20Gate(void)
     
     // Send a command which read the output port value 
     // of the keyboard controller to the control register (port 0x64).
-    _kOutPortByte(0x64, 0xD0);
+    a_pclPort->kOutPortByte(0x64, 0xD0);
     
     // Wait data of the output port and read.
     for (int i = 0; i < 0xFFFF; i++)
@@ -243,7 +250,7 @@ void kKeyboard::kEnableA20Gate(void)
     
     // Read the output port value of the keyboard controller
     // from the output port (0x60).
-    bOutputPortData = _kInPortByte(0x60);
+    bOutputPortData = a_pclPort->kInPortByte(0x60);
     
     // Set A20 gate activating bit
     bOutputPortData |= 0x01;
@@ -262,10 +269,10 @@ void kKeyboard::kEnableA20Gate(void)
     
     // Send the output port setting command (0xD1)
     // to the command register (0x64).
-    _kOutPortByte(0x64, 0xD1);
+    a_pclPort->kOutPortByte(0x64, 0xD1);
     
     // Send setting value for A20 gate to the input buffer (port 0x60).
-    _kOutPortByte(0x60, bOutputPortData);
+    a_pclPort->kOutPortByte(0x60, bOutputPortData);
     
     return;
 }
@@ -288,10 +295,10 @@ void kKeyboard::kReboot(void)
     
     // Send the output port setting command (0xD1)
     // to the command register (0x64).
-    _kOutPortByte(0x64, 0xD1);
+    a_pclPort->kOutPortByte(0x64, 0xD1);
     
     // reset a processor by sending 0 to the inputer buffer (0x60).
-    _kOutPortByte(0x60, 0x00);
+    a_pclPort->kOutPortByte(0x60, 0x00);
     
     while (1)
     {

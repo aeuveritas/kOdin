@@ -1,31 +1,51 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="593,107,725,133"/>
-<area shape="rect" id="node3" href="$da/d13/classk_d_t.html#ab3bbe99e69ecdc2c5b3e16685fe31f92" title="Initialize GDT entries. " alt="" coords="104,503,243,529"/>
-<area shape="rect" id="node6" href="$da/d13/classk_d_t.html#a7e2b7bcf85ff2e1818993519186f3867" title="kDT::kLoadGDTR" alt="" coords="109,556,237,583"/>
-<area shape="rect" id="node8" href="$da/d13/classk_d_t.html#a23c76bd851a469698658e8e7e72f219d" title="Initialize TSS. " alt="" coords="105,613,241,640"/>
-<area shape="rect" id="node10" href="$da/d13/classk_d_t.html#a469131c4c0cf30fe1a13d3e4d88e31b4" title="kDT::kLoadTR" alt="" coords="119,676,227,703"/>
-<area shape="rect" id="node12" href="$da/d13/classk_d_t.html#a4a54afd1f9b289cd2dd9cdfcd4f82d7f" title="Initialize IDT. " alt="" coords="107,107,239,133"/>
-<area shape="rect" id="node15" href="$da/d13/classk_d_t.html#af59d59bb384a9d912565a8dea64a70d4" title="kDT::kLoadIDTR" alt="" coords="112,752,235,779"/>
-<area shape="rect" id="node17" href="$de/d2e/classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c" title="Activate keyboard. " alt="" coords="837,415,1040,441"/>
-<area shape="rect" id="node22" href="$de/d2e/classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc" title="Change the sate of LEDs. " alt="" coords="826,353,1051,380"/>
-<area shape="rect" id="node23" href="$de/dc1/classk_shell.html#ab292740d0e9f12d21a8a3b86ae3236d4" title="Simple shell. " alt="" coords="116,284,231,311"/>
-<area shape="rect" id="node4" href="$da/d13/classk_d_t.html#aa3acf11a8d9eabb14a50a019c2574173" title="kDT::kSetGDTEntry8" alt="" coords="321,553,469,580"/>
-<area shape="rect" id="node5" href="$da/d13/classk_d_t.html#ae96d1da4d8a82d54e2b55ba7499fbd86" title="kDT::kSetGDTEntry16" alt="" coords="317,503,472,529"/>
-<area shape="rect" id="node7" href="$d8/d77/asm_utils_8hpp.html#a959047d2e47706e0eb327110bd41e15b" title="_kLoadGDTR" alt="" coords="343,604,446,631"/>
-<area shape="rect" id="node9" href="$db/daa/classk_utils.html#ae055e25c0ba9910ca7886c4d59c44d58" title="kUtils::kMemSet" alt="" coords="335,655,455,681"/>
-<area shape="rect" id="node11" href="$d8/d77/asm_utils_8hpp.html#a5b3d8f500273f26e2f1f489a874daa40" title="_kLoadTR" alt="" coords="353,705,436,732"/>
-<area shape="rect" id="node13" href="$da/d13/classk_d_t.html#aab66cde783767e1fb1125e1304f4d29b" title="Set IDT gate descriptor. " alt="" coords="327,56,462,83"/>
-<area shape="rect" id="node14" href="$da/d13/classk_d_t.html#abdf5c50642b286472109c764a61abd34" title="Dummny handler for an interrupt and an exception. " alt="" coords="318,107,471,133"/>
-<area shape="rect" id="node16" href="$d8/d77/asm_utils_8hpp.html#a562cc350f9e18de1c2262230d8611397" title="_kLoadIDTR" alt="" coords="347,756,443,783"/>
-<area shape="rect" id="node18" href="$d8/d77/asm_utils_8hpp.html#a3118257a6a597aefbf404ee707c1dae4" title="_kOutPortByte" alt="" coords="1165,364,1273,391"/>
-<area shape="rect" id="node19" href="$de/d2e/classk_keyboard.html#ab1093813a299c6d5d6f45e3dc4c757a3" title="Check whether ot nor there is a data in the input buffer (port 0x60). " alt="" coords="1121,415,1316,441"/>
-<area shape="rect" id="node20" href="$d8/d77/asm_utils_8hpp.html#a22130730d12e1e17d6201ef36cd90222" title="_kInPortByte" alt="" coords="1379,313,1477,340"/>
-<area shape="rect" id="node21" href="$de/d2e/classk_keyboard.html#a889d812f2ebc66775d84dba823e6fb65" title="kKeyboard::kIsOutputBufferFull" alt="" coords="1116,263,1321,289"/>
-<area shape="rect" id="node24" href="$de/d2e/classk_keyboard.html#a714eb7f95810867f33330f49cfab90c7" title="Read a key from the output buffer (port 0x60). " alt="" coords="821,183,1057,209"/>
-<area shape="rect" id="node25" href="$de/d2e/classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="291,335,498,377"/>
-<area shape="rect" id="node26" href="$de/d2e/classk_keyboard.html#a451c6411404db8f08a13dfc3d76059a2" title="Check whether or not a combination key should be used. " alt="" coords="547,233,771,260"/>
-<area shape="rect" id="node30" href="$de/d2e/classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944" title="Update a combination key state and Sync LED state. " alt="" coords="551,335,766,377"/>
-<area shape="rect" id="node27" href="$de/d2e/classk_keyboard.html#a699bd3a2eeae0bdf0247f43b9f94ae88" title="Check the Scan Code is alphabet. " alt="" coords="1107,103,1330,129"/>
-<area shape="rect" id="node28" href="$de/d2e/classk_keyboard.html#a866bf09378d34ec83476869953d8cbfb" title="Check the Scan Code is number or symbol. " alt="" coords="831,66,1046,107"/>
-<area shape="rect" id="node29" href="$de/d2e/classk_keyboard.html#a40824696636e8f49fe7eef695a97586e" title="Check the Scan Code is in number pad. " alt="" coords="819,233,1059,260"/>
+<area shape="rect" id="node2" href="$db/daa/classk_utils.html#a520d256fa14fcadc85479751ba120da2" title="Initialize Utils. " alt="" coords="144,5,291,32"/>
+<area shape="rect" id="node3" href="$db/daa/classk_utils.html#a5118d3a763d3ba9b53ee4fad8a80d232" title="Print result. " alt="" coords="149,56,285,83"/>
+<area shape="rect" id="node5" href="$db/daa/classk_utils.html#a3e9c8f376330bc282950d1e1d74d1bcd" title="Print message. " alt="" coords="142,107,293,133"/>
+<area shape="rect" id="node6" href="$d8/d83/classk_g_d_t.html#a16aa85da872e5201d5f76ea4dbe488a9" title="Initialize GDT entries. " alt="" coords="143,157,291,184"/>
+<area shape="rect" id="node9" href="$d8/d83/classk_g_d_t.html#a010795682dd579990e0054467e3bd935" title="kGDT::kLoadGDTR" alt="" coords="148,236,287,263"/>
+<area shape="rect" id="node11" href="$d8/d83/classk_g_d_t.html#aedfff36893a0acacfc14e297b241539a" title="Initialize TSS. " alt="" coords="144,344,291,371"/>
+<area shape="rect" id="node13" href="$d8/d83/classk_g_d_t.html#a8ccedcbae5d3fb100ee8855834122544" title="kGDT::kLoadTR" alt="" coords="158,508,277,535"/>
+<area shape="rect" id="node15" href="$d4/db2/classk_i_d_t.html#ac8378f3f9630c87a3c33fd6eef06fbc2" title="Initialize IDT. " alt="" coords="149,787,285,813"/>
+<area shape="rect" id="node41" href="$d4/db2/classk_i_d_t.html#afe497ca29a11c1c9b40c4d2f60e2d98a" title="kIDT::kLoadIDTR" alt="" coords="154,837,281,864"/>
+<area shape="rect" id="node42" href="$de/d2e/classk_keyboard.html#abe75121a573dd0f2c02ccfc9d6b1daa9" title="Initialize kKeyboard. " alt="" coords="116,888,319,915"/>
+<area shape="rect" id="node43" href="$de/d2e/classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c" title="Activate keyboard. " alt="" coords="116,939,319,965"/>
+<area shape="rect" id="node44" href="$de/d2e/classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc" title="Change the sate of LEDs. " alt="" coords="105,989,330,1016"/>
+<area shape="rect" id="node45" href="$d8/da9/classk_p_i_c.html#ab8cafff6fab3870055a8cf0d21295ff3" title="Initialize PIC. " alt="" coords="148,1040,287,1067"/>
+<area shape="rect" id="node46" href="$d8/da9/classk_p_i_c.html#a9b9177fe28dc4de5bb5c6728c491b20a" title="Mask interrupt to ignore it. " alt="" coords="132,1091,303,1117"/>
+<area shape="rect" id="node47" href="$d6/d88/classk_i_h.html#aa8b8672fb55eb579488daae4ba78c8f4" title="Initialize IH. " alt="" coords="157,1141,277,1168"/>
+<area shape="rect" id="node48" href="$d8/da9/classk_p_i_c.html#aeeb2b5ba088a3283392cf851442e0d4c" title="Enable interrupt. " alt="" coords="140,1192,295,1219"/>
+<area shape="rect" id="node49" href="$de/dc1/classk_shell.html#ae020500b85d2e16f9b54f2c531ce7712" title="Initialize Shell. " alt="" coords="142,1243,293,1269"/>
+<area shape="rect" id="node50" href="$de/dc1/classk_shell.html#a2513ae687ce1cdab7c665399c4920227" title="Simple shell. " alt="" coords="160,1293,275,1320"/>
+<area shape="rect" id="node4" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="429,41,561,68"/>
+<area shape="rect" id="node7" href="$d8/d83/classk_g_d_t.html#ad1530e109a056d812930a99d41b52696" title="kGDT::kSetGDTEntry8" alt="" coords="415,92,574,119"/>
+<area shape="rect" id="node8" href="$d8/d83/classk_g_d_t.html#af2bb05d30260513f9c71c0e200106e08" title="kGDT::kSetGDTEntry16" alt="" coords="412,143,577,169"/>
+<area shape="rect" id="node10" href="$de/dc3/_g_d_t_8hpp.html#a959047d2e47706e0eb327110bd41e15b" title="_kLoadGDTR" alt="" coords="443,193,546,220"/>
+<area shape="rect" id="node12" href="$db/daa/classk_utils.html#ae055e25c0ba9910ca7886c4d59c44d58" title="Fill memory with data. " alt="" coords="435,244,555,271"/>
+<area shape="rect" id="node14" href="$de/dc3/_g_d_t_8hpp.html#a5b3d8f500273f26e2f1f489a874daa40" title="_kLoadTR" alt="" coords="453,295,536,321"/>
+<area shape="rect" id="node16" href="$d4/db2/classk_i_d_t.html#abdd6838bf4e174ea826716f47d5903be" title="Set IDT gate descriptor. " alt="" coords="425,345,564,372"/>
+<area shape="rect" id="node17" href="$df/d9b/asm_i_s_r_8hpp.html#ad22eb9d31c8e203d5756a16b71fd4501" title="_kISRDivideError" alt="" coords="433,396,557,423"/>
+<area shape="rect" id="node18" href="$df/d9b/asm_i_s_r_8hpp.html#a1abe1c58bc67f746b95c29a81c64e0d6" title="_kISRDebug" alt="" coords="446,447,543,473"/>
+<area shape="rect" id="node19" href="$df/d9b/asm_i_s_r_8hpp.html#aa0674463bbd7eb53f801a3fd71b24d34" title="_kISRNMI" alt="" coords="453,497,537,524"/>
+<area shape="rect" id="node20" href="$df/d9b/asm_i_s_r_8hpp.html#a466fc80e2fed50c0659400f3a8c71497" title="_kISRBreakPoint" alt="" coords="433,548,556,575"/>
+<area shape="rect" id="node21" href="$df/d9b/asm_i_s_r_8hpp.html#a2ecddc6ab8ee8922566a114d07b7a7a2" title="_kISROverflow" alt="" coords="439,599,550,625"/>
+<area shape="rect" id="node22" href="$df/d9b/asm_i_s_r_8hpp.html#a9fe3b9b7b06498e9efe3c4702a753b3c" title="_kISRBoundRangeExceeded" alt="" coords="399,649,591,676"/>
+<area shape="rect" id="node23" href="$df/d9b/asm_i_s_r_8hpp.html#a2ebf7ded26e1b146cbe3cff8fe48070e" title="_kISRInvalidOpcode" alt="" coords="423,700,566,727"/>
+<area shape="rect" id="node24" href="$df/d9b/asm_i_s_r_8hpp.html#a2e25fd09632dcfac71a614b8c9459c94" title="_kISRDeviceNotAvailable" alt="" coords="407,751,582,777"/>
+<area shape="rect" id="node25" href="$df/d9b/asm_i_s_r_8hpp.html#ac1b4e0bf80add3adcc0a0111e51f0112" title="_kISRDoubleFault" alt="" coords="430,801,559,828"/>
+<area shape="rect" id="node26" href="$df/d9b/asm_i_s_r_8hpp.html#a95bcc303eff9fa9e79c7841cf527acc7" title="_kISRCoprocessorSegmentOverrun" alt="" coords="379,852,610,879"/>
+<area shape="rect" id="node27" href="$df/d9b/asm_i_s_r_8hpp.html#acb6bb7832fc76556c9b22962f3251ecf" title="_kISRInvalidTSS" alt="" coords="433,903,556,929"/>
+<area shape="rect" id="node28" href="$df/d9b/asm_i_s_r_8hpp.html#a1f81fc82c58b5957831d4087730ae778" title="_kISRSegmentNotPresent" alt="" coords="406,953,583,980"/>
+<area shape="rect" id="node29" href="$df/d9b/asm_i_s_r_8hpp.html#aaa4e2533977c92d7466e1716b0abc62c" title="_kISRStackSegmentFault" alt="" coords="407,1004,582,1031"/>
+<area shape="rect" id="node30" href="$df/d9b/asm_i_s_r_8hpp.html#abb0b158802d313de3d8e7ae0b56961c7" title="_kISRGeneralProtection" alt="" coords="413,1055,576,1081"/>
+<area shape="rect" id="node31" href="$df/d9b/asm_i_s_r_8hpp.html#acbd00be1d47fccd1e2e22b3e18d7f80e" title="_kISRPageFault" alt="" coords="435,1105,554,1132"/>
+<area shape="rect" id="node32" href="$df/d9b/asm_i_s_r_8hpp.html#a7f3e45d7a1f53a88aed0736554a6f2eb" title="_kISR15" alt="" coords="458,1156,531,1183"/>
+<area shape="rect" id="node33" href="$df/d9b/asm_i_s_r_8hpp.html#ad9e7eeda07ae18b53c677c6d87493011" title="_kISRFPUError" alt="" coords="437,1207,552,1233"/>
+<area shape="rect" id="node34" href="$df/d9b/asm_i_s_r_8hpp.html#acf484459b129a1d2b468c80ef3c0a535" title="_kISRAlignmentCheck" alt="" coords="417,1257,572,1284"/>
+<area shape="rect" id="node35" href="$df/d9b/asm_i_s_r_8hpp.html#a61cd1e01ff92f815ebdb3c01a894e213" title="_kISRMachineCheck" alt="" coords="421,1308,568,1335"/>
+<area shape="rect" id="node36" href="$df/d9b/asm_i_s_r_8hpp.html#a7753fd4651b2558f87beeb9100fcfde6" title="_kISRSIMDError" alt="" coords="434,1359,555,1385"/>
+<area shape="rect" id="node37" href="$df/d9b/asm_i_s_r_8hpp.html#a9eef736fdedf7f5d230de4ad329ccf0e" title="_kISRETCException" alt="" coords="423,1409,567,1436"/>
+<area shape="rect" id="node38" href="$df/d9b/asm_i_s_r_8hpp.html#a73506b16c2dbd4ff17d7933ea76160f4" title="_kISRTimer" alt="" coords="449,1460,541,1487"/>
+<area shape="rect" id="node39" href="$df/d9b/asm_i_s_r_8hpp.html#a42445c59e2074260268ea92d46c4f3aa" title="_kISRKeyboard" alt="" coords="437,1511,552,1537"/>
+<area shape="rect" id="node40" href="$df/d9b/asm_i_s_r_8hpp.html#a16a0a3513427433b5efd2446bc2a7ddf" title="_kISRSlavePIC" alt="" coords="437,1561,552,1588"/>
 </map>

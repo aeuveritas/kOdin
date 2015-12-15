@@ -6,7 +6,9 @@ BootLoader.bin: BootLoader.asm
 	@echo
 	
 	mkdir -p ../OUT/bootloader
-	nasm -o ../OUT/bootloader/BootLoader.bin BootLoader.asm
+	nasm -g -o ../OUT/bootloader/BootLoader.bin BootLoader.asm
+	nasm -f elf -F dwarf -g -o BootLoader.elf BootLoader.asm
+	mv ./BootLoader.elf ../OUT/bootloader
 	
 	@echo
 	@echo ===== BootLoader Build Complete IN ==============================
