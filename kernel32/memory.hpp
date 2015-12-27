@@ -5,9 +5,9 @@
 #pragma pack(push, 1)
 
 /// Class for memory [Protected Mode]
-class kMemory
+class k32Memory
 {
-    kPageManager clPM;
+    k32PageManager clPM;
 
 public:
     bool kIsMemoryEnough(void);

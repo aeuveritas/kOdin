@@ -4,7 +4,7 @@
 <area shape="rect" id="node7" href="$de/d2e/classk_keyboard.html#a714eb7f95810867f33330f49cfab90c7" title="Read a key from the output buffer (port 0x60). " alt="" coords="1286,56,1522,83"/>
 <area shape="rect" id="node8" href="$de/d2e/classk_keyboard.html#ad651c90ebcce238b6e474f91d86b3f8d" title="Translate Scan Code to ASCII Code and push it. " alt="" coords="214,251,421,293"/>
 <area shape="rect" id="node30" href="$d8/da9/classk_p_i_c.html#ae49dafa5afe263e507635f1e8235a192" title="kPIC::kSendEOIToPIC" alt="" coords="238,376,397,403"/>
-<area shape="rect" id="node3" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="507,5,639,32"/>
+<area shape="rect" id="node3" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print string. " alt="" coords="507,5,639,32"/>
 <area shape="rect" id="node5" href="$d9/d2f/classk_port.html#aa0591f8ba4ce293929f771f7f0d0ad43" title="kPort::kInPortByte" alt="" coords="1824,129,1955,156"/>
 <area shape="rect" id="node6" href="$d1/d42/port_8hpp.html#a22130730d12e1e17d6201ef36cd90222" title="_kInPortByte" alt="" coords="2003,159,2101,185"/>
 <area shape="rect" id="node9" href="$de/d2e/classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="470,251,677,293"/>

@@ -13,7 +13,7 @@
 <area shape="rect" id="node46" href="$d6/d88/classk_i_h.html#a2522ac5e6d743fb2502bbf4d1c99ba09" title="Initialize IH. " alt="" coords="145,1235,265,1262"/>
 <area shape="rect" id="node47" href="$de/dc1/classk_shell.html#ae020500b85d2e16f9b54f2c531ce7712" title="Initialize Shell. " alt="" coords="130,1286,281,1312"/>
 <area shape="rect" id="node48" href="$de/dc1/classk_shell.html#a2513ae687ce1cdab7c665399c4920227" title="Simple shell. " alt="" coords="148,1032,263,1059"/>
-<area shape="rect" id="node4" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="679,31,811,58"/>
+<area shape="rect" id="node4" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print string. " alt="" coords="679,31,811,58"/>
 <area shape="rect" id="node8" href="$d8/d83/classk_g_d_t.html#a16aa85da872e5201d5f76ea4dbe488a9" title="Initialize GDT entries. " alt="" coords="394,310,542,336"/>
 <area shape="rect" id="node11" href="$d8/d83/classk_g_d_t.html#a010795682dd579990e0054467e3bd935" title="kGDT::kLoadGDTR" alt="" coords="399,360,537,387"/>
 <area shape="rect" id="node13" href="$d8/d83/classk_g_d_t.html#aedfff36893a0acacfc14e297b241539a" title="Initialize TSS. " alt="" coords="395,411,541,438"/>

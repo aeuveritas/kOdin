@@ -1,14 +1,14 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="147,5,279,32"/>
-<area shape="rect" id="node3" href="$d6/d9c/classk_memory.html#a9fc70470156b717e9e6309e03a7da4c5" title="Check the size of memory is larget than the minimum. " alt="" coords="117,56,310,83"/>
-<area shape="rect" id="node4" href="$d6/d9c/classk_memory.html#a3232feb17e3d9a1f39a93e71b5c3a999" title="Initialize kernel area for IA&#45;32e with 0. " alt="" coords="105,107,322,133"/>
-<area shape="rect" id="node5" href="$d6/d9c/classk_memory.html#a5c46bc3b2d7c0ec2f8abef571a732aed" title="Initialize page manager. " alt="" coords="129,158,298,199"/>
-<area shape="rect" id="node9" href="$d9/d0e/classk_cpu.html#a76637d24ba19b551fe94178b42a23044" title="Read information of the processor. " alt="" coords="142,224,285,251"/>
-<area shape="rect" id="node11" href="$d6/d9c/classk_memory.html#ac147a25d1fadf2075cd6f05a998ab13d" title="Copy IA&#45;32e mode kernel to 0x200000 (= 2 MB) " alt="" coords="109,275,318,317"/>
-<area shape="rect" id="node12" href="$d9/d0e/classk_cpu.html#a219049a9ee5a67a6d81088ac875832b6" title="Switch to the IA&#45;32e mode. " alt="" coords="106,341,321,382"/>
-<area shape="rect" id="node6" href="$d8/d6a/classk_page_manager.html#ab290429de75b7119fa1a0a8f0bddc9ad" title="Initialize page tables for IA&#45;32e mode. " alt="" coords="377,165,549,192"/>
-<area shape="rect" id="node7" href="$d8/d6a/classk_page_manager.html#ac8618fc3f0e55170e9a34fa6c996ccaa" title="Set the base address of the page tables. " alt="" coords="617,129,823,170"/>
-<area shape="rect" id="node8" href="$d8/d6a/classk_page_manager.html#a9109d23ffa662fa53b8c99f18f123e8e" title="Set base address and flags for the page entry. " alt="" coords="603,195,837,221"/>
-<area shape="rect" id="node10" href="$df/dbe/cpu_8hpp.html#a36dde3dfbb75640019eff1036756fe75" title="_kReadCPUID" alt="" coords="407,224,518,251"/>
-<area shape="rect" id="node13" href="$df/dbe/cpu_8hpp.html#a892bf32b245a62dc1d991783170edd55" title="_kSwitchAndExecute64bits\lKernel" alt="" coords="371,341,554,382"/>
+<area shape="rect" id="node2" href="$d5/dda/classk32_utils.html#af8827d7c0ad50c4ece39c59a1cd85f94" title="Print message. " alt="" coords="147,5,293,32"/>
+<area shape="rect" id="node3" href="$dc/d1f/classk32_memory.html#add97190a27116b9411e415f4d892f8f6" title="Check the size of memory is larget than the minimum. " alt="" coords="117,56,323,83"/>
+<area shape="rect" id="node4" href="$dc/d1f/classk32_memory.html#acf877730f1fa73c9eba3af549cb30b89" title="Initialize kernel area for IA&#45;32e with 0. " alt="" coords="105,107,335,133"/>
+<area shape="rect" id="node5" href="$dc/d1f/classk32_memory.html#a8f0b26a52f632252057b80fe9f86a376" title="Initialize page manager. " alt="" coords="129,158,311,199"/>
+<area shape="rect" id="node9" href="$d6/dbb/classk32_cpu.html#aeb8465dfde99d797cb87e590d56063b5" title="Read information of the processor. " alt="" coords="142,224,298,251"/>
+<area shape="rect" id="node11" href="$dc/d1f/classk32_memory.html#a8fde69652d5a7e343c438ec70740b354" title="Copy IA&#45;32e mode kernel to 0x200000 (= 2 MB) " alt="" coords="127,275,313,317"/>
+<area shape="rect" id="node12" href="$d6/dbb/classk32_cpu.html#af1465d24778601fa5799fdbf2e18b008" title="Switch to the IA&#45;32e mode. " alt="" coords="106,341,334,382"/>
+<area shape="rect" id="node6" href="$dc/d32/classk32_page_manager.html#a81b1207bef213abbe14ac340d60ca8bb" title="Initialize page tables for IA&#45;32e mode. " alt="" coords="384,165,571,192"/>
+<area shape="rect" id="node7" href="$dc/d32/classk32_page_manager.html#ad5494da8c52fbc677fa04e2b97fb140b" title="Set the base address of the page tables. " alt="" coords="619,125,807,166"/>
+<area shape="rect" id="node8" href="$dc/d32/classk32_page_manager.html#ab1cc228bba0114e9e1be26ac96dfc104" title="Set base address and flags for the page entry. " alt="" coords="619,190,807,231"/>
+<area shape="rect" id="node10" href="$df/dbe/cpu_8hpp.html#a36dde3dfbb75640019eff1036756fe75" title="_kReadCPUID" alt="" coords="422,224,533,251"/>
+<area shape="rect" id="node13" href="$df/dbe/cpu_8hpp.html#a892bf32b245a62dc1d991783170edd55" title="_kSwitchAndExecute64bits\lKernel" alt="" coords="386,341,569,382"/>
 </map>

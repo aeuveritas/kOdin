@@ -3,7 +3,7 @@
 #pragma pack(push, 1)
 
 /// Print message
-bool kUtils::kPrintString(int iX, int iY, const char* pcString)
+bool k32Utils::kPrintString(int iX, int iY, const char* pcString)
 {
     CHARACTER* pstScreen = (CHARACTER*) 0xB8000;
 

@@ -1,6 +1,6 @@
 var page_8hpp =
 [
-    [ "kPageTableEntry", "d8/d9a/structk_page_table_entry.html", "d8/d9a/structk_page_table_entry" ],
+    [ "k32PageTableEntry", "d2/d7c/structk32_page_table_entry.html", "d2/d7c/structk32_page_table_entry" ],
     [ "PAGE_DEFAULTSIZE", "d8/d6d/page_8hpp.html#af9ac94d0cb65adf6b363b61930f07fa7", null ],
     [ "PAGE_FLAGS_A", "d8/d6d/page_8hpp.html#ab181631657ce63055fde5e36ca79f9ca", null ],
     [ "PAGE_FLAGS_D", "d8/d6d/page_8hpp.html#a581a41d39edb507b60e6651db4b244ed", null ],
@@ -15,5 +15,6 @@ var page_8hpp =
     [ "PAGE_FLAGS_RW", "d8/d6d/page_8hpp.html#a78f99ae73feba35cd922caa6e47ff8e3", null ],
     [ "PAGE_FLAGS_US", "d8/d6d/page_8hpp.html#a14eeeee33bd77a17c54a5ee99ca9adbc", null ],
     [ "PAGE_MAXENTRYCOUNT", "d8/d6d/page_8hpp.html#a904afb10ac2eb72c5224d43385bb754a", null ],
-    [ "PAGE_TABLESIZE", "d8/d6d/page_8hpp.html#a6de97c1e8d818906c164df60432beb5e", null ]
+    [ "PAGE_TABLESIZE", "d8/d6d/page_8hpp.html#a6de97c1e8d818906c164df60432beb5e", null ],
+    [ "PTE", "d8/d6d/page_8hpp.html#a6841028bc64746489dd3a4e821879cc3", null ]
 ];

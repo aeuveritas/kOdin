@@ -11,7 +11,7 @@ extern "C" {
 #pragma pack(push, 1)
 
 /// Class for CPU registers [Protected Mode]
-class kCpu
+class k32Cpu
 {
 public:
     void kReadCPUID(DWORD dwEAX, DWORD* pdwEAX, DWORD* pdwEBX, 

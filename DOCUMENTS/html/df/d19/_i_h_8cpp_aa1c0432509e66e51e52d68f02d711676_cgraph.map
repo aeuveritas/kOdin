@@ -2,7 +2,7 @@
 <area shape="rect" id="node2" href="$d6/d88/classk_i_h.html#a82152723d0fdd74dcdda2e455360e706" title="Common interrupt handler. " alt="" coords="238,31,442,57"/>
 <area shape="rect" id="node3" href="$db/daa/classk_utils.html#a97e045d1cfb1d2150227ca3774cbc6d1" title="Print interrupt message. " alt="" coords="497,5,644,32"/>
 <area shape="rect" id="node5" href="$d8/da9/classk_p_i_c.html#ae49dafa5afe263e507635f1e8235a192" title="kPIC::kSendEOIToPIC" alt="" coords="491,56,650,83"/>
-<area shape="rect" id="node4" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print message. " alt="" coords="703,5,835,32"/>
+<area shape="rect" id="node4" href="$db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb" title="Print string. " alt="" coords="703,5,835,32"/>
 <area shape="rect" id="node6" href="$d9/d2f/classk_port.html#a222c22ded99850a8c88e71639c19f05f" title="kPort::kOutPortByte" alt="" coords="699,56,839,83"/>
 <area shape="rect" id="node7" href="$d1/d42/port_8hpp.html#a3118257a6a597aefbf404ee707c1dae4" title="_kOutPortByte" alt="" coords="889,56,997,83"/>
 </map>

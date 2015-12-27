@@ -9,9 +9,9 @@ void main(void)
     DWORD dwEAX, dwEBX, dwECX, dwEDX;
     char cVendorString[13] = {0, };
 
-    kMemory clMem;
-    kUtils clUtils;
-    kCpu clCpu;
+    k32Memory clMem;
+    k32Utils clUtils;
+    k32Cpu clCpu;
 
     dwLine = 3;
 

@@ -6,17 +6,16 @@
 #pragma pack(push, 1)
 
 // Class for Page Manager [Protected Mode]
-class kPageManager
+class k32PageManager
 {
-    kPageTableEntry* pstPML4T;
-    kPageTableEntry* pstPDPT;
-    kPageTableEntry* pstPDT;
-    kPageTableEntry* pstPT;
+    PTE* pstPML4T;
+    PTE* pstPDPT;
+    PTE* pstPDT;
+    PTE* pstPT;
 
-    void kSetPageTableAddress(kPageTableEntry** pageTable,
-                              kPageTableEntry* address);
+    void kSetPageTableAddress(PTE** pageTable, PTE* address);
     void kSetPageEntryData(
-        kPageTableEntry* pstEntry,
+        PTE* pstEntry,
         unsigned int dwUpperBaseAddress,
         unsigned int dwLowerBaseAddress,
         unsigned int dwLowerFlags,

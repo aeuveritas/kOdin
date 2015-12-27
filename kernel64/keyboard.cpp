@@ -130,7 +130,7 @@ bool kKeyboard::kActivateKeyboard(void)
     bPreviousInterrupt = g_pclIH->kSetInterruptFlag(false);
    
     // Activate a keyboard device by sending keyboard activating command (0xAE)
-    // to the controll register (0x64).
+    // to the control register (0x64).
     a_pclPort->kOutPortByte(0x64, 0xAE);
     
     // Wait for the input buffer (port 0x60) being empty.

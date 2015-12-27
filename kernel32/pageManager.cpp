@@ -1,10 +1,10 @@
 #include "pageManager.hpp"
 
 /// Initialize page tables  for IA-32e mode
-void kPageManager::kInitPage(void)
+void k32PageManager::kInitPage(void)
 {
     // Allocate PML4 table
-    kSetPageTableAddress(&pstPML4T, (kPageTableEntry*)0x100000);
+    kSetPageTableAddress(&pstPML4T, (PTE*)0x100000);
 
     // Set all enties as 0, except for the first entry
     kSetPageEntryData(&(pstPML4T[0]), 0x00, 0x101000, PAGE_FLAGS_DEFAULT, 0);
@@ -13,7 +13,7 @@ void kPageManager::kInitPage(void)
     }
 
     // Allocate PDP table
-    kSetPageTableAddress(&pstPDPT, (kPageTableEntry*)0x101000);
+    kSetPageTableAddress(&pstPDPT, (PTE*)0x101000);
 
     // Set 64 entries to handle up to 64 GB
     // The others are set as 0
@@ -26,7 +26,7 @@ void kPageManager::kInitPage(void)
     }
 
     // Allocate PD table
-    kSetPageTableAddress(&pstPDT, (kPageTableEntry*)0x102000);
+    kSetPageTableAddress(&pstPDT, (PTE*)0x102000);
     int dwMappingAddress = 0;
 
     // One page table can handle 2 MB
@@ -44,8 +44,8 @@ void kPageManager::kInitPage(void)
 }
 
 /// Set the base address of the page tables
-void kPageManager::kSetPageTableAddress(kPageTableEntry** pageTable,
-                                        kPageTableEntry* address)
+void k32PageManager::kSetPageTableAddress(PTE** pageTable,
+                                        PTE* address)
 {
     *pageTable = address;
 
@@ -53,8 +53,8 @@ void kPageManager::kSetPageTableAddress(kPageTableEntry** pageTable,
 }
 
 /// Set base address and flags for the page entry
-void kPageManager::kSetPageEntryData(
-    kPageTableEntry* pstEntry,
+void k32PageManager::kSetPageEntryData(
+    PTE* pstEntry,
     unsigned int dwUpperBaseAddress,
     unsigned int dwLowerBaseAddress,
     unsigned int dwLowerFlags,

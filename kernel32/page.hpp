@@ -25,7 +25,7 @@
 #pragma pack(push, 1)
 
 // Struct for Page Entry [Protected Mode]
-struct kPageTableEntry {
+typedef struct k32PageTableEntry {
     // For PML4 and PDP
     // 1 bit:   P, RW, US, PWT, PCD, A
     // 3 bits:  Reserved, Avail
@@ -41,6 +41,6 @@ struct kPageTableEntry {
     // 11 bits: Avail
     // 1 bit:   EXB
     DWORD dwUpperBaseAddressAndEXB;
-};
+} PTE;
 #pragma pak(pop)
 

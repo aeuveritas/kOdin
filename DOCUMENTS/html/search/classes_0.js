@@ -1,7 +1,11 @@
 var searchData=
 [
+  ['k32cpu',['k32Cpu',['../d6/dbb/classk32_cpu.html',1,'']]],
+  ['k32memory',['k32Memory',['../dc/d1f/classk32_memory.html',1,'']]],
+  ['k32pagemanager',['k32PageManager',['../dc/d32/classk32_page_manager.html',1,'']]],
+  ['k32pagetableentry',['k32PageTableEntry',['../d2/d7c/structk32_page_table_entry.html',1,'']]],
+  ['k32utils',['k32Utils',['../d5/dda/classk32_utils.html',1,'']]],
   ['kcharactorstruct',['kCharactorStruct',['../d8/dbe/structk_charactor_struct.html',1,'']]],
-  ['kcpu',['kCpu',['../d9/d0e/classk_cpu.html',1,'']]],
   ['kdt',['kDT',['../da/d13/classk_d_t.html',1,'']]],
   ['kdtrstruct',['kDTRStruct',['../d4/d6e/structk_d_t_r_struct.html',1,'']]],
   ['kgdt',['kGDT',['../d8/d83/classk_g_d_t.html',1,'']]],
@@ -13,9 +17,6 @@ var searchData=
   ['kkeyboard',['kKeyboard',['../de/d2e/classk_keyboard.html',1,'']]],
   ['kkeymappingentry',['kKeyMappingEntry',['../d5/d01/structk_key_mapping_entry.html',1,'']]],
   ['kkeyqueuedatastruct',['kKeyQueueDataStruct',['../da/ddb/structk_key_queue_data_struct.html',1,'']]],
-  ['kmemory',['kMemory',['../d6/d9c/classk_memory.html',1,'']]],
-  ['kpagemanager',['kPageManager',['../d8/d6a/classk_page_manager.html',1,'']]],
-  ['kpagetableentry',['kPageTableEntry',['../d8/d9a/structk_page_table_entry.html',1,'']]],
   ['kpic',['kPIC',['../d8/da9/classk_p_i_c.html',1,'']]],
   ['kport',['kPort',['../d9/d2f/classk_port.html',1,'']]],
   ['kqueue',['kQueue',['../dd/dce/classk_queue.html',1,'']]],

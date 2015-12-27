@@ -1,7 +1,11 @@
 var annotated =
 [
+    [ "k32Cpu", "d6/dbb/classk32_cpu.html", "d6/dbb/classk32_cpu" ],
+    [ "k32Memory", "dc/d1f/classk32_memory.html", "dc/d1f/classk32_memory" ],
+    [ "k32PageManager", "dc/d32/classk32_page_manager.html", "dc/d32/classk32_page_manager" ],
+    [ "k32PageTableEntry", "d2/d7c/structk32_page_table_entry.html", "d2/d7c/structk32_page_table_entry" ],
+    [ "k32Utils", "d5/dda/classk32_utils.html", "d5/dda/classk32_utils" ],
     [ "kCharactorStruct", "d8/dbe/structk_charactor_struct.html", "d8/dbe/structk_charactor_struct" ],
-    [ "kCpu", "d9/d0e/classk_cpu.html", "d9/d0e/classk_cpu" ],
     [ "kDT", "da/d13/classk_d_t.html", "da/d13/classk_d_t" ],
     [ "kDTRStruct", "d4/d6e/structk_d_t_r_struct.html", "d4/d6e/structk_d_t_r_struct" ],
     [ "kGDT", "d8/d83/classk_g_d_t.html", "d8/d83/classk_g_d_t" ],
@@ -13,9 +17,6 @@ var annotated =
     [ "kKeyboard", "de/d2e/classk_keyboard.html", "de/d2e/classk_keyboard" ],
     [ "kKeyMappingEntry", "d5/d01/structk_key_mapping_entry.html", "d5/d01/structk_key_mapping_entry" ],
     [ "kKeyQueueDataStruct", "da/ddb/structk_key_queue_data_struct.html", "da/ddb/structk_key_queue_data_struct" ],
-    [ "kMemory", "d6/d9c/classk_memory.html", "d6/d9c/classk_memory" ],
-    [ "kPageManager", "d8/d6a/classk_page_manager.html", "d8/d6a/classk_page_manager" ],
-    [ "kPageTableEntry", "d8/d9a/structk_page_table_entry.html", "d8/d9a/structk_page_table_entry" ],
     [ "kPIC", "d8/da9/classk_p_i_c.html", "d8/da9/classk_p_i_c" ],
     [ "kPort", "d9/d2f/classk_port.html", "d9/d2f/classk_port" ],
     [ "kQueue", "dd/dce/classk_queue.html", "dd/dce/classk_queue" ],

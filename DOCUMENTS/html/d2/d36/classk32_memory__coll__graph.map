@@ -1,0 +1,4 @@
+<map id="k32Memory" name="k32Memory">
+<area shape="rect" id="node2" href="$dc/d32/classk32_page_manager.html" title="{k32PageManager\n||+ kInitPage()\l&#45; kSetPageTableAddress()\l&#45; kSetPageEntryData()\l}" alt="" coords="35,205,209,312"/>
+<area shape="rect" id="node3" href="$d2/d7c/structk32_page_table_entry.html" title="{k32PageTableEntry\n|+ dwAttributeAndLowerBaseAddress\l+ dwUpperBaseAddressAndEXB\l|}" alt="" coords="5,6,240,98"/>
+</map>
