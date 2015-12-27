@@ -1,6 +1,8 @@
 #pragma once
 
-#include "DT.hpp"
+#include "utils.hpp"
+#include "dSegment.hpp"
+#include "dInterrupt.hpp"
 #include "asmISR.hpp"
 
 extern kUtils* g_pclUtils;
@@ -13,7 +15,7 @@ extern "C"
 };
 
 /// Class for Interrupt Descriptor Table
-class kIDT: public kDT
+class kIDT
 {
     DTR* pstIDTR;
     IDTENTRY* pstIDTEntry;

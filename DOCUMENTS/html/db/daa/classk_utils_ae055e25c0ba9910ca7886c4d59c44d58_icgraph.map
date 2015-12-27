@@ -1,4 +1,5 @@
 <map id="kUtils::kMemSet" name="kUtils::kMemSet">
 <area shape="rect" id="node2" href="$d8/d83/classk_g_d_t.html#aedfff36893a0acacfc14e297b241539a" title="Initialize TSS. " alt="" coords="173,5,320,32"/>
-<area shape="rect" id="node3" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="368,5,419,32"/>
+<area shape="rect" id="node3" href="$da/d13/classk_d_t.html#a717dd28b321a0bc7bab3aa3b21d076f1" title="Initialize descriptor Table. " alt="" coords="368,5,496,32"/>
+<area shape="rect" id="node4" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="544,5,595,32"/>
 </map>

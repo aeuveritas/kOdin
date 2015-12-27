@@ -3,7 +3,7 @@
 extern kUtils* g_pclUtils;
 
 /// Constructor of GDT
-kGDT::kGDT(void): kDT()
+kGDT::kGDT(void)
 {
     pstGDTR = nullptr;
     pstGDTEntry8 = nullptr;

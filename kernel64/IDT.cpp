@@ -3,7 +3,7 @@
 extern kUtils* g_pclUtils;
 
 /// Constructor of IDT
-kIDT::kIDT(void): kDT()
+kIDT::kIDT(void)
 {
     pstIDTR = nullptr;
     pstIDTEntry = nullptr;

@@ -10,9 +10,12 @@ var classk_utils =
     [ "kPrintInterrupt", "db/daa/classk_utils.html#a97e045d1cfb1d2150227ca3774cbc6d1", null ],
     [ "kPrintKeyboardInterrupt", "db/daa/classk_utils.html#abb2a5d36a730ee4f13b0e3c27c1edf76", null ],
     [ "kPrintMessage", "db/daa/classk_utils.html#a3e9c8f376330bc282950d1e1d74d1bcd", null ],
+    [ "kPrintPairMessage", "db/daa/classk_utils.html#a8e578bb027c9edbb1cc78792baa3c023", null ],
+    [ "kPrintPairResult", "db/daa/classk_utils.html#aa1d36b23e1fde0d2adb6a2832ce119d6", null ],
     [ "kPrintResult", "db/daa/classk_utils.html#a5118d3a763d3ba9b53ee4fad8a80d232", null ],
     [ "kPrintString", "db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb", null ],
     [ "kPrintString", "db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb", null ],
     [ "dwLine", "db/daa/classk_utils.html#adf8b9e9d7fcb854ab87d78ba8dd2b3c3", null ],
-    [ "xIndex", "db/daa/classk_utils.html#a82281595b6cb946b4d9060f04951578c", null ]
+    [ "dwPairLine", "db/daa/classk_utils.html#aeb39f45b3ca9a70d97892c71d9021f49", null ],
+    [ "dwXIndex", "db/daa/classk_utils.html#a42f04534e2fa70df057bfbcbe5740ae2", null ]
 ];

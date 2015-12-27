@@ -4,7 +4,8 @@
 void kUtils::kInitializeUtils(DWORD offset)
 {
     dwLine = offset;
-    xIndex = 0;
+    dwXIndex = 0;
+    dwPairLine = 0;
     
     return;
 }
@@ -26,7 +27,7 @@ bool kUtils::kPrintString(int iX, int iY, const char* pcString)
 /// Print character
 bool kUtils::kPrintChar(const char* pcString)
 {
-    kPrintString(xIndex++, dwLine, pcString);
+    kPrintString(dwXIndex++, dwLine, pcString);
 }
 
 
@@ -42,6 +43,24 @@ bool kUtils::kPrintMessage(const char* pcString)
 bool kUtils::kPrintResult(const char* pcString)
 {
     kPrintString(2, dwLine++, pcString);
+    
+    return true;
+}
+
+/// Print pair message
+bool kUtils::kPrintPairMessage(const char* pcString)
+{
+    dwPairLine = dwLine;
+    
+    kPrintString(0, dwLine++, pcString);
+    
+    return true;
+}
+
+/// Print pair result
+bool kUtils::kPrintPairResult(const char* pcString)
+{
+    kPrintString(2, dwPairLine, pcString);
     
     return true;
 }

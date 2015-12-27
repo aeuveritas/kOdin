@@ -1,15 +1,18 @@
 #pragma once
 
 #include "utils.hpp"
-#include "dSegment.hpp"
-#include "dInterrupt.hpp"
+#include "GDT.hpp"
+#include "IDT.hpp"
 
 #pragma pack(push, 1)
 
 /// Class for description table [IA-32e Mode]
 class kDT
 {
-protected:
+    kGDT clGDT;
+    kIDT clIDT;
+    
+public:
     kDT(void);
     ~kDT(void);
     

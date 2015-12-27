@@ -1,4 +1,5 @@
 <map id="_kISRDebug" name="_kISRDebug">
 <area shape="rect" id="node2" href="$d4/db2/classk_i_d_t.html#ac8378f3f9630c87a3c33fd6eef06fbc2" title="Initialize IDT. " alt="" coords="152,5,288,32"/>
-<area shape="rect" id="node3" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="336,5,387,32"/>
+<area shape="rect" id="node3" href="$da/d13/classk_d_t.html#a717dd28b321a0bc7bab3aa3b21d076f1" title="Initialize descriptor Table. " alt="" coords="336,5,464,32"/>
+<area shape="rect" id="node4" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="512,5,563,32"/>
 </map>

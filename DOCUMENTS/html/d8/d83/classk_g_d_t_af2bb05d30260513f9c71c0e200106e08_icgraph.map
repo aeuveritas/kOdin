@@ -1,4 +1,5 @@
 <map id="kGDT::kSetGDTEntry16" name="kGDT::kSetGDTEntry16">
 <area shape="rect" id="node2" href="$d8/d83/classk_g_d_t.html#a16aa85da872e5201d5f76ea4dbe488a9" title="Initialize GDT entries. " alt="" coords="219,5,367,32"/>
-<area shape="rect" id="node3" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="416,5,467,32"/>
+<area shape="rect" id="node3" href="$da/d13/classk_d_t.html#a717dd28b321a0bc7bab3aa3b21d076f1" title="Initialize descriptor Table. " alt="" coords="416,5,544,32"/>
+<area shape="rect" id="node4" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="592,5,643,32"/>
 </map>

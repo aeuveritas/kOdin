@@ -1,6 +1,8 @@
 #pragma once
 
-#include "DT.hpp"
+#include "utils.hpp"
+#include "dSegment.hpp"
+#include "dInterrupt.hpp"
 
 #pragma pack(push, 1)
 
@@ -11,7 +13,7 @@ extern "C"
 };
 
 /// Class for Global Descriptor Table
-class kGDT: public kDT
+class kGDT
 {
     DTR* pstGDTR;
     GDTENTRY8* pstGDTEntry8;

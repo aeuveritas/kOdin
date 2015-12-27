@@ -108,6 +108,8 @@ var searchData=
   ['kprintinterrupt',['kPrintInterrupt',['../db/daa/classk_utils.html#a97e045d1cfb1d2150227ca3774cbc6d1',1,'kUtils']]],
   ['kprintkeyboardinterrupt',['kPrintKeyboardInterrupt',['../db/daa/classk_utils.html#abb2a5d36a730ee4f13b0e3c27c1edf76',1,'kUtils']]],
   ['kprintmessage',['kPrintMessage',['../db/daa/classk_utils.html#a3e9c8f376330bc282950d1e1d74d1bcd',1,'kUtils']]],
+  ['kprintpairmessage',['kPrintPairMessage',['../db/daa/classk_utils.html#a8e578bb027c9edbb1cc78792baa3c023',1,'kUtils']]],
+  ['kprintpairresult',['kPrintPairResult',['../db/daa/classk_utils.html#aa1d36b23e1fde0d2adb6a2832ce119d6',1,'kUtils']]],
   ['kprintresult',['kPrintResult',['../db/daa/classk_utils.html#a5118d3a763d3ba9b53ee4fad8a80d232',1,'kUtils']]],
   ['kprintstring',['kPrintString',['../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb',1,'kUtils::kPrintString(int iX, int iY, const char *pcString)'],['../db/daa/classk_utils.html#aec7de7b52710a4e44ce60d1ff674debb',1,'kUtils::kPrintString(int iX, int iY, const char *pcString)']]],
   ['kprompt',['kPrompt',['../de/dc1/classk_shell.html#a2513ae687ce1cdab7c665399c4920227',1,'kShell']]],

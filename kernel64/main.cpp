@@ -1,8 +1,7 @@
 #include "types.hpp"
 #include "utils.hpp"
 #include "keyboard.hpp"
-#include "GDT.hpp"
-#include "IDT.hpp"
+#include "DT.hpp"
 #include "PIC.hpp"
 #include "shell.hpp"
 #include "IH.hpp"
@@ -14,9 +13,8 @@ void main(void)
 {
     kUtils clUtils;
     kPort clPort;
+    kDT clDT;
     kKeyboard clKeyboard;
-    kGDT clGDT;
-    kIDT clIDT;
     kPIC clPIC;
     kIH clIH;
     kShell clShell;
@@ -35,23 +33,10 @@ void main(void)
     clUtils.kPrintMessage("[      ]  Start IA-32e C++ Language Kernel");
     clUtils.kPrintResult("PASS");
     
-    // Initialize GDT
-    clUtils.kPrintMessage("[      ]  Initialize GDT for IA-32e Mode");
-    clGDT.kInitializeGDT();
-    clGDT.kLoadGDTR(GDTR_STARTADDRESS);
-    clUtils.kPrintResult("PASS");
-    
-    // Initialize TSS
-    clUtils.kPrintMessage("[      ]  Initialize TSS");
-    clGDT.kInitializeTSS();
-    clGDT.kLoadTR(GDT_TSS);
-    clUtils.kPrintResult("PASS");
-    
-    // Initialize IDT
-    clUtils.kPrintMessage("[      ]  Initialize IDT");
-    clIDT.kInitializeIDT();
-    clIDT.kLoadIDTR(IDTR_STARTADDRESS);
-    clUtils.kPrintResult("PASS");
+    // Initialize DTs
+    clUtils.kPrintPairMessage("[      ]  Initialize DT for IA-32e Mode");
+    clDT.kInitializeDT();
+    clUtils.kPrintPairResult("PASS");
 
     // Activate a keyboard
     clUtils.kPrintMessage("[      ]  Activate Keyboard");

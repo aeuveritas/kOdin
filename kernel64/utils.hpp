@@ -9,7 +9,8 @@
 class kUtils
 {
     DWORD dwLine;
-    DWORD xIndex;
+    DWORD dwXIndex;
+    DWORD dwPairLine;
     
 public:
     void kInitializeUtils(DWORD offset);
@@ -22,6 +23,10 @@ public:
     void kPrintException(const char* pcVectorNumber);
     bool kPrintInterrupt(const char* pcString);
     bool kPrintKeyboardInterrupt(const char* pcString);
+    
+    // Print pair message
+    bool kPrintPairMessage(const char* pcString);
+    bool kPrintPairResult(const char* pcString);
     
     // Memory operations
     void kMemSet(void* pvDestination, BYTE bData, int iSize);

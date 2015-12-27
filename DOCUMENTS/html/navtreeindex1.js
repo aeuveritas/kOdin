@@ -1,5 +1,11 @@
 var NAVTREEINDEX1 =
 {
+"de/d2e/classk_keyboard.html#a0ffc0558b3e313f50aff290c89f4e03a":[0,0,10,17],
+"de/d2e/classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a":[0,0,10,4],
+"de/d2e/classk_keyboard.html#a2cb3e3aa94a2deaf897cf50623dfe87f":[0,0,10,16],
+"de/d2e/classk_keyboard.html#a40824696636e8f49fe7eef695a97586e":[0,0,10,11],
+"de/d2e/classk_keyboard.html#a451c6411404db8f08a13dfc3d76059a2":[0,0,10,13],
+"de/d2e/classk_keyboard.html#a502b6e2fbe5d089c35adeef652919289":[0,0,10,5],
 "de/d2e/classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944":[0,0,10,15],
 "de/d2e/classk_keyboard.html#a699bd3a2eeae0bdf0247f43b9f94ae88":[0,0,10,8],
 "de/d2e/classk_keyboard.html#a6b21ceebd8e47d1d5b43381cf3566236":[0,0,10,0],
@@ -180,15 +186,14 @@ var NAVTREEINDEX1 =
 "dir_addb28c7a5fc17b8a68a66812d63c84d.html":[1,0,0],
 "dir_db908db968f8f6092f1b3817428a1d92.html":[1,0,1],
 "files.html":[1,0],
-"functions.html":[0,3,0],
-"functions_func.html":[0,3,1],
-"functions_vars.html":[0,3,2],
+"functions.html":[0,2,0],
+"functions_func.html":[0,2,1],
+"functions_vars.html":[0,2,2],
 "globals.html":[1,1,0],
 "globals_defs.html":[1,1,4],
 "globals_func.html":[1,1,1],
 "globals_type.html":[1,1,3],
 "globals_vars.html":[1,1,2],
-"hierarchy.html":[0,2],
 "index.html":[],
 "pages.html":[]
 };
