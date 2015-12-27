@@ -17,71 +17,15 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-# Source tree
-* .<br>
-* DOCUMENTS<br>
-* Makefile<br>
-* README.md<br>
-* kOdin.kdev4<br>
-* run.sh<br>
-* bootloader<br>
-  * BootLoader.asm<br>
-  * Makefile<br>
-* kernel32<br>
-  * Makefile<br>
-  * asmUtils.asm<br>
-  * cpu.hpp<br>
-  * cpu.cpp<br>
-  * elf_i386.x<br>
-  * entry.s<br>
-  * main.cpp<br>
-  * memory.cpp<br>
-  * memory.hpp<br>
-  * page.hpp<br>
-  * pageManager.cpp<br>
-  * pageManager.hpp<br>
-  * types.hpp<br>
-  * utils.cpp<br>
-  * utils.hpp<br>
-* kernel64<br>
-  * DT.cpp<br>
-  * DT.hpp<br>
-  * DTR.hpp<br>
-  * GDT.cpp<br>
-  * GDT.hpp<br>
-  * IDT.cpp<br>
-  * IDT.hpp<br>
-  * IH.cpp<br>
-  * IH.hpp<br>
-  * Makefile<br>
-  * PIC.cpp<br>
-  * PIC.hpp<br>
-  * asmISR.asm<br>
-  * asmISR.hpp<br>
-  * asmUtils.asm<br>
-  * dInterrupt.hpp<br>
-  * dSegment.hpp<br>
-  * elf_x86_64.x<br>
-  * entry.s<br>
-  * keyData.hpp<br>
-  * keyboard.cpp<br>
-  * keyboard.hpp<br>
-  * main.cpp<br>
-  * port.cpp<br>
-  * port.hpp<br>
-  * queue.cpp<br>
-  * queue.hpp<br>
-  * shell.cpp<br>
-  * shell.hpp<br>
-  * types.hpp<br>
-  * utils.cpp<br>
-  * utils.hpp<br>
-* utility<br>
-  * Makefile<br>
-  * imageMaker<br>
-    * Makefile<br>
-    * imageMaker.c<br>
+# Documents
+"kOdin" has its own setting for doxygen. To generate documents, try this on your shell.
 
+```
+doxygen ./Doxyfile
+```
+
+In *DOXYGEN* directory, you can find UML, comments for each component.
+Detial document will be available in the future.
 
 # Build history
 [0. kOdin](https://aeuveritas.github.io/kOdin/)<br>

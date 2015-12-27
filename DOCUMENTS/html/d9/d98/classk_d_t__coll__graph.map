@@ -1,9 +1,0 @@
-<map id="kDT" name="kDT">
-<area shape="rect" id="node2" href="$d8/d83/classk_g_d_t.html" title="Class for Global Descriptor Table. " alt="" coords="425,251,564,431"/>
-<area shape="rect" id="node3" href="$df/d1d/structk_t_s_s_struct.html" title="TSS data structure [IA&#45;32e Mode]. " alt="" coords="5,13,165,179"/>
-<area shape="rect" id="node4" href="$d4/d6e/structk_d_t_r_struct.html" title="structures for descriptor table register, GDTR and IDTR [IA&#45;32e Mode] " alt="" coords="613,35,741,157"/>
-<area shape="rect" id="node7" href="$d4/db2/classk_i_d_t.html" title="Class for Interrupt Descriptor Table. " alt="" coords="662,273,780,409"/>
-<area shape="rect" id="node5" href="$d9/d8c/structk_g_d_t_entry8_struct.html" title="8 bytes GDT entry [IA&#45;32e Mode] " alt="" coords="191,21,377,171"/>
-<area shape="rect" id="node6" href="$d3/dbc/structk_g_d_t_entry16_struct.html" title="16 bytes GDT entry [IA&#45;32e Mode] " alt="" coords="401,6,588,186"/>
-<area shape="rect" id="node8" href="$dc/d68/structk_i_d_t_entry_struct.html" title="Structure for IDT Gate Descriptor [IA&#45;32e Mode]. " alt="" coords="766,13,929,179"/>
-</map>

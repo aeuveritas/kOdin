@@ -1,7 +1,0 @@
-<map id="kIH" name="kIH">
-<area shape="rect" id="node2" href="$d8/da9/classk_p_i_c.html" title="Classs for Programmable Interrupt Controller. " alt="" coords="5,456,157,592"/>
-<area shape="rect" id="node3" href="$d9/d2f/classk_port.html" title="{kPort\n||+ kInPortByte()\l+ kOutPortByte()\l}" alt="" coords="58,79,179,171"/>
-<area shape="rect" id="node4" href="$de/d2e/classk_keyboard.html" title="Class for keyboard [IA&#45;32e Mode]. " alt="" coords="182,309,447,739"/>
-<area shape="rect" id="node5" href="$dd/dce/classk_queue.html" title="Class for a general queue. " alt="" coords="234,6,381,245"/>
-<area shape="rect" id="node6" href="$da/ddb/structk_key_queue_data_struct.html" title="Struct for the data structure of key queue. " alt="" coords="406,72,559,179"/>
-</map>

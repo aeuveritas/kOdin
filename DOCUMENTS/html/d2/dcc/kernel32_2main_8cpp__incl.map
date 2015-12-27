@@ -1,8 +1,0 @@
-<map id="kernel32/main.cpp" name="kernel32/main.cpp">
-<area shape="rect" id="node2" href="$d5/d99/kernel32_2types_8hpp.html" title="types.hpp" alt="" coords="74,304,152,331"/>
-<area shape="rect" id="node3" href="$d1/dd9/kernel32_2utils_8hpp.html" title="utils.hpp" alt="" coords="22,155,92,181"/>
-<area shape="rect" id="node4" href="$da/d3e/memory_8hpp.html" title="memory.hpp" alt="" coords="124,80,218,107"/>
-<area shape="rect" id="node7" href="$df/dbe/cpu_8hpp.html" title="cpu.hpp" alt="" coords="238,229,306,256"/>
-<area shape="rect" id="node5" href="$d5/d19/page_manager_8hpp.html" title="pageManager.hpp" alt="" coords="118,155,243,181"/>
-<area shape="rect" id="node6" href="$d8/d6d/page_8hpp.html" title="page.hpp" alt="" coords="126,229,199,256"/>
-</map>

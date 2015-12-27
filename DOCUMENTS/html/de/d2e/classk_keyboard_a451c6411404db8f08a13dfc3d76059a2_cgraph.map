@@ -1,5 +1,0 @@
-<map id="kKeyboard::kIsUseCombinedCode" name="kKeyboard::kIsUseCombinedCode">
-<area shape="rect" id="node2" href="$de/d2e/classk_keyboard.html#a699bd3a2eeae0bdf0247f43b9f94ae88" title="Check the Scan Code is alphabet. " alt="" coords="566,5,789,32"/>
-<area shape="rect" id="node3" href="$de/d2e/classk_keyboard.html#a866bf09378d34ec83476869953d8cbfb" title="Check the Scan Code is number or symbol. " alt="" coords="290,27,505,69"/>
-<area shape="rect" id="node4" href="$de/d2e/classk_keyboard.html#a40824696636e8f49fe7eef695a97586e" title="Check the Scan Code is in number pad. " alt="" coords="277,93,517,120"/>
-</map>

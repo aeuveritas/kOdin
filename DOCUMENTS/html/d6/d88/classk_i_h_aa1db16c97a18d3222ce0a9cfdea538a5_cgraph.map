@@ -1,8 +1,0 @@
-<map id="kIH::kSetInterruptFlag" name="kIH::kSetInterruptFlag">
-<area shape="rect" id="node2" href="$d6/d88/classk_i_h.html#ac4ba20c39d3cb7ec38801b6376774603" title="Read RFLGAS and return it. " alt="" coords="210,5,353,32"/>
-<area shape="rect" id="node4" href="$d6/d88/classk_i_h.html#adfcdeba46a0eb205aae9c591c36a3a27" title="Enable interrupt. " alt="" coords="208,56,355,83"/>
-<area shape="rect" id="node6" href="$d6/d88/classk_i_h.html#ae5fdc3c6db16fa4fb70cf6474ec8900e" title="Disable interrupt. " alt="" coords="206,107,357,133"/>
-<area shape="rect" id="node3" href="$d5/da3/_i_h_8hpp.html#ab95c16bdc2f99ccdcb2dc37443196aa3" title="_kReadRFLAGS" alt="" coords="409,5,529,32"/>
-<area shape="rect" id="node5" href="$d5/da3/_i_h_8hpp.html#a72f1ecb8de34f1c573d4d1b8bad7194e" title="_kEnableInterrupt" alt="" coords="407,56,531,83"/>
-<area shape="rect" id="node7" href="$d5/da3/_i_h_8hpp.html#a2c051e2d22906f00b3317a45dd98cc4f" title="_kDisableInterrupt" alt="" coords="405,107,533,133"/>
-</map>
