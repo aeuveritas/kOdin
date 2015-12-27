@@ -1,15 +1,14 @@
 <map id="kernel64/utils.hpp" name="kernel64/utils.hpp">
-<area shape="rect" id="node2" href="$d6/d12/_d_t_8hpp.html" title="kernel64/DT.hpp" alt="" coords="158,155,276,181"/>
-<area shape="rect" id="node4" href="$df/ddd/kernel64_2main_8cpp.html" title="kernel64/main.cpp" alt="" coords="499,229,627,256"/>
-<area shape="rect" id="node5" href="$de/dc3/_g_d_t_8hpp.html" title="kernel64/GDT.hpp" alt="" coords="124,80,252,107"/>
-<area shape="rect" id="node7" href="$d8/d9b/_i_d_t_8hpp.html" title="kernel64/IDT.hpp" alt="" coords="327,80,449,107"/>
-<area shape="rect" id="node9" href="$d5/da3/_i_h_8hpp.html" title="kernel64/IH.hpp" alt="" coords="867,80,981,107"/>
-<area shape="rect" id="node11" href="$d7/df5/keyboard_8cpp.html" title="kernel64/keyboard.cpp" alt="" coords="689,80,841,107"/>
-<area shape="rect" id="node12" href="$d5/d98/shell_8hpp.html" title="kernel64/shell.hpp" alt="" coords="486,80,612,107"/>
-<area shape="rect" id="node14" href="$da/d2e/kernel64_2utils_8cpp.html" title="kernel64/utils.cpp" alt="" coords="1006,80,1129,107"/>
-<area shape="rect" id="node3" href="$da/dc7/_d_t_8cpp.html" title="kernel64/DT.cpp" alt="" coords="158,229,276,256"/>
-<area shape="rect" id="node6" href="$da/d7b/_g_d_t_8cpp.html" title="kernel64/GDT.cpp" alt="" coords="5,155,133,181"/>
-<area shape="rect" id="node8" href="$de/d80/_i_d_t_8cpp.html" title="kernel64/IDT.cpp" alt="" coords="301,155,424,181"/>
-<area shape="rect" id="node10" href="$df/d19/_i_h_8cpp.html" title="kernel64/IH.cpp" alt="" coords="772,155,887,181"/>
-<area shape="rect" id="node13" href="$da/d8a/shell_8cpp.html" title="kernel64/shell.cpp" alt="" coords="499,155,625,181"/>
+<area shape="rect" id="node2" href="$da/dc7/_d_t_8cpp.html" title="kernel64/DT.cpp" alt="" coords="5,80,123,107"/>
+<area shape="rect" id="node3" href="$da/d7b/_g_d_t_8cpp.html" title="kernel64/GDT.cpp" alt="" coords="148,80,276,107"/>
+<area shape="rect" id="node4" href="$de/d80/_i_d_t_8cpp.html" title="kernel64/IDT.cpp" alt="" coords="300,80,423,107"/>
+<area shape="rect" id="node5" href="$dd/d39/keyboard_8hpp.html" title="kernel64/keyboard.hpp" alt="" coords="537,80,689,107"/>
+<area shape="rect" id="node7" href="$df/d19/_i_h_8cpp.html" title="kernel64/IH.cpp" alt="" coords="356,229,471,256"/>
+<area shape="rect" id="node9" href="$df/ddd/kernel64_2main_8cpp.html" title="kernel64/main.cpp" alt="" coords="685,229,813,256"/>
+<area shape="rect" id="node11" href="$da/d8a/shell_8cpp.html" title="kernel64/shell.cpp" alt="" coords="843,229,969,256"/>
+<area shape="rect" id="node12" href="$dc/d31/queue_8cpp.html" title="kernel64/queue.cpp" alt="" coords="951,80,1085,107"/>
+<area shape="rect" id="node13" href="$da/d2e/kernel64_2utils_8cpp.html" title="kernel64/utils.cpp" alt="" coords="1110,80,1233,107"/>
+<area shape="rect" id="node6" href="$d5/da3/_i_h_8hpp.html" title="kernel64/IH.hpp" alt="" coords="508,155,623,181"/>
+<area shape="rect" id="node8" href="$d7/df5/keyboard_8cpp.html" title="kernel64/keyboard.cpp" alt="" coords="495,229,648,256"/>
+<area shape="rect" id="node10" href="$d5/d98/shell_8hpp.html" title="kernel64/shell.hpp" alt="" coords="698,155,824,181"/>
 </map>

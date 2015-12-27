@@ -1,0 +1,9 @@
+<map id="kernel64/DTR.hpp" name="kernel64/DTR.hpp">
+<area shape="rect" id="node2" href="$de/dc3/_g_d_t_8hpp.html" title="kernel64/GDT.hpp" alt="" coords="77,80,205,107"/>
+<area shape="rect" id="node7" href="$d8/d9b/_i_d_t_8hpp.html" title="kernel64/IDT.hpp" alt="" coords="229,80,352,107"/>
+<area shape="rect" id="node3" href="$d6/d12/_d_t_8hpp.html" title="kernel64/DT.hpp" alt="" coords="158,155,276,181"/>
+<area shape="rect" id="node6" href="$da/d7b/_g_d_t_8cpp.html" title="kernel64/GDT.cpp" alt="" coords="5,155,133,181"/>
+<area shape="rect" id="node4" href="$da/dc7/_d_t_8cpp.html" title="kernel64/DT.cpp" alt="" coords="83,229,201,256"/>
+<area shape="rect" id="node5" href="$df/ddd/kernel64_2main_8cpp.html" title="kernel64/main.cpp" alt="" coords="227,229,355,256"/>
+<area shape="rect" id="node8" href="$de/d80/_i_d_t_8cpp.html" title="kernel64/IDT.cpp" alt="" coords="301,155,424,181"/>
+</map>

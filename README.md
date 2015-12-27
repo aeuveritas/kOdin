@@ -46,6 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * kernel64<br>
   * DT.cpp<br>
   * DT.hpp<br>
+  * DTR.hpp<br>
   * GDT.cpp<br>
   * GDT.hpp<br>
   * IDT.cpp<br>
@@ -53,8 +54,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   * IH.cpp<br>
   * IH.hpp<br>
   * Makefile<br>
-  * PIC.cpp
-  * PIC.hpp
+  * PIC.cpp<br>
+  * PIC.hpp<br>
   * asmISR.asm<br>
   * asmISR.hpp<br>
   * asmUtils.asm<br>
@@ -62,12 +63,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   * dSegment.hpp<br>
   * elf_x86_64.x<br>
   * entry.s<br>
-  * keyMappingEntry.hpp<br>
+  * keyData.hpp<br>
   * keyboard.cpp<br>
   * keyboard.hpp<br>
   * main.cpp<br>
   * port.cpp<br>
   * port.hpp<br>
+  * queue.cpp<br>
+  * queue.hpp<br>
   * shell.cpp<br>
   * shell.hpp<br>
   * types.hpp<br>
@@ -95,3 +98,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 [11. Adding Keyboard Driver](https://aeuveritas.github.io/Adding-Keyboard-Driver/)<br>
 [12. Preparing for Interrupt](https://aeuveritas.github.io/Preparing-for-Interrupt/)<br>
 [13. Adding an Interrupt Handler](https://aeuveritas.github.io/Adding-an-Interrupt-Handler/)<br>
+[14. Upgrading to an Interrupt Based Keyboard Driver](http://aeuveritas.github.io/Upgrading-to-an-Interrupt-Based-Keyboard-Driver/)<br>

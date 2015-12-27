@@ -1,5 +1,7 @@
 #include "DT.hpp"
 
+#include "utils.hpp"
+
 extern kUtils* g_pclUtils;
 
 /// Constructor of kDT

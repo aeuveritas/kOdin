@@ -1,3 +1,5 @@
 <map id="kKeyboard" name="kKeyboard">
-<area shape="rect" id="node2" href="$d9/d2f/classk_port.html" title="{kPort\n||+ kInPortByte()\l+ kOutPortByte()\l}" alt="" coords="63,6,184,98"/>
+<area shape="rect" id="node2" href="$d9/d2f/classk_port.html" title="{kPort\n||+ kInPortByte()\l+ kOutPortByte()\l}" alt="" coords="5,79,125,171"/>
+<area shape="rect" id="node3" href="$dd/dce/classk_queue.html" title="Class for a general queue. " alt="" coords="150,6,297,245"/>
+<area shape="rect" id="node4" href="$da/ddb/structk_key_queue_data_struct.html" title="Struct for the data structure of key queue. " alt="" coords="322,72,475,179"/>
 </map>

@@ -1,6 +1,5 @@
 #pragma once
 
-#include "utils.hpp"
 #include "GDT.hpp"
 #include "IDT.hpp"
 

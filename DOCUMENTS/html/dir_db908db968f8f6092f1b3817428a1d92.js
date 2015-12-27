@@ -7,22 +7,27 @@ var dir_db908db968f8f6092f1b3817428a1d92 =
     [ "DT.hpp", "d6/d12/_d_t_8hpp.html", [
       [ "kDT", "da/d13/classk_d_t.html", "da/d13/classk_d_t" ]
     ] ],
+    [ "DTR.hpp", "de/de4/_d_t_r_8hpp.html", "de/de4/_d_t_r_8hpp" ],
     [ "GDT.cpp", "da/d7b/_g_d_t_8cpp.html", "da/d7b/_g_d_t_8cpp" ],
     [ "GDT.hpp", "de/dc3/_g_d_t_8hpp.html", "de/dc3/_g_d_t_8hpp" ],
     [ "IDT.cpp", "de/d80/_i_d_t_8cpp.html", "de/d80/_i_d_t_8cpp" ],
     [ "IDT.hpp", "d8/d9b/_i_d_t_8hpp.html", "d8/d9b/_i_d_t_8hpp" ],
     [ "IH.cpp", "df/d19/_i_h_8cpp.html", "df/d19/_i_h_8cpp" ],
     [ "IH.hpp", "d5/da3/_i_h_8hpp.html", "d5/da3/_i_h_8hpp" ],
-    [ "keyboard.cpp", "d7/df5/keyboard_8cpp.html", null ],
+    [ "keyboard.cpp", "d7/df5/keyboard_8cpp.html", "d7/df5/keyboard_8cpp" ],
     [ "keyboard.hpp", "dd/d39/keyboard_8hpp.html", [
       [ "kKeyboard", "de/d2e/classk_keyboard.html", "de/d2e/classk_keyboard" ]
     ] ],
-    [ "keyMappingEntry.hpp", "df/d67/key_mapping_entry_8hpp.html", "df/d67/key_mapping_entry_8hpp" ],
+    [ "keyData.hpp", "d3/d71/key_data_8hpp.html", "d3/d71/key_data_8hpp" ],
     [ "main.cpp", "df/ddd/kernel64_2main_8cpp.html", "df/ddd/kernel64_2main_8cpp" ],
     [ "PIC.cpp", "d0/d99/_p_i_c_8cpp.html", null ],
     [ "PIC.hpp", "db/d52/_p_i_c_8hpp.html", "db/d52/_p_i_c_8hpp" ],
     [ "port.cpp", "da/d24/port_8cpp.html", null ],
     [ "port.hpp", "d1/d42/port_8hpp.html", "d1/d42/port_8hpp" ],
+    [ "queue.cpp", "dc/d31/queue_8cpp.html", "dc/d31/queue_8cpp" ],
+    [ "queue.hpp", "d7/ded/queue_8hpp.html", [
+      [ "kQueue", "dd/dce/classk_queue.html", "dd/dce/classk_queue" ]
+    ] ],
     [ "shell.cpp", "da/d8a/shell_8cpp.html", "da/d8a/shell_8cpp" ],
     [ "shell.hpp", "d5/d98/shell_8hpp.html", [
       [ "kShell", "de/dc1/classk_shell.html", "de/dc1/classk_shell" ]

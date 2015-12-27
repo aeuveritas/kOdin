@@ -1,5 +1,7 @@
 #include "IH.hpp"
 
+#include "utils.hpp"
+
 extern kUtils* g_pclUtils;
 extern kIH* g_pclIH;
 
@@ -7,7 +9,8 @@ extern kIH* g_pclIH;
 kIH::kIH(void)
 {
     a_pclPIC = nullptr;
-    
+    a_pclKeyboard = nullptr;
+
     iCommonInterruptCount = 0;
     iKeyboardInterruptCount = 0;
 }
@@ -16,15 +19,17 @@ kIH::kIH(void)
 kIH::~kIH(void)
 {
     a_pclPIC = nullptr;
+    a_pclKeyboard = nullptr;
     
     iCommonInterruptCount = 0;
     iKeyboardInterruptCount = 0;    
 }
 
 /// Initialize IH
-void kIH::kInitializeIH(kPIC* _kPIC)
+void kIH::kInitializeIH(kPIC* _kPIC, kKeyboard* _kKeyboard)
 {
     a_pclPIC = _kPIC;
+    a_pclKeyboard = _kKeyboard;
     
     return;
 }
@@ -70,6 +75,7 @@ void kIH::kCommonInterruptHandler(int iVectorNumber)
 void kIH::kKeyboardHandler(int iVectorNumber)
 {
     char cBuffer[] = "[INT:  , ]";
+    BYTE bTemp;
     
     // When interrupt occurs, print message
     // It will be shown on the right upper screen as 2 digits
@@ -82,11 +88,71 @@ void kIH::kKeyboardHandler(int iVectorNumber)
     
     iKeyboardInterruptCount = (iKeyboardInterruptCount + 1) % 10;
     
+    
+    // Read data from the keyboard controller,
+    // and translate it to ASCII Code
+    // Also, push it
+    if (a_pclKeyboard->kIsOutputBufferFull() == true)
+    {
+        bTemp = a_pclKeyboard->kGetKeyboardScanCode();
+        a_pclKeyboard->kConvertScanCodeAndPushQueue(bTemp);
+    }
+    
     // Send EOI
     a_pclPIC->kSendEOIToPIC(iVectorNumber - PIC_IRQSTARTVECTOR);
     
     return;
 }
+
+/// Enable interrupt
+void kIH::kEnableInterrupt(void)
+{
+    _kEnableInterrupt();
+}
+
+/// Disable interrupt
+void kIH::kDisableInterrupt(void)
+{
+    _kDisableInterrupt();
+}
+
+/// Read RFLGAS and return it
+QWORD kIH::kReadRFLAGS(void)
+{
+    return _kReadRFLAGS();
+}
+
+/**
+ * Change interrupt flag of RFLAG register,
+ * and return previous interrupt flag
+ **/
+bool kIH::kSetInterruptFlag(bool bEnableInterrupt)
+{
+    QWORD qwRFLAGS;
+    
+    // Read current RFLAGS, and enable/disable interrupt
+    qwRFLAGS = kReadRFLAGS();
+    if (bEnableInterrupt == true)
+    {
+        kEnableInterrupt();
+    }
+    else
+    {
+        kDisableInterrupt();
+    }
+    
+    // Check IF bit (bit 9th) of qwRFLAGS,
+    // and return the state of interrupt
+    if (qwRFLAGS & 0x0200)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 
 void _kCommonExceptionHandler(int iVectorNumber, QWORD qwErrorCode)
 {

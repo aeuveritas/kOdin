@@ -1,6 +1,5 @@
 var d_segment_8hpp =
 [
-    [ "kDTRStruct", "d4/d6e/structk_d_t_r_struct.html", "d4/d6e/structk_d_t_r_struct" ],
     [ "kGDTEntry8Struct", "d9/d8c/structk_g_d_t_entry8_struct.html", "d9/d8c/structk_g_d_t_entry8_struct" ],
     [ "kGDTEntry16Struct", "d3/dbc/structk_g_d_t_entry16_struct.html", "d3/dbc/structk_g_d_t_entry16_struct" ],
     [ "kTSSStruct", "df/d1d/structk_t_s_s_struct.html", "df/d1d/structk_t_s_s_struct" ],
@@ -32,7 +31,6 @@ var d_segment_8hpp =
     [ "GDT_TYPE_TSS", "de/d78/d_segment_8hpp.html#ab861bcc6e3be59914c5ba1e6e99e8530", null ],
     [ "GDTR_STARTADDRESS", "de/d78/d_segment_8hpp.html#a9be99ff4a9b47c1729c9944672071cae", null ],
     [ "TSS_SEGMENTSIZE", "de/d78/d_segment_8hpp.html#a181cef9741006f91872be0d95a654e58", null ],
-    [ "DTR", "de/d78/d_segment_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4", null ],
     [ "GDTENTRY16", "de/d78/d_segment_8hpp.html#ac0d691650a59a67d6d57cb706c161d6a", null ],
     [ "GDTENTRY8", "de/d78/d_segment_8hpp.html#a2e30799bc05d9a9ccc2b47081d35cde1", null ],
     [ "TSS", "de/d78/d_segment_8hpp.html#a1ba0e2f974c947810fb437ebe702df10", null ]

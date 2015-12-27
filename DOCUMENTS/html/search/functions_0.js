@@ -2,8 +2,8 @@ var searchData=
 [
   ['_5fkcommonexceptionhandler',['_kCommonExceptionHandler',['../df/d19/_i_h_8cpp.html#a6942b9da00abac579b09354ae0e43dc5',1,'_kCommonExceptionHandler(int iVectorNumber, QWORD qwErrorCode):&#160;IH.cpp'],['../d5/da3/_i_h_8hpp.html#a6942b9da00abac579b09354ae0e43dc5',1,'_kCommonExceptionHandler(int iVectorNumber, QWORD qwErrorCode):&#160;IH.cpp']]],
   ['_5fkcommoninterrupthandler',['_kCommonInterruptHandler',['../df/d19/_i_h_8cpp.html#aa1c0432509e66e51e52d68f02d711676',1,'_kCommonInterruptHandler(int iVectorNumber):&#160;IH.cpp'],['../d5/da3/_i_h_8hpp.html#aa1c0432509e66e51e52d68f02d711676',1,'_kCommonInterruptHandler(int iVectorNumber):&#160;IH.cpp']]],
-  ['_5fkdisableinterrupt',['_kDisableInterrupt',['../db/d52/_p_i_c_8hpp.html#a2c051e2d22906f00b3317a45dd98cc4f',1,'PIC.hpp']]],
-  ['_5fkenableinterrupt',['_kEnableInterrupt',['../db/d52/_p_i_c_8hpp.html#a72f1ecb8de34f1c573d4d1b8bad7194e',1,'PIC.hpp']]],
+  ['_5fkdisableinterrupt',['_kDisableInterrupt',['../d5/da3/_i_h_8hpp.html#a2c051e2d22906f00b3317a45dd98cc4f',1,'IH.hpp']]],
+  ['_5fkenableinterrupt',['_kEnableInterrupt',['../d5/da3/_i_h_8hpp.html#a72f1ecb8de34f1c573d4d1b8bad7194e',1,'IH.hpp']]],
   ['_5fkinportbyte',['_kInPortByte',['../d1/d42/port_8hpp.html#a22130730d12e1e17d6201ef36cd90222',1,'port.hpp']]],
   ['_5fkisr15',['_kISR15',['../df/d9b/asm_i_s_r_8hpp.html#a7f3e45d7a1f53a88aed0736554a6f2eb',1,'asmISR.hpp']]],
   ['_5fkisralignmentcheck',['_kISRAlignmentCheck',['../df/d9b/asm_i_s_r_8hpp.html#acf484459b129a1d2b468c80ef3c0a535',1,'asmISR.hpp']]],
@@ -49,6 +49,6 @@ var searchData=
   ['_5fkloadtr',['_kLoadTR',['../de/dc3/_g_d_t_8hpp.html#a5b3d8f500273f26e2f1f489a874daa40',1,'GDT.hpp']]],
   ['_5fkoutportbyte',['_kOutPortByte',['../d1/d42/port_8hpp.html#a3118257a6a597aefbf404ee707c1dae4',1,'port.hpp']]],
   ['_5fkreadcpuid',['_kReadCPUID',['../df/dbe/cpu_8hpp.html#a36dde3dfbb75640019eff1036756fe75',1,'cpu.hpp']]],
-  ['_5fkreadrflags',['_kReadRFLAGS',['../db/d52/_p_i_c_8hpp.html#ab95c16bdc2f99ccdcb2dc37443196aa3',1,'PIC.hpp']]],
+  ['_5fkreadrflags',['_kReadRFLAGS',['../d5/da3/_i_h_8hpp.html#ab95c16bdc2f99ccdcb2dc37443196aa3',1,'IH.hpp']]],
   ['_5fkswitchandexecute64bitskernel',['_kSwitchAndExecute64bitsKernel',['../df/dbe/cpu_8hpp.html#a892bf32b245a62dc1d991783170edd55',1,'cpu.hpp']]]
 ];

@@ -1,0 +1,16 @@
+<map id="_kDisableInterrupt" name="_kDisableInterrupt">
+<area shape="rect" id="node2" href="$d6/d88/classk_i_h.html#ae5fdc3c6db16fa4fb70cf6474ec8900e" title="Disable interrupt. " alt="" coords="182,171,333,197"/>
+<area shape="rect" id="node3" href="$d6/d88/classk_i_h.html#aa1db16c97a18d3222ce0a9cfdea538a5" title="kIH::kSetInterruptFlag" alt="" coords="382,171,533,197"/>
+<area shape="rect" id="node4" href="$de/d2e/classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c" title="Activate keyboard. " alt="" coords="1877,51,2080,77"/>
+<area shape="rect" id="node7" href="$de/d2e/classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc" title="Change the sate of LEDs. " alt="" coords="582,131,807,157"/>
+<area shape="rect" id="node10" href="$de/d2e/classk_keyboard.html#ad651c90ebcce238b6e474f91d86b3f8d" title="Translate Scan Code to ASCII Code and push it. " alt="" coords="1377,94,1583,135"/>
+<area shape="rect" id="node14" href="$de/d2e/classk_keyboard.html#aa351c5e1eee1cb1b8c3b3c470ba94358" title="Remove key data from the key queue. " alt="" coords="865,262,1063,303"/>
+<area shape="rect" id="node5" href="$de/d2e/classk_keyboard.html#a7ce69bf1da92c457fab4729438190484" title="Initialize kKeyboard. " alt="" coords="2128,80,2331,107"/>
+<area shape="rect" id="node6" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="2379,160,2429,187"/>
+<area shape="rect" id="node8" href="$de/d2e/classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944" title="Update a combination key state and Sync LED state. " alt="" coords="857,94,1071,135"/>
+<area shape="rect" id="node9" href="$de/d2e/classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="1121,94,1327,135"/>
+<area shape="rect" id="node11" href="$d6/d88/classk_i_h.html#afb92f79d858169ba00ecedea82a687dc" title="Keyboard interrupt handler. " alt="" coords="1651,109,1810,136"/>
+<area shape="rect" id="node13" href="$de/d2e/classk_keyboard.html#abee00644a3a124252fa9c6ec9da5af02" title="kKeyboard::kWaitForACKAnd\lPushOtherScanCode" alt="" coords="1633,43,1829,85"/>
+<area shape="rect" id="node12" href="$d5/da3/_i_h_8hpp.html#aa2cc26c8391892cab9c98d57778d9876" title="_kKeyboardHandler" alt="" coords="1911,109,2047,136"/>
+<area shape="rect" id="node15" href="$de/dc1/classk_shell.html#a2513ae687ce1cdab7c665399c4920227" title="Simple shell. " alt="" coords="1167,265,1281,292"/>
+</map>

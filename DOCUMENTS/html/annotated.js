@@ -12,11 +12,13 @@ var annotated =
     [ "kIH", "d6/d88/classk_i_h.html", "d6/d88/classk_i_h" ],
     [ "kKeyboard", "de/d2e/classk_keyboard.html", "de/d2e/classk_keyboard" ],
     [ "kKeyMappingEntry", "d5/d01/structk_key_mapping_entry.html", "d5/d01/structk_key_mapping_entry" ],
+    [ "kKeyQueueDataStruct", "da/ddb/structk_key_queue_data_struct.html", "da/ddb/structk_key_queue_data_struct" ],
     [ "kMemory", "d6/d9c/classk_memory.html", "d6/d9c/classk_memory" ],
     [ "kPageManager", "d8/d6a/classk_page_manager.html", "d8/d6a/classk_page_manager" ],
     [ "kPageTableEntry", "d8/d9a/structk_page_table_entry.html", "d8/d9a/structk_page_table_entry" ],
     [ "kPIC", "d8/da9/classk_p_i_c.html", "d8/da9/classk_p_i_c" ],
     [ "kPort", "d9/d2f/classk_port.html", "d9/d2f/classk_port" ],
+    [ "kQueue", "dd/dce/classk_queue.html", "dd/dce/classk_queue" ],
     [ "kShell", "de/dc1/classk_shell.html", "de/dc1/classk_shell" ],
     [ "kTSSStruct", "df/d1d/structk_t_s_s_struct.html", "df/d1d/structk_t_s_s_struct" ],
     [ "kUtils", "db/daa/classk_utils.html", "db/daa/classk_utils" ]

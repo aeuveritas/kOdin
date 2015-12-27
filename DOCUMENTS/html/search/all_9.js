@@ -36,5 +36,6 @@ var searchData=
   ['pstpdt',['pstPDT',['../d8/d6a/classk_page_manager.html#ac54a13acd1384238c5d3883cabb57095',1,'kPageManager']]],
   ['pstpml4t',['pstPML4T',['../d8/d6a/classk_page_manager.html#ab94b5d0fc5da2384efd7f5bb9a8d5eca',1,'kPageManager']]],
   ['pstpt',['pstPT',['../d8/d6a/classk_page_manager.html#acaaec0b2e43d8b26ea5ec54196933409',1,'kPageManager']]],
-  ['psttss',['pstTSS',['../d8/d83/classk_g_d_t.html#a0cdd0e9cfc59b11bcf25aa1d3de0dcaf',1,'kGDT']]]
+  ['psttss',['pstTSS',['../d8/d83/classk_g_d_t.html#a0cdd0e9cfc59b11bcf25aa1d3de0dcaf',1,'kGDT']]],
+  ['pvqueuearray',['pvQueueArray',['../dd/dce/classk_queue.html#abda821edf3d3ed3f74198669b348f982',1,'kQueue']]]
 ];

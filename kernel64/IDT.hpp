@@ -1,11 +1,9 @@
 #pragma once
 
-#include "utils.hpp"
 #include "dSegment.hpp"
 #include "dInterrupt.hpp"
+#include "DTR.hpp"
 #include "asmISR.hpp"
-
-extern kUtils* g_pclUtils;
 
 #pragma pack(push, 1)
 

@@ -3,8 +3,8 @@
 #include "keyboard.hpp"
 #include "DT.hpp"
 #include "PIC.hpp"
-#include "shell.hpp"
 #include "IH.hpp"
+#include "shell.hpp"
 
 kUtils* g_pclUtils;
 kIH* g_pclIH;
@@ -40,9 +40,7 @@ void main(void)
 
     // Activate a keyboard
     clUtils.kPrintMessage("[      ]  Activate Keyboard");
-    clKeyboard.kInitializeKeyboard(&clPort);
-
-    if (clKeyboard.kActivateKeyboard())
+    if (clKeyboard.kInitializeKeyboard(&clPort))
     {
         clUtils.kPrintResult("PASS");
 
@@ -62,13 +60,13 @@ void main(void)
    
     // Initialize interrupt handler
     clUtils.kPrintMessage("[      ]  Initialize Interrupt Handler");
-    clIH.kInitializeIH(&clPIC);
+    clIH.kInitializeIH(&clPIC, &clKeyboard);
     g_pclIH = &clIH;
     clUtils.kPrintResult("PASS");
     
     // Enable interrupt
     clUtils.kPrintMessage("[      ]  Enable Interrupt");
-    clPIC.kEnableInterrupt();
+    clIH.kEnableInterrupt();
     clUtils.kPrintResult("PASS");
     
     // Initialize shell

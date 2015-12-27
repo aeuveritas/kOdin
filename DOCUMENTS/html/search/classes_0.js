@@ -12,11 +12,13 @@ var searchData=
   ['kih',['kIH',['../d6/d88/classk_i_h.html',1,'']]],
   ['kkeyboard',['kKeyboard',['../de/d2e/classk_keyboard.html',1,'']]],
   ['kkeymappingentry',['kKeyMappingEntry',['../d5/d01/structk_key_mapping_entry.html',1,'']]],
+  ['kkeyqueuedatastruct',['kKeyQueueDataStruct',['../da/ddb/structk_key_queue_data_struct.html',1,'']]],
   ['kmemory',['kMemory',['../d6/d9c/classk_memory.html',1,'']]],
   ['kpagemanager',['kPageManager',['../d8/d6a/classk_page_manager.html',1,'']]],
   ['kpagetableentry',['kPageTableEntry',['../d8/d9a/structk_page_table_entry.html',1,'']]],
   ['kpic',['kPIC',['../d8/da9/classk_p_i_c.html',1,'']]],
   ['kport',['kPort',['../d9/d2f/classk_port.html',1,'']]],
+  ['kqueue',['kQueue',['../dd/dce/classk_queue.html',1,'']]],
   ['kshell',['kShell',['../de/dc1/classk_shell.html',1,'']]],
   ['ktssstruct',['kTSSStruct',['../df/d1d/structk_t_s_s_struct.html',1,'']]],
   ['kutils',['kUtils',['../db/daa/classk_utils.html',1,'']]]

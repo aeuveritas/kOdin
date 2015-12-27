@@ -1,6 +1,11 @@
 <map id="kKeyboard::kChangeKeyboardLED" name="kKeyboard::kChangeKeyboardLED">
-<area shape="rect" id="node2" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="963,5,1013,32"/>
-<area shape="rect" id="node3" href="$de/d2e/classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944" title="Update a combination key state and Sync LED state. " alt="" coords="281,29,495,70"/>
-<area shape="rect" id="node4" href="$de/d2e/classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="545,29,751,70"/>
-<area shape="rect" id="node5" href="$de/dc1/classk_shell.html#a2513ae687ce1cdab7c665399c4920227" title="Simple shell. " alt="" coords="800,32,915,59"/>
+<area shape="rect" id="node2" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1803,32,1853,59"/>
+<area shape="rect" id="node3" href="$de/d2e/classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944" title="Update a combination key state and Sync LED state. " alt="" coords="281,43,495,85"/>
+<area shape="rect" id="node4" href="$de/d2e/classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="545,43,751,85"/>
+<area shape="rect" id="node5" href="$de/d2e/classk_keyboard.html#ad651c90ebcce238b6e474f91d86b3f8d" title="Translate Scan Code to ASCII Code and push it. " alt="" coords="801,43,1007,85"/>
+<area shape="rect" id="node6" href="$d6/d88/classk_i_h.html#afb92f79d858169ba00ecedea82a687dc" title="Keyboard interrupt handler. " alt="" coords="1075,47,1234,73"/>
+<area shape="rect" id="node8" href="$de/d2e/classk_keyboard.html#abee00644a3a124252fa9c6ec9da5af02" title="kKeyboard::kWaitForACKAnd\lPushOtherScanCode" alt="" coords="1057,98,1253,139"/>
+<area shape="rect" id="node7" href="$d5/da3/_i_h_8hpp.html#aa2cc26c8391892cab9c98d57778d9876" title="_kKeyboardHandler" alt="" coords="1335,47,1471,73"/>
+<area shape="rect" id="node9" href="$de/d2e/classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c" title="Activate keyboard. " alt="" coords="1301,101,1504,128"/>
+<area shape="rect" id="node10" href="$de/d2e/classk_keyboard.html#a7ce69bf1da92c457fab4729438190484" title="Initialize kKeyboard. " alt="" coords="1552,72,1755,99"/>
 </map>

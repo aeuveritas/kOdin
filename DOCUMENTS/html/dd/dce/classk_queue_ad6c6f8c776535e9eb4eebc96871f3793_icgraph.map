@@ -1,0 +1,13 @@
+<map id="kQueue::kIsQueueFull" name="kQueue::kIsQueueFull">
+<area shape="rect" id="node2" href="$dd/dce/classk_queue.html#ae25b396b1befb50ccc7f577b0df4410e" title="Push data. " alt="" coords="206,96,357,123"/>
+<area shape="rect" id="node3" href="$de/d2e/classk_keyboard.html#ad651c90ebcce238b6e474f91d86b3f8d" title="Translate Scan Code to ASCII Code and push it. " alt="" coords="406,89,613,130"/>
+<area shape="rect" id="node4" href="$d6/d88/classk_i_h.html#afb92f79d858169ba00ecedea82a687dc" title="Keyboard interrupt handler. " alt="" coords="681,16,839,43"/>
+<area shape="rect" id="node6" href="$de/d2e/classk_keyboard.html#abee00644a3a124252fa9c6ec9da5af02" title="kKeyboard::kWaitForACKAnd\lPushOtherScanCode" alt="" coords="662,89,858,130"/>
+<area shape="rect" id="node5" href="$d5/da3/_i_h_8hpp.html#aa2cc26c8391892cab9c98d57778d9876" title="_kKeyboardHandler" alt="" coords="952,5,1088,32"/>
+<area shape="rect" id="node7" href="$de/d2e/classk_keyboard.html#aa2fd2bfb94b6f8a57aae2035d11c4b7c" title="Activate keyboard. " alt="" coords="919,56,1121,83"/>
+<area shape="rect" id="node10" href="$de/d2e/classk_keyboard.html#a8e48c42235ca22cb294f73c51146dcfc" title="Change the sate of LEDs. " alt="" coords="907,107,1133,133"/>
+<area shape="rect" id="node8" href="$de/d2e/classk_keyboard.html#a7ce69bf1da92c457fab4729438190484" title="Initialize kKeyboard. " alt="" coords="1188,27,1391,53"/>
+<area shape="rect" id="node9" href="$df/ddd/kernel64_2main_8cpp.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="main" alt="" coords="1524,63,1575,89"/>
+<area shape="rect" id="node11" href="$de/d2e/classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944" title="Update a combination key state and Sync LED state. " alt="" coords="1182,129,1397,170"/>
+<area shape="rect" id="node12" href="$de/d2e/classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a" title="Translate ScFALSEan Code to ASCII. " alt="" coords="1446,143,1653,185"/>
+</map>

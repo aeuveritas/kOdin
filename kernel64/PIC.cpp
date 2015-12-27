@@ -78,21 +78,3 @@ void kPIC::kSendEOIToPIC(int iIRQNumber)
         a_pclPort->kOutPortByte(PIC_SLAVE_PORT1, 0x20);
     }
 }
-
-/// Enable interrupt
-void kPIC::kEnableInterrupt(void)
-{
-    _kEnableInterrupt();
-}
-
-/// Disable interrupt
-void kPIC::kDisableInterrupt(void)
-{
-    _kDisableInterrupt();
-}
-
-/// Read RFLGAS and return it
-QWORD kPIC::kReadRFLAGS(void)
-{
-    return _kReadRFLAGS();
-}

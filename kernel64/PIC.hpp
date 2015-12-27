@@ -18,13 +18,6 @@ extern kPort clPort;
 
 #pragma pack(push, 1)
 
-extern "C" 
-{
-    void _kEnableInterrupt(void);
-    void _kDisableInterrupt(void);
-    QWORD _kReadRFLAGS(void);
-}
-
 /// Classs for Programmable Interrupt Controller
 class kPIC
 {
@@ -37,10 +30,6 @@ public:
     void kInitializePIC(kPort* _kPort);
     void kMaskPICInterrupt(WORD wIRQBitmask);
     void kSendEOIToPIC(int iIRQNumber);
-    
-    void kEnableInterrupt(void);
-    void kDisableInterrupt(void);
-    QWORD kReadRFLAGS(void);
 };
 
 #pragma pack(pop)

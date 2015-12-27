@@ -1,5 +1,7 @@
 #include "keyboard.hpp"
-#include "utils.hpp"
+#include "IH.hpp"
+
+extern kIH* g_pclIH;
 
 /// Constructor
 kKeyboard::kKeyboard(void) 
@@ -29,15 +31,24 @@ kKeyboard::~kKeyboard(void)
 // Functions related to keyboard controller and keyboard 
 ///////////////////////////////////////////////////////////////////////////////
 /// Initialize kKeyboard
-void kKeyboard::kInitializeKeyboard(kPort* _kPort)
+bool kKeyboard::kInitializeKeyboard(kPort* _kPort)
 {
+    // Link class port
     a_pclPort = _kPort;
+    
+    // Initialize queue
+    clKeyQueue.kInitializeQueue(stKeyQueueBuffer,
+                                KEY_MAXQUEUECOUNT,
+                                sizeof(KEYDATA));
+    
+    // Activate keyboard
+    return kActivateKeyboard();
 }
 
 /** 
  * Check whether or not there is a received data 
  * in the output buffer (port 0x60).
- */
+ **/
 bool kKeyboard::kIsOutputBufferFull(void)
 {
     // Read the state register (port 0x64), 
@@ -65,9 +76,59 @@ bool kKeyboard::kIsInputBufferFull(void)
     return false;
 }
 
+/** 
+ * Wait for the ACK signal
+ * If a received signal is not the ACK signal,
+ * translate Scan Code and push it
+ **/
+bool kKeyboard::kWaitForACKAndPushOtherScanCode(void)
+{
+    bool bResult = false;
+    BYTE bData;
+    
+    // It is possible to receive key data before the ACK signal
+    // "kOdin" receives 100 data, and find the ACK signal among them
+    for (int j = 0; j < 100; j++)
+    {
+        // The time to count from 0 to 0xFFF is enough
+        // If the ACK signal is not shown, skip this step
+        for (int i = 0; i < 0xFFFF; i++)
+        {
+            // If the output buffer(port 0x60) is full, it is readable
+            if (kIsOutputBufferFull() == true)
+            {
+                break;
+            }
+        }
+        
+        // If the data from the output buffer(port 0x60) is
+        // the ACK signal (0xFA), it returns true
+        bData = _kInPortByte(0x60);
+        if(bData == 0xFA)
+        {
+            bResult = true;
+            break;
+        }
+        // If it is not 0xFA, translate it to ASCII code and push it
+        else
+        {
+            kConvertScanCodeAndPushQueue(bData);
+        }
+    }
+    
+    return bResult;
+}
+
+
 /// Activate keyboard.
 bool kKeyboard::kActivateKeyboard(void)
 {
+    bool bPreviousInterrupt;
+    bool bResult;
+    
+    // Disable an interrupt
+    bPreviousInterrupt = g_pclIH->kSetInterruptFlag(false);
+   
     // Activate a keyboard device by sending keyboard activating command (0xAE)
     // to the controll register (0x64).
     a_pclPort->kOutPortByte(0x64, 0xAE);
@@ -85,38 +146,17 @@ bool kKeyboard::kActivateKeyboard(void)
         }
     }
     
-    // Activate a keyboard by sending keyboard activatin command (0xF4)
+    // Activate a keyboard by sending keyboard activating command (0xF4)
     // to the input buffer (0x60).
     a_pclPort->kOutPortByte(0x60, 0xF4);
     
-    // Wait for ACK.
-    // Before coming ACK, a key data can be arrived 
-    // at the keyboard output buffer (0x60).
-    // So, handle up to 100 data before ACK.
-    for (int j = 0; j < 100; j++)
-    {
-        // Wait for the output buffer (port 0x60) being empty.
-        // If it is empty, send the command.
-        // The maximum wait time is 0xFFFF.
-        // If it is not empty until 0xFFFF, ignore ACK and send it.
-        for (int i = 0; i < 0xFFFF; i++)
-        {
-            // if the output buffer (port 0x60) is full
-            // kOdin can read data.
-            if (kIsOutputBufferFull() == true)
-            {
-                break;
-            }
-        }
-        
-        // If read data is ACK (0xFA), it is succeed.
-        if (a_pclPort->kInPortByte(0x60) == 0xFA)
-        {
-            return true;
-        }
-    }
+    // Wait for the ACK signal
+    bResult = kWaitForACKAndPushOtherScanCode();
     
-    return false;
+    // Restore the previous state of the interrupt flag
+    g_pclIH->kSetInterruptFlag(bPreviousInterrupt);
+    
+    return bResult;
 }
 
 /// Read a key from the output buffer (port 0x60).
@@ -133,9 +173,15 @@ BYTE kKeyboard::kGetKeyboardScanCode(void)
 
 /// Change the sate of LEDs.
 bool kKeyboard::kChangeKeyboardLED(bool bCapsLockOn,
-                                          bool bNumLockOn, bool bScrollLockOn)
+                                   bool bNumLockOn, bool bScrollLockOn)
 {
     int bufferCount;
+    bool bPreviousInterrupt;
+    bool bResult;
+    BYTE bData;
+    
+    // Disable an interrupt
+    bPreviousInterrupt = g_pclIH->kSetInterruptFlag(false);
     
     // Send LED commands to a keyboard and wait until the command is done.
     for (int i = 0; i < 0xFFFF; i++)
@@ -159,29 +205,13 @@ bool kKeyboard::kChangeKeyboardLED(bool bCapsLockOn,
         }
     }
     
-    // Wait for ACK.
-    for (bufferCount = 0; bufferCount < 100; bufferCount++)
-    {
-        for (int i = 0; i < 0xFFFF; i++)
-        {
-            // if the output buffer (port 0x60) is full
-            // kOdin can read data.
-            if (kIsOutputBufferFull() == true)
-            {
-                break;
-            }
-        }
-        
-        // If read data is ACK (0xFA), it is succeed.
-        if (a_pclPort->kInPortByte(0x60) == 0xFA)
-        {
-            break;
-        }
-    }
+    // Wait for the ACK signal
+    bResult = kWaitForACKAndPushOtherScanCode();
     
-    // If it exceed 100, it is failed.
-    if (bufferCount >= 100)
+    if (bResult == false)
     {
+        // Restore the previous state of the interrupt flag
+        g_pclIH->kSetInterruptFlag(bPreviousInterrupt);
         return false;
     }
     
@@ -199,33 +229,13 @@ bool kKeyboard::kChangeKeyboardLED(bool bCapsLockOn,
         }
     }
     
-    // Wait for ACK.
-    for (bufferCount = 0; bufferCount < 100; bufferCount++)
-    {
-        for (int i = 0; i < 0xFFFF; i++)
-        {
-            // if the output buffer (port 0x60) is full
-            // kOdin can read data.
-            if (kIsOutputBufferFull() == true)
-            {
-                break;
-            }
-        }
-        
-        // If read data is ACK (0xFA), it is succeed.
-        if (a_pclPort->kInPortByte(0x60) == 0xFA)
-        {
-            break;
-        }
-    }
+    // Wait for the ACK signal
+    bResult = kWaitForACKAndPushOtherScanCode();
     
-        // If it exceed 100, it is failed.
-    if (bufferCount >= 100)
-    {
-        return false;
-    }
+    // Restore the previous state of the interrupt flag
+    g_pclIH->kSetInterruptFlag(bPreviousInterrupt);
     
-    return true;
+    return bResult;
 }
 
 /// Activate A20 gate.
@@ -470,8 +480,8 @@ void kKeyboard::kUpdateCombinationKeyStatusAndLED(BYTE bScanCode)
 
 /// Translate ScFALSEan Code to ASCII.
 bool kKeyboard::kConvertScanCodeToASCIICode(BYTE bScanCode, 
-                                                   char* pbASCIICode, 
-                                                   BYTE* pbFlags)
+                                            char* pbASCIICode, 
+                                            BYTE* pbFlags)
 {
     bool bUseCombineKey;
     
@@ -548,3 +558,56 @@ bool kKeyboard::kConvertScanCodeToASCIICode(BYTE bScanCode,
     
     return true;
 }
+
+/// Translate Scan Code to ASCII Code and push it
+bool kKeyboard::kConvertScanCodeAndPushQueue(BYTE bScanCode)
+{
+    KEYDATA stData;
+    bool bResult = false;
+    bool bPreviousInterrupt;
+    
+    // Insert Scan Code to the key data structure
+    stData.bScanCode = bScanCode;
+    
+    // Translate Scan Code to ASCII Code,
+    // and insert it to the key data structure
+    if (kConvertScanCodeToASCIICode(bScanCode, &(stData.bASCIICode),
+        &(stData.bFlags)) == true)
+    {
+        // Disable interrupt
+        bPreviousInterrupt = g_pclIH->kSetInterruptFlag(false);
+        
+        // Push the key data
+        bResult = clKeyQueue.kPushQueue(&stData);
+        
+        // Restore previous interrupt flag
+        g_pclIH->kSetInterruptFlag(bPreviousInterrupt);
+    }
+    
+    return bResult;
+}
+
+/// Remove key data from the key queue
+bool kKeyboard::kPopKeyFromKeyQueue(KEYDATA* pstData)
+{
+    bool bResult;
+    bool bPreviousInterrupt;
+    
+    // If the key queue is empty, it is not readable
+    if (clKeyQueue.kIsQueueEmpty() == true)
+    {
+        return false;
+    }
+    
+    // Disable interrupt
+    bPreviousInterrupt = g_pclIH->kSetInterruptFlag(false);
+    
+    // Pop data
+    bResult = clKeyQueue.kPopQueue(pstData);
+    
+    // Restore previous interrupt flag
+    g_pclIH->kSetInterruptFlag(bPreviousInterrupt);
+    
+    return bResult;
+}
+

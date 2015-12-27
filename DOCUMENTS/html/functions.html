@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_q"><span>q</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_w"><span>w</span></a></li>
       <li class="current"><a href="#index_~"><span>~</span></a></li>
     </ul>
@@ -127,7 +128,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 <h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
 <li>a_pclKeyboard
-: <a class="el" href="de/dc1/classk_shell.html#a9809e8d137c18bf5bab7d7d07c6fb513">kShell</a>
+: <a class="el" href="d6/d88/classk_i_h.html#a26679af0580cc472cc5dab89463c32ca">kIH</a>
+, <a class="el" href="de/dc1/classk_shell.html#a9809e8d137c18bf5bab7d7d07c6fb513">kShell</a>
 </li>
 <li>a_pclPIC
 : <a class="el" href="d6/d88/classk_i_h.html#af1ff1c162a281754fa62330a0f61594d">kIH</a>
@@ -140,6 +142,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>bASCIICode
+: <a class="el" href="da/ddb/structk_key_queue_data_struct.html#aeefecf180b75f10da41966f29dd5de3d">kKeyQueueDataStruct</a>
+</li>
 <li>bAttribute
 : <a class="el" href="d8/dbe/structk_charactor_struct.html#a6322a765ad32e7942473b251b6e0df15">kCharactorStruct</a>
 </li>
@@ -155,8 +160,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>bExtendedCodeIn
 : <a class="el" href="de/d2e/classk_keyboard.html#a6e633d357b18a95e8b8b207948803e39">kKeyboard</a>
 </li>
+<li>bFlags
+: <a class="el" href="da/ddb/structk_key_queue_data_struct.html#ab2728f978cdc8c58590f931eba1928fb">kKeyQueueDataStruct</a>
+</li>
 <li>bIST
 : <a class="el" href="dc/d68/structk_i_d_t_entry_struct.html#a4b2c0b0c3a867db5607126b0c54ebeb8">kIDTEntryStruct</a>
+</li>
+<li>bLastOperationPush
+: <a class="el" href="dd/dce/classk_queue.html#a953b226fd1674c64aa6bc162c7dfe666">kQueue</a>
 </li>
 <li>bMiddleBaseAddress1
 : <a class="el" href="d3/dbc/structk_g_d_t_entry16_struct.html#a810f43fa586853e1bb7b0c05250d879a">kGDTEntry16Struct</a>
@@ -169,6 +180,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>bNumLockOn
 : <a class="el" href="de/d2e/classk_keyboard.html#a95c8ac4220bbb18f7b388f10066cc954">kKeyboard</a>
+</li>
+<li>bScanCode
+: <a class="el" href="da/ddb/structk_key_queue_data_struct.html#a0377a2e14abdd2ed2cf8a7754c958c98">kKeyQueueDataStruct</a>
 </li>
 <li>bScrollLockOn
 : <a class="el" href="de/d2e/classk_keyboard.html#af368055e40dc350e144b1cffcba38bbc">kKeyboard</a>
@@ -202,6 +216,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>clIDT
 : <a class="el" href="da/d13/classk_d_t.html#a0ec30ea41209fec5a97a7d007bf0032a">kDT</a>
+</li>
+<li>clKeyQueue
+: <a class="el" href="de/d2e/classk_keyboard.html#aa3d678ff32fb265378062946012b4a7b">kKeyboard</a>
 </li>
 <li>clPM
 : <a class="el" href="d6/d9c/classk_memory.html#a5371b77091dfab73faf1df62726430df">kMemory</a>
@@ -246,8 +263,20 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>iCommonInterruptCount
 : <a class="el" href="d6/d88/classk_i_h.html#a606b6f54ad2fb795893f3598e92e3245">kIH</a>
 </li>
+<li>iDataSize
+: <a class="el" href="dd/dce/classk_queue.html#aa32a5360367e9de3e4120230c0143d54">kQueue</a>
+</li>
 <li>iKeyboardInterruptCount
 : <a class="el" href="d6/d88/classk_i_h.html#a73d9699e1b4c273d73e0e35da9f5f6a6">kIH</a>
+</li>
+<li>iMaxDataCount
+: <a class="el" href="dd/dce/classk_queue.html#a2e44a7a41bb29f773d250a4720070579">kQueue</a>
+</li>
+<li>iPopIndex
+: <a class="el" href="dd/dce/classk_queue.html#a7e336125bf2a2c485eebdfef15ad1043">kQueue</a>
+</li>
+<li>iPushIndex
+: <a class="el" href="dd/dce/classk_queue.html#a8e901b7cb36ebf00b9deb788f69da81a">kQueue</a>
 </li>
 <li>iSkipCountForPause
 : <a class="el" href="de/d2e/classk_keyboard.html#aadb88915af6de5cc4c8b6f062f608043">kKeyboard</a>
@@ -268,6 +297,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>kCommonInterruptHandler()
 : <a class="el" href="d6/d88/classk_i_h.html#a82152723d0fdd74dcdda2e455360e706">kIH</a>
 </li>
+<li>kConvertScanCodeAndPushQueue()
+: <a class="el" href="de/d2e/classk_keyboard.html#ad651c90ebcce238b6e474f91d86b3f8d">kKeyboard</a>
+</li>
 <li>kConvertScanCodeToASCIICode()
 : <a class="el" href="de/d2e/classk_keyboard.html#a21b6a75fb4b81b0a6f94668fde71196a">kKeyboard</a>
 </li>
@@ -278,7 +310,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="d6/d88/classk_i_h.html#a77d8b025a464727616af64632d799152">kIH</a>
 </li>
 <li>kDisableInterrupt()
-: <a class="el" href="d8/da9/classk_p_i_c.html#ab24d45be7460f1f50294cd40ee5b4039">kPIC</a>
+: <a class="el" href="d6/d88/classk_i_h.html#ae5fdc3c6db16fa4fb70cf6474ec8900e">kIH</a>
 </li>
 <li>kDT()
 : <a class="el" href="da/d13/classk_d_t.html#a72a24d3b8447b997ea1106b7c6d684ac">kDT</a>
@@ -287,7 +319,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="de/d2e/classk_keyboard.html#a502b6e2fbe5d089c35adeef652919289">kKeyboard</a>
 </li>
 <li>kEnableInterrupt()
-: <a class="el" href="d8/da9/classk_p_i_c.html#aeeb2b5ba088a3283392cf851442e0d4c">kPIC</a>
+: <a class="el" href="d6/d88/classk_i_h.html#adfcdeba46a0eb205aae9c591c36a3a27">kIH</a>
 </li>
 <li>kGDT()
 : <a class="el" href="d8/d83/classk_g_d_t.html#a2f5e33375a39edfce0f3baff7b403461">kGDT</a>
@@ -311,19 +343,22 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="d4/db2/classk_i_d_t.html#ac8378f3f9630c87a3c33fd6eef06fbc2">kIDT</a>
 </li>
 <li>kInitializeIH()
-: <a class="el" href="d6/d88/classk_i_h.html#aa8b8672fb55eb579488daae4ba78c8f4">kIH</a>
+: <a class="el" href="d6/d88/classk_i_h.html#a2522ac5e6d743fb2502bbf4d1c99ba09">kIH</a>
 </li>
 <li>kInitializeKernel64Area()
 : <a class="el" href="d6/d9c/classk_memory.html#a3232feb17e3d9a1f39a93e71b5c3a999">kMemory</a>
 </li>
 <li>kInitializeKeyboard()
-: <a class="el" href="de/d2e/classk_keyboard.html#abe75121a573dd0f2c02ccfc9d6b1daa9">kKeyboard</a>
+: <a class="el" href="de/d2e/classk_keyboard.html#a7ce69bf1da92c457fab4729438190484">kKeyboard</a>
 </li>
 <li>kInitializePageManager()
 : <a class="el" href="d6/d9c/classk_memory.html#a5c46bc3b2d7c0ec2f8abef571a732aed">kMemory</a>
 </li>
 <li>kInitializePIC()
 : <a class="el" href="d8/da9/classk_p_i_c.html#ab8cafff6fab3870055a8cf0d21295ff3">kPIC</a>
+</li>
+<li>kInitializeQueue()
+: <a class="el" href="dd/dce/classk_queue.html#a293986debf5d9aa280758dc3276383fc">kQueue</a>
 </li>
 <li>kInitializeShell()
 : <a class="el" href="de/dc1/classk_shell.html#ae020500b85d2e16f9b54f2c531ce7712">kShell</a>
@@ -357,6 +392,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>kIsOutputBufferFull()
 : <a class="el" href="de/d2e/classk_keyboard.html#a889d812f2ebc66775d84dba823e6fb65">kKeyboard</a>
+</li>
+<li>kIsQueueEmpty()
+: <a class="el" href="dd/dce/classk_queue.html#ace9350d3000effbe4f359dde1b50548e">kQueue</a>
+</li>
+<li>kIsQueueFull()
+: <a class="el" href="dd/dce/classk_queue.html#ad6c6f8c776535e9eb4eebc96871f3793">kQueue</a>
 </li>
 <li>kIsUseCombinedCode()
 : <a class="el" href="de/d2e/classk_keyboard.html#a451c6411404db8f08a13dfc3d76059a2">kKeyboard</a>
@@ -397,6 +438,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>kPIC()
 : <a class="el" href="d8/da9/classk_p_i_c.html#a28153388821267eeb0e727382c31c845">kPIC</a>
 </li>
+<li>kPopKeyFromKeyQueue()
+: <a class="el" href="de/d2e/classk_keyboard.html#aa351c5e1eee1cb1b8c3b3c470ba94358">kKeyboard</a>
+</li>
+<li>kPopQueue()
+: <a class="el" href="dd/dce/classk_queue.html#a503e2eb110caf8a9d783365c24715af1">kQueue</a>
+</li>
 <li>kPrintChar()
 : <a class="el" href="db/daa/classk_utils.html#aaecd77c14841944a89f4a2d30fe93d4d">kUtils</a>
 </li>
@@ -427,11 +474,17 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>kPrompt()
 : <a class="el" href="de/dc1/classk_shell.html#a2513ae687ce1cdab7c665399c4920227">kShell</a>
 </li>
+<li>kPushQueue()
+: <a class="el" href="dd/dce/classk_queue.html#ae25b396b1befb50ccc7f577b0df4410e">kQueue</a>
+</li>
+<li>kQueue()
+: <a class="el" href="dd/dce/classk_queue.html#ad8e34c1cb9e7ad2cc569f661f8ae71e8">kQueue</a>
+</li>
 <li>kReadCPUID()
 : <a class="el" href="d9/d0e/classk_cpu.html#a76637d24ba19b551fe94178b42a23044">kCpu</a>
 </li>
 <li>kReadRFLAGS()
-: <a class="el" href="d8/da9/classk_p_i_c.html#accaf1ba63278ab96a37752664c793f51">kPIC</a>
+: <a class="el" href="d6/d88/classk_i_h.html#ac4ba20c39d3cb7ec38801b6376774603">kIH</a>
 </li>
 <li>kReboot()
 : <a class="el" href="de/d2e/classk_keyboard.html#af11e0c261c17dba63705b65071ee86ba">kKeyboard</a>
@@ -448,6 +501,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>kSetIDTEntry()
 : <a class="el" href="d4/db2/classk_i_d_t.html#abdd6838bf4e174ea826716f47d5903be">kIDT</a>
 </li>
+<li>kSetInterruptFlag()
+: <a class="el" href="d6/d88/classk_i_h.html#aa1db16c97a18d3222ce0a9cfdea538a5">kIH</a>
+</li>
 <li>kSetPageEntryData()
 : <a class="el" href="d8/d6a/classk_page_manager.html#a9109d23ffa662fa53b8c99f18f123e8e">kPageManager</a>
 </li>
@@ -462,6 +518,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>kUpdateCombinationKeyStatusAndLED()
 : <a class="el" href="de/d2e/classk_keyboard.html#a54f6d918800ec1f8d1a05ac6195d5944">kKeyboard</a>
+</li>
+<li>kWaitForACKAndPushOtherScanCode()
+: <a class="el" href="de/d2e/classk_keyboard.html#abee00644a3a124252fa9c6ec9da5af02">kKeyboard</a>
 </li>
 </ul>
 
@@ -497,6 +556,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>pstTSS
 : <a class="el" href="d8/d83/classk_g_d_t.html#a0cdd0e9cfc59b11bcf25aa1d3de0dcaf">kGDT</a>
 </li>
+<li>pvQueueArray
+: <a class="el" href="dd/dce/classk_queue.html#abda821edf3d3ed3f74198669b348f982">kQueue</a>
+</li>
 </ul>
 
 
@@ -515,6 +577,13 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>qwRsp
 : <a class="el" href="df/d1d/structk_t_s_s_struct.html#a79b3dcc42700d01d09313fef2f279047">kTSSStruct</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>stKeyQueueBuffer
+: <a class="el" href="de/d2e/classk_keyboard.html#ade7041260f8fe19ed24b191c662eb10f">kKeyboard</a>
 </li>
 </ul>
 
@@ -569,6 +638,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>~kPIC()
 : <a class="el" href="d8/da9/classk_p_i_c.html#ab78a3fb9415d604b25dfb985f3df6d58">kPIC</a>
 </li>
+<li>~kQueue()
+: <a class="el" href="dd/dce/classk_queue.html#ab9bfbeb581457673d9aafc3809a43960">kQueue</a>
+</li>
 <li>~kShell()
 : <a class="el" href="de/dc1/classk_shell.html#af5775f2e7e03b7e3f423edf6a38e347f">kShell</a>
 </li>
@@ -578,7 +650,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Dec 27 2015 14:38:37 for kOdin by
+    <li class="footer">Generated on Sun Dec 27 2015 23:33:57 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

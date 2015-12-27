@@ -1,8 +1,8 @@
 #pragma once
 
-#include "utils.hpp"
 #include "dSegment.hpp"
 #include "dInterrupt.hpp"
+#include "DTR.hpp"
 
 #pragma pack(push, 1)
 

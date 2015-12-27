@@ -1,6 +1,7 @@
 var searchData=
 [
   ['icommoninterruptcount',['iCommonInterruptCount',['../d6/d88/classk_i_h.html#a606b6f54ad2fb795893f3598e92e3245',1,'kIH']]],
+  ['idatasize',['iDataSize',['../dd/dce/classk_queue.html#aa32a5360367e9de3e4120230c0143d54',1,'kQueue']]],
   ['idt_2ecpp',['IDT.cpp',['../de/d80/_i_d_t_8cpp.html',1,'']]],
   ['idt_2ehpp',['IDT.hpp',['../d8/d9b/_i_d_t_8hpp.html',1,'']]],
   ['idt_5fflags_5fdpl0',['IDT_FLAGS_DPL0',['../db/d7e/d_interrupt_8hpp.html#ae00bfe90514ec859da31ab103c84935d',1,'dInterrupt.hpp']]],
@@ -23,6 +24,9 @@ var searchData=
   ['ih_2ehpp',['IH.hpp',['../d5/da3/_i_h_8hpp.html',1,'']]],
   ['ikeyboardinterruptcount',['iKeyboardInterruptCount',['../d6/d88/classk_i_h.html#a73d9699e1b4c273d73e0e35da9f5f6a6',1,'kIH']]],
   ['imagemaker_2ec',['imageMaker.c',['../db/db9/image_maker_8c.html',1,'']]],
+  ['imaxdatacount',['iMaxDataCount',['../dd/dce/classk_queue.html#a2e44a7a41bb29f773d250a4720070579',1,'kQueue']]],
+  ['ipopindex',['iPopIndex',['../dd/dce/classk_queue.html#a7e336125bf2a2c485eebdfef15ad1043',1,'kQueue']]],
+  ['ipushindex',['iPushIndex',['../dd/dce/classk_queue.html#a8e901b7cb36ebf00b9deb788f69da81a',1,'kQueue']]],
   ['iskipcountforpause',['iSkipCountForPause',['../de/d2e/classk_keyboard.html#aadb88915af6de5cc4c8b6f062f608043',1,'kKeyboard']]],
   ['ist_5fsize',['IST_SIZE',['../db/d7e/d_interrupt_8hpp.html#ab0ff8a4220fff635d59b9ac59520efa5',1,'dInterrupt.hpp']]],
   ['ist_5fstartaddress',['IST_STARTADDRESS',['../db/d7e/d_interrupt_8hpp.html#a25ca88f1f6ce021fa081b22468aa0df6',1,'dInterrupt.hpp']]]

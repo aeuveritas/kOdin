@@ -165,7 +165,7 @@ Macros</h2></td></tr>
 <tr class="memitem:afce34094f6b8173755a8e715b12a9374"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7e/d_interrupt_8hpp.html#afce34094f6b8173755a8e715b12a9374">IDTR_STARTADDRESS</a></td></tr>
 <tr class="memdesc:afce34094f6b8173755a8e715b12a9374"><td class="mdescLeft">&#160;</td><td class="mdescRight">The start address of IDTR - after TSS.  <a href="#afce34094f6b8173755a8e715b12a9374">More...</a><br/></td></tr>
 <tr class="separator:afce34094f6b8173755a8e715b12a9374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b742e57519f1eeefc43e4ec1f81ab74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7e/d_interrupt_8hpp.html#a3b742e57519f1eeefc43e4ec1f81ab74">IDT_STARTADDRESS</a>&#160;&#160;&#160;(<a class="el" href="../../db/d7e/d_interrupt_8hpp.html#afce34094f6b8173755a8e715b12a9374">IDTR_STARTADDRESS</a> + sizeof(<a class="el" href="../../de/d78/d_segment_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a>))</td></tr>
+<tr class="memitem:a3b742e57519f1eeefc43e4ec1f81ab74"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7e/d_interrupt_8hpp.html#a3b742e57519f1eeefc43e4ec1f81ab74">IDT_STARTADDRESS</a>&#160;&#160;&#160;(<a class="el" href="../../db/d7e/d_interrupt_8hpp.html#afce34094f6b8173755a8e715b12a9374">IDTR_STARTADDRESS</a> + sizeof(<a class="el" href="../../de/de4/_d_t_r_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a>))</td></tr>
 <tr class="memdesc:a3b742e57519f1eeefc43e4ec1f81ab74"><td class="mdescLeft">&#160;</td><td class="mdescRight">The start address of IDT.  <a href="#a3b742e57519f1eeefc43e4ec1f81ab74">More...</a><br/></td></tr>
 <tr class="separator:a3b742e57519f1eeefc43e4ec1f81ab74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3d17d3e21e5e5c8b359d1b5412a9d77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d7e/d_interrupt_8hpp.html#ae3d17d3e21e5e5c8b359d1b5412a9d77">IDT_TABLESIZE</a>&#160;&#160;&#160;(<a class="el" href="../../db/d7e/d_interrupt_8hpp.html#ae156cf383a1d2ebba4e66f205a0213a4">IDT_MAXENTRYCOUNT</a> * sizeof(<a class="el" href="../../db/d7e/d_interrupt_8hpp.html#a3c17a3ae35f355b45c6e9dcec059bb59">IDTENTRY</a>))</td></tr>
@@ -334,7 +334,7 @@ Typedefs</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define IDT_STARTADDRESS&#160;&#160;&#160;(<a class="el" href="../../db/d7e/d_interrupt_8hpp.html#afce34094f6b8173755a8e715b12a9374">IDTR_STARTADDRESS</a> + sizeof(<a class="el" href="../../de/d78/d_segment_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a>))</td>
+          <td class="memname">#define IDT_STARTADDRESS&#160;&#160;&#160;(<a class="el" href="../../db/d7e/d_interrupt_8hpp.html#afce34094f6b8173755a8e715b12a9374">IDTR_STARTADDRESS</a> + sizeof(<a class="el" href="../../de/de4/_d_t_r_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a>))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -401,9 +401,9 @@ Typedefs</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(<a class="code" href="../../de/d78/d_segment_8hpp.html#a9be99ff4a9b47c1729c9944672071cae">GDTR_STARTADDRESS</a> + <span class="keyword">sizeof</span>(<a class="code" href="../../de/d78/d_segment_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a>) + \</div>
+<b>Value:</b><div class="fragment"><div class="line">(<a class="code" href="../../de/d78/d_segment_8hpp.html#a9be99ff4a9b47c1729c9944672071cae">GDTR_STARTADDRESS</a> + <span class="keyword">sizeof</span>(<a class="code" href="../../de/de4/_d_t_r_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a>) + \</div>
 <div class="line">    <a class="code" href="../../de/d78/d_segment_8hpp.html#aa9f5921c3637868b5ccae42cc0aa6b4e">GDT_TABLESIZE</a> + <a class="code" href="../../de/d78/d_segment_8hpp.html#a181cef9741006f91872be0d95a654e58">TSS_SEGMENTSIZE</a>)</div>
-<div class="ttc" id="d_segment_8hpp_html_a0201c3fcd6b8a93628b392efa74a54a4"><div class="ttname"><a href="../../de/d78/d_segment_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a></div><div class="ttdeci">struct kDTRStruct DTR</div><div class="ttdoc">structures for descriptor table register, GDTR and IDTR [IA-32e Mode] </div></div>
+<div class="ttc" id="_d_t_r_8hpp_html_a0201c3fcd6b8a93628b392efa74a54a4"><div class="ttname"><a href="../../de/de4/_d_t_r_8hpp.html#a0201c3fcd6b8a93628b392efa74a54a4">DTR</a></div><div class="ttdeci">struct kDTRStruct DTR</div><div class="ttdoc">structures for descriptor table register, GDTR and IDTR [IA-32e Mode] </div></div>
 <div class="ttc" id="d_segment_8hpp_html_a9be99ff4a9b47c1729c9944672071cae"><div class="ttname"><a href="../../de/d78/d_segment_8hpp.html#a9be99ff4a9b47c1729c9944672071cae">GDTR_STARTADDRESS</a></div><div class="ttdeci">#define GDTR_STARTADDRESS</div><div class="ttdoc">Other macros. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d78/d_segment_8hpp_source.html#l00054">dSegment.hpp:54</a></div></div>
 <div class="ttc" id="d_segment_8hpp_html_aa9f5921c3637868b5ccae42cc0aa6b4e"><div class="ttname"><a href="../../de/d78/d_segment_8hpp.html#aa9f5921c3637868b5ccae42cc0aa6b4e">GDT_TABLESIZE</a></div><div class="ttdeci">#define GDT_TABLESIZE</div><div class="ttdoc">Size of GDT. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d78/d_segment_8hpp_source.html#l00060">dSegment.hpp:60</a></div></div>
 <div class="ttc" id="d_segment_8hpp_html_a181cef9741006f91872be0d95a654e58"><div class="ttname"><a href="../../de/d78/d_segment_8hpp.html#a181cef9741006f91872be0d95a654e58">TSS_SEGMENTSIZE</a></div><div class="ttdeci">#define TSS_SEGMENTSIZE</div><div class="ttdoc">Size of TSS. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d78/d_segment_8hpp_source.html#l00064">dSegment.hpp:64</a></div></div>
@@ -467,7 +467,7 @@ Typedefs</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_db908db968f8f6092f1b3817428a1d92.html">kernel64</a></li><li class="navelem"><a class="el" href="../../db/d7e/d_interrupt_8hpp.html">dInterrupt.hpp</a></li>
-    <li class="footer">Generated on Sun Dec 27 2015 14:38:37 for kOdin by
+    <li class="footer">Generated on Sun Dec 27 2015 23:33:57 for kOdin by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
