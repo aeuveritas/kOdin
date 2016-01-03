@@ -21,7 +21,7 @@
 #define IDT_FLAGS_USER \
     (IDT_FLAGS_DPL3 | IDT_FLAGS_P)
 
-// Other macros
+/// Other macros
 
 /// The number of IDT entry
 #define IDT_MAXENTRYCOUNT       100

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "dInterrupt.hpp"
+#include "descriptionForInterrupt.hpp"
 
 // Array of function pointers
 // typedef void (*pISRVector)();

@@ -1,9 +1,9 @@
 #include "types.hpp"
 #include "utils.hpp"
 #include "keyboard.hpp"
-#include "DT.hpp"
+#include "descriptionTable.hpp"
 #include "PIC.hpp"
-#include "IH.hpp"
+#include "interruptHandler.hpp"
 #include "shell.hpp"
 
 kUtils* g_pclUtils;

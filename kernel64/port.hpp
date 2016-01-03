@@ -9,6 +9,7 @@ extern "C" {
     void _kOutPortByte(WORD wPort, BYTE bData);
 };
 
+/// Class for port  [IA-32e Mode]
 class kPort
 {
 public:

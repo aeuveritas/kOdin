@@ -2,16 +2,16 @@
 
 #include "types.hpp"
 
-// Macro
-// The number of Scan Code to ignore if Pause key is pressed
+/// Macro
+/// The number of Scan Code to ignore if Pause key is pressed
 #define KEY_SKIPCOUNTFORPAUSE       2
 
-// Flag for key state
+/// Flag for key state
 #define KEY_FLAGS_UP                0x00
 #define KEY_FLAGS_DOWN              0x01
 #define KEY_FLAGS_EXTENDEDKEY       0x02
 
-// Macro for Scan Code mapping table
+/// Macro for Scan Code mapping table
 #define KEY_MAPPINGTABLEMAXCOUNT    89
 
 #define KEY_NONE                    0x00
@@ -59,22 +59,22 @@
 
 /// Struct for Scan Code Table [IA-32e Mode]
 typedef struct kKeyMappingEntry {
-    /// Normal ASCII
+    // Normal ASCII
     BYTE bNormalCode;
 
-    /// Combined key with Shift or CAPS lock
+    // Combined key with Shift or CAPS lock
     BYTE bCombinedCode;
 } KEYMAPPINGENTRY;
 
 /// Struct for the data structure of key queue
 typedef struct kKeyQueueDataStruct {
-    /// Scan Code
+    // Scan Code
     BYTE bScanCode;
     
-    /// ASCII Code
+    // ASCII Code
     char bASCIICode;
     
-    /// State flag (push/release/extended key)
+    // State flag (push/release/extended key)
     BYTE bFlags;
 } KEYDATA;
 

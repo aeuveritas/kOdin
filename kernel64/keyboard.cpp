@@ -1,5 +1,5 @@
 #include "keyboard.hpp"
-#include "IH.hpp"
+#include "interruptHandler.hpp"
 
 extern kIH* g_pclIH;
 

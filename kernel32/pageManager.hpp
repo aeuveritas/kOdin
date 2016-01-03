@@ -2,10 +2,10 @@
 
 #include "page.hpp"
 
-// Structures
+/// Structures
 #pragma pack(push, 1)
 
-// Class for Page Manager [Protected Mode]
+/// Class for Page Manager [Protected Mode]
 class k32PageManager
 {
     PTE* pstPML4T;

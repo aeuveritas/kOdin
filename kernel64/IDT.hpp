@@ -1,8 +1,8 @@
 #pragma once
 
-#include "dSegment.hpp"
-#include "dInterrupt.hpp"
-#include "DTR.hpp"
+#include "descriptionForSegment.hpp"
+#include "descriptionForInterrupt.hpp"
+#include "descriptionTableRegister.hpp"
 #include "asmISR.hpp"
 
 #pragma pack(push, 1)
@@ -12,7 +12,7 @@ extern "C"
     void _kLoadIDTR(QWORD qwIDTRAddress);
 };
 
-/// Class for Interrupt Descriptor Table
+/// Class for Interrupt Descriptor Table [IA-32e Mode]
 class kIDT
 {
     DTR* pstIDTR;

@@ -4,7 +4,7 @@
 
 #pragma pack(push, 1)
 
-/// Class for a general queue
+/// Class for a general queue [IA-32e Mode]
 class kQueue
 {
     /// Member variables
