@@ -1,7 +1,6 @@
 #pragma once
 
 #include "types.hpp"
-#include "utils.hpp"
 #include "port.hpp"
 #include "keyData.hpp"
 #include "queue.hpp"
@@ -31,7 +30,6 @@ class kKeyboard
     // Functions
     bool kActivateKeyboard(void);
     void kEnableA20Gate(void);
-    void kReboot(void);
     bool kIsAlphabetScanCode(BYTE bScanCode);
     bool kIsNumberOrSymbolScanCode(BYTE bScanCode);
     bool kIsNumberPadScanCode(BYTE bScanCode);
@@ -53,6 +51,8 @@ public:
                                      char* pbASCIICode, BYTE* pbFlags);
     bool kConvertScanCodeAndPushQueue(BYTE bScanCode);
     bool kPopKeyFromKeyQueue(KEYDATA* pstData);
+
+    void kReboot(void);
 };
 
 #pragma pack(pop)

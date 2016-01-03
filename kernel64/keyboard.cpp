@@ -542,20 +542,6 @@ bool kKeyboard::kConvertScanCodeToASCIICode(BYTE bScanCode,
     // update push or release of a combination key
     kUpdateCombinationKeyStatusAndLED(bScanCode);
     
-    // Skip single shift key
-    if (bShiftDown == true &&
-        ( ( bScanCode & 0x7F ) == 42 || ( bScanCode & 0x7F ) == 54) )
-        return false;
-    // Skip single Caps Lock key
-    else if ( ( bScanCode & 0x7F ) == 58 )
-        return false;
-    // Skip single Number Lock key 
-    else if ( ( bScanCode & 0x7F ) == 69 )
-        return false;
-    // Skip Scroll Lock key 
-    else if ( ( bScanCode & 0x7F ) == 70 )
-        return false;
-    
     return true;
 }
 

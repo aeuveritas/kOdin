@@ -33,6 +33,7 @@ public:
     
     void kInitializeIH(kPIC* _kPIC, kKeyboard* _kKeyboard);
     
+    void kPrintExceptionMessage(const char* pcVectorNumber);
     void kCommonExceptionHandler(int iVectorNumber, QWORD qwErrorCode);
     void kCommonInterruptHandler(int iVectorNumber);
     void kKeyboardHandler(int iVectorNumber);

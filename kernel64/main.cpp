@@ -1,77 +1,109 @@
 #include "types.hpp"
-#include "utils.hpp"
 #include "keyboard.hpp"
 #include "descriptionTable.hpp"
 #include "PIC.hpp"
 #include "interruptHandler.hpp"
-#include "shell.hpp"
+#include "memory.hpp"
+#include "stringHelper.hpp"
+#include "console.hpp"
+#include "consoleShell.hpp"
 
-kUtils* g_pclUtils;
+#include "debug.hpp"
+
+kConsole* g_pclConsole;
 kIH* g_pclIH;
+kMemory* g_pclMemory;
+kStringHelper* g_pclStringHelper;
 
 void main(void)
 {
-    kUtils clUtils;
+    kConsole clConsole;
     kPort clPort;
     kDT clDT;
     kKeyboard clKeyboard;
     kPIC clPIC;
     kIH clIH;
-    kShell clShell;
+    kMemory clMemory;
+    kConsoleShell clConsoleShell;
+    kStringHelper clStringHelper;
     
-    // Initialize Utils
-    clUtils.kInitializeUtils(10);
-    //clUtils.kLock();
+    kDebug clDebug;
     
-    // Set global pointer of kUtils
-    g_pclUtils = &clUtils;
+    int iRamSize;
+    
+    //clDebug.kLock();
+    
+    // Initialize kMemory
+    clMemory.kInitializeMemory();
+    
+    // Set global pointer of kMemory
+    g_pclMemory = & clMemory;
+    
+    
+    // Initialize kStringHelper
+    clStringHelper.kInitializeStringHelper();
+    
+
+    // Set global pointer of kStringHelper
+    g_pclStringHelper = &clStringHelper;
+    
+    // Initialize kConsole
+    clConsole.kInitializeConsole(&clPort, &clKeyboard, 0, 10);
+    
+    // Set global pointer of kConsole
+    g_pclConsole = &clConsole;
     
     // Jump to kernel64 
-    clUtils.kPrintResult("PASS");
+    clConsole.kPrintSetResult("PASS");
     
     // Start C++ kernel
-    clUtils.kPrintMessage("[      ]  Start IA-32e C++ Language Kernel");
-    clUtils.kPrintResult("PASS");
+    clConsole.kPrintSetCheck("[      ]  Start IA-32e C++ Language Kernel");
+    clConsole.kPrintSetResult("PASS");
     
     // Initialize DTs
-    clUtils.kPrintPairMessage("[      ]  Initialize DT for IA-32e Mode");
     clDT.kInitializeDT();
-    clUtils.kPrintPairResult("PASS");
+
+    // Check total RAM size
+    clConsole.kPrintSetCheck("[      ]  Check Total RAM Size");
+    clMemory.kCheckTotalRAMSize();
+    iRamSize = clMemory.kGetTotalRAMSize();
+    clConsole.kPrintSetMiddleInt(iRamSize);
+    clConsole.kPrintSetResult("PASS");
 
     // Activate a keyboard
-    clUtils.kPrintMessage("[      ]  Activate Keyboard");
+    clConsole.kPrintSetCheck("[      ]  Activate Keyboard");
     if (clKeyboard.kInitializeKeyboard(&clPort))
     {
-        clUtils.kPrintResult("PASS");
+        clConsole.kPrintSetResult("PASS");
 
         clKeyboard.kChangeKeyboardLED(false, false, false);
     }
     else
     {
-        clUtils.kPrintResult("FAIL");
+        clConsole.kPrintSetResult("FAIL");
         while (1);
     }
     
     // Initialize PIC and Activate interrupt
-    clUtils.kPrintMessage("[      ]  Initialize PIC and Interrupt");
+    clConsole.kPrintSetCheck("[      ]  Initialize PIC and Interrupt");
     clPIC.kInitializePIC(&clPort);
     clPIC.kMaskPICInterrupt(0);
-    clUtils.kPrintResult("PASS");
+    clConsole.kPrintSetResult("PASS");
    
     // Initialize interrupt handler
-    clUtils.kPrintMessage("[      ]  Initialize Interrupt Handler");
+    clConsole.kPrintSetCheck("[      ]  Initialize Interrupt Handler");
     clIH.kInitializeIH(&clPIC, &clKeyboard);
     g_pclIH = &clIH;
-    clUtils.kPrintResult("PASS");
+    clConsole.kPrintSetResult("PASS");
     
     // Enable interrupt
-    clUtils.kPrintMessage("[      ]  Enable Interrupt");
+    clConsole.kPrintSetCheck("[      ]  Enable Interrupt");
     clIH.kEnableInterrupt();
-    clUtils.kPrintResult("PASS");
-    
+    clConsole.kPrintSetResult("PASS");
+
     // Initialize shell
-    clShell.kInitializeShell(&clKeyboard);
+    clConsoleShell.kInitializeConsoleShell();
     
     // Run shell
-    clShell.kPrompt();
+    clConsoleShell.kActivateConsoleShell();
 }

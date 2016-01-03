@@ -1,9 +1,5 @@
 #include "IDT.hpp"
 
-#include "utils.hpp"
-
-extern kUtils* g_pclUtils;
-
 /// Constructor of IDT
 kIDT::kIDT(void)
 {
@@ -72,9 +68,9 @@ void kIDT::kInitializeIDT(void)
     kSetIDTEntry(&(pstIDTEntry[20]), _kISRETCException, 0x08,
                  IDT_FLAGS_IST1, IDT_FLAGS_KERNEL, IDT_TYPE_INTERRUPT);
     
-    for (int i = 21; i < 32; i++)
+    for (int iEntryNum = 21; iEntryNum < 32; iEntryNum++)
     {
-        kSetIDTEntry(&(pstIDTEntry[i]), _kISRETCException, 0x08,
+        kSetIDTEntry(&(pstIDTEntry[iEntryNum]), _kISRETCException, 0x08,
                      IDT_FLAGS_IST1, IDT_FLAGS_KERNEL, IDT_TYPE_INTERRUPT);
     }
     
@@ -112,9 +108,9 @@ void kIDT::kInitializeIDT(void)
     kSetIDTEntry(&(pstIDTEntry[47]), _kISRHDD2, 0x08,
                  IDT_FLAGS_IST1, IDT_FLAGS_KERNEL, IDT_TYPE_INTERRUPT);
     
-    for (int i = 48; i < IDT_MAXENTRYCOUNT; i++)
+    for (int iEntryNum = 48; iEntryNum < IDT_MAXENTRYCOUNT; iEntryNum++)
     {
-        kSetIDTEntry(&(pstIDTEntry[i]), _kISRETCInterrupt, 0x08,
+        kSetIDTEntry(&(pstIDTEntry[iEntryNum]), _kISRETCInterrupt, 0x08,
                      IDT_FLAGS_IST1, IDT_FLAGS_KERNEL, IDT_TYPE_INTERRUPT);
     }
     

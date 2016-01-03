@@ -78,8 +78,6 @@ typedef struct kKeyQueueDataStruct {
     BYTE bFlags;
 } KEYDATA;
 
-#pragma pack(pop)
-
 /// Mapping Table
 const KEYMAPPINGENTRY stKeyMappingTable[KEY_MAPPINGTABLEMAXCOUNT] = 
 {
@@ -174,5 +172,4 @@ const KEYMAPPINGENTRY stKeyMappingTable[KEY_MAPPINGTABLEMAXCOUNT] =
     {KEY_F12            , KEY_F12           }  /* 88 */
 };
 
-
-
+#pragma pack(pop)

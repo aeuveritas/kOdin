@@ -1,9 +1,9 @@
 #include "interruptHandler.hpp"
 
-#include "utils.hpp"
+#include "console.hpp"
 
-extern kUtils* g_pclUtils;
 extern kIH* g_pclIH;
+extern kConsole* g_pclConsole;
 
 /// Constructor of IH
 kIH::kIH(void)
@@ -34,6 +34,23 @@ void kIH::kInitializeIH(kPIC* _kPIC, kKeyboard* _kKeyboard)
     return;
 }
 
+/// Print message for exception handler
+void kIH::kPrintExceptionMessage(const char* pcVectorNumber)
+{
+    g_pclConsole->kPrintStringXY(0, 0,
+        "===========================================================");
+    g_pclConsole->kPrintStringXY(0, 1, 
+        "                     Exception Occur                       ");
+    g_pclConsole->kPrintStringXY(0, 2, 
+        "                  Vector:                                  ");
+    g_pclConsole->kPrintStringXY(0, 3, 
+        "===========================================================");
+    
+    g_pclConsole->kPrintStringXY(26, 2, pcVectorNumber);
+    
+    return;
+}
+
 /// Common exception handler
 void kIH::kCommonExceptionHandler(int iVectorNumber, QWORD qwErrorCode)
 {
@@ -43,7 +60,7 @@ void kIH::kCommonExceptionHandler(int iVectorNumber, QWORD qwErrorCode)
     cNumber[0] = '0' + iVectorNumber / 10;
     cNumber[1] = '0' + iVectorNumber % 10;
     
-    g_pclUtils->kPrintException(cNumber);
+    kPrintExceptionMessage(cNumber);
     
     while (1);
 
@@ -61,7 +78,7 @@ void kIH::kCommonInterruptHandler(int iVectorNumber)
     
     // Print the number of interrupt happened
     cBuffer[8] = '0' + iCommonInterruptCount;
-    g_pclUtils->kPrintInterrupt(cBuffer);
+    g_pclConsole->kPrintStringXY(70, 0, cBuffer);
     
     iCommonInterruptCount = (iCommonInterruptCount + 1) % 10;
     
@@ -84,10 +101,9 @@ void kIH::kKeyboardHandler(int iVectorNumber)
     
     // Print the number of interrupt happened
     cBuffer[8] = '0' + iKeyboardInterruptCount;
-    g_pclUtils->kPrintKeyboardInterrupt(cBuffer);
+    g_pclConsole->kPrintStringXY(0, 0, cBuffer);
     
-    iKeyboardInterruptCount = (iKeyboardInterruptCount + 1) % 10;
-    
+    iKeyboardInterruptCount = (iKeyboardInterruptCount + 1) % 10;    
     
     // Read data from the keyboard controller,
     // and translate it to ASCII Code
@@ -95,6 +111,7 @@ void kIH::kKeyboardHandler(int iVectorNumber)
     if (a_pclKeyboard->kIsOutputBufferFull() == true)
     {
         bTemp = a_pclKeyboard->kGetKeyboardScanCode();
+        
         a_pclKeyboard->kConvertScanCodeAndPushQueue(bTemp);
     }
     

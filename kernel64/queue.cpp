@@ -1,10 +1,12 @@
 #include "queue.hpp"
 
-#include "utils.hpp"
+#include "memory.hpp"
+#include "console.hpp"
 
-extern kUtils* g_pclUtils;
+extern kConsole* g_pclConsole;
+extern kMemory* g_pclMemory;
 
-/// Constructor
+/// Constructor of queue
 kQueue::kQueue(void)
 {
     iMaxDataCount = 0;
@@ -17,7 +19,7 @@ kQueue::kQueue(void)
     bLastOperationPush = false;
 }
 
-/// Deconstructor
+/// Deconstructor of queue
 kQueue::~kQueue(void)
 {
     iMaxDataCount = 0;
@@ -81,7 +83,7 @@ bool kQueue::kIsQueueEmpty(void)
 /// Push data
 bool kQueue::kPushQueue(const void* pvData)
 {
-    char* src;
+    char* dest;
     
     // Check the queue is full or not
     if (kIsQueueFull() == true)
@@ -89,11 +91,11 @@ bool kQueue::kPushQueue(const void* pvData)
         return false;
     }
     
-    // Calculate targer address
-    src = (char*) pvQueueArray + (iDataSize * iPushIndex);
+    // Calculate target address
+    dest = (char*) pvQueueArray + (iDataSize * iPushIndex);
     
     // Copy data to the queue memory
-    g_pclUtils->kMemCpy(src, pvData, iDataSize);
+    g_pclMemory->kMemCpy(dest, pvData, iDataSize);
     
     // Update the index of push and the last operation flag
     iPushIndex = (iPushIndex + 1) % iMaxDataCount;
@@ -105,7 +107,7 @@ bool kQueue::kPushQueue(const void* pvData)
 /// Pop data
 bool kQueue::kPopQueue(void* pvData)
 {
-    char* dest;
+    char* src;
     
     // Check the queue is empty or not
     if (kIsQueueEmpty() == true)
@@ -114,10 +116,10 @@ bool kQueue::kPopQueue(void* pvData)
     }
     
     // Calculate targer address
-    dest = (char*) pvQueueArray + (iDataSize * iPopIndex);
+    src = (char*) pvQueueArray + (iDataSize * iPopIndex);
     
     // Copy data from the queue memory
-    g_pclUtils->kMemCpy(pvData, dest, iDataSize);
+    g_pclMemory->kMemCpy(pvData, src, iDataSize);
     
     // Update the index of pop and the last operation flag
     iPopIndex = (iPopIndex + 1) % iMaxDataCount;

@@ -1,8 +1,8 @@
 #include "GDT.hpp"
 
-#include "utils.hpp"
+#include "memory.hpp"
 
-extern kUtils* g_pclUtils;
+extern kMemory* g_pclMemory;
 
 /// Constructor of GDT
 kGDT::kGDT(void)
@@ -91,7 +91,7 @@ void kGDT::kSetGDTEntry16(GDTENTRY16* pstEntry, QWORD qwBaseAddress,
 /// Initialize TSS
 void kGDT::kInitializeTSS(void)
 {
-    g_pclUtils->kMemSet(pstTSS, 0, sizeof(TSS));
+    g_pclMemory->kMemSet(pstTSS, 0, sizeof(TSS));
     pstTSS->qwIST[0] = IST_STARTADDRESS + IST_SIZE;
     // Set OS with a larger number than the limit of TSS
     // to disable IO map
