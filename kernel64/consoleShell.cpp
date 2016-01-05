@@ -2,9 +2,11 @@
 #include "console.hpp"
 #include "keyboard.hpp"
 #include "memory.hpp"
+#include "stringHelper.hpp"
 
 extern kConsole* g_pclConsole;
 extern kMemory* g_pclMemory;
+extern kStringHelper* g_pclStringHelper;
 
 /// Constructor of kConsoleShell
 kConsoleShell::kConsoleShell(void)
@@ -24,6 +26,27 @@ void kConsoleShell::kInitializeConsoleShell(void)
     clConsoleCommand.kInitializeConsoleCommand();
 }
 
+/// Update cursor location on the monitor
+void kConsoleShell::kUpdateCursorLocation(void)
+{
+    int iCursorX;
+    int iCursorY;
+    
+    char bufferX[10] = { 0, };
+    char bufferY[10] = { 0, };
+    
+    g_pclConsole->kPrintStringXY(70, 0, "[X:  Y:  ]");
+        
+    g_pclConsole->kGetCursor(&iCursorX, &iCursorY);
+        
+    g_pclStringHelper->kDecimalToString(iCursorX, bufferX);
+    g_pclStringHelper->kDecimalToString(iCursorY, bufferY);
+        
+    g_pclConsole->kPrintStringXY(73, 0, bufferX);
+    g_pclConsole->kPrintStringXY(77, 0, bufferY);
+}
+
+
 /// Shell prompt
 void kConsoleShell::kActivateConsoleShell()
 {
@@ -37,6 +60,8 @@ void kConsoleShell::kActivateConsoleShell()
     
     while (1)
     {
+        kUpdateCursorLocation();
+        
         // Wait for key input
         bKey = g_pclConsole->kGetCh();
         

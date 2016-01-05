@@ -4,7 +4,7 @@
 #include "consoleCommand.hpp"
 
 #define CONSOLESHELL_MAXCOMMANDBUFFERCOUNT         300
-#define CONSOLESHELL_PROMPT                        "kOdin$ "
+#define CONSOLESHELL_PROMPT                        "kOdin $ "
 
 #pragma pack(push, 1)
 
@@ -12,6 +12,8 @@
 class kConsoleShell
 {
     kConsoleCommand clConsoleCommand;
+    
+    void kUpdateCursorLocation(void);
     
 public:
     kConsoleShell(void);

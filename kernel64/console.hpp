@@ -85,10 +85,10 @@ public:
     void kClearScreen(void);
     BYTE kGetCh(void);
     void kPrintStringXY(int iX, int iY, const char* pcString);
-    void kPrintSetCheck(const char* pcBuffer);
-    void kPrintSetMiddleInt(const int iValue);
-    void kPrintSetMiddleString(const char* pcVuffer);
-    void kPrintSetResult(const char* pcBuffer);
+    void kPrintTry(const char* pcBuffer);
+    void kPrintResultIntValue(const int iValue);
+    void kPrintResultStrValue(const char* pcVuffer);
+    void kPrintResult(const char* pcBuffer);
 
     void kReboot(void);
 };

@@ -48,58 +48,58 @@ void main(void)
     g_pclStringHelper = &clStringHelper;
     
     // Initialize kConsole
-    clConsole.kInitializeConsole(&clPort, &clKeyboard, 0, 10);
+    clConsole.kInitializeConsole(&clPort, &clKeyboard, 0, 11);
     
     // Set global pointer of kConsole
     g_pclConsole = &clConsole;
     
     // Jump to kernel64 
-    clConsole.kPrintSetResult("PASS");
+    clConsole.kPrintStringXY(2, 10, "PASS");
     
     // Start C++ kernel
-    clConsole.kPrintSetCheck("[      ]  Start IA-32e C++ Language Kernel");
-    clConsole.kPrintSetResult("PASS");
+    clConsole.kPrintTry("[      ]  Start IA-32e C++ Language Kernel");
+    clConsole.kPrintResult("PASS");
     
     // Initialize DTs
     clDT.kInitializeDT();
 
     // Check total RAM size
-    clConsole.kPrintSetCheck("[      ]  Check Total RAM Size");
+    clConsole.kPrintTry("[      ]  Check Total RAM Size");
     clMemory.kCheckTotalRAMSize();
     iRamSize = clMemory.kGetTotalRAMSize();
-    clConsole.kPrintSetMiddleInt(iRamSize);
-    clConsole.kPrintSetResult("PASS");
+    clConsole.kPrintResultIntValue(iRamSize);
+    clConsole.kPrintResult("PASS");
 
     // Activate a keyboard
-    clConsole.kPrintSetCheck("[      ]  Activate Keyboard");
+    clConsole.kPrintTry("[      ]  Activate Keyboard");
     if (clKeyboard.kInitializeKeyboard(&clPort))
     {
-        clConsole.kPrintSetResult("PASS");
+        clConsole.kPrintResult("PASS");
 
         clKeyboard.kChangeKeyboardLED(false, false, false);
     }
     else
     {
-        clConsole.kPrintSetResult("FAIL");
+        clConsole.kPrintResult("FAIL");
         while (1);
     }
     
     // Initialize PIC and Activate interrupt
-    clConsole.kPrintSetCheck("[      ]  Initialize PIC and Interrupt");
+    clConsole.kPrintTry("[      ]  Initialize PIC and Interrupt");
     clPIC.kInitializePIC(&clPort);
     clPIC.kMaskPICInterrupt(0);
-    clConsole.kPrintSetResult("PASS");
+    clConsole.kPrintResult("PASS");
    
     // Initialize interrupt handler
-    clConsole.kPrintSetCheck("[      ]  Initialize Interrupt Handler");
+    clConsole.kPrintTry("[      ]  Initialize Interrupt Handler");
     clIH.kInitializeIH(&clPIC, &clKeyboard);
     g_pclIH = &clIH;
-    clConsole.kPrintSetResult("PASS");
+    clConsole.kPrintResult("PASS");
     
     // Enable interrupt
-    clConsole.kPrintSetCheck("[      ]  Enable Interrupt");
+    clConsole.kPrintTry("[      ]  Enable Interrupt");
     clIH.kEnableInterrupt();
-    clConsole.kPrintSetResult("PASS");
+    clConsole.kPrintResult("PASS");
 
     // Initialize shell
     clConsoleShell.kInitializeConsoleShell();

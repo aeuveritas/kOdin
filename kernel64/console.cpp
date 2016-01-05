@@ -167,7 +167,7 @@ int kConsole::kConsolePrintString(const char* pcBuffer)
     return iCursorLocation;
 }
 
-/// Clear screnn
+/// Clear screen
 void kConsole::kClearScreen(void)
 {
     CHARACTER* pstScreen = (CHARACTER*) CONSOLE_VIDEOMEMORYADDRESS;
@@ -227,7 +227,7 @@ void kConsole::kReboot(void)
 }
 
 /// Print set message: Check
-void kConsole::kPrintSetCheck(const char* pcBuffer)
+void kConsole::kPrintTry(const char* pcBuffer)
 {
     int iCursorX;
     int iCursorY;
@@ -245,7 +245,7 @@ void kConsole::kPrintSetCheck(const char* pcBuffer)
 }
 
 /// Print set message: Middle integer
-void kConsole::kPrintSetMiddleInt(const int iValue)
+void kConsole::kPrintResultIntValue(const int iValue)
 {
     kPrintf(" - %dMB", iValue);
     
@@ -253,7 +253,7 @@ void kConsole::kPrintSetMiddleInt(const int iValue)
 }
 
 /// Print set message: Middle string
-void kConsole::kPrintSetMiddleString(const char* pcBuffer)
+void kConsole::kPrintResultStrValue(const char* pcBuffer)
 {
     kPrintf(" - %s", pcBuffer);
     
@@ -261,7 +261,7 @@ void kConsole::kPrintSetMiddleString(const char* pcBuffer)
 }
 
 /// Print set message: Result
-void kConsole::kPrintSetResult(const char* pcBuffer)
+void kConsole::kPrintResult(const char* pcBuffer)
 {
     kPrintStringXY(2, iPairY++, pcBuffer);
     kSetCursor(0, iPairY);

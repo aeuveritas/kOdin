@@ -78,7 +78,7 @@ void kIH::kCommonInterruptHandler(int iVectorNumber)
     
     // Print the number of interrupt happened
     cBuffer[8] = '0' + iCommonInterruptCount;
-    g_pclConsole->kPrintStringXY(70, 0, cBuffer);
+    g_pclConsole->kPrintStringXY(70, 1, cBuffer);
     
     iCommonInterruptCount = (iCommonInterruptCount + 1) % 10;
     
@@ -91,7 +91,7 @@ void kIH::kCommonInterruptHandler(int iVectorNumber)
 /// Keyboard interrupt handler
 void kIH::kKeyboardHandler(int iVectorNumber)
 {
-    char cBuffer[] = "[INT:  , ]";
+    char cBuffer[] = "[KEY:  , ]";
     BYTE bTemp;
     
     // When interrupt occurs, print message
@@ -101,7 +101,7 @@ void kIH::kKeyboardHandler(int iVectorNumber)
     
     // Print the number of interrupt happened
     cBuffer[8] = '0' + iKeyboardInterruptCount;
-    g_pclConsole->kPrintStringXY(0, 0, cBuffer);
+    g_pclConsole->kPrintStringXY(70, 2, cBuffer);
     
     iKeyboardInterruptCount = (iKeyboardInterruptCount + 1) % 10;    
     
