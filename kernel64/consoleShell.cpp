@@ -60,6 +60,7 @@ void kConsoleShell::kActivateConsoleShell()
     
     while (1)
     {
+        // Update cursor location
         kUpdateCursorLocation();
         
         // Wait for key input

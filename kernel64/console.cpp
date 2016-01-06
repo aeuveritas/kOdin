@@ -61,7 +61,7 @@ void kConsole::kSetCursor(int iX, int iY)
     // Set lower byte
     // by sending lower byte of iLinearValue
     // to CRTC CDR(Contorl Data Register), 0x3D5
-    a_pclPort->kOutPortByte(VGA_PORT_DATA, iLinearValue && 0xFF);
+    a_pclPort->kOutPortByte(VGA_PORT_DATA, iLinearValue & 0xFF);
     
     // Update the cursor location of this class
     iCursorLocationStamp = iLinearValue;

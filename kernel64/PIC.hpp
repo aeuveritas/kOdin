@@ -27,7 +27,7 @@ public:
     kPIC(void);
     ~kPIC(void);
     
-    void kInitializePIC(kPort* _kPort);
+    void kInitializePIC(kPort* pclkPort);
     void kMaskPICInterrupt(WORD wIRQBitmask);
     void kSendEOIToPIC(int iIRQNumber);
 };

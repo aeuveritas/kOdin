@@ -31,6 +31,8 @@ void main(void)
     
     int iRamSize;
     
+    int iCursorX, iCursorY;
+    
     //clDebug.kLock();
     
     // Initialize kMemory
@@ -47,17 +49,18 @@ void main(void)
     // Set global pointer of kStringHelper
     g_pclStringHelper = &clStringHelper;
     
-    // Initialize kConsole
-    clConsole.kInitializeConsole(&clPort, &clKeyboard, 0, 11);
-    
     // Set global pointer of kConsole
     g_pclConsole = &clConsole;
     
-    // Jump to kernel64 
+    // Jump from kernel32 
     clConsole.kPrintStringXY(2, 10, "PASS");
     
+    // Initialize kConsole
+    clConsole.kInitializeConsole(&clPort, &clKeyboard, 0, 11);
+    
     // Start C++ kernel
-    clConsole.kPrintTry("[      ]  Start IA-32e C++ Language Kernel");
+    g_pclConsole->kGetCursor(&iCursorX, &iCursorY);
+    clConsole.kPrintf("[      ]  Start IA-32e C++ Language Kernel"); 
     clConsole.kPrintResult("PASS");
     
     // Initialize DTs

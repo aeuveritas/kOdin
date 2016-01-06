@@ -26,10 +26,10 @@ kIH::~kIH(void)
 }
 
 /// Initialize IH
-void kIH::kInitializeIH(kPIC* _kPIC, kKeyboard* _kKeyboard)
+void kIH::kInitializeIH(kPIC* pclPIC, kKeyboard* pclKeyboard)
 {
-    a_pclPIC = _kPIC;
-    a_pclKeyboard = _kKeyboard;
+    a_pclPIC = pclPIC;
+    a_pclKeyboard = pclKeyboard;
     
     return;
 }

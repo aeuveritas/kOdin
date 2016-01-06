@@ -13,10 +13,10 @@ kPIC::~kPIC(void)
 }
 
 /// Initialize PIC
-void kPIC::kInitializePIC(kPort* _kPort)
+void kPIC::kInitializePIC(kPort* pclPort)
 {
     // Set the object of kPort
-    a_pclPort = _kPort;
+    a_pclPort = pclPort;
     
     // Initialize the master PIC
     // ICW1 (Port 0x20), IC4 bit (Bit 0) = 1

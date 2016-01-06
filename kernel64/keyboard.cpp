@@ -31,10 +31,10 @@ kKeyboard::~kKeyboard(void)
 // Functions related to keyboard controller and keyboard 
 ///////////////////////////////////////////////////////////////////////////////
 /// Initialize kKeyboard
-bool kKeyboard::kInitializeKeyboard(kPort* _kPort)
+bool kKeyboard::kInitializeKeyboard(kPort* pclPort)
 {
     // Link class port
-    a_pclPort = _kPort;
+    a_pclPort = pclPort;
     
     // Initialize queue
     clKeyQueue.kInitializeQueue(stKeyQueueBuffer,

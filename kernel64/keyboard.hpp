@@ -41,7 +41,7 @@ public:
     kKeyboard(void);
     ~kKeyboard(void);
     
-    bool kInitializeKeyboard(kPort* _kPort);
+    bool kInitializeKeyboard(kPort* pclPort);
     bool kChangeKeyboardLED(bool bCapsLockOn, 
                             bool bNumLockOn, bool bScrollLockOn);
     bool kIsInputBufferFull(void);
