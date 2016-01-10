@@ -4,7 +4,7 @@
 
 #pragma pack(push, 1)
 
-/// Class for command to clear screen [IA-32e Mode]
+/// Command to clear screen [IA-32e Mode]
 class kCommandClearScreen: public kCommandTask
 {
 public:

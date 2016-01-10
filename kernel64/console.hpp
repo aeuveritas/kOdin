@@ -56,7 +56,7 @@
 
 #pragma pack(push, 1)
 
-/// Class of console [IA-32e Mode] 
+/// Console [IA-32e Mode] 
 class kConsole
 {
     // Class pointer for kPort

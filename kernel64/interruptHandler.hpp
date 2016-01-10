@@ -16,7 +16,7 @@ extern "C" {
     QWORD _kReadRFLAGS(void);
 };
 
-/// Class for interrupt handler [IA-32e Mode]
+/// Interrupt handler [IA-32e Mode]
 class kIH
 {
     kPIC* a_pclPIC;

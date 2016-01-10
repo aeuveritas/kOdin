@@ -12,7 +12,7 @@ extern "C"
     void _kLoadIDTR(QWORD qwIDTRAddress);
 };
 
-/// Class for Interrupt Descriptor Table [IA-32e Mode]
+/// Interrupt Descriptor Table [IA-32e Mode]
 class kIDT
 {
     DTR* pstIDTR;

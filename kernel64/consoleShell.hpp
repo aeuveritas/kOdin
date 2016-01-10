@@ -8,7 +8,7 @@
 
 #pragma pack(push, 1)
 
-/// Class for console shell [IA-32e Mode]
+/// Console shell [IA-32e Mode]
 class kConsoleShell
 {
     kConsoleCommand clConsoleCommand;
@@ -20,8 +20,7 @@ public:
     ~kConsoleShell(void);
     
     void kInitializeConsoleShell(void);
-    
-    // Shell itself
+
     void kActivateConsoleShell(void);
 };
 

@@ -5,7 +5,7 @@
 
 #pragma pack(push, 1)
 
-/// Class for description table [IA-32e Mode]
+/// Description table [IA-32e Mode]
 class kDT
 {
     kGDT clGDT;

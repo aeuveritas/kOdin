@@ -11,7 +11,7 @@ kStringHelper::kStringHelper(void)
 
 }
 
-/// Deconstructor of kStringModifier
+/// Destructor of kStringModifier
 kStringHelper::~kStringHelper(void)
 {
 

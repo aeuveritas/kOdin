@@ -4,7 +4,7 @@
 
 #pragma pack(push, 1)
 
-/// structures for descriptor table register, GDTR and IDTR [IA-32e Mode]
+/// Descriptor table register, GDTR and IDTR [IA-32e Mode]
 typedef struct kDTRStruct
 {
     WORD wLimit;

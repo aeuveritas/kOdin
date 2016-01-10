@@ -6,7 +6,7 @@
 extern kConsole* g_pclConsole;
 extern kMemory* g_pclMemory;
 
-/// Constructor of queue
+/// Constructor of kQueue
 kQueue::kQueue(void)
 {
     iMaxDataCount = 0;
@@ -19,7 +19,7 @@ kQueue::kQueue(void)
     bLastOperationPush = false;
 }
 
-/// Deconstructor of queue
+/// Destructor of kQueue
 kQueue::~kQueue(void)
 {
     iMaxDataCount = 0;
@@ -32,7 +32,7 @@ kQueue::~kQueue(void)
     bLastOperationPush = false;
 }
 
-/// Initialize queue
+/// Initialize kQueue
 void kQueue::kInitializeQueue(void* _pvQueueBuffer, int _iMaxDataCount,
                               int _iDataSize)
 {

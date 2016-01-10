@@ -10,7 +10,7 @@ extern "C" {
 
 #pragma pack(push, 1)
 
-/// Class for CPU registers [Protected Mode]
+/// CPU [Protected Mode]
 class k32Cpu
 {
 public:

@@ -4,6 +4,7 @@
 global _kInPortByte, _kOutPortByte
 global _kLoadGDTR, _kLoadTR, _kLoadIDTR
 global _kEnableInterrupt, _kDisableInterrupt, _kReadRFLAGS
+global _kReadTSC
 
 SECTION .text                       ; Define text section
 
@@ -76,4 +77,17 @@ _kReadRFLAGS:
     pushfq                          ; Store value of RFLAGS to the stack
     pop rax                         ; Copy value in the stack to the RAX,
                                     ; because RAX is the return value
+    ret
+    
+; Read TSC (Time Stamp Counter)
+;   PARAM: None
+_kReadTSC
+    push rdx                        ; Store RDX in the stack
+    
+    rdtsc                           ; Read TSC and store the value in RDX:RAX
+    
+    shl rdx, 32                     ; Merge RDX and RAX in RAX
+    or rax, rdx
+    
+    pop rdx                         ; Restore RDX
     ret

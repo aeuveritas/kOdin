@@ -12,7 +12,7 @@ extern "C"
     void _kLoadTR(WORD wTSSSegmentOffset);
 };
 
-/// Class for Global Descriptor Table [IA-32e Mode]
+/// Global descriptor table [IA-32e Mode]
 class kGDT
 {
     DTR* pstGDTR;

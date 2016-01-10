@@ -6,7 +6,7 @@
 
 #pragma pack(push, 1)
 
-/// Class of consol command [IA-32e Mode]
+/// Consol command [IA-32e Mode]
 class kConsoleCommand
 {    
     kCommandFactory clCommandFactory;

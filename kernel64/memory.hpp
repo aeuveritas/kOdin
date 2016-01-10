@@ -4,8 +4,8 @@
 
 #pragma pack(push, 1)
 
-/// Class for Utilities [IA-32e Mode]
 /// TODO: Apply singleton
+/// Memory utilities [IA-32e Mode]
 class kMemory
 {
     QWORD qwTotalRAMSize = 0;

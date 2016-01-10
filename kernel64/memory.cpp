@@ -1,18 +1,18 @@
 #include "memory.hpp"
 
-/// Constructor of memory
+/// Constructor of kMemory
 kMemory::kMemory(void)
 {
 
 }
 
-/// Deconstructor of memory
+/// Destructor of kMemory
 kMemory::~kMemory(void)
 {
 
 }
 
-/// Initialize memory
+/// Initialize kMemory
 void kMemory::kInitializeMemory(void)
 {
 

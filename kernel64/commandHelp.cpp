@@ -6,14 +6,14 @@ extern kConsole* g_pclConsole;
 /// Constructor of kCommandHelp
 kCommandHelp::kCommandHelp(void)
 {
-    // Command Name
+    // Command name
     pcCommandName = "help";
     
     // Help message
-    pcHelp = "Show help of all commands\n";
+    pcHelp = "Show help of all commands";
 }
 
-/// Deconstrutor of kCommandHelp
+/// Destructor of kCommandHelp
 kCommandHelp::~kCommandHelp(void)
 {
 
@@ -38,7 +38,7 @@ void kCommandHelp::kTask_do(const char* pcParameter)
     g_pclConsole->kPrintf(
     "============================================================\n");
     g_pclConsole->kPrintf(
-    "                     kOdin Shell Help.                      \n");
+    "                     kOdin Shell Help                       \n");
     g_pclConsole->kPrintf(
     "============================================================\n");
     
@@ -60,6 +60,7 @@ void kCommandHelp::kTask_do(const char* pcParameter)
         g_pclConsole->kPrintf("  - ");
         
         pclTargetTask->kTask_help();
+        g_pclConsole->kPrintf("\n");
     };
     
     return;

@@ -15,7 +15,7 @@ kIH::kIH(void)
     iKeyboardInterruptCount = 0;
 }
 
-/// Deconstructor of IH
+/// Destructor of IH
 kIH::~kIH(void)
 {
     a_pclPIC = nullptr;

@@ -57,7 +57,7 @@
 
 #pragma pack(push, 1)
 
-/// Struct for Scan Code Table [IA-32e Mode]
+/// Key mapping entry data structure [IA-32e Mode]
 typedef struct kKeyMappingEntry {
     // Normal ASCII
     BYTE bNormalCode;
@@ -66,7 +66,7 @@ typedef struct kKeyMappingEntry {
     BYTE bCombinedCode;
 } KEYMAPPINGENTRY;
 
-/// Struct for the data structure of key queue
+/// Key queue data strcuture
 typedef struct kKeyQueueDataStruct {
     // Scan Code
     BYTE bScanCode;

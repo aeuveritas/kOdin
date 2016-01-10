@@ -9,7 +9,7 @@ kCommandList::kCommandList(void)
 
 }
 
-/// Deconstructor of kCommandList
+/// Destructor of kCommandList
 kCommandList::~kCommandList(void)
 {
 

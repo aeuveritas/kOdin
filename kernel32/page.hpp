@@ -24,7 +24,7 @@
 // Struct
 #pragma pack(push, 1)
 
-// Struct for Page Entry [Protected Mode]
+// Page entry data structure [Protected Mode]
 typedef struct k32PageTableEntry {
     // For PML4 and PDP
     // 1 bit:   P, RW, US, PWT, PCD, A

@@ -14,13 +14,13 @@ kConsoleShell::kConsoleShell(void)
 
 }
 
-/// Deconstructor of kConsoleShell
+/// Destructor of kConsoleShell
 kConsoleShell::~kConsoleShell(void)
 {
 
 }
 
-/// Initialize Shell
+/// Initialize kConsoleShell
 void kConsoleShell::kInitializeConsoleShell(void)
 {
     clConsoleCommand.kInitializeConsoleCommand();

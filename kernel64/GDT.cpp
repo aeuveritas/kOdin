@@ -13,7 +13,7 @@ kGDT::kGDT(void)
     pstTSS = nullptr;
 }
 
-/// Deconstructor of GDT
+/// Destructor of GDT
 kGDT::~kGDT(void)
 {
     pstGDTR = nullptr;
@@ -22,7 +22,7 @@ kGDT::~kGDT(void)
     pstTSS = nullptr;
 }
 
-/// Initialize GDT entries
+/// Initialize kGDT
 void kGDT::kInitializeGDT(void)
 {
     // Set GDTR

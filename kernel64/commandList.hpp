@@ -11,13 +11,18 @@ enum COMMAND_TASK_TYPE
     COMMAND_CLS,
     COMMAND_REBOOT,
     COMMAND_RAMSIZE,
-    COMMAND_STRTOD
+    COMMAND_STRTOD,
+    COMMAND_SETTIMER,
+    COMMAND_WAIT,
+    COMMAND_RDTSC,
+    COMMAND_CPUSPEED,
+    COMMAND_DATE
 };
 
-/// Class of command list [IA-32e Mode]
+/// Command list [IA-32e Mode]
 class kCommandList
 {
-    /// Structure for shell command
+    /// Shell command structure
     typedef struct kShellCommandEntryStruct
     {
         // Command type
@@ -27,12 +32,17 @@ class kCommandList
         kCommandTask* pclCommandTask;
     } SHELLCOMMAND;
     
-    SHELLCOMMAND aCommandTable[5] = {
+    SHELLCOMMAND aCommandTable[10] = {
         {COMMAND_HELP, nullptr},
         {COMMAND_CLS, nullptr},
         {COMMAND_REBOOT, nullptr},
         {COMMAND_RAMSIZE, nullptr},
         {COMMAND_STRTOD, nullptr},
+        {COMMAND_SETTIMER, nullptr},
+        {COMMAND_WAIT, nullptr},
+        {COMMAND_RDTSC, nullptr},
+        {COMMAND_CPUSPEED, nullptr},
+        {COMMAND_DATE, nullptr},
     };
     
     int iNumEntry;

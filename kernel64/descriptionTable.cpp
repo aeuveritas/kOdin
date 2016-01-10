@@ -10,13 +10,13 @@ kDT::kDT(void)
     
 }
 
-/// Deconstructor of kDT
+/// Destructor of kDT
 kDT::~kDT(void)
 {
     
 }
 
-/// Initialize descriptor Table
+/// Initialize kDT
 void kDT::kInitializeDT(void)
 {
     // Initialize GDT

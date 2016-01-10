@@ -5,7 +5,7 @@
 
 #pragma pack(push, 1)
 
-/// Class of command to print help message [IA-32e Mode]
+/// Command to print help message [IA-32e Mode]
 class kCommandHelp: public kCommandTask
 {
     kCommandList* a_pclCommandList;

@@ -13,7 +13,7 @@ kConsoleCommand::kConsoleCommand(void)
 
 }
 
-/// Deconstructor of kConsoleCommand
+/// Destructor of kConsoleCommand
 kConsoleCommand::~kConsoleCommand(void)
 {
 

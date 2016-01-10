@@ -6,14 +6,14 @@ extern kConsole* g_pclConsole;
 /// Constructor of kCommandReboot
 kCommandReboot::kCommandReboot(void)
 {
-    // Command Name
+    // Command name
     pcCommandName = "reboot";
     
     // Help message
-    pcHelp = "Reboot kOdin\n";
+    pcHelp = "Reboot kOdin";
 }
 
-/// Deconstructor of kCommandReboot
+/// Destructor of kCommandReboot
 kCommandReboot::~kCommandReboot(void)
 {
 

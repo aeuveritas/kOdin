@@ -11,14 +11,14 @@ extern kStringHelper* g_pclStringHelper;
 /// Constructor of kCommandStringToDecimalHex
 kCommandStringToDecimalHex::kCommandStringToDecimalHex(void)
 {
-    // Command Name
+    // Command name
     pcCommandName = "strtod";
     
     // Help message
-    pcHelp = "Convert string to decimal/hex\n";
+    pcHelp = "Convert string to decimal/hex";
 }
 
-/// Deconstructor of kCommandStringToDecimalHex
+/// Destructor of kCommandStringToDecimalHex
 kCommandStringToDecimalHex::~kCommandStringToDecimalHex(void)
 {
 

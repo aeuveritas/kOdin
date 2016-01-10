@@ -3,7 +3,7 @@
 
 extern kIH* g_pclIH;
 
-/// Constructor
+/// Constructor of kKeyboard
 kKeyboard::kKeyboard(void) 
 {
     a_pclPort = nullptr;
@@ -15,7 +15,7 @@ kKeyboard::kKeyboard(void)
     iSkipCountForPause = 0;
 }
 
-/// Deconstructor
+/// Destructor of kKeyboard
 kKeyboard::~kKeyboard(void) 
 {
     a_pclPort = nullptr;

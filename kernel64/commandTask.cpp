@@ -25,3 +25,11 @@ void kCommandTask::kTask_help(void)
     
     return;    
 }
+
+/// Print example
+void kCommandTask::kTask_example(void)
+{
+    g_pclConsole->kPrintf(pcExample);
+    
+    return;
+}

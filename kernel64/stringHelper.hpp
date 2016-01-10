@@ -13,7 +13,7 @@ enum kDECIMALTYPE {
     HEXADECIMAL
 };
 
-/// Class for stringModifier [IA-32e Mode]
+/// StringModifier [IA-32e Mode]
 class kStringHelper
 {
 public:

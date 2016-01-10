@@ -1,20 +1,20 @@
 #include "IDT.hpp"
 
-/// Constructor of IDT
+/// Constructor of kIDT
 kIDT::kIDT(void)
 {
     pstIDTR = nullptr;
     pstIDTEntry = nullptr;
 }
 
-/// Deconstructor of IDT
+/// Destructor of kIDT
 kIDT::~kIDT(void)
 {
     pstIDTR = nullptr;
     pstIDTEntry = nullptr;
 }
 
-/// Initialize IDT
+/// Initialize kIDT
 void kIDT::kInitializeIDT(void)
 {   
     // Start address of IDTR

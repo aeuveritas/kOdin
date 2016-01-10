@@ -18,7 +18,7 @@ extern kPort clPort;
 
 #pragma pack(push, 1)
 
-/// Classs for Programmable Interrupt Controller [IA-32e Mode]
+/// Programmable Interrupt Controller [IA-32e Mode]
 class kPIC
 {
     kPort* a_pclPort;

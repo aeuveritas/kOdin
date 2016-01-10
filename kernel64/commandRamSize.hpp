@@ -4,7 +4,7 @@
 
 #pragma pack(push, 1)
 
-/// Class of command to print RAM size [IA-32e Mode]
+/// Command to print RAM size [IA-32e Mode]
 class kCommandRamSize: public kCommandTask
 {
 public:

@@ -2,7 +2,7 @@
 
 #pragma pack(push, 1)
 
-/// Class of command parameter [IA-32e Mode]
+/// Command parameter [IA-32e Mode]
 class kCommandParameter
 {
     // Address for the parameter

@@ -2,7 +2,7 @@
 
 #pragma pack(push, 1)
 
-/// Class of debug module [IA-32e Mode]
+/// Debug module [IA-32e Mode]
 class kDebug
 {
 public:

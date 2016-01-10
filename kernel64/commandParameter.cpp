@@ -11,13 +11,13 @@ kCommandParameter::kCommandParameter(void)
 
 }
 
-/// Deconstuctor of kCommandParameter
+/// Destructor of kCommandParameter
 kCommandParameter::~kCommandParameter(void)
 {
 
 }
 
-/// Initialize command paramater
+/// Initialize kCommandParameter
 void kCommandParameter::kInitializeCommandParameter(const char* pcParameter)
 {
     pcBuffer = pcParameter;

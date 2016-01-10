@@ -7,6 +7,9 @@
 #include "stringHelper.hpp"
 #include "console.hpp"
 #include "consoleShell.hpp"
+#include "PIT.hpp"
+#include "TSC.hpp"
+#include "RTC.hpp"
 
 #include "debug.hpp"
 
@@ -14,6 +17,9 @@ kConsole* g_pclConsole;
 kIH* g_pclIH;
 kMemory* g_pclMemory;
 kStringHelper* g_pclStringHelper;
+kPIT* g_pclPIT;
+kTSC* g_pclTSC;
+kRTC* g_pclRTC;
 
 void main(void)
 {
@@ -26,6 +32,9 @@ void main(void)
     kMemory clMemory;
     kConsoleShell clConsoleShell;
     kStringHelper clStringHelper;
+    kPIT clPIT;
+    kTSC clTSC;
+    kRTC clRTC;
     
     kDebug clDebug;
     
@@ -63,6 +72,7 @@ void main(void)
     clConsole.kPrintf("[      ]  Start IA-32e C++ Language Kernel"); 
     clConsole.kPrintResult("PASS");
     
+    /// Memory
     // Initialize DTs
     clDT.kInitializeDT();
 
@@ -72,21 +82,8 @@ void main(void)
     iRamSize = clMemory.kGetTotalRAMSize();
     clConsole.kPrintResultIntValue(iRamSize);
     clConsole.kPrintResult("PASS");
-
-    // Activate a keyboard
-    clConsole.kPrintTry("[      ]  Activate Keyboard");
-    if (clKeyboard.kInitializeKeyboard(&clPort))
-    {
-        clConsole.kPrintResult("PASS");
-
-        clKeyboard.kChangeKeyboardLED(false, false, false);
-    }
-    else
-    {
-        clConsole.kPrintResult("FAIL");
-        while (1);
-    }
     
+    /// Interrupt
     // Initialize PIC and Activate interrupt
     clConsole.kPrintTry("[      ]  Initialize PIC and Interrupt");
     clPIC.kInitializePIC(&clPort);
@@ -103,7 +100,34 @@ void main(void)
     clConsole.kPrintTry("[      ]  Enable Interrupt");
     clIH.kEnableInterrupt();
     clConsole.kPrintResult("PASS");
+    
+    /// Device driver 
+    // Activate a keyboard
+    clConsole.kPrintTry("[      ]  Activate Keyboard");
+    if (clKeyboard.kInitializeKeyboard(&clPort))
+    {
+        clConsole.kPrintResult("PASS");
 
+        clKeyboard.kChangeKeyboardLED(false, false, false);
+    }
+    else
+    {
+        clConsole.kPrintResult("FAIL");
+        while (1);
+    }
+    
+    // Initialize PIT
+    clPIT.kInitializePIT(&clPort);
+    
+    // Initialize TSC
+    clTSC.kInitializeTSC();
+    g_pclTSC = &clTSC;
+    
+    // Initialize RTC
+    clRTC.kIntializeRTC(&clPort);
+    g_pclRTC = &clRTC;
+    
+    /// Shell
     // Initialize shell
     clConsoleShell.kInitializeConsoleShell();
     

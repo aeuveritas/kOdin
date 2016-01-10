@@ -8,14 +8,14 @@ extern kMemory* g_pclMemory;
 /// Constructor of kCommandRamSize
 kCommandRamSize::kCommandRamSize(void)
 {
-    // Command Name
+    // Command name
     pcCommandName = "ramsize";
     
     // Help message
-    pcHelp = "Show Total RAM Size\n";
+    pcHelp = "Show Total RAM Size";
 }
 
-/// Deconstructor of kCommandRamSize
+/// Destructor of kCommandRamSize
 kCommandRamSize::~kCommandRamSize(void)
 {
 

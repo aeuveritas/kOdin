@@ -7,10 +7,15 @@
 #include "commandReboot.hpp"
 #include "commandRamSize.hpp"
 #include "commandStringToDecimalHex.hpp"
+#include "commandSetTimer.hpp"
+#include "commandWait.hpp"
+#include "commandRDTSC.hpp"
+#include "commandCpuSpeed.hpp"
+#include "commandDate.hpp"
 
 #pragma pack(push, 1)
 
-/// Class for command factory [IA-32e Mode]
+/// Command factory [IA-32e Mode]
 class kCommandFactory
 {
     kCommandList* a_pclCommandList;
@@ -20,6 +25,11 @@ class kCommandFactory
     kCommandReboot clCommandReboot;
     kCommandRamSize clCommandRamSize;
     kCommandStringToDecimalHex clCommandStringToDecimalHex;
+    kCommandSetTimer clCommandSetTimer;
+    kCommandWait clCommandWait;
+    kCommandRDTSC clCommandRDTSC;
+    kCommandCpuSpeed clCommandCpuSpeed;
+    kCommandDate clCommandDate;
     
 public:
     kCommandFactory(void);

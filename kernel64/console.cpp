@@ -12,13 +12,13 @@ kConsole::kConsole(void)
     iCursorLocationStamp = 0;
 }
 
-/// Deconstructor of console
+/// Destructor of console
 kConsole::~kConsole(void)
 {
     iCursorLocationStamp = 0;
 }
 
-/// Initialize console
+/// Initialize kConsole
 void kConsole::kInitializeConsole(kPort* pcPort, kKeyboard* pcKeyboard, int iCursorX, int iCursorY)
 {
     a_pclPort = pcPort;

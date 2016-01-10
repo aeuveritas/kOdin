@@ -10,10 +10,10 @@ kCommandClearScreen::kCommandClearScreen(void)
     pcCommandName = "cls";
     
     // Help message
-    pcHelp = "Clear screen\n";
+    pcHelp = "Clear screen";
 }
 
-/// Deconstructor of kCommandClearScreen
+/// Destructor of kCommandClearScreen
 kCommandClearScreen::~kCommandClearScreen(void)
 {
 

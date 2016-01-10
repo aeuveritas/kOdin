@@ -4,7 +4,7 @@
 
 #pragma pack(push, 1)
 
-/// Class of command to reboot [IA-32e Mode]
+/// Command to reboot [IA-32e Mode]
 class kCommandReboot: public kCommandTask
 {
 public:

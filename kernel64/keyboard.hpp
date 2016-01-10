@@ -7,7 +7,7 @@
 
 #pragma pack(push, 1)
 
-/// Class for keyboard [IA-32e Mode]
+/// Keyboard [IA-32e Mode]
 class kKeyboard
 {
     // class pointer for kPort

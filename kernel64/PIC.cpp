@@ -1,18 +1,18 @@
 #include "PIC.hpp"
 
-/// Constructor of PIC
+/// Constructor of kPIC
 kPIC::kPIC(void)
 {
     a_pclPort = nullptr;
 }
 
-/// Deconstructor of PIC
+/// Destructor of kPIC
 kPIC::~kPIC(void)
 {
     a_pclPort = nullptr;
 }
 
-/// Initialize PIC
+/// Initialize kPIC
 void kPIC::kInitializePIC(kPort* pclPort)
 {
     // Set the object of kPort

@@ -6,7 +6,7 @@ kCommandFactory::kCommandFactory(void)
 
 }
 
-/// Deconstructor of kCommandFactory
+/// Destructor of kCommandFactory
 kCommandFactory::~kCommandFactory(void)
 {
 
@@ -22,6 +22,11 @@ void kCommandFactory::kInitializeCommandFactory(kCommandList* pclCommandList)
     clCommandReboot.kInitializeCommandReboot();
     clCommandRamSize.kInitializeCommandRamSize();
     clCommandStringToDecimalHex.kInitializeCommandStringToDecimalHex();
+    clCommandSetTimer.kInitializeCommandSetTimer();
+    clCommandWait.kInitializeCommandWait();
+    clCommandRDTSC.kInitializeCommandRDTSC();
+    clCommandCpuSpeed.kInitializeCommandCpuSpeed();
+    clCommandDate.kInitializeCommandDate();
 }
 
 /// Update command table
@@ -39,6 +44,16 @@ void kCommandFactory::kUpdateCommandTable(void)
         kSetTask(COMMAND_RAMSIZE, (kCommandTask*)&clCommandRamSize);
     a_pclCommandList->
         kSetTask(COMMAND_STRTOD, (kCommandTask*)&clCommandStringToDecimalHex);
+    a_pclCommandList->
+        kSetTask(COMMAND_SETTIMER, (kCommandTask*)&clCommandSetTimer);
+    a_pclCommandList->
+        kSetTask(COMMAND_WAIT, (kCommandTask*)&clCommandWait);
+    a_pclCommandList->
+        kSetTask(COMMAND_RDTSC, (kCommandTask*)&clCommandRDTSC);
+    a_pclCommandList->
+        kSetTask(COMMAND_CPUSPEED, (kCommandTask*)&clCommandCpuSpeed);
+    a_pclCommandList->
+        kSetTask(COMMAND_DATE, (kCommandTask*)&clCommandDate);
     
     a_pclCommandList->kCountLongestCommandLength();
 }
