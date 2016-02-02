@@ -5,8 +5,8 @@ all: imageMaker
 imageMaker: imageMaker.c
 	@echo ======================= MAKE imageMaker =======================
 	gcc -o $@ $<
-	mv $@ ../../OUT/
+	mv $@ $(TOP_DEPLOY_DIR)
 	@echo ===================== imageMaker Complete =====================
 	
 clean:
-	rm -f ../../OUT/imageMaker
+	rm -f $(TOP_DEPLOY_DIR)/imageMaker

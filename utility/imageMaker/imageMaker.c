@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
     }
 
     // Create Disk.img
-    if ((iTargetFd = open("./OUT/kOdin.img", O_RDWR | O_CREAT | O_TRUNC,
+    if ((iTargetFd = open("./DEPLOY/kOdin.img", O_RDWR | O_CREAT | O_TRUNC,
                           S_IREAD | S_IWRITE)) == -1) {
         fprintf(stderr, "[ERROR] %s open fail\n", "kOdin.img");
         exit(-1);

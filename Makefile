@@ -1,64 +1,31 @@
-all: BootLoader Kernel32 Kernel64 Utility kOdin.img 
+.EXPORT_ALL_VARIABLES:
 
-BootLoader:
-	@echo
-	@echo ===== BootLoader Build Start ====================================
-	@echo
-	
-	make -C bootloader
-	
-	@echo
-	@echo ===== BootLoader Build Complete =================================
-	@echo
-	
-Kernel32:
-	@echo
-	@echo ===== Kernel32 Build Start ====================================
-	@echo
-	
-	make -C kernel32
-	
-	@echo
-	@echo ===== Kernel32 Build Complete =================================
-	@echo
+TOP_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 
-Kernel64:
-	@echo
-	@echo ===== Kernel64 Build Start ====================================
-	@echo
-	
-	make -C kernel64
-	
-	@echo
-	@echo ===== Kernel64 Build Complete =================================
-	@echo
-	
-kOdin.img: OUT/bootloader/BootLoader.bin OUT/kernel32/Kernel32.bin OUT/kernel64/Kernel64.bin
+TOP_DIR := $(dir $(TOP_PATH))
+
+SUB_DIRS = $(TOP_SUB_DIRS)
+###############################################################################
+
+include $(TOP_DIR)/Config.mk
+
+all: prepare sub_build kOdin.img
+
+prepare:
+	mkdir -p $(TOP_DEPLOY_DIR)
+
+kOdin.img: $(TOP_BINARIES)
 	@echo
 	@echo ===== Disk Image Build Start ====================================
 	@echo
 
-	./OUT/imageMaker $^
+	$(TOP_DEPLOY_DIR)/imageMaker $^
 
 	@echo
 	@echo ===== Disk Image Build Complete =================================
 	@echo
-	
-Utility:
-	@echo
-	@echo ===== Utility Build Start ====================================
-	@echo
-	
-	make -C utility
-	
-	@echo
-	@echo ===== Utility Build Complete =================================
-	@echo
 
-clean:
-	make -C bootloader clean
-	make -C kernel32 clean
-	make -C kernel64 clean
-	make -C utility clean
-	rm -rf ./OUT
-	rm -f ./imageMaker
+clean: sub_clean
+	rm -rf $(TOP_DEPLOY_DIR)
+	
+include $(TOP_DIR)/Rules.mk

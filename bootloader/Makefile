@@ -1,19 +1,25 @@
-all: BootLoader.bin
+TARGET_DIR = $(KBL_SOURCE_DIR)
+TARGET_DEPLOY_DIR = $(KBL_DEPLOY_DIR)
+
+all: prepare BootLoader.bin
+
+prepare:
+	mkdir -p $(TARGET_DEPLOY_DIR)
 
 BootLoader.bin: BootLoader.asm
 	@echo
-	@echo ===== BootLoader Build Start IN =================================
+	@echo ===== BootLoader Build Start ====================================
 	@echo
 	
-	mkdir -p ../OUT/bootloader
-	nasm -g -o ../OUT/bootloader/BootLoader.bin BootLoader.asm
+	nasm -g -o $(TARGET_DEPLOY_DIR)/BootLoader.bin BootLoader.asm
 	nasm -f elf -F dwarf -g -o BootLoader.elf BootLoader.asm
-	mv ./BootLoader.elf ../OUT/bootloader
+	mv ./BootLoader.elf $(TARGET_DEPLOY_DIR)
 	
 	@echo
-	@echo ===== BootLoader Build Complete IN ==============================
+	@echo ===== BootLoader Build Complete =================================
 	@echo
 	
 clean:
-	rm -rf ../OUT/bootloader
+	rm -rf $(TARGET_DEPLOY_DIR)
 	
+include $(TOP_DIR)/Rules.mk

@@ -45,3 +45,4 @@ Detial document will be available in the future.
 [14. Upgrading to an Interrupt Based Keyboard Driver](http://aeuveritas.github.io/Upgrading-to-an-Interrupt-Based-Keyboard-Driver/)<br>
 [15. Making a Console Shell](http://aeuveritas.github.io/Making-a-Console-Shell/)<br>
 [16. Making a timer device driver](http://aeuveritas.github.io/Making-a-Timer-Device-Driver/)<br>
+[17. Hierarchical Directory Structure](http://aeuveritas.github.io/Hierarchical-Directory-Structure/)<br>
